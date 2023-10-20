@@ -1,0 +1,622 @@
+,data_base,ocupacao,vencido_acima_de_15_dias
+0,2013-01-31,-,20941893048.96
+1,2013-01-31,PF - Aposentado/pensionista,1554289462.84
+2,2013-01-31,PF - Autônomo,2882347177.0
+3,2013-01-31,PF - Empregado de empresa privada,3568390307.66
+4,2013-01-31,PF - Empregado de entidades sem fins lucrativos,28803100.59
+5,2013-01-31,PF - Empresário,4574358416.17
+6,2013-01-31,PF - MEI,2439.85
+7,2013-01-31,PF - Outros,19867290172.35
+8,2013-01-31,PF - Servidor ou empregado público,4055016813.89
+9,2013-02-28,-,21176508548.19
+10,2013-02-28,PF - Aposentado/pensionista,1563880624.22
+11,2013-02-28,PF - Autônomo,2876721431.23
+12,2013-02-28,PF - Empregado de empresa privada,3585009749.95
+13,2013-02-28,PF - Empregado de entidades sem fins lucrativos,28867020.79
+14,2013-02-28,PF - Empresário,4520456780.71
+15,2013-02-28,PF - MEI,2296.17
+16,2013-02-28,PF - Outros,19874703067.33
+17,2013-02-28,PF - Servidor ou empregado público,4267172513.47
+18,2013-03-31,-,20889021693.35
+19,2013-03-31,PF - Aposentado/pensionista,1653311044.71
+20,2013-03-31,PF - Autônomo,3005040141.04
+21,2013-03-31,PF - Empregado de empresa privada,3755651768.79
+22,2013-03-31,PF - Empregado de entidades sem fins lucrativos,30472636.02
+23,2013-03-31,PF - Empresário,4677258948.02
+24,2013-03-31,PF - MEI,2232.1800000000003
+25,2013-03-31,PF - Outros,20785704263.95
+26,2013-03-31,PF - Servidor ou empregado público,4487445800.83
+27,2013-04-30,-,21755924133.41
+28,2013-04-30,PF - Aposentado/pensionista,1560086535.37
+29,2013-04-30,PF - Autônomo,2866817217.88
+30,2013-04-30,PF - Empregado de empresa privada,3619997323.78
+31,2013-04-30,PF - Empregado de entidades sem fins lucrativos,28490329.29
+32,2013-04-30,PF - Empresário,4478538428.38
+33,2013-04-30,PF - MEI,2175.67
+34,2013-04-30,PF - Outros,19971567179.15
+35,2013-04-30,PF - Servidor ou empregado público,4241741770.29
+36,2013-05-31,-,20902551337.8
+37,2013-05-31,PF - Aposentado/pensionista,1516318415.24
+38,2013-05-31,PF - Autônomo,2853330114.63
+39,2013-05-31,PF - Empregado de empresa privada,3596622262.3
+40,2013-05-31,PF - Empregado de entidades sem fins lucrativos,28046328.44
+41,2013-05-31,PF - Empresário,4498211198.34
+42,2013-05-31,PF - MEI,5437.54
+43,2013-05-31,PF - Outros,19883125809.5
+44,2013-05-31,PF - Servidor ou empregado público,4135751397.63
+45,2013-06-30,-,20202330126.82
+46,2013-06-30,PF - Aposentado/pensionista,1515919779.31
+47,2013-06-30,PF - Autônomo,2802344051.14
+48,2013-06-30,PF - Empregado de empresa privada,3537765307.11
+49,2013-06-30,PF - Empregado de entidades sem fins lucrativos,28748759.11
+50,2013-06-30,PF - Empresário,4373817113.33
+51,2013-06-30,PF - MEI,6207.9
+52,2013-06-30,PF - Outros,20011007165.38
+53,2013-06-30,PF - Servidor ou empregado público,4265048676.65
+54,2013-07-31,-,20793790126.33
+55,2013-07-31,PF - Aposentado/pensionista,1518526087.91
+56,2013-07-31,PF - Autônomo,2827156523.96
+57,2013-07-31,PF - Empregado de empresa privada,3507745223.68
+58,2013-07-31,PF - Empregado de entidades sem fins lucrativos,28095880.75
+59,2013-07-31,PF - Empresário,4400908351.57
+60,2013-07-31,PF - MEI,5933.76
+61,2013-07-31,PF - Outros,20233755815.69
+62,2013-07-31,PF - Servidor ou empregado público,4223865114.58
+63,2013-08-31,-,20395317397.89
+64,2013-08-31,PF - Aposentado/pensionista,1525449369.92
+65,2013-08-31,PF - Autônomo,2776079925.11
+66,2013-08-31,PF - Empregado de empresa privada,3459685370.7
+67,2013-08-31,PF - Empregado de entidades sem fins lucrativos,28432112.99
+68,2013-08-31,PF - Empresário,4329260256.44
+69,2013-08-31,PF - MEI,3919.79
+70,2013-08-31,PF - Outros,20161038825.75
+71,2013-08-31,PF - Servidor ou empregado público,4239362492.9
+72,2013-09-30,-,20129592517.68
+73,2013-09-30,PF - Aposentado/pensionista,1528824624.08
+74,2013-09-30,PF - Autônomo,2770544615.42
+75,2013-09-30,PF - Empregado de empresa privada,3461065563.92
+76,2013-09-30,PF - Empregado de entidades sem fins lucrativos,29007055.05
+77,2013-09-30,PF - Empresário,4295501090.5
+78,2013-09-30,PF - MEI,4664.66
+79,2013-09-30,PF - Outros,20558348309.63
+80,2013-09-30,PF - Servidor ou empregado público,4486896835.78
+81,2013-10-31,-,21605496260.63
+82,2013-10-31,PF - Aposentado/pensionista,1524902839.45
+83,2013-10-31,PF - Autônomo,2745315628.75
+84,2013-10-31,PF - Empregado de empresa privada,3439859741.53
+85,2013-10-31,PF - Empregado de entidades sem fins lucrativos,28007322.25
+86,2013-10-31,PF - Empresário,4236302317.53
+87,2013-10-31,PF - MEI,3832.66
+88,2013-10-31,PF - Outros,20505391104.72
+89,2013-10-31,PF - Servidor ou empregado público,4192600529.05
+90,2013-11-30,-,20220047076.98
+91,2013-11-30,PF - Aposentado/pensionista,1534276344.35
+92,2013-11-30,PF - Autônomo,2721716668.15
+93,2013-11-30,PF - Empregado de empresa privada,3405194845.02
+94,2013-11-30,PF - Empregado de entidades sem fins lucrativos,26982778.16
+95,2013-11-30,PF - Empresário,4205341059.14
+96,2013-11-30,PF - MEI,4929.95
+97,2013-11-30,PF - Outros,20437108979.19
+98,2013-11-30,PF - Servidor ou empregado público,4205149371.0
+99,2013-12-31,-,20796923715.76
+100,2013-12-31,PF - Aposentado/pensionista,1538543236.68
+101,2013-12-31,PF - Autônomo,2754360638.63
+102,2013-12-31,PF - Empregado de empresa privada,3356877592.89
+103,2013-12-31,PF - Empregado de entidades sem fins lucrativos,27430839.91
+104,2013-12-31,PF - Empresário,4225969425.73
+105,2013-12-31,PF - MEI,12919.75
+106,2013-12-31,PF - Outros,20844150662.84
+107,2013-12-31,PF - Servidor ou empregado público,4467406587.69
+108,2014-01-31,-,21371070340.93
+109,2014-01-31,PF - Aposentado/pensionista,1610034308.43
+110,2014-01-31,PF - Autônomo,2761636557.28
+111,2014-01-31,PF - Empregado de empresa privada,3412496207.42
+112,2014-01-31,PF - Empregado de entidades sem fins lucrativos,28444764.72
+113,2014-01-31,PF - Empresário,4230668304.06
+114,2014-01-31,PF - MEI,6140.5
+115,2014-01-31,PF - Outros,21243715334.14
+116,2014-01-31,PF - Servidor ou empregado público,4687648721.93
+117,2014-02-28,-,21716126902.99
+118,2014-02-28,PF - Aposentado/pensionista,1630430023.69
+119,2014-02-28,PF - Autônomo,2731433287.39
+120,2014-02-28,PF - Empregado de empresa privada,3466373423.99
+121,2014-02-28,PF - Empregado de entidades sem fins lucrativos,28210209.43
+122,2014-02-28,PF - Empresário,4136995519.67
+123,2014-02-28,PF - MEI,8057.47
+124,2014-02-28,PF - Outros,21350591294.13
+125,2014-02-28,PF - Servidor ou empregado público,4723043849.5
+126,2014-03-31,-,20218593359.92
+127,2014-03-31,PF - Aposentado/pensionista,1354051294.0
+128,2014-03-31,PF - Autônomo,2658637227.97
+129,2014-03-31,PF - Empregado de empresa privada,3295985664.03
+130,2014-03-31,PF - Empregado de entidades sem fins lucrativos,25276904.63
+131,2014-03-31,PF - Empresário,4093606942.83
+132,2014-03-31,PF - MEI,8217.06
+133,2014-03-31,PF - Outros,19503936370.37
+134,2014-03-31,PF - Servidor ou empregado público,3190388441.44
+135,2014-04-30,-,21004679622.87
+136,2014-04-30,PF - Aposentado/pensionista,1405286364.89
+137,2014-04-30,PF - Autônomo,2700270940.63
+138,2014-04-30,PF - Empregado de empresa privada,3385213482.77
+139,2014-04-30,PF - Empregado de entidades sem fins lucrativos,25056033.16
+140,2014-04-30,PF - Empresário,4098876244.69
+141,2014-04-30,PF - MEI,5133.24
+142,2014-04-30,PF - Outros,20056836349.85
+143,2014-04-30,PF - Servidor ou empregado público,3301901196.26
+144,2014-05-31,-,21639452398.33
+145,2014-05-31,PF - Aposentado/pensionista,1396864584.7
+146,2014-05-31,PF - Autônomo,2696404429.98
+147,2014-05-31,PF - Empregado de empresa privada,3432842650.27
+148,2014-05-31,PF - Empregado de entidades sem fins lucrativos,25164980.69
+149,2014-05-31,PF - Empresário,4149176884.45
+150,2014-05-31,PF - MEI,2696.92
+151,2014-05-31,PF - Outros,20361254666.74
+152,2014-05-31,PF - Servidor ou empregado público,3295013781.11
+153,2014-06-30,-,20783601243.05
+154,2014-06-30,PF - Aposentado/pensionista,1377657560.58
+155,2014-06-30,PF - Autônomo,2723967189.81
+156,2014-06-30,PF - Empregado de empresa privada,3498635314.61
+157,2014-06-30,PF - Empregado de entidades sem fins lucrativos,25800970.68
+158,2014-06-30,PF - Empresário,4180063720.88
+159,2014-06-30,PF - MEI,4066.6
+160,2014-06-30,PF - Outros,20649845372.82
+161,2014-06-30,PF - Servidor ou empregado público,3250325536.94
+162,2014-07-31,-,21798125268.8
+163,2014-07-31,PF - Aposentado/pensionista,1349920140.74
+164,2014-07-31,PF - Autônomo,2733538094.8
+165,2014-07-31,PF - Empregado de empresa privada,3486933480.8
+166,2014-07-31,PF - Empregado de entidades sem fins lucrativos,25869715.92
+167,2014-07-31,PF - Empresário,4210453288.12
+168,2014-07-31,PF - MEI,4316.83
+169,2014-07-31,PF - Outros,20838695700.89
+170,2014-07-31,PF - Servidor ou empregado público,3204034339.96
+171,2014-08-31,-,23125910010.84
+172,2014-08-31,PF - Aposentado/pensionista,1378453402.72
+173,2014-08-31,PF - Autônomo,2764757026.91
+174,2014-08-31,PF - Empregado de empresa privada,3507405563.59
+175,2014-08-31,PF - Empregado de entidades sem fins lucrativos,25723775.46
+176,2014-08-31,PF - Empresário,4288542266.52
+177,2014-08-31,PF - MEI,5090.89
+178,2014-08-31,PF - Outros,21170423521.33
+179,2014-08-31,PF - Servidor ou empregado público,3243622981.55
+180,2014-09-30,-,22641105717.43
+181,2014-09-30,PF - Aposentado/pensionista,1363595350.62
+182,2014-09-30,PF - Autônomo,2716437623.46
+183,2014-09-30,PF - Empregado de empresa privada,3461546424.41
+184,2014-09-30,PF - Empregado de entidades sem fins lucrativos,24916940.41
+185,2014-09-30,PF - Empresário,4210604200.4
+186,2014-09-30,PF - MEI,7416.25
+187,2014-09-30,PF - Outros,20726681534.91
+188,2014-09-30,PF - Servidor ou empregado público,3216260444.24
+189,2014-10-31,-,22679621474.46
+190,2014-10-31,PF - Aposentado/pensionista,1343767020.03
+191,2014-10-31,PF - Autônomo,2747591400.93
+192,2014-10-31,PF - Empregado de empresa privada,3513856258.73
+193,2014-10-31,PF - Empregado de entidades sem fins lucrativos,25688174.06
+194,2014-10-31,PF - Empresário,4277265985.53
+195,2014-10-31,PF - MEI,3037.99
+196,2014-10-31,PF - Outros,20939031992.03
+197,2014-10-31,PF - Servidor ou empregado público,3156985672.43
+198,2014-11-30,-,22900296947.12
+199,2014-11-30,PF - Aposentado/pensionista,1350686608.12
+200,2014-11-30,PF - Autônomo,2749067092.46
+201,2014-11-30,PF - Empregado de empresa privada,3530978826.89
+202,2014-11-30,PF - Empregado de entidades sem fins lucrativos,25537972.35
+203,2014-11-30,PF - Empresário,4351523208.1
+204,2014-11-30,PF - MEI,4206.29
+205,2014-11-30,PF - Outros,21118331819.33
+206,2014-11-30,PF - Servidor ou empregado público,3219805807.66
+207,2014-12-31,-,24611261333.16
+208,2014-12-31,PF - Aposentado/pensionista,1307441747.53
+209,2014-12-31,PF - Autônomo,2704467910.12
+210,2014-12-31,PF - Empregado de empresa privada,3385808078.14
+211,2014-12-31,PF - Empregado de entidades sem fins lucrativos,24719929.53
+212,2014-12-31,PF - Empresário,4235954063.8
+213,2014-12-31,PF - MEI,4353.67
+214,2014-12-31,PF - Outros,20491339325.83
+215,2014-12-31,PF - Servidor ou empregado público,3086301091.09
+216,2015-01-31,-,25495675807.24
+217,2015-01-31,PF - Aposentado/pensionista,1350566067.46
+218,2015-01-31,PF - Autônomo,2786339506.42
+219,2015-01-31,PF - Empregado de empresa privada,3506178770.31
+220,2015-01-31,PF - Empregado de entidades sem fins lucrativos,25967175.6
+221,2015-01-31,PF - Empresário,4404026301.68
+222,2015-01-31,PF - MEI,4623.9400000000005
+223,2015-01-31,PF - Outros,21156552570.21
+224,2015-01-31,PF - Servidor ou empregado público,3217519789.31
+225,2015-02-28,-,26722029927.34
+226,2015-02-28,PF - Aposentado/pensionista,1368829353.3
+227,2015-02-28,PF - Autônomo,2825930264.33
+228,2015-02-28,PF - Empregado de empresa privada,3555595144.63
+229,2015-02-28,PF - Empregado de entidades sem fins lucrativos,27573211.39
+230,2015-02-28,PF - Empresário,4543270579.25
+231,2015-02-28,PF - MEI,5707.06
+232,2015-02-28,PF - Outros,21411633559.27
+233,2015-02-28,PF - Servidor ou empregado público,3274206859.34
+234,2015-03-31,-,28370537830.96
+235,2015-03-31,PF - Aposentado/pensionista,1356251487.83
+236,2015-03-31,PF - Autônomo,2822926034.73
+237,2015-03-31,PF - Empregado de empresa privada,3569457709.72
+238,2015-03-31,PF - Empregado de entidades sem fins lucrativos,27082126.48
+239,2015-03-31,PF - Empresário,4505832007.1
+240,2015-03-31,PF - MEI,5927.48
+241,2015-03-31,PF - Outros,21445553160.81
+242,2015-03-31,PF - Servidor ou empregado público,3227961950.23
+243,2015-04-30,-,28594741394.76
+244,2015-04-30,PF - Aposentado/pensionista,1363955950.92
+245,2015-04-30,PF - Autônomo,2884848419.62
+246,2015-04-30,PF - Empregado de empresa privada,3639646087.19
+247,2015-04-30,PF - Empregado de entidades sem fins lucrativos,27553672.56
+248,2015-04-30,PF - Empresário,4720876108.67
+249,2015-04-30,PF - MEI,6390.05
+250,2015-04-30,PF - Outros,21898487774.41
+251,2015-04-30,PF - Servidor ou empregado público,3262547381.5
+252,2015-05-31,-,28438016179.59
+253,2015-05-31,PF - Aposentado/pensionista,1404742258.83
+254,2015-05-31,PF - Autônomo,3027114232.38
+255,2015-05-31,PF - Empregado de empresa privada,3783806700.91
+256,2015-05-31,PF - Empregado de entidades sem fins lucrativos,29657947.98
+257,2015-05-31,PF - Empresário,4887666990.96
+258,2015-05-31,PF - MEI,2164.63
+259,2015-05-31,PF - Outros,22571437046.39
+260,2015-05-31,PF - Servidor ou empregado público,3392575156.06
+261,2015-06-30,-,29298345309.69
+262,2015-06-30,PF - Aposentado/pensionista,1400169187.97
+263,2015-06-30,PF - Autônomo,3035017769.29
+264,2015-06-30,PF - Empregado de empresa privada,3828974507.97
+265,2015-06-30,PF - Empregado de entidades sem fins lucrativos,29224162.44
+266,2015-06-30,PF - Empresário,4990175165.72
+267,2015-06-30,PF - MEI,760.26
+268,2015-06-30,PF - Outros,22463336511.64
+269,2015-06-30,PF - Servidor ou empregado público,3379105073.67
+270,2015-07-31,-,29959260143.25
+271,2015-07-31,PF - Aposentado/pensionista,1404154832.59
+272,2015-07-31,PF - Autônomo,3121465558.05
+273,2015-07-31,PF - Empregado de empresa privada,3910430804.68
+274,2015-07-31,PF - Empregado de entidades sem fins lucrativos,29546065.09
+275,2015-07-31,PF - Empresário,5186902839.14
+276,2015-07-31,PF - MEI,763.47
+277,2015-07-31,PF - Outros,23034484628.98
+278,2015-07-31,PF - Servidor ou empregado público,3396117681.08
+279,2015-08-31,-,31316737255.17
+280,2015-08-31,PF - Aposentado/pensionista,1445016869.05
+281,2015-08-31,PF - Autônomo,3274032701.58
+282,2015-08-31,PF - Empregado de empresa privada,4040601371.32
+283,2015-08-31,PF - Empregado de entidades sem fins lucrativos,30585511.56
+284,2015-08-31,PF - Empresário,5487558719.97
+285,2015-08-31,PF - MEI,342.53000000000003
+286,2015-08-31,PF - Outros,23848664433.43
+287,2015-08-31,PF - Servidor ou empregado público,3532498523.68
+288,2015-09-30,-,30454168985.17
+289,2015-09-30,PF - Aposentado/pensionista,1478709415.89
+290,2015-09-30,PF - Autônomo,3301466297.48
+291,2015-09-30,PF - Empregado de empresa privada,4132512985.25
+292,2015-09-30,PF - Empregado de entidades sem fins lucrativos,30403568.14
+293,2015-09-30,PF - Empresário,5595773811.96
+294,2015-09-30,PF - MEI,249.18
+295,2015-09-30,PF - Outros,24332159382.35
+296,2015-09-30,PF - Servidor ou empregado público,3599970609.77
+297,2015-10-31,-,30773477340.58
+298,2015-10-31,PF - Aposentado/pensionista,1497930549.51
+299,2015-10-31,PF - Autônomo,3390654874.0
+300,2015-10-31,PF - Empregado de empresa privada,4251426536.37
+301,2015-10-31,PF - Empregado de entidades sem fins lucrativos,32616795.98
+302,2015-10-31,PF - Empresário,5996688641.85
+303,2015-10-31,PF - MEI,250.24
+304,2015-10-31,PF - Outros,25054834281.2
+305,2015-10-31,PF - Servidor ou empregado público,3780529914.56
+306,2015-11-30,-,31280679330.23
+307,2015-11-30,PF - Aposentado/pensionista,1497794699.71
+308,2015-11-30,PF - Autônomo,3469861699.85
+309,2015-11-30,PF - Empregado de empresa privada,4408481742.14
+310,2015-11-30,PF - Empregado de entidades sem fins lucrativos,33214772.7
+311,2015-11-30,PF - Empresário,6110171778.82
+312,2015-11-30,PF - MEI,249.18
+313,2015-11-30,PF - Outros,25973249530.53
+314,2015-11-30,PF - Servidor ou empregado público,3804663525.23
+315,2015-12-31,-,31044942990.3
+316,2015-12-31,PF - Aposentado/pensionista,1497659491.55
+317,2015-12-31,PF - Autônomo,3467583286.14
+318,2015-12-31,PF - Empregado de empresa privada,4335826387.04
+319,2015-12-31,PF - Empregado de entidades sem fins lucrativos,32704300.17
+320,2015-12-31,PF - Empresário,5973786495.49
+321,2015-12-31,PF - MEI,250.24
+322,2015-12-31,PF - Outros,25945267588.63
+323,2015-12-31,PF - Servidor ou empregado público,3793978914.31
+324,2016-01-31,-,34418994569.32
+325,2016-01-31,PF - Aposentado/pensionista,2059810561.68
+326,2016-01-31,PF - Autônomo,1999418879.27
+327,2016-01-31,PF - Empregado de empresa privada,4170760040.94
+328,2016-01-31,PF - Empregado de entidades sem fins lucrativos,17557893.669999998
+329,2016-01-31,PF - Empresário,4910077566.42
+330,2016-01-31,PF - MEI,214334137.43
+331,2016-01-31,PF - Outros,28513114894.51
+332,2016-01-31,PF - Servidor ou empregado público,4125093828.14
+333,2016-02-29,-,35706997280.03
+334,2016-02-29,PF - Aposentado/pensionista,2047212787.97
+335,2016-02-29,PF - Autônomo,2013564193.08
+336,2016-02-29,PF - Empregado de empresa privada,4248524450.17
+337,2016-02-29,PF - Empregado de entidades sem fins lucrativos,18211772.96
+338,2016-02-29,PF - Empresário,5008637772.79
+339,2016-02-29,PF - MEI,219067590.77
+340,2016-02-29,PF - Outros,28497682903.87
+341,2016-02-29,PF - Servidor ou empregado público,4055375170.47
+342,2016-03-31,-,37295146113.26
+343,2016-03-31,PF - Aposentado/pensionista,2072765652.7
+344,2016-03-31,PF - Autônomo,2027079596.39
+345,2016-03-31,PF - Empregado de empresa privada,4253785389.15
+346,2016-03-31,PF - Empregado de entidades sem fins lucrativos,18654073.55
+347,2016-03-31,PF - Empresário,4996638448.16
+348,2016-03-31,PF - MEI,221875731.73
+349,2016-03-31,PF - Outros,28309312740.0
+350,2016-03-31,PF - Servidor ou empregado público,4117214239.11
+351,2016-04-30,-,38480203299.36
+352,2016-04-30,PF - Aposentado/pensionista,2119635272.13
+353,2016-04-30,PF - Autônomo,2076431366.88
+354,2016-04-30,PF - Empregado de empresa privada,4382867450.54
+355,2016-04-30,PF - Empregado de entidades sem fins lucrativos,18711023.82
+356,2016-04-30,PF - Empresário,5196925051.75
+357,2016-04-30,PF - MEI,228498652.39
+358,2016-04-30,PF - Outros,28945379451.35
+359,2016-04-30,PF - Servidor ou empregado público,4238369572.86
+360,2016-05-31,-,39423827920.62
+361,2016-05-31,PF - Aposentado/pensionista,2109995307.6
+362,2016-05-31,PF - Autônomo,2105661759.1
+363,2016-05-31,PF - Empregado de empresa privada,4370485456.98
+364,2016-05-31,PF - Empregado de entidades sem fins lucrativos,18857430.19
+365,2016-05-31,PF - Empresário,5343718779.06
+366,2016-05-31,PF - MEI,228660096.02
+367,2016-05-31,PF - Outros,28804212869.51
+368,2016-05-31,PF - Servidor ou empregado público,4261829778.07
+369,2016-06-30,-,39689350304.02
+370,2016-06-30,PF - Aposentado/pensionista,2102019956.85
+371,2016-06-30,PF - Autônomo,2089831647.39
+372,2016-06-30,PF - Empregado de empresa privada,4402923310.45
+373,2016-06-30,PF - Empregado de entidades sem fins lucrativos,18521745.71
+374,2016-06-30,PF - Empresário,5060718848.91
+375,2016-06-30,PF - MEI,236513543.45
+376,2016-06-30,PF - Outros,31059062489.01
+377,2016-06-30,PF - Servidor ou empregado público,4197584740.15
+378,2016-07-31,-,37964332967.21
+379,2016-07-31,PF - Aposentado/pensionista,2100350420.76
+380,2016-07-31,PF - Autônomo,2203973658.09
+381,2016-07-31,PF - Empregado de empresa privada,4429206727.28
+382,2016-07-31,PF - Empregado de entidades sem fins lucrativos,18897392.54
+383,2016-07-31,PF - Empresário,5451670146.32
+384,2016-07-31,PF - MEI,238739194.7
+385,2016-07-31,PF - Outros,31161495829.2
+386,2016-07-31,PF - Servidor ou empregado público,4241198280.08
+387,2016-08-31,-,39219157808.37
+388,2016-08-31,PF - Aposentado/pensionista,2173719776.91
+389,2016-08-31,PF - Autônomo,2212281601.22
+390,2016-08-31,PF - Empregado de empresa privada,4387128527.97
+391,2016-08-31,PF - Empregado de entidades sem fins lucrativos,19401398.24
+392,2016-08-31,PF - Empresário,5279669407.24
+393,2016-08-31,PF - MEI,235211921.58
+394,2016-08-31,PF - Outros,30748932779.05
+395,2016-08-31,PF - Servidor ou empregado público,4378514103.4
+396,2016-09-30,-,36804978213.43
+397,2016-09-30,PF - Aposentado/pensionista,2239111263.22
+398,2016-09-30,PF - Autônomo,2246597398.11
+399,2016-09-30,PF - Empregado de empresa privada,4394037604.84
+400,2016-09-30,PF - Empregado de entidades sem fins lucrativos,19787949.94
+401,2016-09-30,PF - Empresário,5321789373.27
+402,2016-09-30,PF - MEI,236344331.01
+403,2016-09-30,PF - Outros,30846868371.38
+404,2016-09-30,PF - Servidor ou empregado público,4530349272.92
+405,2016-10-31,-,36856857272.51
+406,2016-10-31,PF - Aposentado/pensionista,2182617050.68
+407,2016-10-31,PF - Autônomo,2223695835.1
+408,2016-10-31,PF - Empregado de empresa privada,4378264787.83
+409,2016-10-31,PF - Empregado de entidades sem fins lucrativos,19424711.84
+410,2016-10-31,PF - Empresário,5347739920.71
+411,2016-10-31,PF - MEI,232868332.89
+412,2016-10-31,PF - Outros,30246475949.67
+413,2016-10-31,PF - Servidor ou empregado público,4597271274.53
+414,2016-11-30,-,34405635801.2
+415,2016-11-30,PF - Aposentado/pensionista,2185997873.36
+416,2016-11-30,PF - Autônomo,2250506048.62
+417,2016-11-30,PF - Empregado de empresa privada,4292995342.8
+418,2016-11-30,PF - Empregado de entidades sem fins lucrativos,18935598.86
+419,2016-11-30,PF - Empresário,5439552180.04
+420,2016-11-30,PF - MEI,230262175.3
+421,2016-11-30,PF - Outros,29601202321.42
+422,2016-11-30,PF - Servidor ou empregado público,4599936712.79
+423,2016-12-31,-,35878513457.18
+424,2016-12-31,PF - Aposentado/pensionista,2083357953.47
+425,2016-12-31,PF - Autônomo,2191654267.22
+426,2016-12-31,PF - Empregado de empresa privada,4012245146.41
+427,2016-12-31,PF - Empregado de entidades sem fins lucrativos,17523820.49
+428,2016-12-31,PF - Empresário,5143635845.96
+429,2016-12-31,PF - MEI,224403771.49
+430,2016-12-31,PF - Outros,28874257104.34
+431,2016-12-31,PF - Servidor ou empregado público,4226144134.67
+432,2017-01-31,-,38985910852.8
+433,2017-01-31,PF - Aposentado/pensionista,3485375679.67
+434,2017-01-31,PF - Autônomo,4490183704.15
+435,2017-01-31,PF - Empregado de empresa privada,7241976101.72
+436,2017-01-31,PF - Empregado de entidades sem fins lucrativos,53753325.04
+437,2017-01-31,PF - Empresário,7677794041.21
+438,2017-01-31,PF - MEI,515559140.07
+439,2017-01-31,PF - Outros,18576217605.6
+440,2017-01-31,PF - Servidor ou empregado público,5468475375.71
+441,2017-02-28,-,39798079123.41
+442,2017-02-28,PF - Aposentado/pensionista,3392372740.83
+443,2017-02-28,PF - Autônomo,4434135154.06
+444,2017-02-28,PF - Empregado de empresa privada,7127411194.1
+445,2017-02-28,PF - Empregado de entidades sem fins lucrativos,52595859.38
+446,2017-02-28,PF - Empresário,7591145020.93
+447,2017-02-28,PF - MEI,504444119.68
+448,2017-02-28,PF - Outros,18233598837.74
+449,2017-02-28,PF - Servidor ou empregado público,5258749628.07
+450,2017-03-31,-,38503976572.26
+451,2017-03-31,PF - Aposentado/pensionista,3454343631.64
+452,2017-03-31,PF - Autônomo,4463204766.2
+453,2017-03-31,PF - Empregado de empresa privada,7197939000.52
+454,2017-03-31,PF - Empregado de entidades sem fins lucrativos,53834685.29
+455,2017-03-31,PF - Empresário,7591829243.29
+456,2017-03-31,PF - MEI,506405313.26
+457,2017-03-31,PF - Outros,18349503023.26
+458,2017-03-31,PF - Servidor ou empregado público,5320225972.39
+459,2017-04-30,-,36132575534.11
+460,2017-04-30,PF - Aposentado/pensionista,3546005392.77
+461,2017-04-30,PF - Autônomo,4470443284.46
+462,2017-04-30,PF - Empregado de empresa privada,7163619541.25
+463,2017-04-30,PF - Empregado de entidades sem fins lucrativos,55114007.32
+464,2017-04-30,PF - Empresário,7644108529.519999
+465,2017-04-30,PF - MEI,505130375.04
+466,2017-04-30,PF - Outros,18323805353.17
+467,2017-04-30,PF - Servidor ou empregado público,5491160825.96
+468,2017-05-31,-,38783310857.0
+469,2017-05-31,PF - Aposentado/pensionista,3498866496.47
+470,2017-05-31,PF - Autônomo,4388344477.32
+471,2017-05-31,PF - Empregado de empresa privada,7083803118.85
+472,2017-05-31,PF - Empregado de entidades sem fins lucrativos,54715991.28
+473,2017-05-31,PF - Empresário,8028829309.49
+474,2017-05-31,PF - MEI,496396949.59
+475,2017-05-31,PF - Outros,18190681775.93
+476,2017-05-31,PF - Servidor ou empregado público,5417028117.31
+477,2017-06-30,-,32604679153.62
+478,2017-06-30,PF - Aposentado/pensionista,3365991484.09
+479,2017-06-30,PF - Autônomo,4094620880.11
+480,2017-06-30,PF - Empregado de empresa privada,6833430512.97
+481,2017-06-30,PF - Empregado de entidades sem fins lucrativos,52252658.66
+482,2017-06-30,PF - Empresário,7604367414.44
+483,2017-06-30,PF - MEI,474704728.39
+484,2017-06-30,PF - Outros,17522636323.18
+485,2017-06-30,PF - Servidor ou empregado público,5167872071.93
+486,2017-07-31,-,32179143350.69
+487,2017-07-31,PF - Aposentado/pensionista,3398832016.1
+488,2017-07-31,PF - Autônomo,4069472881.92
+489,2017-07-31,PF - Empregado de empresa privada,6765777973.44
+490,2017-07-31,PF - Empregado de entidades sem fins lucrativos,52675580.99
+491,2017-07-31,PF - Empresário,7241588084.72
+492,2017-07-31,PF - MEI,466207017.3
+493,2017-07-31,PF - Outros,17532499536.4
+494,2017-07-31,PF - Servidor ou empregado público,5297108453.0
+495,2017-08-31,-,31568061051.6
+496,2017-08-31,PF - Aposentado/pensionista,3308664767.31
+497,2017-08-31,PF - Autônomo,4087341416.55
+498,2017-08-31,PF - Empregado de empresa privada,6689873335.22
+499,2017-08-31,PF - Empregado de entidades sem fins lucrativos,51471745.74
+500,2017-08-31,PF - Empresário,7585797397.05
+501,2017-08-31,PF - MEI,456042807.29
+502,2017-08-31,PF - Outros,17481127507.71
+503,2017-08-31,PF - Servidor ou empregado público,5213783645.39
+504,2017-09-30,-,31647962824.47
+505,2017-09-30,PF - Aposentado/pensionista,3224195244.63
+506,2017-09-30,PF - Autônomo,4001805559.54
+507,2017-09-30,PF - Empregado de empresa privada,6618370341.83
+508,2017-09-30,PF - Empregado de entidades sem fins lucrativos,51274082.09
+509,2017-09-30,PF - Empresário,7412159138.32
+510,2017-09-30,PF - MEI,448047169.99
+511,2017-09-30,PF - Outros,17178001665.76
+512,2017-09-30,PF - Servidor ou empregado público,5046530045.17
+513,2017-10-31,-,31182613516.89
+514,2017-10-31,PF - Aposentado/pensionista,3271308340.38
+515,2017-10-31,PF - Autônomo,3976263377.33
+516,2017-10-31,PF - Empregado de empresa privada,6631234217.51
+517,2017-10-31,PF - Empregado de entidades sem fins lucrativos,51087314.49
+518,2017-10-31,PF - Empresário,7159551306.5
+519,2017-10-31,PF - MEI,446774439.19
+520,2017-10-31,PF - Outros,17359474647.5
+521,2017-10-31,PF - Servidor ou empregado público,5214864018.48
+522,2017-11-30,-,31761266902.31
+523,2017-11-30,PF - Aposentado/pensionista,3271385520.49
+524,2017-11-30,PF - Autônomo,3939773899.04
+525,2017-11-30,PF - Empregado de empresa privada,6626439732.07
+526,2017-11-30,PF - Empregado de entidades sem fins lucrativos,51076635.45
+527,2017-11-30,PF - Empresário,7177634800.71
+528,2017-11-30,PF - MEI,445631868.83
+529,2017-11-30,PF - Outros,17416675308.5
+530,2017-11-30,PF - Servidor ou empregado público,5248648893.99
+531,2017-12-31,-,29691465602.13
+532,2017-12-31,PF - Aposentado/pensionista,3204448997.69
+533,2017-12-31,PF - Autônomo,3809257451.54
+534,2017-12-31,PF - Empregado de empresa privada,6376406903.95
+535,2017-12-31,PF - Empregado de entidades sem fins lucrativos,49175092.1
+536,2017-12-31,PF - Empresário,6894484907.35
+537,2017-12-31,PF - MEI,438662965.62
+538,2017-12-31,PF - Outros,17116918885.86
+539,2017-12-31,PF - Servidor ou empregado público,5094354901.26
+540,2018-01-31,-,30668068081.75
+541,2018-01-31,PF - Aposentado/pensionista,4139131437.3
+542,2018-01-31,PF - Autônomo,3791116828.69
+543,2018-01-31,PF - Empregado de empresa privada,6911821975.49
+544,2018-01-31,PF - Empregado de entidades sem fins lucrativos,47497246.44
+545,2018-01-31,PF - Empresário,6821447759.79
+546,2018-01-31,PF - MEI,667643975.12
+547,2018-01-31,PF - Outros,16292438571.6
+548,2018-01-31,PF - Servidor ou empregado público,5732598378.85
+549,2018-02-28,-,30115367200.6
+550,2018-02-28,PF - Aposentado/pensionista,4066466295.02
+551,2018-02-28,PF - Autônomo,3689687888.57
+552,2018-02-28,PF - Empregado de empresa privada,6851168931.13
+553,2018-02-28,PF - Empregado de entidades sem fins lucrativos,46143431.97
+554,2018-02-28,PF - Empresário,6745042430.68
+555,2018-02-28,PF - MEI,657857635.48
+556,2018-02-28,PF - Outros,16086602947.87
+557,2018-02-28,PF - Servidor ou empregado público,5354829482.99
+558,2018-03-31,-,28976914290.49
+559,2018-03-31,PF - Aposentado/pensionista,4116766289.67
+560,2018-03-31,PF - Autônomo,3704424449.93
+561,2018-03-31,PF - Empregado de empresa privada,7002897196.64
+562,2018-03-31,PF - Empregado de entidades sem fins lucrativos,46996827.69
+563,2018-03-31,PF - Empresário,6694759652.31
+564,2018-03-31,PF - MEI,674541957.95
+565,2018-03-31,PF - Outros,16413295326.11
+566,2018-03-31,PF - Servidor ou empregado público,5524362068.56
+567,2018-04-30,-,27110367222.44
+568,2018-04-30,PF - Aposentado/pensionista,4137613162.06
+569,2018-04-30,PF - Autônomo,3639235660.39
+570,2018-04-30,PF - Empregado de empresa privada,6965396717.67
+571,2018-04-30,PF - Empregado de entidades sem fins lucrativos,46651010.03
+572,2018-04-30,PF - Empresário,6556195492.12
+573,2018-04-30,PF - MEI,669603162.16
+574,2018-04-30,PF - Outros,16487939148.64
+575,2018-04-30,PF - Servidor ou empregado público,5515747078.73
+576,2018-05-31,-,28161188898.65
+577,2018-05-31,PF - Aposentado/pensionista,4111879331.33
+578,2018-05-31,PF - Autônomo,3638277304.41
+579,2018-05-31,PF - Empregado de empresa privada,6936927419.14
+580,2018-05-31,PF - Empregado de entidades sem fins lucrativos,45568329.36
+581,2018-05-31,PF - Empresário,6497398696.33
+582,2018-05-31,PF - MEI,668321545.89
+583,2018-05-31,PF - Outros,16669719602.0
+584,2018-05-31,PF - Servidor ou empregado público,5213669509.81
+585,2018-06-30,-,27823639966.08
+586,2018-06-30,PF - Aposentado/pensionista,4074355439.99
+587,2018-06-30,PF - Autônomo,3663107666.83
+588,2018-06-30,PF - Empregado de empresa privada,7047962001.03
+589,2018-06-30,PF - Empregado de entidades sem fins lucrativos,47831707.23
+590,2018-06-30,PF - Empresário,6490102293.23
+591,2018-06-30,PF - MEI,678524975.41
+592,2018-06-30,PF - Outros,16842681433.49
+593,2018-06-30,PF - Servidor ou empregado público,5222880342.14
+594,2018-07-31,-,25173916635.93
+595,2018-07-31,PF - Aposentado/pensionista,3972204577.54
+596,2018-07-31,PF - Autônomo,3721125753.95
+597,2018-07-31,PF - Empregado de empresa privada,7066688631.36
+598,2018-07-31,PF - Empregado de entidades sem fins lucrativos,47729126.86
+599,2018-07-31,PF - Empresário,6569548152.42
+600,2018-07-31,PF - MEI,685638912.09
+601,2018-07-31,PF - Outros,17064284155.29
+602,2018-07-31,PF - Servidor ou empregado público,5037503054.56
+603,2018-08-31,-,25231328679.0
+604,2018-08-31,PF - Aposentado/pensionista,3962751221.77
+605,2018-08-31,PF - Autônomo,3722984026.32
+606,2018-08-31,PF - Empregado de empresa privada,7021060735.5
+607,2018-08-31,PF - Empregado de entidades sem fins lucrativos,47640078.45
+608,2018-08-31,PF - Empresário,6495521473.58
+609,2018-08-31,PF - MEI,681822859.82
+610,2018-08-31,PF - Outros,17141671637.58
+611,2018-08-31,PF - Servidor ou empregado público,4935427101.56
+612,2018-12-31,-,22182593305.86
+613,2018-12-31,PF - Aposentado/pensionista,3733770942.93
+614,2018-12-31,PF - Autônomo,3588607296.42
+615,2018-12-31,PF - Empregado de empresa privada,6930235389.29
+616,2018-12-31,PF - Empregado de entidades sem fins lucrativos,48595360.18
+617,2018-12-31,PF - Empresário,6206319722.34
+618,2018-12-31,PF - MEI,624520180.62
+619,2018-12-31,PF - Outros,17881177567.95
+620,2018-12-31,PF - Servidor ou empregado público,4856203716.14
