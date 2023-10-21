@@ -13,7 +13,7 @@ Para isso,serão realizados os seguintes procedimentos:
 3. Análise das principais áreas tecnológicas dessas patentes.
 4. Análise das instituições e empresas parceiras dessas patentes.
 
-##INTEGRANTES
+## INTEGRANTES
 
 * Adriana Cristina Souza Leite
 * Alessandra Aparecida da Silva Menezes 
