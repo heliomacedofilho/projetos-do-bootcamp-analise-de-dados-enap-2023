@@ -6,7 +6,7 @@
 # ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge) ![Badge Outubro/2023](http://img.shields.io/static/v1?label=DATA&message=Outubro/2023&color=blue&style=for-the-badge)
 
 # :scroll: [Descrição do Projeto](#descrição_do_projeto)
-O apresentação do projeto **Presença das Políticas Públicas Sociais (PPS) nos municípios brasileiros** é a etapa final para conclusão do curso Bootcamp em Análise de Dados (turma exclusiva para mulheres) – 2023 ofertado pela Escola Nacional de Administração Pública - Enap.
+O projeto **Presença das Políticas Públicas Sociais (PPS) nos municípios brasileiros** é a etapa final para conclusão do curso Bootcamp em Análise de Dados (turma exclusiva para mulheres) – 2023, ofertado pela Escola Nacional de Administração Pública - Enap.
 
 # :checkered_flag: [Objetivos do projeto](#objetivos_do_projeto)
   
@@ -22,10 +22,10 @@ O apresentação do projeto **Presença das Políticas Públicas Sociais (PPS) n
 
 # :date: [Conjuntos de dados utilizados](#conjuntos_de_dados_utilizados)
 
-- `Cadastro Único`: Cadastro Único - Famílias/Pessoas por faixas de renda per capita - MI Social
-- `Programa Bolsa Família`: Bolsa Família – MI Social
-- `Benefício de Prestação Continuada`: Dados Despesas – Transferências – Programas Sociais – BPC
-- `Registro Mensal Atendimento do CRAS`: RMA 2022 CRAS
+- `Cadastro Único`: [Cadastro Único - Famílias/Pessoas por faixas de renda per capita - MI Social](https://img.shields.io/github/stars/camilafernanda?style=social](https://dados.gov.br/dados/conjuntos-dados/cadastro-unico---familiaspessoas-por-faixas-de-renda-per-capita---mi-social))
+- `Programa Bolsa Família`: [Bolsa Família – MI Social](https://dados.gov.br/dados/conjuntos-dados/bolsa-familia---mi-social)
+- `Benefício de Prestação Continuada`: [Dados Despesas – Transferências – Programas Sociais – BPC](https://portaldatransparencia.gov.br/download-de-dados/bpc)
+- `Registro Mensal Atendimento do CRAS`: [RMA 2022 CRAS](https://aplicacoes.mds.gov.br/snas/vigilancia/index2.php)
 - `Índice de Gestão Descentralizada`:  IGD-E PBF – Taxas
 - `Fundo de Participação do Município (FPM)`: FPM por município
 - `Produto Interno Bruto Municipal`: PIB por Unidade da Federação 2020
