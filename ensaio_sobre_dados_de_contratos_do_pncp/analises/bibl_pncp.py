@@ -73,7 +73,8 @@ def une_csv():
     df_final.to_csv(f"dadosPNCP_completo.csv", index=False)  # salvando o DataFrame como um arquivo CSV O argumento 'index=False' evita que o índice seja salvo no arquivo CSV
     #return folderpath
 
-#organiza os dados do csv compelto, pois nele havia algumas colunas com informações aninhadas (e foram separadas para melhor análise)
+#trata os dados do csv completo, pois nele havia algumas colunas com informações aninhadas (e foram separadas para melhor análise)
+# além de linhas duplicadas (291 registros iênticos) - que foram excluídos
 def trata_csv_completo():
     #lendo o arquivo CSV e carregando em um DataFrame
     df = pd.read_csv('dados/dadosPNCP_completo.csv', low_memory=False) #lowmemory = false = para corrigir o warning de tipo de dados que estava dando nas colunas abaixo
@@ -94,6 +95,7 @@ def trata_csv_completo():
     #valores_distintos = df['categoriaProcesso'].unique()
     #print(valores_distintos)
     
+    #TRATANDO COLUNAS COM VALORES ANINHADOS:
     extrair_id = lambda valor: eval(valor)['id'] if valor else None # Função para extrair 'id'
     extrair_nome = lambda valor: eval(valor)['nome'] if valor else None # Função para extrair 'nome'
     extrair_cnpj = lambda valor: eval(valor)['cnpj'] if valor else None # Função para extrair 'cnpj'
@@ -131,6 +133,9 @@ def trata_csv_completo():
     #df['categoriaProcesso_nome'][0:100]
     #df['orgaoEntidade_cnpj'][0:100]
     #df['unidadeOrgao_ufSigla'][0:100]
+
+    #EXCLUINDO REGISTROS DUPLICADOS: 291 duplicados no total de 215.402 (0,1%). Restaram 215.111 registros.
+    df = df.drop_duplicates()
     
     df.to_csv(f"dadosPNCP_completo_tratado.csv", index=False)  # salvando o DataFrame como um arquivo CSV O argumento 'index=False' evita que o índice seja salvo no arquivo CSV
     
