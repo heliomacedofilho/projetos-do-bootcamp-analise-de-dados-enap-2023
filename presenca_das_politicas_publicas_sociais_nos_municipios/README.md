@@ -45,7 +45,7 @@ O projeto **Presença das Políticas Públicas Sociais (PPS) nos municípios bra
   
   - Script da análise do Pib Municipal - Camila
   
-  - Script do Índice de avaliação da presença das PPS nos municípios brasileiros
+  - Script do Índice de avaliação da presença das PPS nos municípios brasileiros - Juliana
 
 # :angel: [Pessoas Contribuidoras](#pessoas-contribuidoras)
 
