@@ -1,0 +1,946 @@
+,data_base,modalidade,numero_de_operacoes
+0,2012-06,Cartão de crédito,176610963
+1,2012-06,Empréstimo com consignação em folha,36536654
+2,2012-06,Empréstimo sem consignação em folha,25555154
+3,2012-06,Habitacional,3114694
+4,2012-06,Outros créditos,26819530
+5,2012-06,Rural e agroindustrial,2955666
+6,2012-06,Veículos,14116376
+7,2012-07,Cartão de crédito,178288335
+8,2012-07,Empréstimo com consignação em folha,36887628
+9,2012-07,Empréstimo sem consignação em folha,25062325
+10,2012-07,Habitacional,3157382
+11,2012-07,Outros créditos,27030446
+12,2012-07,Rural e agroindustrial,2870045
+13,2012-07,Veículos,14084193
+14,2012-08,Cartão de crédito,179457907
+15,2012-08,Empréstimo com consignação em folha,37061906
+16,2012-08,Empréstimo sem consignação em folha,24912399
+17,2012-08,Habitacional,3211109
+18,2012-08,Outros créditos,27457215
+19,2012-08,Rural e agroindustrial,2905423
+20,2012-08,Veículos,14158360
+21,2012-09,Cartão de crédito,156872685
+22,2012-09,Empréstimo com consignação em folha,37027131
+23,2012-09,Empréstimo sem consignação em folha,24761851
+24,2012-09,Habitacional,3216476
+25,2012-09,Outros créditos,27043727
+26,2012-09,Rural e agroindustrial,2947036
+27,2012-09,Veículos,14112350
+28,2012-10,Cartão de crédito,110489184
+29,2012-10,Empréstimo com consignação em folha,37262697
+30,2012-10,Empréstimo sem consignação em folha,24953050
+31,2012-10,Habitacional,3257104
+32,2012-10,Outros créditos,27398028
+33,2012-10,Rural e agroindustrial,2980832
+34,2012-10,Veículos,14103387
+35,2012-11,Cartão de crédito,108724800
+36,2012-11,Empréstimo com consignação em folha,37359640
+37,2012-11,Empréstimo sem consignação em folha,24546165
+38,2012-11,Habitacional,3288622
+39,2012-11,Outros créditos,27574310
+40,2012-11,Rural e agroindustrial,3032634
+41,2012-11,Veículos,14095490
+42,2012-12,Cartão de crédito,114546178
+43,2012-12,Empréstimo com consignação em folha,37246841
+44,2012-12,Empréstimo sem consignação em folha,23049302
+45,2012-12,Habitacional,3332948
+46,2012-12,Outros créditos,26682385
+47,2012-12,Rural e agroindustrial,3089512
+48,2012-12,Veículos,14109678
+49,2013-01,Cartão de crédito,114371390
+50,2013-01,Empréstimo com consignação em folha,38066209
+51,2013-01,Empréstimo sem consignação em folha,23252228
+52,2013-01,Habitacional,3371442
+53,2013-01,Outros créditos,27818754
+54,2013-01,Rural e agroindustrial,3122948
+55,2013-01,Veículos,14063034
+56,2013-02,Cartão de crédito,112238628
+57,2013-02,Empréstimo com consignação em folha,38501200
+58,2013-02,Empréstimo sem consignação em folha,23451576
+59,2013-02,Habitacional,3406818
+60,2013-02,Outros créditos,27945505
+61,2013-02,Rural e agroindustrial,3157863
+62,2013-02,Veículos,14037000
+63,2013-03,Cartão de crédito,111633108
+64,2013-03,Empréstimo com consignação em folha,38570722
+65,2013-03,Empréstimo sem consignação em folha,23792049
+66,2013-03,Habitacional,3454232
+67,2013-03,Outros créditos,27988738
+68,2013-03,Rural e agroindustrial,3176044
+69,2013-03,Veículos,14020271
+70,2013-04,Cartão de crédito,112368607
+71,2013-04,Empréstimo com consignação em folha,38785823
+72,2013-04,Empréstimo sem consignação em folha,24132853
+73,2013-04,Habitacional,3501181
+74,2013-04,Outros créditos,29343226
+75,2013-04,Rural e agroindustrial,3193741
+76,2013-04,Veículos,13991940
+77,2013-05,Cartão de crédito,115078681
+78,2013-05,Empréstimo com consignação em folha,39071422
+79,2013-05,Empréstimo sem consignação em folha,24351769
+80,2013-05,Habitacional,3572825
+81,2013-05,Outros créditos,29530468
+82,2013-05,Rural e agroindustrial,3227174
+83,2013-05,Veículos,13955183
+84,2013-06,Cartão de crédito,114190379
+85,2013-06,Empréstimo com consignação em folha,39039502
+86,2013-06,Empréstimo sem consignação em folha,24328109
+87,2013-06,Habitacional,3630178
+88,2013-06,Outros créditos,29523805
+89,2013-06,Rural e agroindustrial,3232234
+90,2013-06,Veículos,13985322
+91,2013-07,Cartão de crédito,116761720
+92,2013-07,Empréstimo com consignação em folha,39270432
+93,2013-07,Empréstimo sem consignação em folha,24175688
+94,2013-07,Habitacional,3688792
+95,2013-07,Outros créditos,29178478
+96,2013-07,Rural e agroindustrial,3201493
+97,2013-07,Veículos,14072528
+98,2013-08,Cartão de crédito,118398602
+99,2013-08,Empréstimo com consignação em folha,39206959
+100,2013-08,Empréstimo sem consignação em folha,24281210
+101,2013-08,Habitacional,3744191
+102,2013-08,Outros créditos,29196657
+103,2013-08,Rural e agroindustrial,3233157
+104,2013-08,Veículos,13938081
+105,2013-09,Cartão de crédito,119904896
+106,2013-09,Empréstimo com consignação em folha,39141104
+107,2013-09,Empréstimo sem consignação em folha,24179778
+108,2013-09,Habitacional,3763246
+109,2013-09,Outros créditos,29660553
+110,2013-09,Rural e agroindustrial,3318258
+111,2013-09,Veículos,13934867
+112,2013-10,Cartão de crédito,120722286
+113,2013-10,Empréstimo com consignação em folha,39277177
+114,2013-10,Empréstimo sem consignação em folha,24553531
+115,2013-10,Habitacional,3800483
+116,2013-10,Outros créditos,30437640
+117,2013-10,Rural e agroindustrial,3359734
+118,2013-10,Veículos,13919914
+119,2013-11,Cartão de crédito,119734838
+120,2013-11,Empréstimo com consignação em folha,39192123
+121,2013-11,Empréstimo sem consignação em folha,25057180
+122,2013-11,Habitacional,3852402
+123,2013-11,Outros créditos,31085744
+124,2013-11,Rural e agroindustrial,3409999
+125,2013-11,Veículos,13933689
+126,2013-12,Cartão de crédito,127501338
+127,2013-12,Empréstimo com consignação em folha,39115675
+128,2013-12,Empréstimo sem consignação em folha,23165357
+129,2013-12,Habitacional,3890844
+130,2013-12,Outros créditos,31485681
+131,2013-12,Rural e agroindustrial,3462286
+132,2013-12,Veículos,13903297
+133,2014-01,Cartão de crédito,126884451
+134,2014-01,Empréstimo com consignação em folha,39622497
+135,2014-01,Empréstimo sem consignação em folha,23565785
+136,2014-01,Habitacional,3926741
+137,2014-01,Outros créditos,32400740
+138,2014-01,Rural e agroindustrial,3444182
+139,2014-01,Veículos,13962024
+140,2014-02,Cartão de crédito,125355492
+141,2014-02,Empréstimo com consignação em folha,40250454
+142,2014-02,Empréstimo sem consignação em folha,23881674
+143,2014-02,Habitacional,3969048
+144,2014-02,Outros créditos,32687707
+145,2014-02,Rural e agroindustrial,3457580
+146,2014-02,Veículos,14044984
+147,2014-03,Cartão de crédito,125490803
+148,2014-03,Empréstimo com consignação em folha,40415554
+149,2014-03,Empréstimo sem consignação em folha,24357121
+150,2014-03,Habitacional,4009160
+151,2014-03,Outros créditos,33171266
+152,2014-03,Rural e agroindustrial,3448722
+153,2014-03,Veículos,13944503
+154,2014-04,Cartão de crédito,124131705
+155,2014-04,Empréstimo com consignação em folha,40614587
+156,2014-04,Empréstimo sem consignação em folha,24835829
+157,2014-04,Habitacional,4054698
+158,2014-04,Outros créditos,33388533
+159,2014-04,Rural e agroindustrial,3493014
+160,2014-04,Veículos,13880918
+161,2014-05,Cartão de crédito,125723020
+162,2014-05,Empréstimo com consignação em folha,40928642
+163,2014-05,Empréstimo sem consignação em folha,25210766
+164,2014-05,Habitacional,4108124
+165,2014-05,Outros créditos,33592428
+166,2014-05,Rural e agroindustrial,3510958
+167,2014-05,Veículos,13795483
+168,2014-06,Cartão de crédito,127494472
+169,2014-06,Empréstimo com consignação em folha,41132837
+170,2014-06,Empréstimo sem consignação em folha,25291649
+171,2014-06,Habitacional,4166620
+172,2014-06,Outros créditos,32516518
+173,2014-06,Rural e agroindustrial,3504977
+174,2014-06,Veículos,13702283
+175,2014-07,Cartão de crédito,127157657
+176,2014-07,Empréstimo com consignação em folha,41653297
+177,2014-07,Empréstimo sem consignação em folha,25124333
+178,2014-07,Habitacional,4217689
+179,2014-07,Outros créditos,32118421
+180,2014-07,Rural e agroindustrial,3453068
+181,2014-07,Veículos,13597362
+182,2014-08,Cartão de crédito,120526833
+183,2014-08,Empréstimo com consignação em folha,41651247
+184,2014-08,Empréstimo sem consignação em folha,25190739
+185,2014-08,Habitacional,4274588
+186,2014-08,Outros créditos,32234796
+187,2014-08,Rural e agroindustrial,3469501
+188,2014-08,Veículos,13526297
+189,2014-09,Cartão de crédito,121669408
+190,2014-09,Empréstimo com consignação em folha,41677550
+191,2014-09,Empréstimo sem consignação em folha,25017908
+192,2014-09,Habitacional,4298975
+193,2014-09,Outros créditos,31571643
+194,2014-09,Rural e agroindustrial,3503354
+195,2014-09,Veículos,13440702
+196,2014-10,Cartão de crédito,122512006
+197,2014-10,Empréstimo com consignação em folha,42093675
+198,2014-10,Empréstimo sem consignação em folha,25079981
+199,2014-10,Habitacional,4357186
+200,2014-10,Outros créditos,31900414
+201,2014-10,Rural e agroindustrial,3558416
+202,2014-10,Veículos,13370363
+203,2014-11,Cartão de crédito,123388983
+204,2014-11,Empréstimo com consignação em folha,41865226
+205,2014-11,Empréstimo sem consignação em folha,24760797
+206,2014-11,Habitacional,4410914
+207,2014-11,Outros créditos,31347722
+208,2014-11,Rural e agroindustrial,3595847
+209,2014-11,Veículos,13357516
+210,2014-12,Cartão de crédito,127075797
+211,2014-12,Empréstimo com consignação em folha,41601037
+212,2014-12,Empréstimo sem consignação em folha,22949508
+213,2014-12,Habitacional,4467272
+214,2014-12,Outros créditos,29772462
+215,2014-12,Rural e agroindustrial,3659692
+216,2014-12,Veículos,13302324
+217,2015-01,Cartão de crédito,128201150
+218,2015-01,Empréstimo com consignação em folha,41886672
+219,2015-01,Empréstimo sem consignação em folha,23341524
+220,2015-01,Habitacional,4516974
+221,2015-01,Outros créditos,30544695
+222,2015-01,Rural e agroindustrial,3660934
+223,2015-01,Veículos,13349261
+224,2015-02,Cartão de crédito,125485665
+225,2015-02,Empréstimo com consignação em folha,42558282
+226,2015-02,Empréstimo sem consignação em folha,23717531
+227,2015-02,Habitacional,4553485
+228,2015-02,Outros créditos,30574942
+229,2015-02,Rural e agroindustrial,3649735
+230,2015-02,Veículos,13314259
+231,2015-03,Cartão de crédito,125603799
+232,2015-03,Empréstimo com consignação em folha,42922732
+233,2015-03,Empréstimo sem consignação em folha,24061709
+234,2015-03,Habitacional,4602764
+235,2015-03,Outros créditos,30947163
+236,2015-03,Rural e agroindustrial,3645900
+237,2015-03,Veículos,13106061
+238,2015-04,Cartão de crédito,124574555
+239,2015-04,Empréstimo com consignação em folha,43126395
+240,2015-04,Empréstimo sem consignação em folha,24447119
+241,2015-04,Habitacional,4657141
+242,2015-04,Outros créditos,30986295
+243,2015-04,Rural e agroindustrial,3644388
+244,2015-04,Veículos,12988710
+245,2015-05,Cartão de crédito,124778172
+246,2015-05,Empréstimo com consignação em folha,43358173
+247,2015-05,Empréstimo sem consignação em folha,24770984
+248,2015-05,Habitacional,4695625
+249,2015-05,Outros créditos,30874175
+250,2015-05,Rural e agroindustrial,3646415
+251,2015-05,Veículos,12847650
+252,2015-06,Cartão de crédito,125038977
+253,2015-06,Empréstimo com consignação em folha,43543058
+254,2015-06,Empréstimo sem consignação em folha,24790533
+255,2015-06,Habitacional,4735704
+256,2015-06,Outros créditos,30972875
+257,2015-06,Rural e agroindustrial,3623966
+258,2015-06,Veículos,12683227
+259,2015-07,Cartão de crédito,124894801
+260,2015-07,Empréstimo com consignação em folha,43745518
+261,2015-07,Empréstimo sem consignação em folha,24666438
+262,2015-07,Habitacional,4778748
+263,2015-07,Outros créditos,30701891
+264,2015-07,Rural e agroindustrial,3539226
+265,2015-07,Veículos,12510750
+266,2015-08,Cartão de crédito,124891166
+267,2015-08,Empréstimo com consignação em folha,43904847
+268,2015-08,Empréstimo sem consignação em folha,24848686
+269,2015-08,Habitacional,4836332
+270,2015-08,Outros créditos,30976534
+271,2015-08,Rural e agroindustrial,3569643
+272,2015-08,Veículos,12309452
+273,2015-09,Cartão de crédito,122550861
+274,2015-09,Empréstimo com consignação em folha,43985021
+275,2015-09,Empréstimo sem consignação em folha,24808767
+276,2015-09,Habitacional,4864525
+277,2015-09,Outros créditos,30888837
+278,2015-09,Rural e agroindustrial,3597411
+279,2015-09,Veículos,12163912
+280,2015-10,Cartão de crédito,124104101
+281,2015-10,Empréstimo com consignação em folha,43909065
+282,2015-10,Empréstimo sem consignação em folha,24639516
+283,2015-10,Habitacional,4896785
+284,2015-10,Outros créditos,30452108
+285,2015-10,Rural e agroindustrial,3607406
+286,2015-10,Veículos,12015551
+287,2015-11,Cartão de crédito,126489984
+288,2015-11,Empréstimo com consignação em folha,43878339
+289,2015-11,Empréstimo sem consignação em folha,24568215
+290,2015-11,Habitacional,4922519
+291,2015-11,Outros créditos,30246631
+292,2015-11,Rural e agroindustrial,3627734
+293,2015-11,Veículos,11859423
+294,2015-12,Cartão de crédito,128704690
+295,2015-12,Empréstimo com consignação em folha,43946856
+296,2015-12,Empréstimo sem consignação em folha,23199893
+297,2015-12,Habitacional,5010579
+298,2015-12,Outros créditos,28743224
+299,2015-12,Rural e agroindustrial,3666987
+300,2015-12,Veículos,11604563
+301,2016-01,Cartão de crédito,127553634
+302,2016-01,Empréstimo com consignação em folha,44714267
+303,2016-01,Empréstimo sem consignação em folha,23445480
+304,2016-01,Habitacional,5050980
+305,2016-01,Outros créditos,29930535
+306,2016-01,Rural e agroindustrial,3665948
+307,2016-01,Veículos,11520779
+308,2016-02,Cartão de crédito,127274376
+309,2016-02,Empréstimo com consignação em folha,45409443
+310,2016-02,Empréstimo sem consignação em folha,23629912
+311,2016-02,Habitacional,5078861
+312,2016-02,Outros créditos,30364671
+313,2016-02,Rural e agroindustrial,3656873
+314,2016-02,Veículos,11414190
+315,2016-03,Cartão de crédito,125750780
+316,2016-03,Empréstimo com consignação em folha,45868730
+317,2016-03,Empréstimo sem consignação em folha,23933515
+318,2016-03,Habitacional,5127935
+319,2016-03,Outros créditos,30321690
+320,2016-03,Rural e agroindustrial,3657605
+321,2016-03,Veículos,11250634
+322,2016-04,Cartão de crédito,124463693
+323,2016-04,Empréstimo com consignação em folha,46062831
+324,2016-04,Empréstimo sem consignação em folha,24540148
+325,2016-04,Habitacional,5128084
+326,2016-04,Outros créditos,30101488
+327,2016-04,Rural e agroindustrial,3660827
+328,2016-04,Veículos,11131453
+329,2016-05,Cartão de crédito,125931434
+330,2016-05,Empréstimo com consignação em folha,46276436
+331,2016-05,Empréstimo sem consignação em folha,24500714
+332,2016-05,Habitacional,5158052
+333,2016-05,Outros créditos,30239496
+334,2016-05,Rural e agroindustrial,3647953
+335,2016-05,Veículos,10958994
+336,2016-06,Cartão de crédito,187287827
+337,2016-06,Empréstimo com consignação em folha,51014800
+338,2016-06,Empréstimo sem consignação em folha,27977493
+339,2016-06,Habitacional,5335897
+340,2016-06,Outros créditos,41417261
+341,2016-06,Rural e agroindustrial,3658649
+342,2016-06,Veículos,11074283
+343,2016-07,Cartão de crédito,185414723
+344,2016-07,Empréstimo com consignação em folha,51014435
+345,2016-07,Empréstimo sem consignação em folha,27586459
+346,2016-07,Habitacional,5364841
+347,2016-07,Outros créditos,40427314
+348,2016-07,Rural e agroindustrial,3600227
+349,2016-07,Veículos,10935912
+350,2016-08,Cartão de crédito,186693879
+351,2016-08,Empréstimo com consignação em folha,51033559
+352,2016-08,Empréstimo sem consignação em folha,27254248
+353,2016-08,Habitacional,5397707
+354,2016-08,Outros créditos,40669824
+355,2016-08,Rural e agroindustrial,3627277
+356,2016-08,Veículos,10763874
+357,2016-09,Cartão de crédito,185246386
+358,2016-09,Empréstimo com consignação em folha,50856282
+359,2016-09,Empréstimo sem consignação em folha,26652836
+360,2016-09,Habitacional,5427612
+361,2016-09,Outros créditos,39918287
+362,2016-09,Rural e agroindustrial,3657702
+363,2016-09,Veículos,10641690
+364,2016-10,Cartão de crédito,185169646
+365,2016-10,Empréstimo com consignação em folha,50786183
+366,2016-10,Empréstimo sem consignação em folha,26180429
+367,2016-10,Habitacional,5399511
+368,2016-10,Outros créditos,39789015
+369,2016-10,Rural e agroindustrial,3661495
+370,2016-10,Veículos,10469362
+371,2016-11,Cartão de crédito,185501370
+372,2016-11,Empréstimo com consignação em folha,50620960
+373,2016-11,Empréstimo sem consignação em folha,25628730
+374,2016-11,Habitacional,5438595
+375,2016-11,Outros créditos,42943515
+376,2016-11,Rural e agroindustrial,3675908
+377,2016-11,Veículos,10350851
+378,2016-12,Cartão de crédito,188842220
+379,2016-12,Empréstimo com consignação em folha,50326477
+380,2016-12,Empréstimo sem consignação em folha,23659643
+381,2016-12,Habitacional,5491247
+382,2016-12,Outros créditos,41943511
+383,2016-12,Rural e agroindustrial,3714618
+384,2016-12,Veículos,10192000
+385,2017-01,Cartão de crédito,188931685
+386,2017-01,Empréstimo com consignação em folha,50976442
+387,2017-01,Empréstimo sem consignação em folha,23544850
+388,2017-01,Habitacional,5511865
+389,2017-01,Outros créditos,42717543
+390,2017-01,Rural e agroindustrial,3697049
+391,2017-01,Veículos,10130289
+392,2017-02,Cartão de crédito,188186729
+393,2017-02,Empréstimo com consignação em folha,51414709
+394,2017-02,Empréstimo sem consignação em folha,23593358
+395,2017-02,Habitacional,5539891
+396,2017-02,Outros créditos,41285799
+397,2017-02,Rural e agroindustrial,3695101
+398,2017-02,Veículos,10102240
+399,2017-03,Cartão de crédito,185303965
+400,2017-03,Empréstimo com consignação em folha,51786377
+401,2017-03,Empréstimo sem consignação em folha,23785026
+402,2017-03,Habitacional,5548718
+403,2017-03,Outros créditos,41886147
+404,2017-03,Rural e agroindustrial,3688735
+405,2017-03,Veículos,9974062
+406,2017-04,Cartão de crédito,183919783
+407,2017-04,Empréstimo com consignação em folha,51777748
+408,2017-04,Empréstimo sem consignação em folha,23774234
+409,2017-04,Habitacional,5575554
+410,2017-04,Outros créditos,40578578
+411,2017-04,Rural e agroindustrial,3695632
+412,2017-04,Veículos,9907897
+413,2017-05,Cartão de crédito,186982311
+414,2017-05,Empréstimo com consignação em folha,52059039
+415,2017-05,Empréstimo sem consignação em folha,23891701
+416,2017-05,Habitacional,5596145
+417,2017-05,Outros créditos,40418245
+418,2017-05,Rural e agroindustrial,3688681
+419,2017-05,Veículos,9813209
+420,2017-06,Cartão de crédito,188073626
+421,2017-06,Empréstimo com consignação em folha,51979929
+422,2017-06,Empréstimo sem consignação em folha,23968386
+423,2017-06,Habitacional,5624293
+424,2017-06,Outros créditos,40170490
+425,2017-06,Rural e agroindustrial,3671609
+426,2017-06,Veículos,9759207
+427,2017-07,Cartão de crédito,191384639
+428,2017-07,Empréstimo com consignação em folha,51911795
+429,2017-07,Empréstimo sem consignação em folha,23696677
+430,2017-07,Habitacional,5655074
+431,2017-07,Outros créditos,39982051
+432,2017-07,Rural e agroindustrial,3506647
+433,2017-07,Veículos,9705985
+434,2017-08,Cartão de crédito,192306218
+435,2017-08,Empréstimo com consignação em folha,51931192
+436,2017-08,Empréstimo sem consignação em folha,23754542
+437,2017-08,Habitacional,5688424
+438,2017-08,Outros créditos,39971086
+439,2017-08,Rural e agroindustrial,3547151
+440,2017-08,Veículos,9658419
+441,2017-09,Cartão de crédito,191981762
+442,2017-09,Empréstimo com consignação em folha,51789733
+443,2017-09,Empréstimo sem consignação em folha,23520946
+444,2017-09,Habitacional,5709679
+445,2017-09,Outros créditos,39415639
+446,2017-09,Rural e agroindustrial,3587374
+447,2017-09,Veículos,9633543
+448,2017-10,Cartão de crédito,191729211
+449,2017-10,Empréstimo com consignação em folha,51782032
+450,2017-10,Empréstimo sem consignação em folha,23560031
+451,2017-10,Habitacional,5716878
+452,2017-10,Outros créditos,40092547
+453,2017-10,Rural e agroindustrial,3606767
+454,2017-10,Veículos,9605174
+455,2017-11,Cartão de crédito,182794244
+456,2017-11,Empréstimo com consignação em folha,51676346
+457,2017-11,Empréstimo sem consignação em folha,23160054
+458,2017-11,Habitacional,5736603
+459,2017-11,Outros créditos,39690568
+460,2017-11,Rural e agroindustrial,3622106
+461,2017-11,Veículos,9591102
+462,2017-12,Cartão de crédito,186808920
+463,2017-12,Empréstimo com consignação em folha,51392070
+464,2017-12,Empréstimo sem consignação em folha,21366132
+465,2017-12,Habitacional,5754350
+466,2017-12,Outros créditos,38693490
+467,2017-12,Rural e agroindustrial,3647594
+468,2017-12,Veículos,9530294
+469,2018-01,Cartão de crédito,186878645
+470,2018-01,Empréstimo com consignação em folha,51872205
+471,2018-01,Empréstimo sem consignação em folha,21439377
+472,2018-01,Habitacional,5775254
+473,2018-01,Outros créditos,39826566
+474,2018-01,Rural e agroindustrial,3651345
+475,2018-01,Veículos,9529113
+476,2018-02,Cartão de crédito,186319557
+477,2018-02,Empréstimo com consignação em folha,51912623
+478,2018-02,Empréstimo sem consignação em folha,21687957
+479,2018-02,Habitacional,5802268
+480,2018-02,Outros créditos,40226374
+481,2018-02,Rural e agroindustrial,3616412
+482,2018-02,Veículos,9529601
+483,2018-03,Cartão de crédito,186336509
+484,2018-03,Empréstimo com consignação em folha,52030153
+485,2018-03,Empréstimo sem consignação em folha,22141393
+486,2018-03,Habitacional,5827794
+487,2018-03,Outros créditos,40043832
+488,2018-03,Rural e agroindustrial,3574442
+489,2018-03,Veículos,9518585
+490,2018-04,Cartão de crédito,188196589
+491,2018-04,Empréstimo com consignação em folha,51936318
+492,2018-04,Empréstimo sem consignação em folha,22541482
+493,2018-04,Habitacional,5855092
+494,2018-04,Outros créditos,40650790
+495,2018-04,Rural e agroindustrial,3531614
+496,2018-04,Veículos,9535897
+497,2018-05,Cartão de crédito,187817990
+498,2018-05,Empréstimo com consignação em folha,51976795
+499,2018-05,Empréstimo sem consignação em folha,22981715
+500,2018-05,Habitacional,5881844
+501,2018-05,Outros créditos,40449921
+502,2018-05,Rural e agroindustrial,3613220
+503,2018-05,Veículos,9517595
+504,2018-06,Cartão de crédito,189189071
+505,2018-06,Empréstimo com consignação em folha,51757031
+506,2018-06,Empréstimo sem consignação em folha,23338917
+507,2018-06,Habitacional,5912857
+508,2018-06,Outros créditos,40142069
+509,2018-06,Rural e agroindustrial,3597487
+510,2018-06,Veículos,9518812
+511,2018-07,Cartão de crédito,190337912
+512,2018-07,Empréstimo com consignação em folha,51638749
+513,2018-07,Empréstimo sem consignação em folha,23434023
+514,2018-07,Habitacional,5937170
+515,2018-07,Outros créditos,40274665
+516,2018-07,Rural e agroindustrial,3524905
+517,2018-07,Veículos,9504118
+518,2018-08,Cartão de crédito,191781478
+519,2018-08,Empréstimo com consignação em folha,51430866
+520,2018-08,Empréstimo sem consignação em folha,24079541
+521,2018-08,Habitacional,5967763
+522,2018-08,Outros créditos,40310357
+523,2018-08,Rural e agroindustrial,3570540
+524,2018-08,Veículos,9518287
+525,2018-09,Cartão de crédito,190751277
+526,2018-09,Empréstimo com consignação em folha,51256732
+527,2018-09,Empréstimo sem consignação em folha,24404704
+528,2018-09,Habitacional,5998049
+529,2018-09,Outros créditos,39530911
+530,2018-09,Rural e agroindustrial,3621353
+531,2018-09,Veículos,9530963
+532,2018-10,Cartão de crédito,193709252
+533,2018-10,Empréstimo com consignação em folha,51180562
+534,2018-10,Empréstimo sem consignação em folha,25274570
+535,2018-10,Habitacional,6021479
+536,2018-10,Outros créditos,40311461
+537,2018-10,Rural e agroindustrial,3624379
+538,2018-10,Veículos,9546396
+539,2018-11,Cartão de crédito,199959834
+540,2018-11,Empréstimo com consignação em folha,50961427
+541,2018-11,Empréstimo sem consignação em folha,25557383
+542,2018-11,Habitacional,6340299
+543,2018-11,Outros créditos,40288394
+544,2018-11,Rural e agroindustrial,3641852
+545,2018-11,Veículos,9584422
+546,2018-12,Cartão de crédito,201510645
+547,2018-12,Empréstimo com consignação em folha,50674217
+548,2018-12,Empréstimo sem consignação em folha,24106476
+549,2018-12,Habitacional,6350004
+550,2018-12,Outros créditos,39643155
+551,2018-12,Rural e agroindustrial,3671642
+552,2018-12,Veículos,9589877
+553,2019-01,Cartão de crédito,202633818
+554,2019-01,Empréstimo com consignação em folha,50981212
+555,2019-01,Empréstimo sem consignação em folha,25228179
+556,2019-01,Habitacional,6423054
+557,2019-01,Outros créditos,41981558
+558,2019-01,Rural e agroindustrial,3695757
+559,2019-01,Veículos,9637554
+560,2019-02,Cartão de crédito,203931333
+561,2019-02,Empréstimo com consignação em folha,51984109
+562,2019-02,Empréstimo sem consignação em folha,26127443
+563,2019-02,Habitacional,6447203
+564,2019-02,Outros créditos,43041925
+565,2019-02,Rural e agroindustrial,3686085
+566,2019-02,Veículos,9702167
+567,2019-03,Cartão de crédito,205292900
+568,2019-03,Empréstimo com consignação em folha,52193169
+569,2019-03,Empréstimo sem consignação em folha,27122131
+570,2019-03,Habitacional,6457234
+571,2019-03,Outros créditos,43984148
+572,2019-03,Rural e agroindustrial,3678771
+573,2019-03,Veículos,9737445
+574,2019-04,Cartão de crédito,207574146
+575,2019-04,Empréstimo com consignação em folha,52345000
+576,2019-04,Empréstimo sem consignação em folha,28031941
+577,2019-04,Habitacional,6418760
+578,2019-04,Outros créditos,45031211
+579,2019-04,Rural e agroindustrial,3660374
+580,2019-04,Veículos,9799022
+581,2019-05,Cartão de crédito,227113506
+582,2019-05,Empréstimo com consignação em folha,52481660
+583,2019-05,Empréstimo sem consignação em folha,29156694
+584,2019-05,Habitacional,6434553
+585,2019-05,Outros créditos,49859974
+586,2019-05,Rural e agroindustrial,3629594
+587,2019-05,Veículos,9856432
+588,2019-06,Cartão de crédito,228865100
+589,2019-06,Empréstimo com consignação em folha,52411856
+590,2019-06,Empréstimo sem consignação em folha,29768085
+591,2019-06,Habitacional,6457639
+592,2019-06,Outros créditos,48884600
+593,2019-06,Rural e agroindustrial,3587201
+594,2019-06,Veículos,9915529
+595,2019-07,Cartão de crédito,232872088
+596,2019-07,Empréstimo com consignação em folha,52526912
+597,2019-07,Empréstimo sem consignação em folha,30007421
+598,2019-07,Habitacional,6473035
+599,2019-07,Outros créditos,48647941
+600,2019-07,Rural e agroindustrial,3474362
+601,2019-07,Veículos,9933816
+602,2019-08,Cartão de crédito,236499261
+603,2019-08,Empréstimo com consignação em folha,52349100
+604,2019-08,Empréstimo sem consignação em folha,30431719
+605,2019-08,Habitacional,6464443
+606,2019-08,Outros créditos,48521621
+607,2019-08,Rural e agroindustrial,3502256
+608,2019-08,Veículos,10011177
+609,2019-09,Cartão de crédito,238910990
+610,2019-09,Empréstimo com consignação em folha,52207167
+611,2019-09,Empréstimo sem consignação em folha,30376082
+612,2019-09,Habitacional,6479975
+613,2019-09,Outros créditos,47969152
+614,2019-09,Rural e agroindustrial,3537086
+615,2019-09,Veículos,10087093
+616,2019-10,Cartão de crédito,238389912
+617,2019-10,Empréstimo com consignação em folha,52214030
+618,2019-10,Empréstimo sem consignação em folha,30666957
+619,2019-10,Habitacional,6512501
+620,2019-10,Outros créditos,48626713
+621,2019-10,Rural e agroindustrial,3556671
+622,2019-10,Veículos,10182558
+623,2019-11,Cartão de crédito,240237756
+624,2019-11,Empréstimo com consignação em folha,52059381
+625,2019-11,Empréstimo sem consignação em folha,30551489
+626,2019-11,Habitacional,6543622
+627,2019-11,Outros créditos,48603771
+628,2019-11,Rural e agroindustrial,3565137
+629,2019-11,Veículos,10287627
+630,2019-12,Cartão de crédito,247655138
+631,2019-12,Empréstimo com consignação em folha,51953223
+632,2019-12,Empréstimo sem consignação em folha,28085898
+633,2019-12,Habitacional,6571300
+634,2019-12,Outros créditos,46629896
+635,2019-12,Rural e agroindustrial,3579816
+636,2019-12,Veículos,10360898
+637,2020-01,Cartão de crédito,250853849
+638,2020-01,Empréstimo com consignação em folha,52790965
+639,2020-01,Empréstimo sem consignação em folha,26328924
+640,2020-01,Habitacional,6573297
+641,2020-01,Outros créditos,47443854
+642,2020-01,Rural e agroindustrial,3571060
+643,2020-01,Veículos,10466167
+644,2020-02,Cartão de crédito,250431571
+645,2020-02,Empréstimo com consignação em folha,53812894
+646,2020-02,Empréstimo sem consignação em folha,26782399
+647,2020-02,Habitacional,6585993
+648,2020-02,Outros créditos,47845083
+649,2020-02,Rural e agroindustrial,3555583
+650,2020-02,Veículos,10533106
+651,2020-03,Cartão de crédito,249095622
+652,2020-03,Empréstimo com consignação em folha,54167844
+653,2020-03,Empréstimo sem consignação em folha,27242524
+654,2020-03,Habitacional,6605320
+655,2020-03,Outros créditos,47808451
+656,2020-03,Rural e agroindustrial,3542255
+657,2020-03,Veículos,10563181
+658,2020-04,Cartão de crédito,237554077
+659,2020-04,Empréstimo com consignação em folha,53686320
+660,2020-04,Empréstimo sem consignação em folha,27111507
+661,2020-04,Habitacional,6629429
+662,2020-04,Outros créditos,46128142
+663,2020-04,Rural e agroindustrial,3521496
+664,2020-04,Veículos,10461326
+665,2020-05,Cartão de crédito,228709846
+666,2020-05,Empréstimo com consignação em folha,52858471
+667,2020-05,Empréstimo sem consignação em folha,26167747
+668,2020-05,Habitacional,6650521
+669,2020-05,Outros créditos,44445791
+670,2020-05,Rural e agroindustrial,3490476
+671,2020-05,Veículos,10380461
+672,2020-06,Cartão de crédito,222707627
+673,2020-06,Empréstimo com consignação em folha,52603098
+674,2020-06,Empréstimo sem consignação em folha,24892725
+675,2020-06,Habitacional,6668364
+676,2020-06,Outros créditos,44120641
+677,2020-06,Rural e agroindustrial,3476332
+678,2020-06,Veículos,10370543
+679,2020-07,Cartão de crédito,233557495
+680,2020-07,Empréstimo com consignação em folha,52155776
+681,2020-07,Empréstimo sem consignação em folha,24119280
+682,2020-07,Habitacional,6667403
+683,2020-07,Outros créditos,43915981
+684,2020-07,Rural e agroindustrial,3456726
+685,2020-07,Veículos,10378240
+686,2020-08,Cartão de crédito,236534678
+687,2020-08,Empréstimo com consignação em folha,52036131
+688,2020-08,Empréstimo sem consignação em folha,24168168
+689,2020-08,Habitacional,6704260
+690,2020-08,Outros créditos,43886930
+691,2020-08,Rural e agroindustrial,3500699
+692,2020-08,Veículos,10421633
+693,2020-09,Cartão de crédito,238909484
+694,2020-09,Empréstimo com consignação em folha,51884468
+695,2020-09,Empréstimo sem consignação em folha,24074283
+696,2020-09,Habitacional,6727556
+697,2020-09,Outros créditos,43597189
+698,2020-09,Rural e agroindustrial,3529552
+699,2020-09,Veículos,10482139
+700,2020-10,Cartão de crédito,243536726
+701,2020-10,Empréstimo com consignação em folha,53446610
+702,2020-10,Empréstimo sem consignação em folha,24484514
+703,2020-10,Habitacional,6758499
+704,2020-10,Outros créditos,43332054
+705,2020-10,Rural e agroindustrial,3556252
+706,2020-10,Veículos,10561533
+707,2020-11,Cartão de crédito,248011955
+708,2020-11,Empréstimo com consignação em folha,54344035
+709,2020-11,Empréstimo sem consignação em folha,24569751
+710,2020-11,Habitacional,6794498
+711,2020-11,Outros créditos,42982418
+712,2020-11,Rural e agroindustrial,3546833
+713,2020-11,Veículos,10652570
+714,2020-12,Cartão de crédito,256661893
+715,2020-12,Empréstimo com consignação em folha,54400380
+716,2020-12,Empréstimo sem consignação em folha,23553649
+717,2020-12,Habitacional,6830105
+718,2020-12,Outros créditos,41586383
+719,2020-12,Rural e agroindustrial,3565702
+720,2020-12,Veículos,10720764
+721,2021-01,Cartão de crédito,258089812
+722,2021-01,Empréstimo com consignação em folha,54199971
+723,2021-01,Empréstimo sem consignação em folha,24464491
+724,2021-01,Habitacional,6850050
+725,2021-01,Outros créditos,42337087
+726,2021-01,Rural e agroindustrial,3561034
+727,2021-01,Veículos,10745974
+728,2021-02,Cartão de crédito,259382361
+729,2021-02,Empréstimo com consignação em folha,54130336
+730,2021-02,Empréstimo sem consignação em folha,25499378
+731,2021-02,Habitacional,6879670
+732,2021-02,Outros créditos,42337533
+733,2021-02,Rural e agroindustrial,3557818
+734,2021-02,Veículos,10786871
+735,2021-03,Cartão de crédito,261717009
+736,2021-03,Empréstimo com consignação em folha,54069324
+737,2021-03,Empréstimo sem consignação em folha,26663038
+738,2021-03,Habitacional,6916513
+739,2021-03,Outros créditos,42382846
+740,2021-03,Rural e agroindustrial,3557990
+741,2021-03,Veículos,10766247
+742,2021-04,Cartão de crédito,266668915
+743,2021-04,Empréstimo com consignação em folha,55936713
+744,2021-04,Empréstimo sem consignação em folha,27555802
+745,2021-04,Habitacional,6947914
+746,2021-04,Outros créditos,42411769
+747,2021-04,Rural e agroindustrial,3529660
+748,2021-04,Veículos,10770386
+749,2021-05,Cartão de crédito,277258833
+750,2021-05,Empréstimo com consignação em folha,56436615
+751,2021-05,Empréstimo sem consignação em folha,28432250
+752,2021-05,Habitacional,6985729
+753,2021-05,Outros créditos,42795103
+754,2021-05,Rural e agroindustrial,3488466
+755,2021-05,Veículos,10756107
+756,2021-06,Cartão de crédito,282028622
+757,2021-06,Empréstimo com consignação em folha,56627045
+758,2021-06,Empréstimo sem consignação em folha,29235503
+759,2021-06,Habitacional,7020465
+760,2021-06,Outros créditos,42463310
+761,2021-06,Rural e agroindustrial,3458030
+762,2021-06,Veículos,10702287
+763,2021-07,Cartão de crédito,293986782
+764,2021-07,Empréstimo com consignação em folha,56589844
+765,2021-07,Empréstimo sem consignação em folha,30409100
+766,2021-07,Habitacional,7051734
+767,2021-07,Outros créditos,42792132
+768,2021-07,Rural e agroindustrial,3444285
+769,2021-07,Veículos,10641654
+770,2021-08,Cartão de crédito,302732600
+771,2021-08,Empréstimo com consignação em folha,56557386
+772,2021-08,Empréstimo sem consignação em folha,32351752
+773,2021-08,Habitacional,7094852
+774,2021-08,Outros créditos,44209976
+775,2021-08,Rural e agroindustrial,3497857
+776,2021-08,Veículos,10654050
+777,2021-09,Cartão de crédito,308823287
+778,2021-09,Empréstimo com consignação em folha,56524781
+779,2021-09,Empréstimo sem consignação em folha,34734919
+780,2021-09,Habitacional,7134557
+781,2021-09,Outros créditos,47302406
+782,2021-09,Rural e agroindustrial,3542650
+783,2021-09,Veículos,10668817
+784,2021-10,Cartão de crédito,343836975
+785,2021-10,Empréstimo com consignação em folha,56388526
+786,2021-10,Empréstimo sem consignação em folha,36905573
+787,2021-10,Habitacional,7160149
+788,2021-10,Outros créditos,47837659
+789,2021-10,Rural e agroindustrial,3572812
+790,2021-10,Veículos,10674088
+791,2021-11,Cartão de crédito,349263881
+792,2021-11,Empréstimo com consignação em folha,56405695
+793,2021-11,Empréstimo sem consignação em folha,38919197
+794,2021-11,Habitacional,7189876
+795,2021-11,Outros créditos,46585860
+796,2021-11,Rural e agroindustrial,3582706
+797,2021-11,Veículos,10623818
+798,2021-12,Cartão de crédito,357991553
+799,2021-12,Empréstimo com consignação em folha,56440165
+800,2021-12,Empréstimo sem consignação em folha,39576207
+801,2021-12,Habitacional,7228898
+802,2021-12,Outros créditos,45086751
+803,2021-12,Rural e agroindustrial,3599334
+804,2021-12,Veículos,10591056
+805,2022-01,Cartão de crédito,375847802
+806,2022-01,Empréstimo com consignação em folha,56216927
+807,2022-01,Empréstimo sem consignação em folha,42750833
+808,2022-01,Habitacional,7251013
+809,2022-01,Outros créditos,46464483
+810,2022-01,Rural e agroindustrial,3589836
+811,2022-01,Veículos,10568984
+812,2022-02,Cartão de crédito,317907358
+813,2022-02,Empréstimo com consignação em folha,56119020
+814,2022-02,Empréstimo sem consignação em folha,45416403
+815,2022-02,Habitacional,7273608
+816,2022-02,Outros créditos,46737718
+817,2022-02,Rural e agroindustrial,3569957
+818,2022-02,Veículos,10547860
+819,2022-03,Cartão de crédito,319945661
+820,2022-03,Empréstimo com consignação em folha,56909711
+821,2022-03,Empréstimo sem consignação em folha,48324875
+822,2022-03,Habitacional,7296060
+823,2022-03,Outros créditos,48669280
+824,2022-03,Rural e agroindustrial,3550192
+825,2022-03,Veículos,10508745
+826,2022-04,Cartão de crédito,324604382
+827,2022-04,Empréstimo com consignação em folha,58586498
+828,2022-04,Empréstimo sem consignação em folha,50063243
+829,2022-04,Habitacional,7324623
+830,2022-04,Outros créditos,49678902
+831,2022-04,Rural e agroindustrial,3511117
+832,2022-04,Veículos,10447720
+833,2022-05,Cartão de crédito,327084466
+834,2022-05,Empréstimo com consignação em folha,59154105
+835,2022-05,Empréstimo sem consignação em folha,51390154
+836,2022-05,Habitacional,7357574
+837,2022-05,Outros créditos,50607114
+838,2022-05,Rural e agroindustrial,3468645
+839,2022-05,Veículos,10413405
+840,2022-06,Cartão de crédito,330170951
+841,2022-06,Empréstimo com consignação em folha,59442630
+842,2022-06,Empréstimo sem consignação em folha,52543645
+843,2022-06,Habitacional,7397888
+844,2022-06,Outros créditos,51684566
+845,2022-06,Rural e agroindustrial,3441019
+846,2022-06,Veículos,10368491
+847,2022-07,Cartão de crédito,330911553
+848,2022-07,Empréstimo com consignação em folha,59639996
+849,2022-07,Empréstimo sem consignação em folha,54351286
+850,2022-07,Habitacional,7438868
+851,2022-07,Outros créditos,52731679
+852,2022-07,Rural e agroindustrial,3402026
+853,2022-07,Veículos,10301296
+854,2022-08,Cartão de crédito,331595161
+855,2022-08,Empréstimo com consignação em folha,60116798
+856,2022-08,Empréstimo sem consignação em folha,57122934
+857,2022-08,Habitacional,7476166
+858,2022-08,Outros créditos,54194171
+859,2022-08,Rural e agroindustrial,3487405
+860,2022-08,Veículos,10281214
+861,2022-09,Cartão de crédito,335831237
+862,2022-09,Empréstimo com consignação em folha,60639330
+863,2022-09,Empréstimo sem consignação em folha,59217067
+864,2022-09,Habitacional,7515531
+865,2022-09,Outros créditos,54563315
+866,2022-09,Rural e agroindustrial,3540413
+867,2022-09,Veículos,10244659
+868,2022-10,Cartão de crédito,338606738
+869,2022-10,Empréstimo com consignação em folha,63583220
+870,2022-10,Empréstimo sem consignação em folha,61361590
+871,2022-10,Habitacional,7550503
+872,2022-10,Outros créditos,55177141
+873,2022-10,Rural e agroindustrial,3551411
+874,2022-10,Veículos,10221030
+875,2022-11,Cartão de crédito,341081321
+876,2022-11,Empréstimo com consignação em folha,64944150
+877,2022-11,Empréstimo sem consignação em folha,63188567
+878,2022-11,Habitacional,7583925
+879,2022-11,Outros créditos,55220670
+880,2022-11,Rural e agroindustrial,3547728
+881,2022-11,Veículos,10217790
+882,2022-12,Cartão de crédito,342279943
+883,2022-12,Empréstimo com consignação em folha,64961252
+884,2022-12,Empréstimo sem consignação em folha,63376255
+885,2022-12,Habitacional,7620305
+886,2022-12,Outros créditos,53669454
+887,2022-12,Rural e agroindustrial,3547124
+888,2022-12,Veículos,10171973
+889,2023-01,Cartão de crédito,346642992
+890,2023-01,Empréstimo com consignação em folha,67566974
+891,2023-01,Empréstimo sem consignação em folha,66586340
+892,2023-01,Habitacional,7645048
+893,2023-01,Outros créditos,55752884
+894,2023-01,Rural e agroindustrial,3522505
+895,2023-01,Veículos,10172912
+896,2023-02,Cartão de crédito,348069387
+897,2023-02,Empréstimo com consignação em folha,68487456
+898,2023-02,Empréstimo sem consignação em folha,69208200
+899,2023-02,Habitacional,7666672
+900,2023-02,Outros créditos,55551045
+901,2023-02,Rural e agroindustrial,3510350
+902,2023-02,Veículos,10142741
+903,2023-03,Cartão de crédito,350533325
+904,2023-03,Empréstimo com consignação em folha,68844918
+905,2023-03,Empréstimo sem consignação em folha,72746810
+906,2023-03,Habitacional,7698155
+907,2023-03,Outros créditos,56399139
+908,2023-03,Rural e agroindustrial,3499442
+909,2023-03,Veículos,10155079
+910,2023-04,Cartão de crédito,352053187
+911,2023-04,Empréstimo com consignação em folha,69409571
+912,2023-04,Empréstimo sem consignação em folha,75330386
+913,2023-04,Habitacional,7728404
+914,2023-04,Outros créditos,55161483
+915,2023-04,Rural e agroindustrial,3460028
+916,2023-04,Veículos,10158676
+917,2023-05,Cartão de crédito,358716223
+918,2023-05,Empréstimo com consignação em folha,69677905
+919,2023-05,Empréstimo sem consignação em folha,78519438
+920,2023-05,Habitacional,7759270
+921,2023-05,Outros créditos,55117535
+922,2023-05,Rural e agroindustrial,3404800
+923,2023-05,Veículos,10171897
+924,2023-06,Cartão de crédito,360263786
+925,2023-06,Empréstimo com consignação em folha,68773445
+926,2023-06,Empréstimo sem consignação em folha,73307010
+927,2023-06,Habitacional,7790915
+928,2023-06,Outros créditos,53609843
+929,2023-06,Rural e agroindustrial,3358977
+930,2023-06,Veículos,10175343
+931,2023-07,Cartão de crédito,364527523
+932,2023-07,Empréstimo com consignação em folha,67837738
+933,2023-07,Empréstimo sem consignação em folha,75394244
+934,2023-07,Habitacional,7821968
+935,2023-07,Outros créditos,52607190
+936,2023-07,Rural e agroindustrial,3331510
+937,2023-07,Veículos,10163540
+938,2023-08,Cartão de crédito,368198169
+939,2023-08,Empréstimo com consignação em folha,68732019
+940,2023-08,Empréstimo sem consignação em folha,79399749
+941,2023-08,Habitacional,7823679
+942,2023-08,Outros créditos,52396083
+943,2023-08,Rural e agroindustrial,3405732
+944,2023-08,Veículos,10202556
