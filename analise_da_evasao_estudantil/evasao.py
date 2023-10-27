@@ -16,7 +16,6 @@ info = st.sidebar.selectbox('Selecione o tipo de informação:',
                                    ('ANO_INGRESSO', 'SEMESTRE_INGRESSO', 'TIPO_INGRESSO', 'COTA',\
                                     'CAMPUS', 'TURNO', 'ETNIA', 'SEXO', 'Estado', 'Baixa renda', 'Escola pública', 'Etnia PPI', 'PCD'))
 
-
 curso = st.sidebar.selectbox('Selecione o curso:',
                                    ('CIÊNCIAS BIOLÓGICAS', 'ADMINISTRAÇÃO', 'CIÊNCIAS CONTÁBEIS',
        'CIÊNCIAS ECONÔMICAS', 'DIREITO', 'FARMÁCIA', 'FISIOTERAPIA',
@@ -100,14 +99,14 @@ def evadido_vs_ingressante_por_filtro(df_ingressantes, filtro):
    
     return df
 
+def format_value(value):
+        return "{:.1f}".format(value)
+
 def cota_por_curso(evadido_vs_ingressante, curso):
     
     df = evadido_vs_ingressante.loc[curso]
     
     fig = go.Figure()
-
-    def format_value(value):
-        return "{:.1f}".format(value)
 
     multiplicador = 100
     df['pct_evasao'] = (df['pct_evasao']*multiplicador).apply(format_value)
@@ -172,3 +171,39 @@ def evadido_vs_sexo_por_filtro(df_ingressantes, filtro, curso):
 
 evadido_vs_sexo_por_filtro(df_ingressantes_apos_2012, info, curso)
 
+def evasao_por_grupo(df, info, subinfo):
+    df = evadido_vs_ingressante_por_filtro(df, info)
+    filtro_por_subinfo = df.loc[df.index.get_level_values(info) == subinfo]
+    ordena_por_evasao = filtro_por_subinfo.sort_values(by=['pct_evasao'], ascending=False)
+    #plot_grafico(ordena_por_evasao.index.get_level_values('CURSO_NOME'),
+    #            ordena_por_evasao['pct_evasao'], subinfo)
+
+    ordena_por_evasao['pct_evasao'] = (ordena_por_evasao['pct_evasao']*100).apply(format_value)
+    
+    fig = go.Figure()
+    
+    fig.add_trace(go.Bar(x=ordena_por_evasao.index.get_level_values('CURSO_NOME'), y=ordena_por_evasao['pct_evasao'], name='taxa', text=ordena_por_evasao['pct_evasao'], textposition='inside'))
+
+    fig.update_layout(title=f'Taxa de evasão x {info} - {subinfo}', xaxis_title=f'{info} - {subinfo}', yaxis_title='Taxa de evasão', width=1200, height=800)
+    
+    # Exiba o gráfico no Streamlit
+    st.plotly_chart(fig)
+
+if info == 'ANO_INGRESSO':
+    subinfo = st.selectbox('Selecione o ano: ', df_ingressantes_apos_2012['ANO_INGRESSO'].unique())
+    evasao_por_grupo(df_ingressantes_apos_2012, info, int(subinfo))
+elif info == 'COTA':
+    subinfo = st.selectbox('Selecione um grupo: ', df_ingressantes_apos_2012['COTA'].unique())
+    evasao_por_grupo(df_ingressantes_apos_2012, info, subinfo)
+elif info == 'TIPO_INGRESSO':
+    subinfo = st.selectbox('Selecione um tipo de ingresso: ', df_ingressantes_apos_2012['TIPO_INGRESSO'].unique())
+    evasao_por_grupo(df_ingressantes_apos_2012, info, subinfo)
+elif info == 'CAMPUS':
+    subinfo = st.selectbox('Selecione um campus: ', df_ingressantes_apos_2012['CAMPUS'].unique())
+    evasao_por_grupo(df_ingressantes_apos_2012, info, subinfo)
+elif info == 'TURNO':
+    subinfo = st.selectbox('Selecione um turno: ', df_ingressantes_apos_2012['TURNO'].unique())
+    evasao_por_grupo(df_ingressantes_apos_2012, info, subinfo)
+    
+
+#evasao_por_grupo(df_ingressantes_apos_2012, info, subinfo)
