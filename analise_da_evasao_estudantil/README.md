@@ -27,7 +27,7 @@ Etapas do projeto:
 5. Avaliação da evasão dos alunos em função das informações da localização de origem por meio do mapa de calor;
 6. Informação da evasão dos alunos por sexo;
 7. Análise por meio de regressão linear do número de evadidos por ano;
-
+8. Análise 
 
 
 
@@ -35,6 +35,8 @@ Scripts desenvolvidos:
 
 1.analise_dados_evasao.jpynb
 2.Regressão linear.jpynb
+3.grafico_de_barras.jpynb
+4.limpeza_tratamento_dados
 
 Resultados obtidos:
 
