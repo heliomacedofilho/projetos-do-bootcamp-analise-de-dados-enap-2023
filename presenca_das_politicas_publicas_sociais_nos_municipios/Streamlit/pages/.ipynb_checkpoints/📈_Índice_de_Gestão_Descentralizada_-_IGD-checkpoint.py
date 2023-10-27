@@ -5,4 +5,4 @@ import plotly.express as px
 import locale
 
 
-st.title('_Programa Bolsa Família_ :blue[PBF] :family:')
+st.title('_Índice de Gestão Descentralizada_ :blue[IGD] :chart_with_upwards_trend:')
