@@ -21,7 +21,6 @@ O projeto **Presença das Políticas Públicas Sociais (PPS) nos municípios bra
   Para acessar os detalhes sobre o projeto, tais como objetvos, premissas, metodologia, bases a serem utilizadas, acesse a apresentação em PowerPoint clicando aqui.
 
 # :date: [Conjuntos de dados utilizados](#conjuntos_de_dados_utilizados)
-
 - `Cadastro Único`: [Cadastro Único - Famílias/Pessoas por faixas de renda per capita - MI Social](https://img.shields.io/github/stars/camilafernanda?style=social](https://dados.gov.br/dados/conjuntos-dados/cadastro-unico---familiaspessoas-por-faixas-de-renda-per-capita---mi-social))
 - `Programa Bolsa Família`: [Bolsa Família – MI Social](https://dados.gov.br/dados/conjuntos-dados/bolsa-familia---mi-social)
 - `Benefício de Prestação Continuada`: [Dados Despesas – Transferências – Programas Sociais – BPC](https://portaldatransparencia.gov.br/download-de-dados/bpc)
@@ -70,7 +69,7 @@ O projeto **Presença das Políticas Públicas Sociais (PPS) nos municípios bra
   
   Cristiane Lopes de Assis
   
-  Juliana Pierrobon Lopez
+  Juliana Pierrobon Lopez - TESTE
   
   Mariana Nogueira de Resende Sousa
 
