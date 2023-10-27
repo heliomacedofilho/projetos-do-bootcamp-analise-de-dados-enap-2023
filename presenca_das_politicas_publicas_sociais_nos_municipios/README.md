@@ -21,7 +21,6 @@ O projeto **Presença das Políticas Públicas Sociais (PPS) nos municípios bra
   Para acessar os detalhes sobre o projeto, tais como objetvos, premissas, metodologia, bases a serem utilizadas, acesse a apresentação em PowerPoint clicando aqui.
 
 # :date: [Conjuntos de dados utilizados](#conjuntos_de_dados_utilizados)
-
 - `Cadastro Único`: [Cadastro Único - Famílias/Pessoas por faixas de renda per capita - MI Social](https://img.shields.io/github/stars/camilafernanda?style=social](https://dados.gov.br/dados/conjuntos-dados/cadastro-unico---familiaspessoas-por-faixas-de-renda-per-capita---mi-social))
 - `Programa Bolsa Família`: [Bolsa Família – MI Social](https://dados.gov.br/dados/conjuntos-dados/bolsa-familia---mi-social)
 - `Benefício de Prestação Continuada`: [Dados Despesas – Transferências – Programas Sociais – BPC](https://portaldatransparencia.gov.br/download-de-dados/bpc)
@@ -34,19 +33,19 @@ O projeto **Presença das Políticas Públicas Sociais (PPS) nos municípios bra
  
 # :hammer: [Scripts desenvolvidos](#scripts_desenvolvidos)
 
-  - Script da análise do Cadastro Único
+  - Script da análise do Cadastro Único  - mariana
   
-  - Script da análise do Programa Bolsa Família
+  - Script da análise do Programa Bolsa Família - Juliana
   
-  - Script da análise do Benefício de Prestação Continuada
+  - Script da análise do Benefício de Prestação Continuada - Cris
   
-  - Script da análise do Índice de Gestão Descentralizada
+  - Script da análise do Índice de Gestão Descentralizada - Camila
   
-  - Script da análise do Registro Mensal Atendimento (RMA) do CRAS
+  - Script da análise do Registro Mensal Atendimento (RMA) do CRAS - Aline
   
-  - Script da análise do Pib Municipal
+  - Script da análise do Pib Municipal - Camila
   
-  - Script do Índice de avaliação da presença das PPS nos municípios brasileiros
+  - Script do Índice de avaliação da presença das PPS nos municípios brasileiros - Juliana
 
 # :angel: [Pessoas Contribuidoras](#pessoas-contribuidoras)
 
@@ -70,7 +69,7 @@ O projeto **Presença das Políticas Públicas Sociais (PPS) nos municípios bra
   
   Cristiane Lopes de Assis
   
-  Juliana Pierrobon Lopez
+  Juliana Pierrobon Lopez - TESTE
   
   Mariana Nogueira de Resende Sousa
 
