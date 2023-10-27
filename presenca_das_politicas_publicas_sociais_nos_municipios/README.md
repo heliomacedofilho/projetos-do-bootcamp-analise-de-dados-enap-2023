@@ -34,17 +34,17 @@ O projeto **Presença das Políticas Públicas Sociais (PPS) nos municípios bra
  
 # :hammer: [Scripts desenvolvidos](#scripts_desenvolvidos)
 
-  - Script da análise do Cadastro Único
+  - Script da análise do Cadastro Único  - mariana
   
-  - Script da análise do Programa Bolsa Família
+  - Script da análise do Programa Bolsa Família - Juliana
   
-  - Script da análise do Benefício de Prestação Continuada
+  - Script da análise do Benefício de Prestação Continuada - Cris
   
-  - Script da análise do Índice de Gestão Descentralizada
+  - Script da análise do Índice de Gestão Descentralizada - Camila
   
-  - Script da análise do Registro Mensal Atendimento (RMA) do CRAS
+  - Script da análise do Registro Mensal Atendimento (RMA) do CRAS - Aline
   
-  - Script da análise do Pib Municipal
+  - Script da análise do Pib Municipal - Camila
   
   - Script do Índice de avaliação da presença das PPS nos municípios brasileiros
 
