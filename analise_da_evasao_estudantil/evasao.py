@@ -14,7 +14,7 @@ st.markdown("---")
 
 info = st.sidebar.selectbox('Selecione o tipo de informação:',
                                    ('ANO_INGRESSO', 'SEMESTRE_INGRESSO', 'TIPO_INGRESSO', 'COTA',\
-                                    'CAMPUS', 'TURNO', 'ETNIA', 'SEXO'))
+                                    'CAMPUS', 'TURNO', 'ETNIA', 'SEXO', 'Estado', 'Baixa renda', 'Escola pública', 'Etnia PPI', 'PCD'))
 
 
 curso = st.sidebar.selectbox('Selecione o curso:',
@@ -45,12 +45,17 @@ curso = st.sidebar.selectbox('Selecione o curso:',
 
  
 
-filepath = os.path.join(os.getcwd(), 'Dados', 'dataset_grad_pres.csv')
+#filepath = os.path.join(os.getcwd(), 'Dados', 'dataset_grad_pres.csv')
+filepath = os.path.join(os.getcwd(), 'Dados', 'dataset_tratado.csv')
+
 
 # Cria o DataFrame completo, com todos os dados do arquivo dataset_grad_pres.csv
 
+#df_completo = pd.read_csv(filepath, engine='python', 
+#                     on_bad_lines='warn', encoding='iso-8859-1', header=0, sep = ";")
+
 df_completo = pd.read_csv(filepath, engine='python', 
-                     on_bad_lines='warn', encoding='iso-8859-1', header=0, sep = ";")
+                     on_bad_lines='warn', header=0, sep = ",")
 
 df_ingressantes_apos_2012 = df_completo.loc[(df_completo['ANO_INGRESSO'] > 2012)]
 
@@ -119,4 +124,51 @@ def cota_por_curso(evadido_vs_ingressante, curso):
 st.write("Gráfico de Barras:")
 
 cota_por_curso(evadido_vs_ingressante_por_filtro(df_ingressantes_apos_2012, info), curso)
+
+def qtt_evadidos_por_sexo(df_ingressantes_apos_2012, filtro, sexo):
+    df = df_ingressantes_apos_2012.loc[df_ingressantes_apos_2012['SITUACAO'] == 'Evadido']
+    df = df.loc[df_ingressantes_apos_2012['SEXO'] == sexo]
+    return df.groupby('CURSO_NOME')[filtro].value_counts()
+
+def qtt_ingressantes_por_sexo(df_ingressantes_apos_2012, filtro, sexo):
+    df = df_ingressantes_apos_2012.loc[df_ingressantes_apos_2012['SEXO'] == sexo]
+    return df.groupby('CURSO_NOME')[filtro].value_counts()
+
+def evadido_vs_sexo_por_filtro(df_ingressantes, filtro, curso):
+    qtt_total_feminino_por_filtro = qtt_ingressantes_por_sexo(df_ingressantes, filtro, 'F')
+    qtt_total_masculino_por_filtro = qtt_ingressantes_por_sexo(df_ingressantes, filtro, 'M')
+    
+    qtt_feminino_por_filtro = qtt_evadidos_por_sexo(df_ingressantes, filtro, 'F')
+    qtt_masculino_por_filtro = qtt_evadidos_por_sexo(df_ingressantes, filtro, 'M')
+    df = pd.merge(qtt_total_feminino_por_filtro, qtt_total_masculino_por_filtro, 
+                                      how='left', on=['CURSO_NOME', filtro], suffixes=('_total_feminino', '_total_masculino')).fillna(0)
+    df = pd.merge(df, qtt_feminino_por_filtro, 
+                                      how='left', on=['CURSO_NOME', filtro], suffixes=('', '_feminino')).fillna(0)
+    df = pd.merge(df, qtt_masculino_por_filtro, 
+                                      how='left', on=['CURSO_NOME', filtro], suffixes=('', '_masculino')).fillna(0)
+
+    df = df.loc[curso].sort_index()
+
+    df.columns = ['total_feminino', 'total_masculino', 'evadido_feminino', 'evadido_masculino']
+
+
+    #calculando os percentuais
+    df['pct_evasao_feminino'] = df['evadido_feminino']/df['total_feminino']
+    df['pct_evasao_masculino'] = df['evadido_masculino']/df['total_masculino']
+
+    multiplicador = 100
+    df['pct_evasao_feminino'] = df['pct_evasao_feminino']*multiplicador
+    df['pct_evasao_masculino'] = df['pct_evasao_masculino']*multiplicador
+
+    fig = go.Figure()
+
+    fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_feminino'], mode='lines+markers', name='feminino'))
+    fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_masculino'], mode='lines+markers', name='masculino'))
+
+    fig.update_layout(title=f'Taxa de evasão x {info}', xaxis_title=f'{info}', yaxis_title='Taxa de evasão')
+    
+    # Exiba o gráfico no Streamlit
+    st.plotly_chart(fig)
+
+evadido_vs_sexo_por_filtro(df_ingressantes_apos_2012, info, curso)
 
