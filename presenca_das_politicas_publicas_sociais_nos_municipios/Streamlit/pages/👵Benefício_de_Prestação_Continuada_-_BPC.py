@@ -149,5 +149,5 @@ fig2 = px.choropleth(resultados_df,
                     hover_name='nome').update_layout(height=800, width=1000, autosize=False)
 fig2.update_traces(marker_line_width=0)
     # Exibir o gráfico no Streamlit
-st.header("Mapa dos municípios com o impacto do BPC em relação ao FPM")
+st.header("Mapa com o impacto do BPC em relação ao FPM nos municípios ")
 st.plotly_chart(fig2, use_container_width = True)
