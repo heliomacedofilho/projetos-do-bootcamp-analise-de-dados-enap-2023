@@ -173,7 +173,7 @@ Para além de treinar as ferramentas aprendidas durante o BootCamp, enfrentamos 
   
   Thais Salzer  
   
-# :two_women_holding_hands: [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
+# :two_women_holding_hands:Pessoas Desenvolvedoras do Projeto
 
   Aline Oliveira Moura
   
@@ -185,4 +185,7 @@ Para além de treinar as ferramentas aprendidas durante o BootCamp, enfrentamos 
 
 ![Mariana_zoom](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/180e9397-6b4e-4483-8e5a-daa715ba22d9)
 
+# :star2:Recrutador de talentos
+
+![Gif_gatos_botas](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/85784c8c-09d0-45ba-bdc6-c02881919e30)
 
