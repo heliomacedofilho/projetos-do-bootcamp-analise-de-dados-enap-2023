@@ -109,10 +109,10 @@ def cota_por_curso(evadido_vs_ingressante, curso):
     df['pct_concluido'] = (df['pct_concluido']*multiplicador).apply(format_value)
     df['pct_ativo'] = (df['pct_ativo']*multiplicador).apply(format_value)
 
-    fig.add_trace(go.Bar(x=df.index, y=df['evadidos'], name='Evadidos', text=df['pct_evasao'], textposition='inside'))
-    fig.add_trace(go.Bar(x=df.index, y=df['concluidos'], name='Concluídos', text=df['pct_concluido'], textposition='inside'))
-    fig.add_trace(go.Bar(x=df.index, y=df['ativos'], name='Ativos', text=df['pct_ativo'], textposition='inside'))
-    fig.update_layout(barmode='stack', xaxis_title=f'{info}', title=f'SITUAÇÃO X {info}')
+    fig.add_trace(go.Bar(x=df.index, y=df['evadidos'], name='Evadidos (%)', text=df['pct_evasao'], textposition='inside'))
+    fig.add_trace(go.Bar(x=df.index, y=df['concluidos'], name='Concluídos (%)', text=df['pct_concluido'], textposition='inside'))
+    fig.add_trace(go.Bar(x=df.index, y=df['ativos'], name='Ativos (%)', text=df['pct_ativo'], textposition='inside'))
+    fig.update_layout(barmode='stack', xaxis_title=f'{info}', yaxis_title= 'NÚMERO DE ALUNOS', title=f'SITUAÇÃO X {info} - {curso}')
     
     st.plotly_chart(fig)
 
@@ -192,10 +192,10 @@ def evadido_vs_sexo_por_filtro(df_ingressantes, filtro, curso):
 
     fig = go.Figure()
 
-    fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_feminino'], mode='lines+markers', name='feminino'))
-    fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_masculino'], mode='lines+markers', name='masculino'))
+    fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_feminino'], mode='lines+markers', name='feminino (%)'))
+    fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_masculino'], mode='lines+markers', name='masculino (%)'))
 
-    fig.update_layout(title=f'TAXA DE EVASÃO X {info}', xaxis_title=f'{info}', yaxis_title='TAXA DE EVASÃO')
+    fig.update_layout(title=f'TAXA DE EVASÃO X {info} - {curso}', xaxis_title=f'{info}', yaxis_title='TAXA DE EVASÃO')
     
     # Exiba o gráfico no Streamlit
     st.plotly_chart(fig)
