@@ -25,7 +25,7 @@ O projeto **Presença das Políticas Públicas Sociais (PPS) nos municípios bra
 - `Programa Bolsa Família`: [Bolsa Família – MI Social](https://dados.gov.br/dados/conjuntos-dados/bolsa-familia---mi-social)
 - `Benefício de Prestação Continuada`: [Dados Despesas – Transferências – Programas Sociais – BPC](https://portaldatransparencia.gov.br/download-de-dados/bpc)
 - `Registro Mensal Atendimento do CRAS`: [RMA 2022 CRAS](https://aplicacoes.mds.gov.br/snas/vigilancia/index2.php)
-- `Índice de Gestão Descentralizada`:  IGD-E PBF – Taxas
+- `Índice de Gestão Descentralizada do Município - Fator de Operação 1`:  [Vis Data do Ministério do Desenvolvimento Social](https://aplicacoes.cidadania.gov.br/vis/data3/data-explorer.php)
 - `Fundo de Participação do Município (FPM)`:  [FPM por Município](https://www.tesourotransparente.gov.br/ckan/dataset/transferencias-obrigatorias-da-uniao-por-municipio/resource/d69ff32a-6681-4114-81f0-233bb6b17f58)
 - `Produto Interno Bruto Municipal`: PIB por Unidade da Federação 2020
 - `População dos municípios Censo 2010`: [Tabela 1378 - População residente, por situação do domicílio, sexo e idade, segundo a condição no domicílio e compartilhamento da responsabilidade pelo domicílio](https://sidra.ibge.gov.br/tabela/1378)
