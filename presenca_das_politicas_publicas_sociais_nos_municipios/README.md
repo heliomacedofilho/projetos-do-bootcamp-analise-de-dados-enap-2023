@@ -28,6 +28,7 @@ O projeto **Presença das Políticas Públicas Sociais (PPS) nos municípios bra
 - `Índice de Gestão Descentralizada`:  IGD-E PBF – Taxas
 - `Fundo de Participação do Município (FPM)`:  [FPM por Município](https://www.tesourotransparente.gov.br/ckan/dataset/transferencias-obrigatorias-da-uniao-por-municipio/resource/d69ff32a-6681-4114-81f0-233bb6b17f58)
 - `Produto Interno Bruto Municipal`: PIB por Unidade da Federação 2020
+- `População dos municípios Censo 2010`: [Tabela 1378 - População residente, por situação do domicílio, sexo e idade, segundo a condição no domicílio e compartilhamento da responsabilidade pelo domicílio](https://sidra.ibge.gov.br/tabela/1378)
 - `População dos municípios Censo 2022`: [Prévia da População dos Municípios com base nos dados do Censo Demográfico 2022 coletados até 25/12/2022](https://www.ibge.gov.br/estatisticas/sociais/populacao/22827-censo-demografico-2022.html?edicao=35938&t=resultados)
 
  
