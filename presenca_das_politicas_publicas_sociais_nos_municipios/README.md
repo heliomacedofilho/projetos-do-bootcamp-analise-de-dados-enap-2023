@@ -102,7 +102,7 @@ O público-alvo são as famílias que vivem com renda mensal de até meio salár
 
 - `Registro Mensal Atendimento do CRAS`: [RMA 2022 CRAS](https://aplicacoes.mds.gov.br/snas/vigilancia/index2.php) - Para o cálculo da presença do atendimento dos CRAS nos municípios brasileiros foram utilizados os dados do ano de 2022, de modo a  minimizar o efeito das variações mensais, tanto do atendimento quanto do seu registro, que não é realizado necessariamente no mesmo mês do atendimento. Destaca-se que no Portal de Dados Abertos estão disponibilizados os dados até 2021, embora no próprio portal tenha o direcionamento para a página com todas as bases do RMA. Assim, foram utilizados os dados acessados no Portal da Vigilância Socioassistencial da Secretaria Nacional de Assistência Social.
   
-- `Índice de Gestão Descentralizada`:  [IGD-M PBF - Taxas](https://aplicacoes.cidadania.gov.br/vis/data3/data-explorer.php) - Para o cálculo da classificação dos municípios a partir do resultado do IGD foram utilizados os dados de agosto/2023, última referência disponibilizada pelo MDS na ferramenta Vis Data. Embora os dados do IGD-M estejam disponibilizados no Portal Dados Abertos para a mesma referência, ao analisar a base foram identificadas inconsistências, com alguns municípios apresentando resultados em casas decimais e outros em casas das centenas.
+- `Índice de Gestão Descentralizada`:  [IGD-M PBF - Taxas](https://aplicacoes.cidadania.gov.br/vis/data3/data-explorer.php) - Para o cálculo da classificação dos municípios a partir do resultado do IGD foram utilizados os dados de agosto/2023, última referência disponibilizada pelo MDS na ferramenta Vis Data. Embora os dados do IGD-M estejam disponibilizados no Portal Dados Abertos para a mesma referência, ao analisar a base foram identificadas inconsistências. 
   
 - `Fundo de Participação do Município (FPM)`:  [FPM por Município](https://www.tesourotransparente.gov.br/ckan/dataset/transferencias-obrigatorias-da-uniao-por-municipio/resource/d69ff32a-6681-4114-81f0-233bb6b17f58) - Como o público alvo do BPC é uma parcela da população brasileira (Pessoas com deficiência e Idosos a partir de 65 anos que preencham as regras do programa) e não há a obrigatoriedade de estar cadastrada no CadÚnico para acesso ao programa, para avaliar a presença do BPC nos municípios brasileiros foram comparados os valores do BPC com o valor repassado por meio do FPM. Esta é uma comparação tradicional realizada para reforçar o papel da Previdência social, conforme explicado no informe [Previdência Social e Redistribuição de Renda Intermunicipal](http://sa.previdencia.gov.br/site/arquivos/office/3_090608-155706-828.pdf). Com o objetivo de comparar com o mesmo período do BPC, foi utilizado o valor total do FPM repassado aos municípios em 2022, disponível no Portal do Tesouro Nacional Transparente.
 
@@ -139,6 +139,26 @@ Por fim, foram somados as notas padronizadas atribuídas aos quatro programas pa
   
   - Script do Índice de avaliação da presença das PPS nos municípios brasileiros - Juliana
 
+# :wrench: Conjuntos de dados com indicação de ajuste no Portal de Dados Abertos
+De uma maneira geral, os dados disponibilizados nos Portal de dados abertos pelo MDS acessados para o desenvolvimento do presente projeto estavam organizados de maneira adequada, atualizados e sem inconsistências, com exceção dos conjuntos abaixo destacados: 
+
+- `Registro Mensal Atendimento do CRAS`: [Registro Mensal de Atendimentos - RMA](https://dados.gov.br/dados/conjuntos-dados/registro-mensal-de-atendimentos-rma) - A última atualização dos dados do RMA no Portal de Dados Abertos foi em 26/08/2021. Embora no Portal de Dados Abertos tenha o caminho para o Portal da Vigilância Sociassistencial, da Secretaria Nacional de Assistência Saocial, onde estão disponibilizados os dados atualizados, de modo a qualificar o Portal de Dados Abertos, sugere-se a sua atualização, nem que sejam apenas referente aos dados dos anos fechados, 2021 e 2022, direcionando o cidadão para o outro portal apenas para obter os dados do ano corrente.
+  
+- `Índice de Gestão Descentralizada`:  [IGD-M PBF - Taxas 2023](https://dados.gov.br/dados/conjuntos-dados/indice-de-gestao-descentralizada---igd---mi-social) - O arquivo csv com os dados do IGD no Portal de Dados Abertos está apresentando inconsistências, com alguns municípios apresentando resultados em casas decimais e outros na casa das centenas. Seugere-se que os arquivos sejam analisados e substituídos de modo a corrigir as inconsistências.
+
+Registra-se que a disponibilização dos dados em outros portais abertos permitiu que as dificuldades encontradas fossem superadas e as análises dos programas previamente selecionados executadas sem dificuldade.
+
+# :woman_student: Aprendizados para a vida
+O processo do desenvolvimento do Projeto permitiu construirmos aprendizados que poderão ser usados ao longo do percurso da jornada de analistas de dados. 
+
+Para além de treinar as ferramentas aprendidas durante o BootCamp, enfrentamos dificuldades que nos trouxeram grandes oportunidades de crescimento, que gostaríamos de dividir com todas:
+
+* Abra o arquivo a ser utilizado antes de carregá-lo na interface onde serão desenvolvidas as análises - Muitas vezes uma simples leitura do arquivo permite a identificação imediata de algum padrão de inconsistência que pode indicar a necessidade de substituição do arquivo e que, ao analisar na interface de desenvolvimento, pode ser observado apenas após um longo tempo de escrita de códigos
+  
+* Ao partir de uma premissa para analisar os dados selecionados, que envolvam um conjunto de dados muito extenso, faça um exercício com uma amostra inicial. Até mesmo pensando em dados hipotéticos, teste a sua ideia antes de dar início à analise de todo o conjunto de dados. Isso poderá poupar muitas horas de escrita de códigos que no final não serão usados
+
+* Ao trabalhar em um projeto no GitHub, com mais de uma pessoa trabalhando no mesmo arquivo, lembre-se sempre de ao finalizar de escrever o código no jupyter lab, salvar o arquivo, fazer o commit (para pegar as alterações da pasta local e preparar o arquivo para ir para o GitHub) e depois clicar no push para o seu repositório do projeto do GitHub ser atualizado. Apenas salvar o arquivo no jupyter lab poderá fazer com que a atualização do GitHub por outra pessoa gere arquivos com conflitos que demandrão muitas horas de trabalho para você recuperar a sua versão.
+  
 # :angel: Pessoas Contribuidoras
 
   Bruno Garcia
