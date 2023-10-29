@@ -1,0 +1,131 @@
+Automatização de coleta de dados de documento SEI
+
+Como fazer
+Entrada automática do SEI
+Pesquisa Avançada Automática
+Baixar a relação de documentos e os documentos
+Retirar os dados dos documentos SEI
+Desenvolver o relatório com esses dados
+	Analisar os dados
+
+
+Etapas dos Programas
+Entrar no SEI
+Automatizar a busca
+Automatizar o download
+ 
+Coleta de dados
+Tratamento de dados 
+Limpeza de dados
+Resultados da Informação
+Dashboard
+https://www.youtube.com/watch?v=f7Goh4LpHdM
+
+Entrada Automática no SEI 
+Identificar a URL
+Acesso ao dado : ID SEI e Senha
+Identificação do tipo de conteúdo: HTML   
+Identificar a estrutura do dado: Ver orientação Bruno http://xpather.com
+<b> ver TAG
+Extrair dados
+OBS:Criar função para automação da coleta e para a limpeza dos dados
+(ver pudim.com.br)
+Transformar dado em DataFrame
+
+https://www.youtube.com/watch?v=f7Goh4LpHdM
+
+Função para acesso ao dado via Selenium
+1º importar Selenium
+!pip install__upgrade selenium__quiet
+from selenium import webdriver
+2º Definir página da navegação
+   ‘         .get          ‘
+3º Identificar elemento/TAG para interação
+    ‘         .find_element            ‘
+4º interaja simulando clique com mouse
+    ‘         .click              ‘
+4º Destruir instância/fechar porta
+    ‘        .quit          ‘
+
+OBS: Na construção da função colocar o tempo para execução(time), observar as peculiaridades do SEI, visto sua demora de processamento.
+OBS; PESQUISAR COMO PROGRAMAR O SELENIUM PARA FECHAR QUANDO CONCLUÍDO O DOWNLOAD(MAIS EFICIENTE QUE TENTARMOS ESTABELECER UM TEMPO IDEAL).
+
+Coletas Dados
+Delimitar onde está a informação no HTML
+https://www.w3schools.com/xml/xpath_intro.asp
+http://xpather.com/
+/html/body/div[2]/text()[1]
+/html/body/div[2]/b/text()
+Retirar a informação com BeautifulSoup
+criar um DF com todos os dados até a Observações
+
+Transformar dado em Data Frame
+
+Limpar Dados
+
+Limpar Dados
+Limpar os dados de  acordo com os campos anteriores
+Tipo de solicitante 
+Organização
+Qual o método analitico (ficar com os que tem SIM)
+Qual o objetivo (ficar com os que tem SIM)
+Nome do Projeto [str] 
+Centro de Custo [int]
+Material Solicitado (apenas os que tem valor diferente de Zero)
+
+Atividades do dia 19/10/2023
+Baixar os documentos em HTML 
+      Verificar a estrutura da tabela
+      Verificar os dados importantes
+      Verificar os dados de concatenação
+Verificar a Automação
+sei.sgb.gov.br            
+     
+
+
+Automatizar a busca
+Entrar com a solicitação para autenticação (via Selenium)
+Fazer busca pela pesquisa avançada
+     escrever o tipo documento (REMA)
+<option value="485">REMA - Empréstimo de Materiais ou Ex. Geológicos</option>
+      Preencher o data do documento 
+<input type="radio" name="rdoData" id="optPeriodoExplicito" value="0" onclick="tratarPeriodo(this.value);" class="infraRadio">
+             Período explícito 
+<label id="lblDataE" for="txtDataE" accesskey="" class="infraLabelOpcional">&nbsp;até&nbsp;</label>
+Botão de Buscar
+<button tabindex="451" type="submit" id="sbmPesquisar" name="sbmPesquisar" value="Pesquisar" class="infraButton">Pesquisar</button>
+
+Extra
+Clicar em baixar a lista de documentos
+[clicar ] em [baixar lista]
+onclick = “getTablePesquisarDownload|this,”
+
+Listagem do Resultado da Busca
+
+Objetivo da navegação simulada
+
+Como fazer
+Entrada automática do SEI
+Pesquisa Avançada Automática
+Baixar a relação de documentos e os documentos
+Retirar os dados dos documentos SEI
+Desenvolver o relatório com esses dados
+	Analisar os dados
+Selenim
+Beautfulspup
+
+Request com expressão Regular 
+Pandas, Matplotlib e Seaborn
+	Informar a quantidade de dados
+
+teste
+
+
+Conclusões
+Verificar o quantitativo total
+Verificar os valores economizados da sociedade
+Verificar qual é a unidade mais acessada
+Criação de dashbord
+Resultados esperados
+Desenvolvimento de um caderno para facilitar a retirada de dados de dos documentos SEI
+
