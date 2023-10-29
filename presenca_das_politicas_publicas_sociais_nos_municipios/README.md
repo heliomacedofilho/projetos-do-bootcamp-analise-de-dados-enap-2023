@@ -71,6 +71,7 @@ O cálculo do IGD é composto por 4 fatores: 1) taxa de atualização cadastral 
 
 Para o cálculo do Índice da presença das PPS nos municípios brasileiros foram utilizados os dados do Fator 1 do IGD, por estarem disponibilizados no Portal de Dados Abertos e por ser o fator mais diretamente relacionado às entregas diretas à sociedade. 
 
+
 ## :memo: Demais Políticias Públicas utilizadas
 
 ### :computer: Cadastro Único para Programas Sociais (CadÚnico)
