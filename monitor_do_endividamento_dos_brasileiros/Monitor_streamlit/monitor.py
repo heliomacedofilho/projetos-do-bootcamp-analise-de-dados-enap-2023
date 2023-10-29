@@ -808,9 +808,7 @@ def load_pj_cnaesecao_cnaesubclasse_endividamento():
 
 pj_cnaesecao_cnaesubclasse_endividamento = load_pj_cnaesecao_cnaesubclasse_endividamento()
 
-pj_cnaesecao_cnaesubclasse_endividamento_filtrado = pj_cnaesecao_cnaesubclasse_endividamento[(pj_cnaesecao_cnaesubclasse_endividamento["data_base"] >= date1) & (pj_cnaesecao_cnaesubclasse_endividamento["data_base"] <= date2)].copy()
-
-plot_pj_cnaesecao_cnaesubclasse_endividamento = px.treemap(pj_cnaesecao_cnaesubclasse_endividamento_filtrado, 
+plot_pj_cnaesecao_cnaesubclasse_endividamento = px.treemap(pj_cnaesecao_cnaesubclasse_endividamento, 
                  path=['cnae_secao', 'cnae_subclasse'],
                  values='valor_deflacionado')
 
