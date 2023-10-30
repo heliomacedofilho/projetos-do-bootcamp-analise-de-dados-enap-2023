@@ -5,10 +5,14 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import locale
 import plotly.io as pio
+import json 
 
 #carregando os dados
 df = pd.read_csv('data\df_bpc_fpm_completa.csv')
-georreferenciamento_df = pd.read_csv('https://raw.githubusercontent.com/kelvins/Municipios-Brasileiros/main/csv/municipios.csv')
+georreferenciamento_df = pd.read_csv('data\georreferenciamento_df.csv')
+
+with open('data\geojson', 'r') as geojson_file:
+    geojson = json.load(geojson_file)
 
 #criando as caixas de seleção
 escolha = st.sidebar.selectbox("Deseja filtrar os resultados?", ['Não', 'Sim'])
@@ -125,27 +129,13 @@ st.text("")
 
 with col5 :
     #criando o mapa
-        #criando uma cópia segura dos dados
-    resultados_df = df_filtrado.copy()
-        #criando dataframe com informações de georreferenciamento de municípios
-        #os dados de georreferenciamento tem 7 dígitos (vamos remover o dígito verificador e atualizar o dataframe)
-    georreferenciamento_df['codigo_ibge'] = georreferenciamento_df['codigo_ibge'].astype('str').map(lambda x: x[:-1]).astype('int')
-        #cruzamento do dataframe resultados com as informações de georreferenciamento
+    resultados_df = df_filtrado.copy() #criando uma cópia segura dos dados
     resultados_df = pd.merge(df_filtrado[['ibge_6', 'Classe']],
                              georreferenciamento_df[['codigo_ibge', 'nome', 'latitude', 'longitude']],
                              left_on='ibge_6',
                              right_on='codigo_ibge',
                              how='inner')
-        #puxar a malha geográfica do brasil a nível de município
-    import requests
-    geojson = requests.get(f'http://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=application/vnd.geo+json&qualidade=minima&intrarregiao=municipio').json()
-        #a malha geográfica do ibge tem 7 dígitos (vamos remover o dígito verificador e atualizar a malha)
-    from geojson_rewind import rewind
-    for feature in geojson['features']:
-        feature['properties']['codarea'] = feature['properties']['codarea'][:-1]
-    geojson = rewind(geojson, rfc7946=False)
-        #construir o mapa choroplético 
-    pio.renderers.default = 'iframe'
+    #construir o mapa choroplético 
     fig2 = px.choropleth(resultados_df,
                         geojson=geojson,
                         scope='south america',
