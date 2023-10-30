@@ -4,64 +4,27 @@ import plotly.graph_objects as go
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
+from scipy.stats import chi2_contingency
+import ssl
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
+#ssl._create_default_https_context = ssl._create_unverified_context
 
-# Título do aplicativo
-st.set_page_config(page_title="Evasão de alunos na UFJF", page_icon= '📚', layout="wide")
-st.markdown('# Evasão de alunos na UFJF 📚')
-st.markdown("---")
-
-info = st.sidebar.selectbox('Selecione o tipo de informação:',
-                                   ('ANO_INGRESSO', 'SEMESTRE_INGRESSO', 'TIPO_INGRESSO', 'COTA',\
-                                    'CAMPUS', 'TURNO', 'ETNIA', 'SEXO', 'Estado', 'Baixa renda', 'Escola pública', 'Etnia PPI', 'PCD'))
-
-curso = st.sidebar.selectbox('Selecione o curso:',
-                                   ('CIÊNCIAS BIOLÓGICAS', 'ADMINISTRAÇÃO', 'CIÊNCIAS CONTÁBEIS',
-       'CIÊNCIAS ECONÔMICAS', 'DIREITO', 'FARMÁCIA', 'FISIOTERAPIA',
-       'MEDICINA', 'FILOSOFIA', 'NUTRIÇÃO', 'FÍSICA', 'ODONTOLOGIA',
-       'GEOGRAFIA', 'EDUCAÇÃO FÍSICA', 'HISTÓRIA', 'LETRAS', 'PEDAGOGIA',
-       'SERVIÇO SOCIAL', 'ENFERMAGEM', 'ENGENHARIA CIVIL', 'PSICOLOGIA',
-       'ARQUITETURA E URBANISMO', 'CIÊNCIA DA COMPUTAÇÃO',
-       'ENGENHARIA DE PRODUÇÃO', 'MÚSICA', 'CIÊNCIAS EXATAS',
-       'ENGENHARIA COMPUTACIONAL', 'ESTATÍSTICA', 'MATEMÁTICA', 'QUÍMICA',
-       'ENGENHARIA ELÉTRICA - ENERGIA',
-       'ENGENHARIA ELÉTRICA - ROBÓTICA E AUTOMAÇÃO INDUSTRIAL',
-       'ENGENHARIA ELÉTRICA - SISTEMAS DE POTÊNCIA',
-       'ENGENHARIA ELÉTRICA - SISTEMAS ELETRÔNICOS',
-       'ENGENHARIA ELÉTRICA -  TELECOMUNICAÇÕES', 'ENGENHARIA MECÂNICA',
-       'BACHARELADO INTERDISCIPLINAR EM ARTES E DESIGN',
-       'CINEMA E AUDIOVISUAL', 'BACHARELADO EM ARTES VISUAIS',
-       'BACHARELADO EM DESIGN', 'BACHARELADO EM MODA',
-       'LICENCIATURA EM ARTES VISUAIS',
-       'ENGENHARIA AMBIENTAL E SANITÁRIA',
-       'BACHARELADO INTERDISCIPLINAR EM CIÊNCIAS HUMANAS',
-       'CIÊNCIA DA RELIGIÃO', 'CIÊNCIAS SOCIAIS', 'TURISMO',
-       'SISTEMAS DE INFORMAÇÃO', 'JORNALISMO', 'MEDICINA VETERINÁRIA',
-       'LETRAS - LIBRAS', 'LICENCIATURA EM MÚSICA',
-       'RÁDIO  TV E INTERNET'))
-
-
- 
-
-#filepath = os.path.join(os.getcwd(), 'Dados', 'dataset_grad_pres.csv')
 filepath = os.path.join(os.getcwd(), 'Dados', 'dataset_tratado.csv')
 
-
-# Cria o DataFrame completo, com todos os dados do arquivo dataset_grad_pres.csv
-
-#df_completo = pd.read_csv(filepath, engine='python', 
-#                     on_bad_lines='warn', encoding='iso-8859-1', header=0, sep = ";")
+#filepath = 'https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/analise_da_evasao_estudantil/Dados/dataset_tratado.csv'
 
 df_completo = pd.read_csv(filepath, engine='python', 
                      on_bad_lines='warn', header=0, sep = ",")
 
+
+# ----------------- INÍCIO FILTROS DATAFRAME-------------------------------
+
 df_ingressantes_apos_2012 = df_completo.loc[(df_completo['ANO_INGRESSO'] > 2012)]
 
 df_ingressantes_apos_2012 = df_ingressantes_apos_2012.loc[(df_ingressantes_apos_2012['TIPO_INGRESSO'] == 'SiSU') 
-            | (df_ingressantes_apos_2012['TIPO_INGRESSO'] == 'PISM') 
-            | (df_ingressantes_apos_2012['TIPO_INGRESSO'] == 'SiSU VAGA OCIOSA')
-            | (df_ingressantes_apos_2012['TIPO_INGRESSO'] == 'PISM VAGA OCIOSA')]
+            | (df_ingressantes_apos_2012['TIPO_INGRESSO'] == 'PISM')] 
+#            | (df_ingressantes_apos_2012['TIPO_INGRESSO'] == 'SiSU VAGA OCIOSA')
+#            | (df_ingressantes_apos_2012['TIPO_INGRESSO'] == 'PISM VAGA OCIOSA')]
 
 df_ingressantes_apos_2012 = df_ingressantes_apos_2012[~df_ingressantes_apos_2012['CURSO_NOME'].str.contains("ABI -", regex=False)]
 
@@ -69,6 +32,39 @@ df_ingressantes_apos_2012 = df_ingressantes_apos_2012[~df_ingressantes_apos_2012
 
 df_ingressantes_apos_2012 = df_ingressantes_apos_2012[~df_ingressantes_apos_2012['CURSO_NOME'].str.contains("BACHARELADO INTERDISCIPLINAR", regex=False)]
 
+# ----------------- FIM FILTROS DATAFRAME-------------------------------
+
+
+# ----------------- INÍCIO CONFIG PAG WEB ------------------------------
+# Título do aplicativo
+st.set_page_config(page_title="Evasão de alunos na UFJF", page_icon= '📚', layout="wide")
+st.markdown('# Evasão de alunos na UFJF 📚')
+st.markdown("---")
+
+chaves = ['ANO DE INGRESSO', 'SEMESTRE DE INGRESSO', 'TIPO DE INGRESSO', 'COTA',
+       'NOME DO CURSO', 'AREA', 'SITUAÇÃO', 'MOTIVO DA SAÍDA', 'CAMPUS', 'TURNO',
+       'ETNIA', 'SEXO', 'TIPO DE CURSO', 'LNG', 'LAT', 'LOCAL', 'LNG_ORGM',
+       'LAT_ORGM', 'LOCAL DE ORIGEM', 'BAIXA RENDA', 'ESCOLA PÚBLICA', 'ETNIA PPI',
+       'PCD', 'ESTADO']
+
+valores = df_completo.columns
+
+ch = {chave: valor for chave, valor in zip(chaves, valores)}
+
+info = st.sidebar.selectbox('Selecione o tipo de informação:',
+                                   ('ANO DE INGRESSO', 'SEMESTRE DE INGRESSO', 'TIPO DE INGRESSO', 'COTA',
+                                    'CAMPUS', 'TURNO', 'ETNIA', 'SEXO', 'BAIXA RENDA', 'ESCOLA PÚBLICA', 
+                                    'ETNIA PPI', 'PCD', 'ESTADO'))
+
+curso = st.sidebar.selectbox('Selecione o curso:',
+                                   (df_ingressantes_apos_2012['CURSO_NOME'].unique()))
+
+st.write("Escreva o texto aqui!")
+
+# ----------------- FIM CONFIG PAG WEB ---------------------------------
+
+
+# ----------------- INÍCIO PRIMEIRO GRÁFICO ----------------------------
 
 def calcular_qtt_situacao(df_ingressantes_apos_2012, filtro, situacao):
     df = df_ingressantes_apos_2012.loc[df_ingressantes_apos_2012['SITUACAO'] == situacao]
@@ -113,16 +109,51 @@ def cota_por_curso(evadido_vs_ingressante, curso):
     df['pct_concluido'] = (df['pct_concluido']*multiplicador).apply(format_value)
     df['pct_ativo'] = (df['pct_ativo']*multiplicador).apply(format_value)
 
-    fig.add_trace(go.Bar(x=df.index, y=df['evadidos'], name='evadidos', text=df['pct_evasao'], textposition='inside'))
-    fig.add_trace(go.Bar(x=df.index, y=df['concluidos'], name='concluidos', text=df['pct_concluido'], textposition='inside'))
-    fig.add_trace(go.Bar(x=df.index, y=df['ativos'], name='ativos', text=df['pct_ativo'], textposition='inside'))
-    fig.update_layout(barmode='stack', title=f'Situação x {info}')
+    fig.add_trace(go.Bar(x=df.index, y=df['evadidos'], name='Evadidos (%)', text=df['pct_evasao'], textposition='inside'))
+    fig.add_trace(go.Bar(x=df.index, y=df['concluidos'], name='Concluídos (%)', text=df['pct_concluido'], textposition='inside'))
+    fig.add_trace(go.Bar(x=df.index, y=df['ativos'], name='Ativos (%)', text=df['pct_ativo'], textposition='inside'))
+    fig.update_layout(barmode='stack', xaxis_title=f'{info}', yaxis_title= 'NÚMERO DE ALUNOS', title=f'SITUAÇÃO X {info} - {curso}')
     
     st.plotly_chart(fig)
 
-st.write("Gráfico de Barras:")
+cota_por_curso(evadido_vs_ingressante_por_filtro(df_ingressantes_apos_2012, ch[info]), curso)
 
-cota_por_curso(evadido_vs_ingressante_por_filtro(df_ingressantes_apos_2012, info), curso)
+# ----------------- FIM PRIMEIRO GRÁFICO ------------------------------
+
+
+# ----------------- INÍCIO TABELA QUI-QUADRADO ------------------------
+
+df_chi2 = df_ingressantes_apos_2012.loc[df_ingressantes_apos_2012['CURSO_NOME'] == curso]
+
+frequency_table = pd.crosstab(df_chi2[ch[info]], df_chi2['SITUACAO'], margins=False)
+
+chi2, p, dof, expected = chi2_contingency(frequency_table)
+
+data = {
+    'Estatística': ['Qui-Quadrado', 'Valor-p', 'Graus de Liberdade'],
+    'Valores': [chi2, p, int(dof)],    
+}
+
+table = pd.DataFrame(data)
+
+st.markdown("""
+<style>
+div[data-testid="stTable"] table {
+    width: 50%; /* Largura da tabela */
+    height: 100px; /* Altura da tabela */
+    overflow: auto; /* Adiciona barras de rolagem se necessário */
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.write('Tabela Qui-Quadrado')
+
+st.table(table)
+
+# ----------------- FIM TABELA QUI-QUADRADO ---------------------------
+
+
+# ----------------- INÍCIO SEGUNDO GRÁFICO ----------------------------
 
 def qtt_evadidos_por_sexo(df_ingressantes_apos_2012, filtro, sexo):
     df = df_ingressantes_apos_2012.loc[df_ingressantes_apos_2012['SITUACAO'] == 'Evadido']
@@ -161,15 +192,20 @@ def evadido_vs_sexo_por_filtro(df_ingressantes, filtro, curso):
 
     fig = go.Figure()
 
-    fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_feminino'], mode='lines+markers', name='feminino'))
-    fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_masculino'], mode='lines+markers', name='masculino'))
+    fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_feminino'], mode='lines+markers', name='feminino (%)'))
+    fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_masculino'], mode='lines+markers', name='masculino (%)'))
 
-    fig.update_layout(title=f'Taxa de evasão x {info}', xaxis_title=f'{info}', yaxis_title='Taxa de evasão')
+    fig.update_layout(title=f'TAXA DE EVASÃO X {info} - {curso}', xaxis_title=f'{info}', yaxis_title='TAXA DE EVASÃO')
     
     # Exiba o gráfico no Streamlit
     st.plotly_chart(fig)
 
-evadido_vs_sexo_por_filtro(df_ingressantes_apos_2012, info, curso)
+evadido_vs_sexo_por_filtro(df_ingressantes_apos_2012, ch[info], curso)
+
+# ----------------- FIM SEGUNDO GRÁFICO -------------------------------
+
+
+# ----------------- INÍCIO TERCEIRO GRÁFICO ---------------------------
 
 def evasao_por_grupo(df, info, subinfo):
     df = evadido_vs_ingressante_por_filtro(df, info)
@@ -184,26 +220,25 @@ def evasao_por_grupo(df, info, subinfo):
     
     fig.add_trace(go.Bar(x=ordena_por_evasao.index.get_level_values('CURSO_NOME'), y=ordena_por_evasao['pct_evasao'], name='taxa', text=ordena_por_evasao['pct_evasao'], textposition='inside'))
 
-    fig.update_layout(title=f'Taxa de evasão x {info} - {subinfo}', xaxis_title=f'{info} - {subinfo}', yaxis_title='Taxa de evasão', width=1200, height=800)
+    fig.update_layout(title=f'TAXA DE EVASÃO X {info} - {subinfo}', xaxis_title=f'{info} - {subinfo}', yaxis_title='TAXA DE EVASÃO', width=1000, height=800)
     
     # Exiba o gráfico no Streamlit
     st.plotly_chart(fig)
 
-if info == 'ANO_INGRESSO':
+if info == 'ANO DE INGRESSO':
     subinfo = st.selectbox('Selecione o ano: ', df_ingressantes_apos_2012['ANO_INGRESSO'].unique())
-    evasao_por_grupo(df_ingressantes_apos_2012, info, int(subinfo))
+    evasao_por_grupo(df_ingressantes_apos_2012, ch[info], int(subinfo))
 elif info == 'COTA':
     subinfo = st.selectbox('Selecione um grupo: ', df_ingressantes_apos_2012['COTA'].unique())
-    evasao_por_grupo(df_ingressantes_apos_2012, info, subinfo)
-elif info == 'TIPO_INGRESSO':
+    evasao_por_grupo(df_ingressantes_apos_2012, ch[info], subinfo)
+elif info == 'TIPO DE INGRESSO':
     subinfo = st.selectbox('Selecione um tipo de ingresso: ', df_ingressantes_apos_2012['TIPO_INGRESSO'].unique())
-    evasao_por_grupo(df_ingressantes_apos_2012, info, subinfo)
+    evasao_por_grupo(df_ingressantes_apos_2012, ch[info], subinfo)
 elif info == 'CAMPUS':
     subinfo = st.selectbox('Selecione um campus: ', df_ingressantes_apos_2012['CAMPUS'].unique())
-    evasao_por_grupo(df_ingressantes_apos_2012, info, subinfo)
+    evasao_por_grupo(df_ingressantes_apos_2012, ch[info], subinfo)
 elif info == 'TURNO':
     subinfo = st.selectbox('Selecione um turno: ', df_ingressantes_apos_2012['TURNO'].unique())
-    evasao_por_grupo(df_ingressantes_apos_2012, info, subinfo)
-    
+    evasao_por_grupo(df_ingressantes_apos_2012, ch[info], subinfo)
 
-#evasao_por_grupo(df_ingressantes_apos_2012, info, subinfo)
+# ----------------- FIM TERCEIRO GRÁFICO -------------------------------
