@@ -94,7 +94,9 @@ O público-alvo são as famílias que vivem com renda mensal de até meio salár
 
   * **Registro Mensal de Atendimento**: para o cálculo da presença dos atendimentos dos CRAS nos municípios foram utilizados os dados dos RMA do ano de 2022, dividido por doze, de modo a comparar o número médio de atendimento de 2022 com o número de pessoas cadastradas no CadÚnico em dez/2022
 
-   * **Análise de renda**: a partir dos dados do CadÚnico, de abril/2012 a agosto/2023, foram feitas análises do número de famílias em cada uma das faixas de renda ao longo do tempo: extrema pobreza, pobreza e baixa renda, aqui consideradas as famílias acima da faixa da pobreza e que recebem até 1/2 salário mínimo por pessoa da família. O recorte de 2012 se deveu por apenas a partir de abril constarem dados por faixa de renda. 
+   * **Análise de renda**: a partir dos dados do CadÚnico, de abril/2012 a agosto/2023, foram feitas análises do número de famílias em cada uma das faixas de renda ao longo do tempo: extrema pobreza, pobreza e baixa renda, aqui consideradas as famílias acima da faixa da pobreza e que recebem até 1/2 salário mínimo por pessoa da família. O recorte de 2012 se deveu por apenas a partir de abril constarem dados por faixa de renda.
+     
+   * **Taxa pobreza CadÚnico**:  a partir dos dados do CadÚnico, de abril/2012 e agosto/2023, foram feitas análises das taxas de pobreza do Cadastro Único, utilizando para tanto o número de pessoas nas faixas de pobreza e extrema-pobreza, pela população do Censo de 2010 e do Censo de 2023. Da mesma forma, o recorte de 2012 se deveu por apenas a partir de abril constarem dados por faixa de renda.
 
 - `Programa Bolsa Família`: [Bolsa Família – MI Social](https://dados.gov.br/dados/conjuntos-dados/bolsa-familia---mi-social) - Os dados do PBF utilizados foram os disponibilizados no Portal de Dados Abertos. Destaca-se que ao acessar os dados do PBF estavam disponíveis tanto os dados do mês de setembro quanto o de outubro de 2023. Entretanto, considerando que para a preparação da folha de pagamento do programa são utilizados os dados do CadÚnico do mês anterior, optou-se por utilizar os dados do PBF de setembro de 2023.
 
@@ -122,6 +124,13 @@ Como, a depender do caso concreto foi identificada a necessidade de distribuir o
 ![Padronizacao_nota](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/c65c5daf-e618-4929-bc84-663a7b400cd1)
 
 Por fim, foram somados as notas padronizadas atribuídas aos quatro programas para cada um dos municípios brasileiros, podendo pontuar no total de 0 a 10 em relação à presença das PPS.
+
+# :mag_right: Metodologia para cálculo da diferença das taxas de pobreza do CadÚnico de 2012 e 2023
+A partir dos dados do CadÚnico, de abril/2012 a agosto/2023, foram feitas análises das taxas de pobreza do Cadastro Único considerando os dados de população do Censo. Para tanto, o total do número de pessoas das faixas de pobreza e extrema-pobreza do Cadastro Único, de abril/2012 e de agosto/2023, foi dividido pela população do Censo de 2010 e do Censo de 2022, respectivamente. 
+
+Após o cálculo da taxa de pobreza para cada um dos dois períodos analisados, foi feito o cálculo da diferença das taxas da pobreza de 2012 e de 2023 e os municípios classificados de acordo com as variações de aumento ou redução da taxa da pobreza, conforme imagem abaixo.
+
+![metodologia_dif_tx_pob](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/6b2f20db-0050-4acc-a6ee-db44498757fa)
 
 # :hammer: Scripts desenvolvidos
 
