@@ -39,8 +39,10 @@ st.set_page_config(page_title="Monitor endividamento", page_icon=":bar_chart:", 
 
 st.title(":bar_chart: Monitor do endividamento dos brasileiros")
 
-st.info('Para facilitar a sua análise, todos os valores já estão deflacionados!\n\n'
-        'Clique em "sobre" no canto superior direito da tela para conferir mais detalhes sobre este projeto', 
+link = "https://sobremonitordoendividamento.readthedocs.io"
+
+st.info(f'Para facilitar a sua análise, todos os valores já estão deflacionados!\n\n'
+        f'Quer conferir mais detalhes sobre este projeto ou entrar em contato conosco? Clique [aqui]({link})',
         icon="👩‍💻")
 
 #Fazer o filtro
@@ -320,7 +322,10 @@ st.markdown("<div style='text-align: center; color: #555555; font-size: 1.3em;ma
 
 st.markdown("""
 <div style='text-align: left; color: #666666; font-size: 1em; background-color: #f0f0f0; padding: 10px; border-radius: 5px;margin-bottom: 20px;margin-bottom: 20px;'>
-    💡&nbsp;&nbsp;&nbsp;Nos gráficos abaixo são apresentadas a relação do endividamento dos brasileiros com os principais indicadores da atividade econômica do país. O Índice Nacional de Preços ao Consumidor Amplo (IPCA) mensura a variação do custo de vida médio das famílias, enquanto a taxa de de desocupação é o percentual de pessoas na força de trabalho que estão desempregados. Ambos são calculados pelo IBGE. Já a taxa média mensal de juros se refere à taxa contratada pelas pessoas físicas nas instituições financeiras e é disponibilizada pelo Banco Central do Brasil. Por sua vez, no cálculo do endividamento de longo prazo foram consideradas as parcelas de crédito com vencimento maior do que 360 dias, enquanto o endividamento total considera todas as operações.
+    💡&nbsp;&nbsp;&nbsp;Nos gráficos abaixo são apresentadas a relação do endividamento dos brasileiros com os principais indicadores da atividade econômica do país. O Índice Nacional de Preços ao Consumidor Amplo (IPCA) mensura a variação do custo de vida médio das famílias, enquanto a taxa de de desocupação é o percentual de pessoas na força de trabalho que estão desempregados. Ambos são calculados pelo IBGE. Já a taxa média mensal de juros se refere à taxa contratada pelas pessoas físicas nas instituições financeiras e é disponibilizada pelo Banco Central do Brasil. Por sua vez, no cálculo do endividamento de longo prazo foram consideradas as parcelas de crédito com vencimento maior do que 360 dias, enquanto o endividamento total considera todas as operações. 
+<br>
+<br>
+Conforme classificação adotada pela Fundação Getúlio Vargas, considerou-se baixa renda os contrantes com rendimento de até dois salários mínimos e alta renda os contratantes com rendimento acima de cinco salários mínimos.
 </div>
 """, unsafe_allow_html=True)
 
@@ -471,6 +476,10 @@ desemprego_divida_lp_filtrado = filter_data(data = desemprego_divida_lp,
                                             data_inicio = date1,
                                             data_fim = date2)
 
+filtro1 = desemprego_divida_lp_filtrado['categoria_renda'] == "alta renda"
+filtro2 = desemprego_divida_lp_filtrado['categoria_renda'] == "baixa renda"
+desemprego_divida_lp_filtrado=  desemprego_divida_lp_filtrado.loc[filtro1 | filtro2]
+
 plot_desemprego_divida_lp_filtrado = go.Figure()
 
 for categoria_renda in desemprego_divida_lp_filtrado['categoria_renda'].unique():
@@ -525,12 +534,12 @@ plot_desemprego_divida_lp_filtrado.update_layout(
     template="seaborn",
     legend=dict(
         x=0.5,  
-        y=-0.1,
+        y=-0.2,
         traceorder='normal',
         orientation='h',
         xanchor='center',  
         yanchor='top',
-        title='Categorias de renda *'
+        title='Categorias de faixas de rendimento'
     ),  
     xaxis=dict(showgrid=False, title = 'Ano'),
     yaxis=dict(
@@ -544,18 +553,18 @@ plot_desemprego_divida_lp_filtrado.update_layout(
 st.plotly_chart(plot_desemprego_divida_lp_filtrado, use_container_width=True)
 
 st.markdown("""
-<div style='text-align: center; color: #666666; font-size: 0.6em; margin-top: -30px;'>
-    * A categoria de renda é definida por meio de texto texto texto texto texto
-</div>
-""", unsafe_allow_html=True)
-
-st.markdown("""
 <div style='text-align: left; color: #666666; font-size: 1em; background-color: #f0f0f0; padding: 10px; border-radius: 5px;margin-bottom: 20px;margin-bottom: 20px;'>
-    💡&nbsp;&nbsp;&nbsp;Explicação correlação
+    💡&nbsp;&nbsp;&nbsp;A correlação é a medida estatística que indica o quanto as variáveis apresentadas estão relacionadas. Valores mais próximos de 1 indicam uma relação forte e positiva, enquanto valores mais próximos de -1 indicam uma relação forte e negativa. Por sua vez, valores mais próximos de 0 indicam relação fraca.
+<br>
+<br>
+Pontos de atendimento indicam as unidades físicas de instituições financeiras (I.F) autorizadas a funcionar no Brasil; bancos autorizados apontam a quantidade de I.F. com autorização para funcionar no sistema financeira nacional; cartões de crédito mostram a quantidade de cartões de crédito ativos; taxa de juros pessoa física é a taxa média contratada pelas pessoas físicas nas instituições financeiras; retorno sobre ativos das I.F. reflete o resultado contábil dessas instituições; ativo problemático designa a parcela das operações de crédito em que há pouca expectativa de pagamento; por fim, carteira ativa é o endividamento total das pessoas físicas. Todos esses indicadores foram obtidos no Sistema Gerenciador de Séries Temporais do Banco Central do Brasil.
+<br>
+<br>
+Atenção: em dispositivos móveis a visualização a seguir pode ficar prejudicada devido às dimensões do gráfico.
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Correlação entre indicadores macroeconômicos e as parcelas do endividamento total e parcelas com pouca expectativa de pagamento</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Mapa de calor da correlação entre variáveis de endividamento e de inclusão financeira</div>", unsafe_allow_html=True)
 
 @st.cache_data()
 def load_df_corr_porte_pf():
@@ -571,11 +580,10 @@ rename_columns = {
 'carteira_ativa_alta renda': 'Carteira ativa <br> alta renda',
 'ativo_problematico_baixa renda': 'Ativo problemático <br> baixa renda',
 'ativo_problematico_alta renda': 'Ativo problemático <br> alta renda',
-'cart. créd. ativos': 'Cartões de crédito ativos',
+'Cart. créd. ativos': 'Cartões de crédito <br> ativos',
 'Retorno sobre ativos IF': 'Retorno sobre ativos <br> das I.F.'}
 
 corr.rename(columns=rename_columns, index=rename_columns, inplace=True)
-
 
 mask = np.triu(np.ones_like(corr, dtype=bool))
 corr_masked = corr.mask(mask)
@@ -586,13 +594,22 @@ x=corr.columns,
 y=corr.index,
 zmin=-1, 
 zmax=1, 
-showscale=False))
+showscale=True,
+colorbar=dict(
+    orientation='h',
+    x=0.5, 
+    y=-0.2, 
+    xanchor='center',
+    yanchor='bottom',
+    len=0.75,
+    thickness=15
+    )))
 
 for i, row in enumerate(corr_masked.to_numpy()):
     for j, value in enumerate(row):
         if not np.isnan(value):  
             fig.add_annotation(dict(
-                font=dict(size=15),
+                font=dict(size=12),
                 x=corr.columns[j],
                 y=corr.index[i],
                 showarrow=False,
@@ -603,22 +620,22 @@ for i, row in enumerate(corr_masked.to_numpy()):
 fig.update_xaxes(side="top", tickangle=360, showgrid=False)
 fig.update_yaxes(side="left", tickangle=0, showgrid=False)
 
-fig.update_layout(margin=dict(t=0, b=0, l=0, r=0),
+fig.update_layout(margin=dict(t=0, b=50, l=0, r=0),
 template = "seaborn",
-dragmode=False)
+dragmode=False
+)
 
 st.plotly_chart(fig, use_container_width=True)
 
-
-
 #PESSOAS JURÍDICAS
-st.subheader('Como as empresas andam se financiando?')
+st.subheader('Como está o endividamento das empresas brasileiras?')
 
-st.markdown("<div style='text-align: center; color: #555555; font-size: 1.3em;margin-bottom: 20px;'>Distribuição dos ativos problemáticos das empresas brasileiras, em que há pouca expectativa de pagamento</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center; color: #555555; font-size: 1.3em;margin-bottom: 20px;'>Endividamento das empresas brasileiras</div>", unsafe_allow_html=True)
 
 st.markdown("""
 <div style='text-align: left; color: #666666; font-size: 1em; background-color: #f0f0f0; padding: 10px; border-radius: 5px;margin-bottom: 20px;'>
-    💡&nbsp;&nbsp;&nbsp;Os setores de atuação se referem às CNAEs, que são texto texto texto texto........ texto texto texto........ texto texto texto .... texto texto texto texto texto texto texto texto texto  texto texto texto  texto texto texto  texto texto texto
+    💡&nbsp;&nbsp;&nbsp;Nos gráficos abaixo, o setor de atuação (CNAE) se refere à atividade econômica da empresa, conforme classificação do IBGE. O primeiro gráfico (gráfico de dispersão) representa a relação entre duas variáveis: a proporção de empresas que saíram da atividade e o ativo problemático do respectivo setor. O segundo gráfico demonstra a distribuição geográfica do ativo problemático e considera o Estado ao qual o CNPJ da empresa contratante da operação está vinculado. O ativo problemático indica as parcelas de crédito em que há poucas expectativas de pagamento.
+    
 </div>
 """, unsafe_allow_html=True)
 
@@ -630,7 +647,7 @@ def load_df_corr_ibge_scr_pj():
 df_corr_ibge_scr_pj = load_df_corr_ibge_scr_pj()
 
 cnae_secao = st.selectbox(
-        'Para qual setor de atuação você deseja visualizar?',
+        'Qual setor de atuação você deseja visualizar?',
         df_corr_ibge_scr_pj['cnae_secao'].unique(), 
         index=14
     )
@@ -639,7 +656,7 @@ col5, col6 = st.columns((2))
 
 with col5:
 
-    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Dispersão entre os ativos problemáticos e a saída das empresas que pertencem ao setor de atuação selecionado</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Gráfico de dispersão os ativos problemáticos e a proporção de saída das empresas do setor</div>", unsafe_allow_html=True)
     
     df_corr_ibge_scr_pj_filtered = df_corr_ibge_scr_pj[df_corr_ibge_scr_pj['cnae_secao'] == cnae_secao]
 
@@ -650,7 +667,7 @@ with col5:
                                        margin=dict(t=0, l=0, r=0, b=0),
                                        template = "seaborn",
                                        xaxis=dict(showgrid=False, title = 'Ativo problemático'), 
-                                       yaxis=dict(showgrid=False, title='Qtde. empresas saíram da atividade/Total'),
+                                       yaxis=dict(showgrid=False, title='Qtde. empresas que saíram da atividade/Total'),
                                        dragmode=False)
     
     plot_corr_ibge_scr_pj.update_yaxes(showgrid=False)
@@ -660,7 +677,7 @@ with col5:
 
 with col6:
     
-    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Estados em que estão localizadas as empresas tomadoras de crédito com parcelas classificadas como ativo problemático que pertencem ao setor de atuação selecionado</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Distribuição geográfica do ativo problemático por Estado e setor de atuação das empresas contratantes</div>", unsafe_allow_html=True)
     
     df_cnae_pj_ativoproblematico = load_data_apenas_ano(arquivo = "df_cnae_pj_ativoproblematico.csv",
                                                 coluna_data = "ano")
@@ -703,15 +720,15 @@ with col6:
     
     st.plotly_chart(plot_cnae_pj_ativoproblematico,use_container_width=True)
 
-st.markdown("<div style='text-align: center; color: #555555; font-size: 1.3em;margin-bottom: 20px;'>Por dentro das micro e pequenas empresas</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center; color: #555555; font-size: 1.3em;margin-bottom: 20px;'>Endividamento das micro e pequenas empresas</div>", unsafe_allow_html=True)
 
 st.markdown("""
 <div style='text-align: left; color: #666666; font-size: 1em; background-color: #f0f0f0; padding: 10px; border-radius: 5px;margin-bottom: 20px;'>
-    💡&nbsp;&nbsp;&nbsp;Micro empresa é considerada aquela empresa em que..... pequena empresa é aquela empresa é que....., que são texto texto texto texto........ texto texto texto........ texto texto texto .... texto texto texto texto texto texto texto texto texto  texto texto texto  texto texto texto  texto texto texto
+    💡&nbsp;&nbsp;&nbsp;Nos gráficos abaixo, microempresa é aquela cuja receita bruta anual é de até R$ 360 mil por ano e pequena empresa é aquela cuja receita bruta anual está entre R$ 360 mil e R$ 4,8 milhões, conforme classificação da Receita Federal em janeiro de 2022. Para o cálculo do endividamento de curto prazo foram consideradas as operações de crédito com parcelas de vencimento em até 360 dias. O capital de giro se refere aos recursos utilizados para manter o equilíbrio do caixa e é utilizado para cobrir despesas correntes.
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Modalidades de crédito contratadas pelas micro e pequenas empresas com parcelas cujo vencimento é inferior a 360 dias</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Modalidades de crédito de curto prazo contratadas pelas micro e pequenas empresas</div>", unsafe_allow_html=True)
 
 pj_porte_modalidade_endividamentocp = load_data_ano_mes(arquivo = "pj_porte_modalidade_endividamentocp.csv",
                                                         coluna_data = "data_base")
@@ -732,7 +749,7 @@ plot_pj_porte_modalidade_endividamentocp = px.line(pj_porte_modalidade_endividam
              facet_col='porte',
              title='',
              labels={'data_base': '', 'curto_prazo_deflacionado': 'Endividamento de curto prazo'},
-             category_orders={"porte": ["Empresa de pequeno porte", "Microempresa"]})
+             category_orders={"porte": ["Microempresa", "Empresa de pequeno porte"]})
 
 plot_pj_porte_modalidade_endividamentocp.update_layout(
     title='',
@@ -741,7 +758,8 @@ plot_pj_porte_modalidade_endividamentocp.update_layout(
                 xanchor='center', 
                 yanchor='top', 
                 orientation = 'h',
-                traceorder='normal',),
+                traceorder='normal',
+               title = "Modalidade da operação de crédito"),
     xaxis=dict(title="Anos"),
     xaxis2=dict(title="Anos"),
     dragmode=False,
@@ -753,9 +771,7 @@ plot_pj_porte_modalidade_endividamentocp.update_yaxes(showgrid=False)
 
 st.plotly_chart(plot_pj_porte_modalidade_endividamentocp, use_container_width=True)
 
-st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Micro e pequenas empresas: endividamento para capital de giro versus ativo problemático, em que há pouca expectativa de pagamento</div>", unsafe_allow_html=True)
-
-
+st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Endividamento para capital de giro e ativo problemático das micro e pequenas empresas</div>", unsafe_allow_html=True)
 
 df_micro_peq_problematico = load_data(arquivo = "df_micro_peq_problematico.csv",
                                       coluna_data = "data_base")
@@ -777,7 +793,8 @@ plot_micro_peq_problematico = px.bar(df_micro_peq_problematico_filtrado,
              y=['Endividamento de Curto Prazo', 'Ativo Problemático'],
              facet_col='porte', 
              labels={'data_base': 'data_base'},
-             template="seaborn")
+             template="seaborn",
+            category_orders={"porte": ["Microempresa", "Empresa de pequeno porte"]})
 
 plot_micro_peq_problematico.update_layout(
     barmode='group',
@@ -788,9 +805,9 @@ plot_micro_peq_problematico.update_layout(
                 yanchor='top', 
                 orientation = 'h',
                 traceorder='normal',
-                title= 'tipo de parcela de crédito'),
-    xaxis=dict(),
-    xaxis2=dict(),
+                title= 'Tipo de parcela de crédito'),
+    xaxis=dict(title="Anos"),
+    xaxis2=dict(title="Anos"),
     dragmode=False,
     yaxis=dict(showgrid=False, title="Endividamento para capital de giro <br> e ativo problemático")
 )
@@ -799,15 +816,15 @@ plot_micro_peq_problematico.update_yaxes(showgrid=False)
 
 st.plotly_chart(plot_micro_peq_problematico, use_container_width=True)
 
-st.markdown("<div style='text-align: center; color: #555555; font-size: 1.3em;margin-bottom: 20px;'>Por dentro do setor de agricultura, pecuária, produção florestal, pesca e aquicultura</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center; color: #555555; font-size: 1.3em;margin-bottom: 20px;'>Endividamento do setor de agricultura, pecuária, produção florestal, pesca e aquicultura</div>", unsafe_allow_html=True)
 
 st.markdown("""
 <div style='text-align: left; color: #666666; font-size: 1em; background-color: #f0f0f0; padding: 10px; border-radius: 5px;margin-bottom: 20px;'>
-    💡&nbsp;&nbsp;&nbsp;O setor agro é responsável por x% das exportações brasileiras. Tantantantan texto texto texto
+    💡&nbsp;&nbsp;&nbsp;Pela classificação do IBGE, o setor de agricultura, pecuária, produção florestal, pesca e aquicultura possui subclasses, que fornecem informações mais detalhadas sobre a atividade econômica da empresa. A visualização abaixo considera as subclasses que tem participação de até 80% no setor.
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Distribuição do endividamento nas principais áreas de atuação das empresas do setor de agricultura, pecuária, produção florestal, pesca e aquicultura em dezembro-2022</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Distribuição do endividamento no setor de agricultura, pecuária, produção florestal, pesca e aquicultura em dezembro-2022</div>", unsafe_allow_html=True)
 
 
 @st.cache_data()
@@ -836,13 +853,13 @@ plot_pj_cnaesecao_cnaesubclasse_endividamento.update_traces(textinfo='label+perc
 
 st.plotly_chart(plot_pj_cnaesecao_cnaesubclasse_endividamento,use_container_width=True)
 
-st.subheader("Como o endividamento dos brasileiros vem sendo tratado pelos legisladores?")
+st.subheader("Endividamento em pauta no Congresso Nacional")
 
 st.markdown("<div style='text-align: center; color: #555555; font-size: 1.3em;margin-bottom: 20px;'>Proposições legislativas que se referem à endividamento com tramitação nos últimos 180 dias</div>", unsafe_allow_html=True)
 
 st.markdown("""
 <div style='text-align: left; color: #666666; font-size: 1em; background-color: #f0f0f0; padding: 10px; border-radius: 5px;margin-bottom: 20px;'>
-    💡&nbsp;&nbsp;&nbsp;A busca utiliza a API da Câmara dos Deputados, módulo proposições, e se refere aos projetos de lei e medidas provisórias que tenham como palavras-chave termos relacionados ao endividamento da população brasileira.e....., que são texto texto texto texto........ texto texto texto........ texto texto texto .... texto texto texto texto texto texto texto texto texto  texto texto texto  texto texto texto  texto texto texto
+    💡&nbsp;&nbsp;&nbsp;A busca utiliza a base de dados da Câmara dos Deputados e se refere aos projetos de lei e medidas provisórias que tenham como palavras-chave termos relacionados ao endividamento da população e das empresas brasileiras. Os resultados são atualizados em tempo real.
 </div>
 """, unsafe_allow_html=True)
 
@@ -948,7 +965,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     with st.container():
         # Filtro para o Tipo
         selected_tipo = st.multiselect(
-            "Filter Tipo",
+            "Tipo de proposição",
             df['Tipo'].unique(),
             default=st.session_state.filter_tipo
         )
@@ -956,7 +973,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
         # Filtro para o Ano
         _min, _max = int(df['Ano'].min()), int(df['Ano'].max())
         selected_ano = st.slider(
-            "Filter Ano",
+            "Ano",
             min_value=_min,
             max_value=_max,
             value=st.session_state.filter_ano,
@@ -965,7 +982,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 
         # Filtro para a Situação
         selected_situacao = st.multiselect(
-            "Filter Situação",
+            "Situação",
             df['Situação'].unique(),
             default=st.session_state.filter_situacao
         )
