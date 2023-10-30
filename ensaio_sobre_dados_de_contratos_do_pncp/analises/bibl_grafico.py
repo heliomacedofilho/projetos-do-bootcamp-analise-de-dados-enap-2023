@@ -16,8 +16,8 @@ def build_path(subfolder = 'merge'):
         os.makedirs(folderpath)
     return folderpath
     
-def save_data(figure, tipo_mapa, detalhe, subfolder = 'app'):
-    filepath = os.path.join(build_path(subfolder), f'{tipo_mapa}-{detalhe}.pkl')
+def save_data(figure, nome_grafico, subfolder = 'app'):
+    filepath = os.path.join(build_path(subfolder), f'{nome_grafico}.pkl')
     
     with open(filepath, 'wb') as pickle_file:
         pickle.dump(figure, pickle_file)   
