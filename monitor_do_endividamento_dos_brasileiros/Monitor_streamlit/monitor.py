@@ -114,18 +114,17 @@ def filter_data(data, coluna_data, filtro, coluna_filtro, data_inicio=None, data
         filtered_data = filtered_data[filtered_data[coluna_filtro] == filtro]
     return filtered_data
 
-st.subheader("Como a população brasileira anda se endividando?")
+st.subheader("Como está o endividamento da população brasileira?")
 
 st.markdown("""
 <div style='text-align: center; color: #555555; font-size: 1.3em; margin-bottom: 20px;'>
-    Endividamento dos brasileiros pessoas físicas de acordo com a sua ocupação
+    Endividamento dos brasileiros de acordo com a sua ocupação
 </div>
 """, unsafe_allow_html=True)
 
 st.markdown("""
 <div style='text-align: left; color: #666666; font-size: 1em; background-color: #f0f0f0; padding: 10px; border-radius: 5px;margin-bottom: 20px;'>
-    💡&nbsp;&nbsp;&nbsp;Os dados plotados consideram as parcelas de crédito que as pessoas físicas...
-    No caso do mapa, é considerada a localização do CPF do tomador de crédito.... texto texto texto texto texto texto texto texto texto
+    💡&nbsp;&nbsp;&nbsp;Nos gráficos abaixo, a lista de ocupações é proveniente do cadastro da Receita Federal e está vínculada natureza da ocupação principal do cliente que contrata a operação de crédito. Por sua vez, o endividamento total é a soma das parcelas de crédito contratadas para qualquer prazo de vencimento. Já a informação sobre o endividamento por Estado considera o CEP de residência do contratante da operação, enquanto o ativo problemático se refere à parcela de crédito em que há pouca expectativa de pagamento.
 </div>
 """, unsafe_allow_html=True)
 
@@ -150,7 +149,7 @@ col1, col2 = st.columns((2))
 
 with col1:
     
-    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Endividamento dos tomadores de crédito selecionados de acordo com a modalidade da operação e considerando todos os prazos de vencimento</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Endividamento por modalidade da operação de crédito e ocupação dos contratantes</div>", unsafe_allow_html=True)
     
     # Criação do gráfico
     plot_pf_ocupacao_modalidade_endividamento = px.line(pf_ocupacao_modalidade_endividamento_filtrado, 
@@ -165,7 +164,8 @@ with col1:
             traceorder='normal',
             orientation='h',
             xanchor='center',  
-            yanchor='top'      
+            yanchor='top',
+            title="Modalidade da operação de crédito"
         ),
         yaxis=dict(
             showgrid=False,
@@ -181,7 +181,7 @@ with col1:
 
 with col2:
     
-    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Estados em que residem os tomadores de crédito com parcelas classificadas como ativo problemático, em que há pouca expectativa de pagamento</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Distribuição geográfica do ativo problemático por Estado de residência e ocupação dos contratantes</div>", unsafe_allow_html=True)
 
     @st.cache_data()
     def load_geojson_data():
@@ -232,11 +232,11 @@ with col2:
     
     st.plotly_chart(plot_ocupacao_pf_ativoproblematico,use_container_width=True)
 
-st.markdown("<div style='text-align: center; color: #555555; font-size: 1.3em;margin-bottom: 20px;'>Endividamento dos brasileiros pessoas físicas de acordo com a sua renda</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center; color: #555555; font-size: 1.3em;margin-bottom: 20px;'>Endividamento dos brasileiros de acordo com a sua renda</div>", unsafe_allow_html=True)
 
 st.markdown("""
 <div style='text-align: left; color: #666666; font-size: 1em; background-color: #f0f0f0; padding: 10px; border-radius: 5px;margin-bottom: 20px;'>
-    💡&nbsp;&nbsp;&nbsp;Os dados plotados consideram as parcelas de crédito que as pessoas físicas.... No caso da quantidade de operações, foram excluídas as operações que totalizam 15 itens........ texto texto texto .... texto texto texto texto texto texto texto texto texto  texto texto texto  texto texto texto  texto texto texto
+    💡&nbsp;&nbsp;&nbsp; Nos gráficos abaixo, a faixa de rendimento dos tomadores de crédito se refere ao porte do cliente conforme classificação do Sistema de Operações de Crédito. Para o cálculo do endividamento de longo prazo foram consideradas todas as parcelas com prazo de vencimento acima de 360 dias. Quanto ao cálculo da quantidade de operações, foram desconsideradas as séries agregadas em que o número de operações é inferior ou igual a 15.
 </div>
 """, unsafe_allow_html=True)
 
@@ -259,7 +259,7 @@ pf_rendimento_modalidade_noperacoes_endividamento_filtrado = filter_data(
 col20, col21 = st.columns((2))
 
 with col20:
-    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Endividamento com vencimento acima de 360 dias em relação às modalidades de crédito contratadas pelas pessoas físicas da faixa de renda selecionada</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Endividamento de longo prazo por modalidade da operação de crédito e renda dos contratantes</div>", unsafe_allow_html=True)
 
     plot_rendimento_modalidade_noperacoes = px.line(pf_rendimento_modalidade_noperacoes_endividamento_filtrado, 
                   x='data_base', 
@@ -274,7 +274,8 @@ with col20:
         y=-0.2,
         orientation='h',
         xanchor='center',
-        traceorder='normal',
+        traceorder='normal', 
+        title='Modalidade da operação de crédito'
     ),
     xaxis=dict(showgrid=False, title='Ano'),
     yaxis=dict(
@@ -289,7 +290,7 @@ with col20:
 
 with col21:
     
-    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Quantidade de operações totais em relação às modalidades de crédito contratadas pelas pessoas físicas da faixa de renda selecionada</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Quantidade de operações de crédito por modalidade e renda dos contrantantes</div>", unsafe_allow_html=True)
 
     plot_rendimento_modalidade_noperacoes = px.line(pf_rendimento_modalidade_noperacoes_endividamento_filtrado, 
                   x='data_base', 
@@ -304,7 +305,8 @@ with col21:
             y=-0.2,
             orientation='h',
             xanchor='center',
-            traceorder='normal',
+            traceorder='normal', 
+            title="Modalidade da operação de crédito"
         ),
         xaxis=dict(showgrid=False, title = 'Ano'),
         yaxis=dict(showgrid=False, title = 'Quantidade de operações'),
@@ -314,18 +316,18 @@ with col21:
             
     st.plotly_chart(plot_rendimento_modalidade_noperacoes, use_container_width=True)
 
-st.markdown("<div style='text-align: center; color: #555555; font-size: 1.3em;margin-bottom: 20px;margin-bottom: 20px;'>Inserindo dados macroeconômicos na análise</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center; color: #555555; font-size: 1.3em;margin-bottom: 20px;margin-bottom: 20px;'>Relação do endividamento dos brasileiros com dados macroeconômicos</div>", unsafe_allow_html=True)
 
 st.markdown("""
 <div style='text-align: left; color: #666666; font-size: 1em; background-color: #f0f0f0; padding: 10px; border-radius: 5px;margin-bottom: 20px;margin-bottom: 20px;'>
-    💡&nbsp;&nbsp;&nbsp;Ficou curioso em saber mais? O IPEA disponibiliza análises. O bacen disponibiliza análises tantatantan........ texto texto texto........ texto texto texto .... texto texto texto texto texto texto texto texto texto  texto texto texto  texto texto texto  texto texto texto
+    💡&nbsp;&nbsp;&nbsp;Nos gráficos abaixo são apresentadas a relação do endividamento dos brasileiros com os principais indicadores da atividade econômica do país. O Índice Nacional de Preços ao Consumidor Amplo (IPCA) mensura a variação do custo de vida médio das famílias, enquanto a taxa de de desocupação é o percentual de pessoas na força de trabalho que estão desempregados. Ambos são calculados pelo IBGE. Já a taxa média mensal de juros se refere à taxa contratada pelas pessoas físicas nas instituições financeiras e é disponibilizada pelo Banco Central do Brasil. Por sua vez, no cálculo do endividamento de longo prazo foram consideradas as parcelas de crédito com vencimento maior do que 360 dias, enquanto o endividamento total considera todas as operações.
 </div>
 """, unsafe_allow_html=True)
 
 df_juros_inflacao_modalidade = load_data_ano_mes(arquivo = "df_juros_inflacao_modalidade.csv", coluna_data = "data_base")
 
 indicador_macro = st.selectbox(
-        'Selecione o indicador macroeconômico que você deseja adicionar à série',
+        'Selecione o indicador macroeconômico que você deseja visualizar na série',
         ('IPCA', 'Taxa média mensal de juros - PF')
     )
 
@@ -372,7 +374,7 @@ def create_figure(yaxis_column_name):
             xanchor='center',
             traceorder='normal',
             yanchor='top',
-            title = 'modalidades'
+            title = 'Modalidade da operação de crédito'
             ),
         xaxis=dict(showgrid=False, title = 'Ano'),
         yaxis=dict(
@@ -387,154 +389,11 @@ def create_figure(yaxis_column_name):
 
 
     
-st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Distribuição do endividamento com parcelas acima de 360 dias por modalidades de contratação</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Endividamento de longo prazo por modalidades de contratação</div>", unsafe_allow_html=True)
 
 st.plotly_chart(create_figure(indicador_macro), use_container_width=True)
 
-
-col30, col31 = st.columns((2))
-
-with col30:
-    
-    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Endividamento com vencimento acima de 360 dias por faixa de renda em comparação à taxa de desocupação</div>", unsafe_allow_html=True)
-
-    desemprego_divida_lp = load_data_ano_mes(arquivo = "df_desemprego_divida_grupo.csv", coluna_data = "data")
-
-    desemprego_divida_lp_filtrado = filter_data(data = desemprego_divida_lp,
-                                                coluna_data = "data",
-                                                filtro = None,
-                                                coluna_filtro = None,
-                                                data_inicio = date1,
-                                                data_fim = date2)
-
-    plot_desemprego_divida_lp_filtrado = go.Figure()
-
-    for categoria_renda in desemprego_divida_lp_filtrado['categoria_renda'].unique():
-        subset = desemprego_divida_lp_filtrado[desemprego_divida_lp_filtrado['categoria_renda'] == categoria_renda]
-        plot_desemprego_divida_lp_filtrado.add_trace(go.Scatter(x=subset['data'],
-                                 y=subset['longo_prazo_deflacionado'],
-                                 mode='lines',
-                                 name=f'{categoria_renda}',
-                                 yaxis='y2',
-                                 opacity=0.7))
-
-    plot_desemprego_divida_lp_filtrado.add_trace(go.Scatter(x=desemprego_divida_lp_filtrado['data'],
-                             y=desemprego_divida_lp_filtrado['valor'], 
-                             mode='lines',
-                             name='taxa de desocupação',
-                             opacity=1,
-                            line=dict(color='dimgray', width=2, dash='dot')))
-
-    plot_desemprego_divida_lp_filtrado.add_shape(
-        go.layout.Shape(
-            type="line",
-            x0="2017-07-01",
-            x1="2017-07-01",
-            y0=0,
-            y1=1,
-            yref='paper',
-            line=dict(color="black", width=2)
-        )
-    )
-
-    plot_desemprego_divida_lp_filtrado.add_annotation(
-        go.layout.Annotation(
-            text="Reforma Trabalhista",
-            x="2017-07-01",
-            y=0,
-            yref='paper',
-            showarrow=False,
-            font=dict(color="black", size=12),
-            textangle = 90,
-            xshift=10
-        )
-    )
-
-    plot_desemprego_divida_lp_filtrado.update_layout(
-        title_text='',
-        yaxis2=dict(
-            overlaying='y',
-            side='right',
-            showgrid=False,
-            title="Endividamento de longo prazo"
-        ),
-        template="seaborn",
-        legend=dict(
-            x=0.5,  
-            y=-0.2,
-            traceorder='normal',
-            orientation='h',
-            xanchor='center',  
-            yanchor='top',
-            title='categorias de renda'
-        ),  
-        xaxis=dict(showgrid=False, title = 'Ano'),
-        yaxis=dict(
-            showgrid=False,
-            title="Taxa de desocupação"
-        ),
-        margin=dict(t=0, b=0, l=0, r=0),
-        dragmode=False
-    )
-    
-    st.plotly_chart(plot_desemprego_divida_lp_filtrado, use_container_width=True)
-    
-with col31:
-    
-    st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Correlação entre indicadores macroeconômicos e as parcelas do endividamento total e parcelas com pouca expectativa de pagamento</div>", unsafe_allow_html=True)
-    
-    @st.cache_data()
-    def load_df_corr_porte_pf():
-        df = pd.read_csv("df_corr_porte_pf.csv", encoding="UTF-8", delimiter=',', decimal='.')
-        return df
-
-    df_corr_porte_pf = load_df_corr_porte_pf()
-
-    corr = df_corr_porte_pf.corr()
-    
-    rename_columns = {
-    'carteira_ativa_baixa renda': 'Carteira ativa - baixa renda',
-    'carteira_ativa_alta renda': 'Carteira ativa - alta renda',
-    'ativo_problematico_baixa renda': 'Ativo problemático - baixa renda',
-    'ativo_problematico_alta renda': 'Ativo problemático - alta renda',
-    'cart. créd. ativos': 'Cartões de crédito ativos'}
-    
-    corr.rename(columns=rename_columns, index=rename_columns, inplace=True)
-    
-    
-    mask = np.triu(np.ones_like(corr, dtype=bool))
-    corr_masked = corr.mask(mask)
-    
-    fig = go.Figure(data=go.Heatmap(
-    z=corr_masked,
-    x=corr.columns,
-    y=corr.index,
-    zmin=-1, 
-    zmax=1, 
-    showscale=False))
-
-    for i, row in enumerate(corr_masked.to_numpy()):
-        for j, value in enumerate(row):
-            if not np.isnan(value):  
-                fig.add_annotation(dict(
-                    font=dict(size=10),
-                    x=corr.columns[j],
-                    y=corr.index[i],
-                    showarrow=False,
-                    text=f"{value:.2f}",
-                    xref="x",
-                    yref="y"
-                ))
-    fig.update_xaxes(side="bottom", tickangle=90, showgrid=False)
-    fig.update_yaxes(side="left", tickangle=0, showgrid=False)
-
-    fig.update_layout(margin=dict(t=0, b=0, l=0, r=0),
-    template = "seaborn",
-    dragmode=False)
-    
-    st.plotly_chart(fig, use_container_width=True)
-
-st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Endividamento com prazo de vencimento acima de 360 dias em comparação ao índice de preços ao consumidor amplo (inflação)</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Endividamento de longo prazo por renda dos contratantes</div>", unsafe_allow_html=True)
 
 
 pf_porte_endividamentolp_inflacao = load_data_ano_mes(arquivo = "pf_porte_endividamentolp_inflacao.csv", coluna_data = "data")
@@ -593,13 +452,164 @@ plot_pf_porte_endividamentolp_inflacao.update_layout(
         orientation='h',
         xanchor='center',
         yanchor='top',
-        title='faixa de renda'
+        title='Faixa de rendimento'
     ),
     template="seaborn",
     dragmode=False
 )
     
 st.plotly_chart(plot_pf_porte_endividamentolp_inflacao, use_container_width=True)
+
+st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Endividamento de longo prazo por categoria de renda dos contratantes</div>", unsafe_allow_html=True)
+
+desemprego_divida_lp = load_data_ano_mes(arquivo = "df_desemprego_divida_grupo.csv", coluna_data = "data")
+
+desemprego_divida_lp_filtrado = filter_data(data = desemprego_divida_lp,
+                                            coluna_data = "data",
+                                            filtro = None,
+                                            coluna_filtro = None,
+                                            data_inicio = date1,
+                                            data_fim = date2)
+
+plot_desemprego_divida_lp_filtrado = go.Figure()
+
+for categoria_renda in desemprego_divida_lp_filtrado['categoria_renda'].unique():
+    subset = desemprego_divida_lp_filtrado[desemprego_divida_lp_filtrado['categoria_renda'] == categoria_renda]
+    plot_desemprego_divida_lp_filtrado.add_trace(go.Scatter(x=subset['data'],
+                             y=subset['longo_prazo_deflacionado'],
+                             mode='lines',
+                             name=f'{categoria_renda}',
+                             yaxis='y2',
+                             opacity=0.7))
+
+plot_desemprego_divida_lp_filtrado.add_trace(go.Scatter(x=desemprego_divida_lp_filtrado['data'],
+                         y=desemprego_divida_lp_filtrado['valor'], 
+                         mode='lines',
+                         name='taxa de desocupação',
+                         opacity=1,
+                        line=dict(color='dimgray', width=2, dash='dot')))
+
+plot_desemprego_divida_lp_filtrado.add_shape(
+    go.layout.Shape(
+        type="line",
+        x0="2017-07-01",
+        x1="2017-07-01",
+        y0=0,
+        y1=1,
+        yref='paper',
+        line=dict(color="black", width=2)
+    )
+)
+
+plot_desemprego_divida_lp_filtrado.add_annotation(
+    go.layout.Annotation(
+        text="Reforma Trabalhista",
+        x="2017-07-01",
+        y=0,
+        yref='paper',
+        showarrow=False,
+        font=dict(color="black", size=12),
+        textangle = 90,
+        xshift=10
+    )
+)
+
+plot_desemprego_divida_lp_filtrado.update_layout(
+    title_text='',
+    yaxis2=dict(
+        overlaying='y',
+        side='right',
+        showgrid=False,
+        title="Endividamento de longo prazo"
+    ),
+    template="seaborn",
+    legend=dict(
+        x=0.5,  
+        y=-0.1,
+        traceorder='normal',
+        orientation='h',
+        xanchor='center',  
+        yanchor='top',
+        title='Categorias de renda *'
+    ),  
+    xaxis=dict(showgrid=False, title = 'Ano'),
+    yaxis=dict(
+        showgrid=False,
+        title="Taxa de desocupação"
+    ),
+    margin=dict(t=0, b=0, l=0, r=0),
+    dragmode=False
+)
+
+st.plotly_chart(plot_desemprego_divida_lp_filtrado, use_container_width=True)
+
+st.markdown("""
+<div style='text-align: center; color: #666666; font-size: 0.6em; margin-top: -30px;'>
+    * A categoria de renda é definida por meio de texto texto texto texto texto
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div style='text-align: left; color: #666666; font-size: 1em; background-color: #f0f0f0; padding: 10px; border-radius: 5px;margin-bottom: 20px;margin-bottom: 20px;'>
+    💡&nbsp;&nbsp;&nbsp;Explicação correlação
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("<div style='text-align: center; color: #888888; font-size: 0.9em;margin-bottom: 20px;margin-top: 20px;'>Correlação entre indicadores macroeconômicos e as parcelas do endividamento total e parcelas com pouca expectativa de pagamento</div>", unsafe_allow_html=True)
+
+@st.cache_data()
+def load_df_corr_porte_pf():
+    df = pd.read_csv("df_corr_porte_pf.csv", encoding="UTF-8", delimiter=',', decimal='.')
+    return df
+
+df_corr_porte_pf = load_df_corr_porte_pf()
+
+corr = df_corr_porte_pf.corr()
+
+rename_columns = {
+'carteira_ativa_baixa renda': 'Carteira ativa <br> baixa renda',
+'carteira_ativa_alta renda': 'Carteira ativa <br> alta renda',
+'ativo_problematico_baixa renda': 'Ativo problemático <br> baixa renda',
+'ativo_problematico_alta renda': 'Ativo problemático <br> alta renda',
+'cart. créd. ativos': 'Cartões de crédito ativos',
+'Retorno sobre ativos IF': 'Retorno sobre ativos <br> das I.F.'}
+
+corr.rename(columns=rename_columns, index=rename_columns, inplace=True)
+
+
+mask = np.triu(np.ones_like(corr, dtype=bool))
+corr_masked = corr.mask(mask)
+
+fig = go.Figure(data=go.Heatmap(
+z=corr_masked,
+x=corr.columns,
+y=corr.index,
+zmin=-1, 
+zmax=1, 
+showscale=False))
+
+for i, row in enumerate(corr_masked.to_numpy()):
+    for j, value in enumerate(row):
+        if not np.isnan(value):  
+            fig.add_annotation(dict(
+                font=dict(size=15),
+                x=corr.columns[j],
+                y=corr.index[i],
+                showarrow=False,
+                text=f"{value:.2f}",
+                xref="x",
+                yref="y"
+            ))
+fig.update_xaxes(side="top", tickangle=360, showgrid=False)
+fig.update_yaxes(side="left", tickangle=0, showgrid=False)
+
+fig.update_layout(margin=dict(t=0, b=0, l=0, r=0),
+template = "seaborn",
+dragmode=False)
+
+st.plotly_chart(fig, use_container_width=True)
+
+
 
 #PESSOAS JURÍDICAS
 st.subheader('Como as empresas andam se financiando?')
