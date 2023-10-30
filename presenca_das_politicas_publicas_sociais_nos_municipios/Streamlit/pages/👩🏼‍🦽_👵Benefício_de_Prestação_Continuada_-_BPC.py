@@ -141,6 +141,7 @@ with col5 :
                         scope='south america',
                         color='Classe',
                         color_continuous_scale="Blues",
+                        color_continuous_midpoint = 5.5,
                         locations='ibge_6',
                         featureidkey='properties.codarea',
                         hover_name='nome').update_layout(height=800, width=1000, autosize=False)
