@@ -46,7 +46,7 @@ Bibliotecas utilizadas para extração, análise e visualização dos dados
 - Seaborn
 - Streamlit
 - SidraPy
-    
+
 Nosso contato
 --------
 
