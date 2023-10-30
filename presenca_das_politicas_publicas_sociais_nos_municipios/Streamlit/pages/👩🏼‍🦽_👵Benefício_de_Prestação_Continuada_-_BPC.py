@@ -68,7 +68,7 @@ st.write(
 st.text("")
 
 #criando os cartões com os valores totais do BPC, FPM e total de beneficiados
-col1, col2, col3= st.columns(3)
+col1, col2, col3, col4= st.columns(4)
 
 with col1 :
     st.write(
@@ -96,13 +96,22 @@ with col3 :
     )
     st.write("{:,}".format(df_filtrado['bpc_ben'].sum()))
 
+with col4 :
+    st.write(
+        """
+        <h2 style="font-size: 18px;">Índice Médio</h2>
+        """,
+        unsafe_allow_html=True
+    )
+    st.write("{:,.2f}%".format(df_filtrado['fpm_bpc'].mean()))
+
 #criando um espaço entre as visualizações
 st.text("")
 
-col4, col5 = st.columns(2)
+col5, col6 = st.columns(2)
 
 #criando o gráfico do índice
-with col4:
+with col5:
     
     df_filtrado = df_filtrado.sort_values(by='Classe')
     df_filtrado2 = df_filtrado.groupby('Classe').agg({'count':'sum'}).reset_index()
@@ -127,7 +136,7 @@ with col4:
 #criando um espaço entre as visualizações
 st.text("")
 
-with col5 :
+with col6 :
     #criando o mapa
     resultados_df = df_filtrado.copy() #criando uma cópia segura dos dados
     resultados_df = pd.merge(df_filtrado[['ibge_6', 'Classe']],
