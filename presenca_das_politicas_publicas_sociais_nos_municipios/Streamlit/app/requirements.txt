@@ -1,0 +1,6 @@
+streamlit==1.27.2
+pandas==2.1.1
+matplotlib==3.8.0
+plotly==5.17.0
+requests==2.31.0
+geojson_rewind==1.1.0

@@ -67,7 +67,7 @@ col1, col2, col3= st.columns(3)
 with col1 :
     st.write(
         """
-        <h2 style="font-size: 24px;">Valor total pago do BPC</h2>
+        <h2 style="font-size: 18px;">Valor total pago do BPC</h2>
         """,
         unsafe_allow_html=True
     )
@@ -75,7 +75,7 @@ with col1 :
 with col2 :
     st.write(
         """
-        <h2 style="font-size: 24px;">Repasse total do FPM</h2>
+        <h2 style="font-size: 18px;">Repasse total do FPM</h2>
         """,
         unsafe_allow_html=True
     )
@@ -84,7 +84,7 @@ with col2 :
 with col3 :
     st.write(
         """
-        <h2 style="font-size: 24px;">Total de beneficiados</h2>
+        <h2 style="font-size: 18px;">Total de beneficiados</h2>
         """,
         unsafe_allow_html=True
     )
@@ -93,27 +93,23 @@ with col3 :
 #criando um espaço entre as visualizações
 st.text("")
 
+
 #criando o gráfico do índice
 df_filtrado = df_filtrado.sort_values(by='Classe')
-    # Adicionando uma coluna formatada com os rótulos de dados
-df_filtrado['rótulo_dados'] = df_filtrado['count']
-    # Criando o gráfico
-fig = px.bar(df_filtrado, x='Classe', y='count')
+df_filtrado2 = df_filtrado.groupby('Classe').agg({'count':'sum'}).reset_index()
+#    # Adicionando uma coluna formatada com os rótulos de dados
+fig = px.bar(df_filtrado2, x='Classe', y='count', text_auto=True)
     # Personalizando o gráfico
-fig.update_traces(texttemplate='%{customdata}', customdata=df_filtrado['rótulo_dados'], textposition='outside')  # Adicionar rótulos de dados
-fig.update_yaxes(showticklabels=False,  # Remover marcações do eixo y
-                title_text='Nº de municípios')
+fig.update_yaxes(title_text='Nº de municípios')
 fig.update_xaxes(
     title_text='Índice',
-    tickvals=[1, 2,3,4,5,6,7,8,9,10,11],  # Valores reais
+    tickvals=[1,2,3,4,5,6,7,8,9,10,11],  # Valores reais
     ticktext=['0-10%', '11-20%', '21-30%', '31-40%', '41-50%', '51-60%', '61-70%', '71-80%', '81-90%', '91-100%', '>100%'],  # Rótulos personalizados
     tickangle=90,  # Rotação dos rótulos
-    tickfont=dict(size=12)# Tamanho da fonte
-)
+    tickfont=dict(size=12))# Tamanho da fonte
     # Exibir o gráfico no Streamlit
 st.header("Relação entre o valor pago do BPC e o FPM")
 st.plotly_chart(fig, use_container_width=True)
-
 #criando um espaço entre as visualizações
 st.text("")
 
@@ -148,6 +144,7 @@ fig2 = px.choropleth(resultados_df,
                     featureidkey='properties.codarea',
                     hover_name='nome').update_layout(height=800, width=1000, autosize=False)
 fig2.update_traces(marker_line_width=0)
+fig2.update_geos(fitbounds="locations", visible=False)
     # Exibir o gráfico no Streamlit
 st.header("Mapa com o impacto do BPC em relação ao FPM nos municípios ")
 st.plotly_chart(fig2, use_container_width = True)
