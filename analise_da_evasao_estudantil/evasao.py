@@ -44,7 +44,7 @@ df_ingressantes_apos_2012 = df_ingressantes_apos_2012[~df_ingressantes_apos_2012
 # Título do aplicativo
 st.set_page_config(page_title="Evasão de alunos na UFJF", page_icon= '📚', layout="wide")
 st.markdown('# Evasão de alunos na UFJF 📚')
-st.markdown("---")
+#st.markdown("---")
 
 tab1, tab2 = st.tabs(["Análise Por Curso", "Análise Geral"])
 
@@ -58,13 +58,11 @@ valores = df_completo.columns
 
 ch = {chave: valor for chave, valor in zip(chaves, valores)}
 
-tipo = ['ANO DE INGRESSO', 'SEMESTRE DE INGRESSO', 'TIPO DE INGRESSO', 'COTA',
+tipo_tab1 = ['ANO DE INGRESSO', 'SEMESTRE DE INGRESSO', 'TIPO DE INGRESSO', 'COTA',
                                     'CAMPUS', 'TURNO', 'ETNIA', 'SEXO', 'BAIXA RENDA', 'ESCOLA PÚBLICA', 
                                     'ETNIA PPI', 'PCD', 'ESTADO']
 
-info = st.sidebar.selectbox('Selecione o tipo de informação:',
-                                   (np.sort(tipo)))
-
+tipo_tab2 = ['ANO DE INGRESSO', 'TIPO DE INGRESSO', 'COTA', 'CAMPUS', 'TURNO']
 
 
 numero_cursos = len(df_ingressantes_apos_2012['CURSO_NOME'].unique())
@@ -72,7 +70,10 @@ numero_cursos = len(df_ingressantes_apos_2012['CURSO_NOME'].unique())
 with tab1:
     st.header("Análise Por Curso")
 
-    st.write(f'Bem-vindas e Bem-vindos ao painel de dados de evasão estudantil da UFJF. Aqui você vai encontrar informações sobre {str(numero_cursos)} cursos da UFJF, em uma série histórica de 2013 a 2023. Com os campos seletivos a sua esquerda, você pode selecionar o curso desejado e as informações que você deseja explorar como, forma de ingresso, tipos de cota de ingresso, questões sociais como sexo, etnia, renda e se o estudante é ou não oriundo de escola pública em sua educação básica. Uma vez selecionados os parâmetros, você visualizará dois gráficos: (i) um gráfico de barras com as informações de porcentagem de alunos evadidos, concluídos e ativos no curso escolhido, com informações da estatística de qui-quadrado dessas proporções; (ii) um gráfico de linhas com as informações de proporção de evadidos separados por sexo feminino e masculino.')
+    st.write(f'Bem-vindas e Bem-vindos ao painel de dados de evasão estudantil da UFJF. Aqui você vai encontrar informações sobre {str(numero_cursos)} cursos da UFJF, em uma série histórica de 2013 a 2023. Com os campos seletivos abaixo você pode selecionar o curso desejado e as informações que você deseja explorar como, forma de ingresso, tipos de cota de ingresso, questões sociais como sexo, etnia, renda e se o estudante é ou não oriundo de escola pública em sua educação básica. Uma vez selecionados os parâmetros, você visualizará dois gráficos: (i) um gráfico de barras com as informações de porcentagem de alunos evadidos, concluídos e ativos no curso escolhido, com informações da estatística de qui-quadrado dessas proporções; (ii) um gráfico de linhas com as informações de proporção de evadidos separados por sexo feminino e masculino.')
+
+    info = st.selectbox('Selecione o tipo de informação:',
+                                   (np.sort(tipo_tab1)))
 
     curso = st.selectbox('Selecione o curso:',
                                    (np.sort(df_ingressantes_apos_2012['CURSO_NOME'].unique())))
@@ -165,6 +166,13 @@ with tab1:
     st.write('Tabela Qui-Quadrado')
     
     st.table(table)
+
+    valorp = table.loc[1, 'Valores']
+
+    if valorp <= 0.05:
+        st.write(f'A estatística de Qui-quadrado indica, com nível de confiança de 95%, que o fator {info} influencia na taxa de evasão do curso {curso}.')
+    else:
+        st.write(f'A estatística de Qui-quadrado indica que o fator {info} não influencia na taxa de evasão do curso {curso}.')
     
     # ----------------- FIM TABELA QUI-QUADRADO ---------------------------
     
@@ -208,8 +216,8 @@ with tab1:
     
         fig = go.Figure()
     
-        fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_feminino'], mode='lines+markers', name='feminino (%)'))
-        fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_masculino'], mode='lines+markers', name='masculino (%)'))
+        fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_feminino'], mode='lines+markers', line=dict(color='MediumSeaGreen'), marker=dict(size=8), name = 'Feminino (%)'))
+        fig.add_trace(go.Scatter(x=df.index, y=df['pct_evasao_masculino'], mode='lines+markers', line=dict(color='SteelBlue'), marker=dict(size=8), name='Masculino (%)'))
     
         fig.update_layout(title=f'TAXA DE EVASÃO X {info} - {curso}', xaxis_title=f'{info}', yaxis_title='TAXA DE EVASÃO')
         
@@ -222,6 +230,11 @@ with tab1:
 
 with tab2:
     st.header("Análise Geral")
+
+    st.write('No gráfico abaixo, trazemos informações de cunho mais geral sobre as proporções de alunos evadidos da UFJF. Na caixa de seleção abaixo, você pode filtrar as informações que deseja visualizar, como o gráfico geral de evadidos por curso, e os gráficos com os demais parâmetros de análise: ingresso, renda, etnia, cota, sexo e outras. As informações trazidas aqui são o somatório de todos os cursos da UFJF que foram selecionados para a análise e respeitando a série temporal dos últimos 10 anos.')
+
+    info = st.selectbox('Selecione o tipo de informação:',
+                                   (np.sort(tipo_tab2)))
 
     # ----------------- INÍCIO TERCEIRO GRÁFICO ---------------------------
     
@@ -242,8 +255,6 @@ with tab2:
         
         # Exiba o gráfico no Streamlit
         st.plotly_chart(fig)
-    
-    st.write('No gráfico abaixo, trazemos informações de cunho mais geral sobre as proporções de alunos evadidos da UFJF. Na caixa de seleção abaixo, você pode filtrar as informações que deseja visualizar, como o gráfico geral de evadidos por curso, e os gráficos com os demais parâmetros de análise: ingresso, renda, etnia, cota, sexo e outras. As informações trazidas aqui são o somatório de todos os cursos da UFJF que foram selecionados para a análise e respeitando a série temporal dos últimos 10 anos.')
     
     if info == 'ANO DE INGRESSO':
         subinfo = st.selectbox('Selecione o ano: ', df_ingressantes_apos_2012['ANO_INGRESSO'].unique())
