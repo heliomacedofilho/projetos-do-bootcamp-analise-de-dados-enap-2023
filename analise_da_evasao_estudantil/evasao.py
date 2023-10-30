@@ -6,14 +6,19 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.stats import chi2_contingency
 import ssl
+import numpy as np
 
-#ssl._create_default_https_context = ssl._create_unverified_context
+ssl._create_default_https_context = ssl._create_unverified_context
 
-filepath = os.path.join(os.getcwd(), 'Dados', 'dataset_tratado.csv')
+#filepath = os.path.join(os.getcwd(), 'Dados', 'dataset_tratado_st.csv')
 
-#filepath = 'https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/analise_da_evasao_estudantil/Dados/dataset_tratado.csv'
+#url = 'https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/analise_da_evasao_estudantil/Dados/dataset_tratado_st.csv'
 
-df_completo = pd.read_csv(filepath, engine='python', 
+#@st.cache_data
+
+url = 'https://raw.githubusercontent.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/e7236a97bb126ac8df02fbdee5227f21744af258/analise_da_evasao_estudantil/Dados/dataset_tratado_st.csv'
+
+df_completo = pd.read_csv(url, engine='python', 
                      on_bad_lines='warn', header=0, sep = ",")
 
 
@@ -51,15 +56,19 @@ valores = df_completo.columns
 
 ch = {chave: valor for chave, valor in zip(chaves, valores)}
 
-info = st.sidebar.selectbox('Selecione o tipo de informação:',
-                                   ('ANO DE INGRESSO', 'SEMESTRE DE INGRESSO', 'TIPO DE INGRESSO', 'COTA',
+tipo = ['ANO DE INGRESSO', 'SEMESTRE DE INGRESSO', 'TIPO DE INGRESSO', 'COTA',
                                     'CAMPUS', 'TURNO', 'ETNIA', 'SEXO', 'BAIXA RENDA', 'ESCOLA PÚBLICA', 
-                                    'ETNIA PPI', 'PCD', 'ESTADO'))
+                                    'ETNIA PPI', 'PCD', 'ESTADO']
+
+info = st.sidebar.selectbox('Selecione o tipo de informação:',
+                                   (np.sort(tipo)))
 
 curso = st.sidebar.selectbox('Selecione o curso:',
-                                   (df_ingressantes_apos_2012['CURSO_NOME'].unique()))
+                                   (np.sort(df_ingressantes_apos_2012['CURSO_NOME'].unique())))
 
-st.write("Escreva o texto aqui!")
+numero_cursos = len(df_ingressantes_apos_2012['CURSO_NOME'].unique())
+
+st.write(f'Bem-vindas e Bem-vindos ao painel de dados de evasão estudantil da UFJF. Aqui você vai encontrar informações sobre {str(numero_cursos)} cursos da UFJF, em uma série histórica de 2013 a 2023. Com os campos seletivos a sua esquerda, você pode selecionar o curso desejado e as informações que você deseja explorar como, forma de ingresso, tipos de cota de ingresso, questões sociais como sexo, etnia, renda e se o estudante é ou não oriundo de escola pública em sua educação básica. Uma vez selecionados os parâmetros, você visualizará dois gráficos: (i) um gráfico de barras com as informações de porcentagem de alunos evadidos, concluídos e ativos no curso escolhido, com informações da estatística de qui-quadrado dessas proporções; (ii) um gráfico de linhas com as informações de proporção de evadidos separados por sexo feminino e masculino.')
 
 # ----------------- FIM CONFIG PAG WEB ---------------------------------
 
@@ -224,6 +233,8 @@ def evasao_por_grupo(df, info, subinfo):
     
     # Exiba o gráfico no Streamlit
     st.plotly_chart(fig)
+
+st.write('No gráfico abaixo, trazemos informações de cunho mais geral sobre as proporções de alunos evadidos da UFJF. Na caixa de seleção abaixo, você pode filtrar as informações que deseja visualizar, como o gráfico geral de evadidos por curso, e os gráficos com os demais parâmetros de análise: ingresso, renda, etnia, cota, sexo e outras. As informações trazidas aqui são o somatório de todos os cursos da UFJF que foram selecionados para a análise e respeitando a série temporal dos últimos 10 anos.')
 
 if info == 'ANO DE INGRESSO':
     subinfo = st.selectbox('Selecione o ano: ', df_ingressantes_apos_2012['ANO_INGRESSO'].unique())
