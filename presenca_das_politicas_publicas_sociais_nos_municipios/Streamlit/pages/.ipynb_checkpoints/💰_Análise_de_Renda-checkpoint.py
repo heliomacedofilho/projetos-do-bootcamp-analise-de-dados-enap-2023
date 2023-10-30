@@ -82,7 +82,7 @@ st.write(
 st.write(
     """
     <div style="text-align: justify">
-A partir dos dados do CadÚnico, de abril/2012 e de agosto/2023, foram feitas análises das taxas de pobreza do Cadastro Único, utilizando para tanto o total do número de pessoas nas faixas da pobreza e da extrema-pobreza, dividindo pela população do Censo de 2010 e do Censo de 2023, respectivamente. O recorte de 2012 para calcular a taxa da pobreza com base na população do Censo de 2010 se deveu por apenas a partir de abril constarem dados por faixa de renda. 
+A partir dos dados do CadÚnico, de abril/2012 e de agosto/2023, foram feitas análises das taxas de pobreza do Cadastro Único, utilizando para tanto o total do número de pessoas nas faixas da pobreza e da extrema-pobreza, dividido pela população do Censo de 2010 e do Censo de 2023, respectivamente. O recorte de 2012 para calcular a taxa da pobreza com base na população do Censo de 2010 se deve ao fato de apenas a partir de abril/2012 constarem dados por faixa de renda. 
 
 Posteriormente, o resultado da diferença das taxas de pobreza de 2012 e 2023 foi dividida em faixas de diminuição ou aumento da taxa da pobreza, conforme apresentado no gráfico abaixo.
 </div>
@@ -104,7 +104,7 @@ with col1 :
         """,
         unsafe_allow_html=True
     )
-    st.write("{:,.3f}".format(df_filtrado['tx_pob_extpob_x'].mean()))
+    st.write("{:,.3f}".format(df_filtrado['tx_pob_extpob_x'].mean()).replace(',', '.'))
 with col2 :
     st.write(
         """
@@ -112,7 +112,7 @@ with col2 :
         """,
         unsafe_allow_html=True
     )
-    st.write("{:,.3f}".format(df_filtrado['tx_pob_extpob_y'].mean()))
+    st.write("{:,.3f}".format(df_filtrado['tx_pob_extpob_y'].mean()).replace(',', '.'))
 
 with col3 :
     st.write(
@@ -121,7 +121,7 @@ with col3 :
         """,
         unsafe_allow_html=True
     )
-    st.write("{:,.3f}".format(df_filtrado['Dif_taxa_12_23'].mean()))
+    st.write("{:,.3f}".format(df_filtrado['Dif_taxa_12_23'].mean()).replace(',', '.'))
     
     #criando um espaço entre as visualizações
 st.text("")
@@ -137,32 +137,32 @@ with col4 :
     df_contagem_valores.reset_index(inplace = True)
 
 # CRIA o gráfico
-    fig = px.bar(df_contagem_valores, x='Classe_dif_taxa_12_23', y='count')
+    fig = px.bar(df_contagem_valores, x='Classe_dif_taxa_12_23', y='count',
+                title='Diferença das taxas de pobreza do CadÚnico 2012 e 2023')
      
 
 # PERSONALIZAR o gráfico
     fig.update_yaxes(title_text='Nº de municípios',
-                # title_textfont =dict(size=20),
+                #title_textfont =dict(size=20),
                 tickfont=dict(size=18)) # Tamanho da fonte 
 
 
     fig.update_xaxes(
-        title_text='Diferença das taxas de pobreza do CadÚnico 2012 e 2023',
+        title_text='Diferença das taxas de pobreza',
         tickvals=[1,2,3,4,5,6,7,8],  # Valores reais
         ticktext=['Aumento + de 20%', 'Aumento entre 10% e 20%','Aumento até 10%', 'sem alteração', 'Redução de até 10%', 'Redução entre 10% a 20%)', 'Redução entre 20% a 30%', 'Redução + de 30%'],  # Rótulos personalizados
         tickangle=-45,  # Rotação dos rótulos
         tickfont=dict(size=18))# Tamanho da fonte
     
+    fig.update_layout(height=600, width=45, autosize=False)
     
 # EXIBIR o gráfico
-    st.header("Diferença das taxas de pobreza do CadÚnico 2012 e 2023")
+    #st.header("Diferença das taxas de pobreza do CadÚnico 2012 e 2023")
     st.plotly_chart(fig, use_container_width=True)
 
 
-
 with col5 :
- 
-    # MAPA
+# MAPA
 # cópia segura
     resultados_df = df_filtrado.copy()
 # dataframe info geográficas dos municípios
@@ -176,6 +176,7 @@ with col5 :
 #pio.renderers.default = 'iframe'
     fig2 = px.choropleth(resultados_df,
                     geojson=geojson,
+                    title="Diferença das taxas de pobreza do CadÚnico 2012 e 2023",
                     scope='south america',
                     color='Dif_taxa_12_23',
                     color_continuous_scale="RdBu_r",
@@ -183,12 +184,12 @@ with col5 :
                     locations='ibge_6',
                     featureidkey='properties.codarea',
                     hover_name='nome').update_layout(height=800, width=1000, autosize=False)
-
+    
     fig2.update_traces(marker_line_width=0)
     fig2.update_geos(fitbounds="locations", visible=False)
 
 # Exibir o gráfico no Streamlit
-    st.header("Diferença das taxas de pobreza do CadÚnico 2012 e 2023")
+    #st.header("Diferença das taxas de pobreza do CadÚnico 2012 e 2023")
     st.plotly_chart(fig2, use_container_width = True)
     
 
@@ -211,43 +212,19 @@ A partir dos dados do CadÚnico, de abril/2012 a agosto/2023, foram feitas anál
     unsafe_allow_html=True
 )
 
-# #criando as caixas de seleção
-# #colunas = ['ibge_6', 'ano', 'valor', 'codigo_ibge', 'nome', 'latitude', 'longitude']  
-# escolha = st.sidebar.selectbox("Deseja filtrar os resultados?", ['Não', 'Sim'])
-# df_filtrado2 = df2
-# if escolha == 'Sim':
-#     lista_regioes = df2['Região'].unique().tolist()
-#     lista_regioes.insert(0, "Marcar Todos")
-#     regiao_selecionada = st.sidebar.selectbox("Selecione uma região:", lista_regioes)
+#criando um espaço entre as visualizações
+st.text("")
 
-#     if regiao_selecionada != "Marcar Todos":
-#         df_filtrado2 = df2[df2['Região'] == regiao_selecionada]
-
-#         lista_estados = df_filtrado2['ufSigla'].unique().tolist()
-#         lista_estados.insert(0, "Marcar Todos")
-#         estado_selecionado = st.sidebar.selectbox("Selecione um estado:", lista_estados)
-
-#         if estado_selecionado != "Marcar Todos":
-#             df_filtrado2 = df_filtrado2[df_filtrado2['ufSigla'] == estado_selecionado]
-
-#             lista_municipios = df_filtrado2['nome'].unique().tolist()
-#             lista_municipios.insert(0, "Marcar Todos")
-#             municipio_selecionado = st.sidebar.selectbox("Selecione um município:", lista_municipios)
-
-#             if municipio_selecionado != "Marcar Todos":
-#                 df_filtrado2 = df_filtrado2[df_filtrado2['nome'] == municipio_selecionado]
-
-              
 # MAPA evolução da faixa da pobreza
 # AJUSTA o dataframe
-contagem_valores2 = df_filtrado2['valor'].value_counts()
+contagem_valores2 = df2['valor'].value_counts()
 df_contagem_valores2 = pd.DataFrame(contagem_valores2)
 df_contagem_valores2.reset_index(inplace = True)
 
 # cópia segura
-resultados_df2 = df_filtrado2.copy()
+resultados_df2 = df2.copy()
 # dataframe info geográficas dos municípios
-resultados_df2 = pd.merge(df_filtrado2[['ibge_6', 'valor']],
+resultados_df2 = pd.merge(df2[['ibge_6','ano', 'valor']],
                         georreferenciamento_df[['codigo_ibge', 'nome', 'latitude', 'longitude']],
                         left_on='ibge_6',
                         right_on='codigo_ibge',
@@ -259,16 +236,20 @@ fig3 = px.choropleth(resultados_df2,
                     geojson=geojson,
                     scope='south america',
                     color='valor',
-                    color_continuous_scale="RdBu_r",
-                    #color_continuous_midpoint = 0.0,
+                    color_continuous_scale="Oryel",
                     locations='ibge_6',
                     featureidkey='properties.codarea',
-                    hover_name='nome').update_layout(height=800, width=1000, autosize=False)
+                    hover_name='nome',
+                    animation_frame='ano').update_layout(height=800, width=1000, autosize=False)
+
+fig3.update_layout(
+    title_text='Evolução da faixa da pobreza das famílias do CadÚnico ao longo do tempo',
+    title_x=0.3)  # Define o título no centro horizontal do gráfico
 
 fig3.update_traces(marker_line_width=0)
 fig3.update_geos(fitbounds="locations", visible=False)
 
 # Exibir o gráfico no Streamlit
-st.header("Evolução da faixa da pobreza das famílias do CadÚnico")
+#st.header("Evolução da faixa da pobreza das famílias do CadÚnico")
 st.plotly_chart(fig3, use_container_width = True)
     
