@@ -1,0 +1,668 @@
+automatizacao_de_relatorio_de_dados_de_documentos/retirar_html.ipynb
+automatizacao_de_relatorio_de_dados_de_documentos/raspagem_daiana.ipynb
+automatizacao_de_relatorio_de_dados_de_documentos/html_all.ipynb
+automatizacao_de_relatorio_de_dados_de_documentos/final_projeto.ipynb
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0526986.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0527028.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0549431.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0551646.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0551714.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0552011.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0567037.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0575684.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0580264.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0584472.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0597092.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0609813.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0614179.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0615791.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0634516.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0636408.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0636555.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0647653.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0660066.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0665856.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0670157.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0686695.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0691924.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0714166.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0775881.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0796246.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0809848.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0821160.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0827380.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0837951.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0882155.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0908448.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0919003.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0924588.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0928504.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0930163.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0961496.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_0967568.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1024528.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1027320.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1048752.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1061626.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1076921.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1090862.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1093692.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1115143.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1119388.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1119539.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1128399.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1143543.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1143678.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1143851.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1159758.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1229086.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1312854.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1398575.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1434318.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1438119.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1458466.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1460770.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1470806.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1503921.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1608851.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1651951.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1653107.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1653499.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1657589.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1725968.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1728287.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1730654.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1742298.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1742909.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1768052.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1773551.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1776774.html
+automatizacao_de_relatorio_de_dados_de_documentos/arq_sei/documento_1781391.html
+automatizacao_de_relatorio_de_dados_de_documentos/html/documento_1657589.html
+automatizacao_de_relatorio_de_dados_de_documentos/html/documento_1725968.html
+automatizacao_de_relatorio_de_dados_de_documentos/html/documento_1728287.html
+automatizacao_de_relatorio_de_dados_de_documentos/html/documento_1730654.html
+automatizacao_de_relatorio_de_dados_de_documentos/html/documento_1742298.html
+automatizacao_de_relatorio_de_dados_de_documentos/html/documento_1742909.html
+automatizacao_de_relatorio_de_dados_de_documentos/html/documento_1768052.html
+automatizacao_de_relatorio_de_dados_de_documentos/html/documento_1773551.html
+automatizacao_de_relatorio_de_dados_de_documentos/html/documento_1776774.html
+automatizacao_de_relatorio_de_dados_de_documentos/html/documento_1781391.html
+automatizacao_de_relatorio_de_dados_de_documentos/jocker_sei/teste.txt
+automatizacao_de_relatorio_de_dados_de_documentos/lista/20231029_163100.txt
+automatizacao_de_relatorio_de_dados_de_documentos/lista_arq/20231029_163100.txt
+saude_teste/datasus.txt
+saude_teste/dias permanencia.txt
+saude_teste/juntar_estados.ipynb
+saude_teste/POP2022_Municipios_20230622.xls
+saude_teste/por_municipios.zip
+saude_teste/iframe_figures/figure_23.html
+saude_teste/por_municipios/Tabela 1.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 1.2 - Acre.xls
+saude_teste/por_municipios/Tabela 1.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 1.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 1.5 - Para.xls
+saude_teste/por_municipios/Tabela 1.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 1.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 1.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 1.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 1.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 1.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 1.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 1.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 1.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 1.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 1.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 1.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 1.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 1.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 1.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 1.21 - Parana.xls
+saude_teste/por_municipios/Tabela 1.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 1.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 1.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 1.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 1.26 - Goias.xls
+saude_teste/por_municipios/Tabela 1.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 2.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 2.2 - Acre.xls
+saude_teste/por_municipios/Tabela 2.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 2.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 2.5 - Para.xls
+saude_teste/por_municipios/Tabela 2.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 2.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 2.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 2.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 2.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 2.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 2.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 2.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 2.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 2.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 2.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 2.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 2.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 2.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 2.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 2.21 - Parana.xls
+saude_teste/por_municipios/Tabela 2.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 2.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 2.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 2.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 2.26 - Goias.xls
+saude_teste/por_municipios/Tabela 2.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 3.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 3.2 - Acre.xls
+saude_teste/por_municipios/Tabela 3.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 3.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 3.5 - Para.xls
+saude_teste/por_municipios/Tabela 3.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 3.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 3.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 3.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 3.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 3.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 3.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 3.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 3.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 3.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 3.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 3.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 3.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 3.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 3.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 3.21 - Parana.xls
+saude_teste/por_municipios/Tabela 3.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 3.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 3.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 3.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 3.26 - Goias.xls
+saude_teste/por_municipios/Tabela 3.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 4.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 4.2 - Acre.xls
+saude_teste/por_municipios/Tabela 4.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 4.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 4.5 - Para.xls
+saude_teste/por_municipios/Tabela 4.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 4.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 4.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 4.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 4.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 4.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 4.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 4.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 4.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 4.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 4.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 4.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 4.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 4.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 4.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 4.21 - Parana.xls
+saude_teste/por_municipios/Tabela 4.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 4.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 4.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 4.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 4.26 - Goias.xls
+saude_teste/por_municipios/Tabela 4.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 5.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 5.2 - Acre.xls
+saude_teste/por_municipios/Tabela 5.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 5.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 5.5 - Para.xls
+saude_teste/por_municipios/Tabela 5.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 5.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 5.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 5.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 5.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 5.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 5.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 5.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 5.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 5.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 5.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 5.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 5.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 5.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 5.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 5.21 - Parana.xls
+saude_teste/por_municipios/Tabela 5.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 5.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 5.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 5.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 5.26 - Goias.xls
+saude_teste/por_municipios/Tabela 5.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 6.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 6.2 - Acre.xls
+saude_teste/por_municipios/Tabela 6.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 6.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 6.5 - Para.xls
+saude_teste/por_municipios/Tabela 6.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 6.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 6.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 6.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 6.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 6.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 6.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 6.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 6.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 6.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 6.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 6.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 6.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 6.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 6.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 6.21 - Parana.xls
+saude_teste/por_municipios/Tabela 6.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 6.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 6.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 6.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 6.26 - Goias.xls
+saude_teste/por_municipios/Tabela 6.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 7.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 7.2 - Acre.xls
+saude_teste/por_municipios/Tabela 7.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 7.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 7.5 - Para.xls
+saude_teste/por_municipios/Tabela 7.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 7.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 7.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 7.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 7.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 7.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 7.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 7.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 7.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 7.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 7.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 7.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 7.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 7.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 7.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 7.21 - Parana.xls
+saude_teste/por_municipios/Tabela 7.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 7.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 7.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 7.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 7.26 - Goias.xls
+saude_teste/por_municipios/Tabela 7.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 8.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 8.2 - Acre.xls
+saude_teste/por_municipios/Tabela 8.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 8.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 8.5 - Para.xls
+saude_teste/por_municipios/Tabela 8.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 8.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 8.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 8.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 8.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 8.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 8.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 8.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 8.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 8.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 8.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 8.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 8.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 8.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 8.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 8.21 - Parana.xls
+saude_teste/por_municipios/Tabela 8.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 8.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 8.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 8.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 8.26 - Goias.xls
+saude_teste/por_municipios/Tabela 8.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 9.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 9.2 - Acre.xls
+saude_teste/por_municipios/Tabela 9.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 9.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 9.5 - Para.xls
+saude_teste/por_municipios/Tabela 9.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 9.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 9.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 9.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 9.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 9.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 9.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 9.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 9.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 9.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 9.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 9.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 9.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 9.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 9.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 9.21 - Parana.xls
+saude_teste/por_municipios/Tabela 9.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 9.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 9.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 9.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 9.26 - Goias.xls
+saude_teste/por_municipios/Tabela 9.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 10.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 10.2 - Acre.xls
+saude_teste/por_municipios/Tabela 10.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 10.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 10.5 - Para.xls
+saude_teste/por_municipios/Tabela 10.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 10.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 10.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 10.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 10.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 10.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 10.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 10.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 10.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 10.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 10.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 10.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 10.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 10.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 10.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 10.21 - Parana.xls
+saude_teste/por_municipios/Tabela 10.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 10.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 10.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 10.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 10.26 - Goias.xls
+saude_teste/por_municipios/Tabela 10.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 11.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 11.2 - Acre.xls
+saude_teste/por_municipios/Tabela 11.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 11.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 11.5 - Para.xls
+saude_teste/por_municipios/Tabela 11.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 11.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 11.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 11.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 11.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 11.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 11.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 11.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 11.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 11.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 11.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 11.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 11.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 11.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 11.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 11.21 - Parana.xls
+saude_teste/por_municipios/Tabela 11.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 11.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 11.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 11.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 11.26 - Goias.xls
+saude_teste/por_municipios/Tabela 11.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 12.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 12.2 - Acre.xls
+saude_teste/por_municipios/Tabela 12.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 12.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 12.5 - Para.xls
+saude_teste/por_municipios/Tabela 12.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 12.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 12.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 12.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 12.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 12.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 12.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 12.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 12.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 12.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 12.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 12.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 12.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 12.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 12.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 12.21 - Parana.xls
+saude_teste/por_municipios/Tabela 12.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 12.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 12.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 12.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 12.26 - Goias.xls
+saude_teste/por_municipios/Tabela 12.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 13.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 13.2 - Acre.xls
+saude_teste/por_municipios/Tabela 13.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 13.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 13.5 - Para.xls
+saude_teste/por_municipios/Tabela 13.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 13.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 13.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 13.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 13.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 13.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 13.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 13.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 13.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 13.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 13.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 13.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 13.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 13.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 13.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 13.21 - Parana.xls
+saude_teste/por_municipios/Tabela 13.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 13.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 13.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 13.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 13.26 - Goias.xls
+saude_teste/por_municipios/Tabela 13.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 14.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 14.2 - Acre.xls
+saude_teste/por_municipios/Tabela 14.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 14.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 14.5 - Para.xls
+saude_teste/por_municipios/Tabela 14.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 14.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 14.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 14.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 14.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 14.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 14.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 14.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 14.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 14.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 14.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 14.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 14.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 14.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 14.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 14.21 - Parana.xls
+saude_teste/por_municipios/Tabela 14.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 14.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 14.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 14.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 14.26 - Goias.xls
+saude_teste/por_municipios/Tabela 14.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 15.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 15.2 - Acre.xls
+saude_teste/por_municipios/Tabela 15.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 15.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 15.5 - Para.xls
+saude_teste/por_municipios/Tabela 15.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 15.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 15.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 15.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 15.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 15.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 15.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 15.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 15.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 15.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 15.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 15.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 15.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 15.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 15.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 15.21 - Parana.xls
+saude_teste/por_municipios/Tabela 15.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 15.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 15.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 15.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 15.26 - Goias.xls
+saude_teste/por_municipios/Tabela 15.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 16.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 16.2 - Acre.xls
+saude_teste/por_municipios/Tabela 16.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 16.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 16.5 - Para.xls
+saude_teste/por_municipios/Tabela 16.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 16.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 16.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 16.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 16.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 16.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 16.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 16.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 16.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 16.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 16.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 16.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 16.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 16.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 16.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 16.21 - Parana.xls
+saude_teste/por_municipios/Tabela 16.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 16.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 16.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 16.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 16.26 - Goias.xls
+saude_teste/por_municipios/Tabela 16.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 17.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 17.2 - Acre.xls
+saude_teste/por_municipios/Tabela 17.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 17.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 17.5 - Para.xls
+saude_teste/por_municipios/Tabela 17.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 17.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 17.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 17.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 17.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 17.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 17.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 17.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 17.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 17.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 17.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 17.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 17.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 17.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 17.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 17.21 - Parana.xls
+saude_teste/por_municipios/Tabela 17.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 17.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 17.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 17.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 17.26 - Goias.xls
+saude_teste/por_municipios/Tabela 17.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 18.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 18.2 - Acre.xls
+saude_teste/por_municipios/Tabela 18.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 18.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 18.5 - Para.xls
+saude_teste/por_municipios/Tabela 18.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 18.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 18.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 18.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 18.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 18.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 18.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 18.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 18.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 18.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 18.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 18.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 18.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 18.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 18.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 18.21 - Parana.xls
+saude_teste/por_municipios/Tabela 18.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 18.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 18.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 18.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 18.26 - Goias.xls
+saude_teste/por_municipios/Tabela 18.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 19.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 19.2 - Acre.xls
+saude_teste/por_municipios/Tabela 19.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 19.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 19.5 - Para.xls
+saude_teste/por_municipios/Tabela 19.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 19.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 19.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 19.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 19.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 19.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 19.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 19.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 19.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 19.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 19.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 19.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 19.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 19.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 19.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 19.21 - Parana.xls
+saude_teste/por_municipios/Tabela 19.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 19.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 19.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 19.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 19.26 - Goias.xls
+saude_teste/por_municipios/Tabela 19.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 20.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 20.2 - Acre.xls
+saude_teste/por_municipios/Tabela 20.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 20.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 20.5 - Para.xls
+saude_teste/por_municipios/Tabela 20.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 20.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 20.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 20.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 20.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 20.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 20.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 20.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 20.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 20.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 20.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 20.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 20.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 20.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 20.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 20.21 - Parana.xls
+saude_teste/por_municipios/Tabela 20.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 20.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 20.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 20.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 20.26 - Goias.xls
+saude_teste/por_municipios/Tabela 20.27 - Distrito Federal.xls
+saude_teste/por_municipios/Tabela 21.1 - Rondonia.xls
+saude_teste/por_municipios/Tabela 21.2 - Acre.xls
+saude_teste/por_municipios/Tabela 21.3 - Amazonas.xls
+saude_teste/por_municipios/Tabela 21.4 - Roraima.xls
+saude_teste/por_municipios/Tabela 21.5 - Para.xls
+saude_teste/por_municipios/Tabela 21.6 - Amapa.xls
+saude_teste/por_municipios/Tabela 21.7 - Tocantins.xls
+saude_teste/por_municipios/Tabela 21.8 - Maranhao.xls
+saude_teste/por_municipios/Tabela 21.9 - Piaui.xls
+saude_teste/por_municipios/Tabela 21.10 - Ceara.xls
+saude_teste/por_municipios/Tabela 21.11 - Rio Grande do Norte.xls
+saude_teste/por_municipios/Tabela 21.12 - Paraiba.xls
+saude_teste/por_municipios/Tabela 21.13 - Pernambuco.xls
+saude_teste/por_municipios/Tabela 21.14 - Alagoas.xls
+saude_teste/por_municipios/Tabela 21.15 - Sergipe.xls
+saude_teste/por_municipios/Tabela 21.16 - Bahia.xls
+saude_teste/por_municipios/Tabela 21.17 - Minas Gerais.xls
+saude_teste/por_municipios/Tabela 21.18 - Espirito Santo.xls
+saude_teste/por_municipios/Tabela 21.19 - Rio de Janeiro.xls
+saude_teste/por_municipios/Tabela 21.20 - Sao Paulo.xls
+saude_teste/por_municipios/Tabela 21.21 - Parana.xls
+saude_teste/por_municipios/Tabela 21.22 - Santa Catarina.xls
+saude_teste/por_municipios/Tabela 21.23 - Rio Grande do Sul.xls
+saude_teste/por_municipios/Tabela 21.24 - Mato Grosso do Sul.xls
+saude_teste/por_municipios/Tabela 21.25 - Mato Grosso.xls
+saude_teste/por_municipios/Tabela 21.26 - Goias.xls
+saude_teste/por_municipios/Tabela 21.27 - Distrito Federal.xls
+automatizacao_de_relatorio_de_dados_de_documentos/final_projeto.ipynb
+automatizacao_de_relatorio_de_dados_de_documentos/retirar_html_all.ipynb
