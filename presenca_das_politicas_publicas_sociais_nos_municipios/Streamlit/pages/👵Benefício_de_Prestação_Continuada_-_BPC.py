@@ -39,7 +39,7 @@ if escolha == 'Sim':
 st.write(
     """
     <div style="text-align: center;">
-        <h1 style="color: black;">Benefício de Prestação Continuada <br> <span style="color: blue;">BPC</span> &#x1F475;</h1>
+        <h1 style="color: black;">Benefício de Prestação Continuada <br> <span style="color: blue;">BPC</span> 💻;</h1>
     </div>
     """,
     unsafe_allow_html=True
