@@ -1,0 +1,3 @@
+# Projeto da Análise da Evasão Estudantil 🎲
+
+Aqui inicio o projeto...
