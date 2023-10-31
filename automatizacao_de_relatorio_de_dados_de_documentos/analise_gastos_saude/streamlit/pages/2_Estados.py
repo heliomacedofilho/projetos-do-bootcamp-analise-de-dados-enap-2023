@@ -19,12 +19,12 @@ def gerar_df():
 
 df = gerar_df()
 
-nomes_originais = ['Gastos Hospitalares', 'Gastos Hosp. per capita', 'Mortalidade', 'Emendas Parlamentares']
+nomes_originais = ['Custos de Internações Hospitalares', 'Custos Intern. Hosp. per capita', 'Mortalidade', 'Emendas Parlamentares']
 
 anos = ['Escolha o ano', '2014', '2015', '2016',
         '2017', '2018', '2019', '2020', '2021', '2022']
 
-estados = ['Escolha um estado', 'RO', 'AC', 'AM', 'RR', 'PA', 'AP', 'TO', 'MA', 'PI', 'CE', 'RN',
+estados = ['Escolha um Estado', 'RO', 'AC', 'AM', 'RR', 'PA', 'AP', 'TO', 'MA', 'PI', 'CE', 'RN',
            'PB', 'PE', 'AL', 'SE', 'BA', 'MG', 'ES', 'RJ', 'SP', 'PR', 'SC',
            'RS', 'MS', 'MT', 'GO', 'DF']
 
