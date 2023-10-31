@@ -15,6 +15,9 @@ import os
 from geojson_rewind import rewind
 import requests
 
+import time
+import gzip
+
 #A biblioteca pickle é uma biblioteca Python padrão que permite serializar e desserializar objetos Python. Serializar um objeto significa converter o objeto em uma representação binária que pode ser armazenada em um arquivo ou transmitida por uma rede. Desserializar um objeto significa converter a representação binária de volta para o objeto Python.
 #Faz com que a exibição dos gráficos fique mais rapida
 import pickle 
@@ -31,6 +34,9 @@ st.markdown("-------------------")
 ### ************************************************************************************###
 st.markdown("<h5 style='text-align: justify; color: black;'>Esse projeto resultou em um conjunto de mapas/gráficos visando facilitar as análises e entendimento dos resultados pelos interessados: </h5>", unsafe_allow_html=True)
 st.markdown("-------------------")
+
+st.markdown("<h5 style='text-align: justify; color: blue;'>Evolução das Tecnologias de Geração </h5>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: justify; color: black;'>Atualmente, a tecnologia mais utilizada no Brasil é a 4G, que representa aproximadamente 78% do total de acessos nacionalmente. A tecnologia 3G teve seu ápice em 2015 e, desde então, vem paulatinamente sendo substituída pela 4G.  Já a tecnologia 5G iniciou sua fase de testes em 2021 e sua operação comercial em 2022, mas, até o momento, representa pouco menos de 4% do número total de acessos. O gráfico abaixo traz a evolução das tecnologias de geração no Brasil desde 2009 até 2023 (dados consolidados até setembro). </h6>", unsafe_allow_html=True)
 
 
 # arquivo = './Bootcamp Enap/projeto-smp/df_tec_geracao.csv'
@@ -159,9 +165,11 @@ st.pyplot(grafico_1)
 ### Inicio do Código da Bia para criar o 2o MAPA
 ### ************************************************************************************###
 
-st.markdown("-------------------")
-st.markdown("<h5 style='text-align: justify; color: black;'> O Gráfico abaixo exibe a tecnologia de geração dos telefones móveis usados pelos brasileiros</h5>", unsafe_allow_html=True)
-st.markdown("-------------------")
+
+st.markdown("<h5 style='text-align: justify; color: blue;'>Acesso aos dados móveis por tecnologia de geração </h5>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: justify; color: black;'>A apresentação gráfica abaixo retrata a modalidade de cobrança de acesso aos dados móveis por tecnologia de geração. Em 2023, cerca de 78% dos acessos são via tecnologia 4G, e metade dos usuários utilizam a modalidade pós-paga (50,8%), e a outra metade, a pré-paga (49,2%). As demais tecnologias (5G, 3G e 2G) representam, individualmente, menos de 10% dos acessos, e a modalidade de cobrança predominante em cada uma delas é a pós-paga (mais de 70%): </h6>", unsafe_allow_html=True)
+
+
 
 # Chame a função de carga dos dados
 arquivo = './dadospublicos/tec_2023_modalidade.csv'
@@ -187,15 +195,8 @@ st.plotly_chart(fig)
 ### Inicio do Código da Graciele para criar o MAPA
 ### ************************************************************************************###
 
-# Chame a função de carga dos dados
-#arquivo = './dadospublicos/uf_5g.csv'
-#df = load_data(arquivo)
-#
-###**Ler o df de dados de 5g por UF**
-#tec_2023_5g_por_estado = pd.read_csv('./tec_2023_5g_por_estado.csv',sep =';')
-#tec_2023_5g_por_estado.head()
-#
-#tec_2023_5g_por_estado.rename(columns=str.lower, inplace=True) #renomear as colunas para minúsculas
+st.markdown("<h5 style='text-align: justify; color: blue;'>Tecnologia de geração 5G </h5>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: justify; color: black;'>A tecnologia de geração 5G é o mais recente padrão tecnológico para serviços móveis: sua operação comercial iniciou em 2022 e está em expansão pelo País. Em 2023, representa pouco menos de 4% do total de acessos a dados móveis. A figura abaixo é um mapa dinâmico do Brasil que traz a penetração da tecnologia 5G por estado (em termos de percentual do total de acessos nesta modalidade), bastando passar o mouse sobre o estado para visualizar os dados. Os estados de SP, RJ, MG, PR e DF concentram o maior percentual de acessos 5G no País: </h6>", unsafe_allow_html=True)
 
 #import streamlit as st
 from streamlit.components.v1 import html
@@ -214,14 +215,44 @@ html(mapa_html, height=600)
 ### ************************************************************************************###
 
 st.markdown("-------------------")
-st.markdown("<h5 style='text-align: justify; color: black;'> O Gráfico abaixo permite ao usuário interagir selecionando a Operadora e visualizando a concentração de telefones móveis por municípios brasileiros</h5>", unsafe_allow_html=True)
-st.markdown("-------------------")
+st.markdown("<h5 style='text-align: justify; color: blue;'>Concentração de acessos por operadora, por região </h5>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: justify; color: black;'>Abaixo temos um mapa dinâmico que permite ao usuário escolher e ver, por operadora, as regiões, por código DDD, de concentração de mercado da operadora selecionada: quanto mais escura, na escala de cores, estiver determinada região, maior a concentração da operadora selecionada (em número de acessos). Basta selecionar na caixa de diálogo abaixo a operadora de sua preferência: </h6>", unsafe_allow_html=True)
 
-import time
 
 resultados = st.selectbox('Qual a operadora gostaria de ver a concentração de dados por Municípios?', ('TELECOM AMERICAS','TELEFONICA', 'TELECOM ITALIA', 'OI','OUTROS'))
 
-import gzip
+@st.cache_resource
+def carrega_mapa(file_name):
+    with gzip.GzipFile('./mapas/' + file_name+'.gz', 'r') as archive:
+           mapa= pickle.load(archive)
+    return mapa
+
+def cor_grupos(escolha_grupo):
+   if escolha_grupo == 'TELECOM AMERICAS':
+       result = 'mapa_TelecomAmericas_Claro.pkl'
+   elif escolha_grupo == 'TELECOM ITALIA':
+       result = 'mapa_TelecomItalia_Tim.pkl'
+   elif escolha_grupo == 'TELEFONICA':
+       result = 'mapa_Telefonica_Vivo.pkl'
+   elif escolha_grupo == 'OI':
+       result = 'mapa_oi.pkl'
+   else:
+       result = 'mapa_Outros.pkl'     
+   return result
+
+st.plotly_chart(carrega_mapa(cor_grupos(resultados)))
+
+
+
+# @st.cache_data
+# def carrega_mapa(file_name):
+#     start_time = time.time()
+#     with open('./mapas/'+file_name,'rb') as file:
+#         mapa= pickle.load(file)
+#     print("--- carga mapa %s seconds ---" % (time.time() - start_time))
+#     return mapa
+
+#import gzip
 
 # Nome do arquivo Pickle compactado
 #pickle_file = './mapas/mapa_Telefonica_Vivo.pkl.gz'
