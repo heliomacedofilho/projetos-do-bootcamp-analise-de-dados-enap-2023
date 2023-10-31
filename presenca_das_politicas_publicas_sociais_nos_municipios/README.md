@@ -141,7 +141,7 @@ Por fim, foram somadas as notas padronizadas atribuídas aos quatro programas pa
   
   - [Script da análise do Programa Bolsa Família](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/PBF.ipynb)
   
-  - [cript da análise do Benefício de Prestação Continuada](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/BPC-2022.ipynb)
+  - [Script da análise do Benefício de Prestação Continuada](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/BPC-2022.ipynb)
   
   - [Script da análise do Índice de Gestão Descentralizada](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/igd_m.ipynb)
   
