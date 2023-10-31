@@ -113,7 +113,7 @@ O público-alvo são as famílias que vivem com renda mensal de até meio salár
   - `População dos municípios Censo 2010`: [Tabela 1378 - População residente, por situação do domicílio, sexo e idade, segundo a condição no domicílio e compartilhamento da responsabilidade pelo domicílio](https://sidra.ibge.gov.br/tabela/1378)
   - `População dos municípios Censo 2022`: [Prévia da População dos Municípios com base nos dados do Censo Demográfico 2022 coletados até 25/12/2022](https://www.ibge.gov.br/estatisticas/sociais/populacao/22827-censo-demografico-2022.html?edicao=35938&t=resultados)
 
-- `Produto Interno Bruto Municipal`: [PIB por Unidade da Federação 2020](https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html) - De modo a comparar o resultado do Índice da presença das PPS nos municípios com outros dados econômicos foram utilizados os dados do PIM municipal. Destaca-se que esta é uma comparação apenas referente ao retrato presente do Índice de participação das PPS nos municípios como exercício para a utilização das ferramentas aprendidas no curso. Novas análises futuras poderão englobar a avaliação do comportamento da presença das PPS por meio do índice ao longo do tempo e compará-la com o PIB-M ao longo do tempo. 
+- `Produto Interno Bruto Municipal`: [PIB por Unidade da Federação 2020](https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html) - De modo a comparar o resultado do Índice da presença das PPS nos municípios com outros dados econômicos foram utilizados os dados do PIB municipal per capita. Entretanto, ao fazer uma análise preliminar entre as duas variáveis, identificou-se uma correlação linear desprezível. Desta forma, o resultado não foi apresentado no presente projeto.
  
 # :mag_right: Metodologia para cálculo do Índice das PPS nos municípios brasileiros
 A partir do resultado da análise da presença de cada um dos programas selecionados, foram definidos os intervalos com uma melhor distribuição dos municípios a partir dos casos concretos e, para cada faixa definida, foi atribuída uma nota de 0, no caso de resultado igual a zero, a no máximo 11, conforme imagem abaixo.
@@ -124,32 +124,32 @@ Como, a depender do caso concreto foi identificada a necessidade de distribuir o
 
 ![Padronizacao_nota](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/c65c5daf-e618-4929-bc84-663a7b400cd1)
 
-Por fim, foram somados as notas padronizadas atribuídas aos quatro programas para cada um dos municípios brasileiros, podendo pontuar no total de 0 a 10 em relação à presença das PPS.
+Por fim, foram somadas as notas padronizadas atribuídas aos quatro programas para cada um dos municípios brasileiros, podendo pontuar no total de 0 a 10 em relação à presença das PPS.
 
 # :mag_right: Metodologia para as análises de renda
-A partir dos dados do CadÚnico, de abril/2012 a agosto/2023, foram feitas análises das taxas de pobreza do Cadastro Único considerando os dados de população do Censo. Para tanto, o total do número de pessoas em situação de pobreza e extrema-pobreza do Cadastro Único, de abril/2012 e de agosto/2023, foi dividido pela população do Censo de 2010 e do Censo de 2022, respectivamente. 
+* `Taxa da pobreza`: A partir dos dados do CadÚnico foram feitas análises das taxas de pobreza do Cadastro Único considerando os dados de população do Censo. Para tanto, o total do número de pessoas em situação de pobreza e extrema-pobreza do Cadastro Único, de abril/2012 e de agosto/2023, foi dividido pela população do Censo de 2010 e do Censo de 2022, respectivamente.
+  
+  Após o cálculo da taxa de pobreza para cada um dos dois períodos analisados, foi feito o cálculo da diferença das taxas da pobreza de 2012 e de 2023 e os municípios classificados de acordo com as variações de aumento ou redução da taxa da pobreza, conforme imagem abaixo.
+  
+   ![metodologia_dif_tx_pob](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/6b2f20db-0050-4acc-a6ee-db44498757fa)
 
-Após o cálculo da taxa de pobreza para cada um dos dois períodos analisados, foi feito o cálculo da diferença das taxas da pobreza de 2012 e de 2023 e os municípios classificados de acordo com as variações de aumento ou redução da taxa da pobreza, conforme imagem abaixo.
-
-![metodologia_dif_tx_pob](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/6b2f20db-0050-4acc-a6ee-db44498757fa)
-
-Em adição, foi analisada a variação do número de famílias na faixa da pobreza, ou seja, em situação de pobreza e extrema-pobreza, no CadÚnico ao longo do tempo. Para tanto, foram utilizados os dados do CadÚnico dos meses de agosto de cada ano.  
+* `Variação do número de famílias na faixa da pobreza`: A partir dos dados do CadÚnico foi realizada a análise da variação do número total de famílias na faixa da pobreza, ou seja, em situação de pobreza e extrema-pobreza ao longo do tempo. Para tanto, foi utilizado o número total de famílias do CadÚnico dos meses de agosto de cada ano, incluídas nesta faixa.  
 
 # :hammer: Scripts desenvolvidos
 
-  - Script da análise do Cadastro Único  - mariana
+  - [Script da análise do Cadastro Único](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/CadastroUnico.ipynb)
   
-  - Script da análise do Programa Bolsa Família - Juliana
+  - [Script da análise do Programa Bolsa Família](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/PBF.ipynb)
   
-  - Script da análise do Benefício de Prestação Continuada - Cris
+  - [Script da análise do Benefício de Prestação Continuada](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/BPC-2022.ipynb)
   
-  - Script da análise do Índice de Gestão Descentralizada - Camila
+  - [Script da análise do Índice de Gestão Descentralizada](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/igd_m.ipynb)
   
-  - Script da análise do Registro Mensal Atendimento (RMA) do CRAS - Aline
+  - [Script da análise do Registro Mensal Atendimento (RMA) do CRAS](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/RMA.ipynb)
   
-  - Script da análise do Pib Municipal - Camila
+  - [Script da análise do Pib Municipal](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/pib_pc.ipynb)
   
-  - Script do Índice de avaliação da presença das PPS nos municípios brasileiros - Juliana
+  - [Script do Índice de avaliação da presença das PPS nos municípios brasileiros](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/Indice%20Geral%20PPS.ipynb)
 
 # :wrench: Conjuntos de dados com indicação de ajuste no Portal de Dados Abertos
 De uma maneira geral, os dados disponibilizados nos Portal de dados abertos pelo MDS acessados para o desenvolvimento do presente projeto estavam organizados de maneira adequada, atualizados e sem inconsistências, com exceção dos conjuntos abaixo destacados: 
