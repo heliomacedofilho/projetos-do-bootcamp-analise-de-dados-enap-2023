@@ -7,11 +7,11 @@ import matplotlib.pyplot as plt
 from scipy.stats import chi2_contingency
 import ssl
 import numpy as np
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay 
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-from mlxtend.plotting import plot_confusion_matrix
+#from sklearn.linear_model import LogisticRegression
+#from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay 
+#from sklearn.model_selection import train_test_split
+#from sklearn.preprocessing import LabelEncoder
+#from mlxtend.plotting import plot_confusion_matrix
 
 
 
@@ -45,20 +45,9 @@ df_ingressantes_apos_2012 = df_ingressantes_apos_2012[~df_ingressantes_apos_2012
 
 df_ingressantes_apos_2012 = df_ingressantes_apos_2012[~df_ingressantes_apos_2012['CURSO_NOME'].str.contains("BACHARELADO INTERDISCIPLINAR", regex=False)]
 
-encoder = LabelEncoder()
+#encoder = LabelEncoder()
 
-df = df_ingressantes_apos_2012.loc[(df_ingressantes_apos_2012['ANO_INGRESSO'] < 2019)]
-df = df.loc[(df['SITUACAO'] != 'Ativo')]
-df['BAIXA_RENDA_Encoded'] = encoder.fit_transform(df['BAIXA_RENDA'])
-df['ESCOLA_PUBLICA_Encoded'] = encoder.fit_transform(df['ESCOLA_PUBLICA'])
-df['ETNIA_PPI_Encoded'] = encoder.fit_transform(df['ETNIA_PPI'])
-df['PCD_Encoded'] = encoder.fit_transform(df['PCD'])
-df['SEXO_Encoded'] = encoder.fit_transform(df['SEXO'])
-df['ANO_INGRESSO_Encoded'] = encoder.fit_transform(df['ANO_INGRESSO'])
-df['TIPO_INGRESSO_Encoded'] = encoder.fit_transform(df['TIPO_INGRESSO'])
-df['CAMPUS_Encoded'] = encoder.fit_transform(df['CAMPUS'])
-df['TURNO_Encoded'] = encoder.fit_transform(df['TURNO'])
-df['SITUACAO_Encoded'] = encoder.fit_transform(df['SITUACAO'])
+
 
 
 # ----------------- FIM FILTROS DATAFRAME-------------------------------
@@ -299,7 +288,7 @@ with tab2:
         subinfo = st.selectbox('Selecione um turno: ', df_ingressantes_apos_2012['TURNO'].unique())
         evasao_por_grupo(df_ingressantes_apos_2012, ch[info], subinfo)
 
-    
+   
     # ----------------- FIM TERCEIRO GRÁFICO -------------------------------
 
 
