@@ -63,7 +63,7 @@ st.text("")
 st.write(
     """
     <div style="text-align: justify">
-<p> O  <span style="color: blue;">PBF</span>  é um programa de transferência de renda para famílias em situação de pobreza e extrema pobreza. O mapeamento das famílias de baixa renda que atendem os requisitos para obter o auxílio é feito pelo Cadastro Único. Para este trabalho, utilizamos os dados do PBF de <strong>Setembro de 2023</strong> e os dados do Cadastro Único de <strong>Agosto de 2023</strong>, posto que o pagamento do PBF baseia-se no Cadastro Único do mês anterior. </p>
+<p> O  <span style="color: blue;">PBF</span>  é um programa de transferência de renda para famílias em situação de pobreza e extrema pobreza. O mapeamento das famílias que atendem aos requisitos para obter o auxílio é feito no Cadastro Único. Para este trabalho, utilizamos os dados do PBF de <strong>Setembro de 2023</strong> e os dados do Cadastro Único de <strong>Agosto de 2023</strong>, posto que a folha de pagamento do PBF se baseia no Cadastro Único do mês anterior. </p>
 </div>    
     """,
     unsafe_allow_html=True
@@ -101,64 +101,23 @@ with col3 :
     )
     st.write("R${:,.2f}".format(df_filtrado['pbf_vlr_medio_benef_f'].mean()))
 
-#criando um espaço entre as visualizações
-#st.text("")
-#
-#st.write(
-#    """
-#    <div style="text-align: justify">
-#<p> O   <span style="color: blue;">Cadastro Único</span> é um  mapa das famílias de baixa renda no Brasil, mostrando ao governo quem essas famílias são, como elas vivem e do que elas precisam para melhorar suas vidas. Atualmente,  considera-se "baixa renda" como aquele em a renda per capita familiar (rpcf) é menor do que 1/2 salário mínimo, dentro desta faixa, a *Pobreza* compreende a faixa em que rpcf está entre R$ 89,01 e R$ 178,00 e a *Extrema pobreza* quando a rpcf é <= R$ 89 reais. </p>
-#
-# 
-#</div>    
-#    """,
-#    unsafe_allow_html=True
-#)
-#
 st.text("")
-
-#criando os cartões com os valores totais do BPC, FPM e total de beneficiados
-#col4, col5, col6= st.columns(3)
-#
-#with col4 :
-#    st.write(
-#        """
-#        <h2 style="font-size: 24px;">Número de famílias de baixa renda</h2>
-#        """,
-#        unsafe_allow_html=True
-#    )
-#    st.write("{:,}".format(df_filtrado['cadunico_tot_fam_rpc_ate_meio_sm'].sum()))
-#with col5 :
-#    st.write(
-#        """
-#        <h2 style="font-size: 24px;">Número de famílias na faixa da pobreza</h2>
-#        """,
-#        unsafe_allow_html=True
-#    )
-#    st.write("{:,}".format(df_filtrado['cadunico_tot_fam_pob'].sum()))
-#
-#with col6 :
-#    st.write(
-#        """
-#        <h2 style="font-size: 24px;">Número de famílias na faixa da extrema pobreza</h2>
-#        """,
-#        unsafe_allow_html=True
-#    )
-#    st.write("{:,}".format(df_filtrado['cadunico_tot_fam_ext_pob'].sum()))
-#
-##criando um espaço entre as visualizações
+st.text("")
 st.text("")
 
 st.write(
-    """
-    <div style="text-align: justify">
-<p> A Presença do Bolsa Família em cada município foi mensurada a partir da porcentagem de famílias atendidas pelo programa em relação ao total de famílias cadastradas como a faixa de pobreza ou extrema pobreza. 
-<p> Considerando que o pagamento do benefício no mês baseia-se no Cadastro Único do mês anterior, utilizamos os dados do Cadastro Único de <strong>Agosto de 2023</strong>. </p>
-  
-</div>    
-    """,
-    unsafe_allow_html=True
-)
+        """
+        <div style="text-align: justify">
+    <p> A presença do Bolsa Família em cada município foi mensurada a partir da porcentagem de famílias beneficiárias em relação ao total de famílias cadastradas na faixa de pobreza ou extrema pobreza. De acordo com a porcentagem de famílias atendidas, foi atribuído um índice para o município (IPBF), que varia de 0 a 6, sendo que 6 é quando mais de 100% das famílias elegíveis foram beneficiadas. </p>  
+    </div>    
+        """,
+        unsafe_allow_html=True
+    )
+st.text("")
+st.text("")
+st.text("")
+st.text("")
+
 
 col4, col5= st.columns(2)
 
@@ -182,43 +141,59 @@ with col4 :
     fig.update_xaxes(
         title_text='% de famílias',
         tickvals=[1,2,3,4,5,6],  # Valores reais
-        ticktext=['<=80%', '80-85%', '85-90%', '90-95%', '95-100%', '>100%'],  # Rótulos personalizados
+        ticktext=['<=80', '80-85', '85-90', '90-95', '95-100', '>100'],  # Rótulos personalizados
         tickangle=0,  # Rotação dos rótulos
-        tickfont=dict(size=18)# Tamanho da fonte
+        tickfont=dict(size=14)# Tamanho da fonte
     )
     # EXIBIR o gráfico
-    st.header("Famílias abaixo da linha da pobreza que receberam o Bolsa Família")
+    # st.header("Famílias elegíveis beneficiadas em cada município")
     st.plotly_chart(fig, use_container_width=True)
     
-    #criando um espaço entre as visualizações
-    st.text("")
     
 with col5 :
-    # MAPA
-    # cópia segura
-    resultados_df = df_filtrado.copy()
-    # dataframe info geográficas dos municípios
-    resultados_df = pd.merge(df_filtrado[['ibge_6', 'cl_indice_bf']],
-                             georreferenciamento_df[['codigo_ibge', 'nome', 'latitude', 'longitude']],
-                             left_on='ibge_6',
-                             right_on='codigo_ibge',
-                             how='inner')
-    
-    # COROPLÉTICO 
-    #pio.renderers.default = 'iframe'
-    fig2 = px.choropleth(resultados_df,
-                        geojson=geojson,
-                        scope='south america',
-                        color='cl_indice_bf',
-                        color_continuous_scale="Reds",
-                        color_continuous_midpoint = 3, 
-                        locations='ibge_6',
-                        featureidkey='properties.codarea',
-                        hover_name='nome').update_layout(height=800, width=1000, autosize=False)
-    
-    fig2.update_traces(marker_line_width=0)
-    fig2.update_geos(fitbounds="locations", visible=False)
-    
-    # Exibir o gráfico no Streamlit
-    st.header("Índice Bolsa Família nos Municípios (1-6)")
-    st.plotly_chart(fig2, use_container_width = True)
+    st.write(
+        """
+        <div style="text-align: justify">
+        <p> Classes do IPBF:</p>  
+        <p> 0: 0 % de famílias atendidas</p>  
+        <p> 1: < 80 % de famílias atendidas</p>  
+        <p> 2: 80-85 % de famílias atendidas</p>  
+        <p> 3: 85-90 % de famílias atendidas</p>  
+        <p> 4: 90-95 % de famílias atendidas</p>  
+        <p> 5: 95-100 % de famílias atendidas</p>  
+        <p> 6: >100 % de famílias atendidas</p>  
+
+    </div>    
+        """,
+        unsafe_allow_html=True
+    )
+   
+#criando um espaço entre as visualizações
+st.text("")
+  
+# MAPA
+# dataframe info geográficas dos municípios
+resultados_df = pd.merge(df_filtrado[['ibge_6', 'cl_indice_bf']],
+                         georreferenciamento_df[['codigo_ibge', 'nome', 'latitude', 'longitude']],
+                         left_on='ibge_6',
+                         right_on='codigo_ibge',
+                         how='inner')
+
+# COROPLÉTICO 
+#pio.renderers.default = 'iframe'
+fig2 = px.choropleth(resultados_df,
+                    geojson=geojson,
+                    scope='south america',
+                    color='cl_indice_bf',
+                    color_continuous_scale="Reds",
+                    color_continuous_midpoint = 3, 
+                    locations='ibge_6',
+                    featureidkey='properties.codarea',
+                    hover_name='nome').update_layout(height=800, width=1000, autosize=False)
+
+fig2.update_traces(marker_line_width=0)
+fig2.update_geos(fitbounds="locations", visible=False)
+
+# Exibir o gráfico no Streamlit
+st.header("IPBF por Município")
+st.plotly_chart(fig2, use_container_width = True)
