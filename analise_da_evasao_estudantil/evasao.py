@@ -327,6 +327,11 @@ with tab2:
         # Ordenar o DataFrame por proporção
         proporcao_por_estado = proporcao_por_estado.sort_values(ascending=False)
 
+        df_dados = pd.merge(proporcao_por_estado, contagem_total_por_estado, 
+                                          how='left', on=['ESTADO'])
+
+        df_dados.columns = ['PCT', 'ABS']
+
         fig = go.Figure()
         
         fig.add_trace(go.Bar(x=proporcao_por_estado.index, y=proporcao_por_estado, name='taxa', text=proporcao_por_estado.apply(format_value), textposition='inside'))
@@ -335,6 +340,16 @@ with tab2:
         
         # Exiba o gráfico no Streamlit
         st.plotly_chart(fig)
+
+        st.write('Valores absolutos de alunos por estado:')
+
+        st.text(df_dados['ABS'].to_frame().T)
+
+        st.write(df_dados['ABS'].to_frame().T)
+
+        st.table(df_dados['ABS'].to_frame().T)
+
+
 
 
     fc_evadidos_por_estado(df_ingressantes_apos_2012)
