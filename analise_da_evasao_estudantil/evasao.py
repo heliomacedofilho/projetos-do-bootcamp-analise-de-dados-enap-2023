@@ -307,7 +307,7 @@ with tab2:
 
 
     st.subheader('Análise por Local de Origem')
-    st.write('O gráfico a seguir mostra a taxa de evasão de acordo com o estado de origem dos estudantes.')
+    st.write('O gráfico a seguir mostra a taxa de evasão de acordo com o estado de origem dos estudantes. É importante destacar que tais informações devem ser avaliadas em conjunto com os dados absolutos de alunos matriculados por Estado uma vez ocorre uma variação significativa desse dado impactando diretamente nas taxas apresentadas.')
 
     def format_value(value):
             return "{:.1f}".format(value)
