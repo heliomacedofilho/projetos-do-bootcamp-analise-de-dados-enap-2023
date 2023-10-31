@@ -307,7 +307,7 @@ with tab2:
 
 
     st.subheader('Análise por Local de Origem')
-    st.write('O gráfico a seguir mostra a taxa de evasão de acordo com o estado de origem dos estudantes.')
+    st.write('O gráfico a seguir mostra a taxa de evasão de acordo com o estado de origem dos estudantes. É importante destacar que tais informações devem ser avaliadas em conjunto com os dados absolutos de alunos matriculados por Estado uma vez ocorre uma variação significativa desse dado impactando diretamente nas taxas apresentadas.')
 
     def format_value(value):
             return "{:.1f}".format(value)
@@ -327,6 +327,11 @@ with tab2:
         # Ordenar o DataFrame por proporção
         proporcao_por_estado = proporcao_por_estado.sort_values(ascending=False)
 
+        df_dados = pd.merge(proporcao_por_estado, contagem_total_por_estado, 
+                                          how='left', on=['ESTADO'])
+
+        df_dados.columns = ['PCT', 'ABS']
+
         fig = go.Figure()
         
         fig.add_trace(go.Bar(x=proporcao_por_estado.index, y=proporcao_por_estado, name='taxa', text=proporcao_por_estado.apply(format_value), textposition='inside'))
@@ -335,6 +340,16 @@ with tab2:
         
         # Exiba o gráfico no Streamlit
         st.plotly_chart(fig)
+
+        st.write('Valores absolutos de alunos por estado:')
+
+        st.text(df_dados['ABS'].to_frame().T)
+
+        st.write(df_dados['ABS'].to_frame().T)
+
+        st.table(df_dados['ABS'].to_frame().T)
+
+
 
 
     fc_evadidos_por_estado(df_ingressantes_apos_2012)

@@ -12,9 +12,7 @@ st.markdown("### Patentes depositadas entre Jan/2018 e Jan/2023")
 df = pd.read_csv('dados_patentes_longo_AM.csv')
 df['data_deposito'] = pd.to_datetime(df['data_deposito'], format="%d/%m/%Y")
 df['ifes'] = df['ifes'].astype('category')
-df['area'] = df['area'].astype('category')
 df['regiao'] = df['regiao'].astype('category')
-df['ipc'] = df['ipc'].astype('category')
 df['parceria'] = df['parceria'].astype('category')
 
 # Extrair o ano, o mês e mês/ano
@@ -77,7 +75,7 @@ def plot_line(counts):
             },
     template="simple_white")
     fig.update_xaxes(tickangle=-90)
-    st.write(fig)
+    st.plotly_chart(fig)
 
 def plot_pie(counts):
     fig=px.pie(counts,
@@ -93,59 +91,59 @@ def plot_pie(counts):
     color_discrete_map={"Titular": "lightgreen", "Parceiro": "darkgreen"})
     fig.update_traces(hoverinfo='label+percent', textfont_size=18,
                   marker=dict(line=dict(color='#000000', width=2)))
-    st.write(fig)
+    st.plotly_chart(fig)
 
 with aba1:
 
-    st.markdown("#### Série temporal das patentes com participação de instituições federais de ensino")
+    st.markdown("#### Série temporal das patentes com participação de instituições federais de ensino por tipo de participação")
     data = IFE
     counts = data.loc[data['data_deposito'] >= '2018-01-01'].copy()
     counts = counts.groupby(['mes_dep', 'ano_dep', 'mes_ano_dep', 'parceria'], observed=True)['ID'].nunique().reset_index()
     counts = counts.sort_values(['ano_dep', 'mes_dep']).copy()
     plot_line(counts)
 
-    st.markdown("#### Distribuição percentual do total de patentes com participação de instituições federais de ensino")
+    st.markdown("#### Distribuição percentual do total de patentes com participação de instituições federais de ensino por tipo de participação")
     counts = data.groupby('parceria', observed=True)['ID'].nunique().reset_index()
     plot_pie(counts)
 
 
 with aba2:
     
-    st.markdown("#### Série temporal das patentes com participação de institutos e centros federais de ensino")
+    st.markdown("#### Série temporal das patentes com participação de institutos e centros federais de ensino por tipo de participação")
     data = IF
     counts = data.loc[data['data_deposito'] >= '2018-01-01'].copy()
     counts = counts.groupby(['mes_dep', 'ano_dep', 'mes_ano_dep', 'parceria'], observed=True)['ID'].nunique().reset_index()
     counts = counts.sort_values(['ano_dep', 'mes_dep']).copy()
     plot_line(counts)
 
-    st.markdown("#### Distribuição percentual do total de patentes com participação de institutos e centros federais de ensino")
+    st.markdown("#### Distribuição percentual do total de patentes com participação de institutos e centros federais de ensino por tipo de participação")
     counts = data.groupby('parceria', observed=True)['ID'].nunique().reset_index()
     plot_pie(counts)
 
     
 with aba3:   
 
-    st.markdown("#### Série temporal das patentes com participação de universidades federais de ensino")
+    st.markdown("#### Série temporal das patentes com participação de universidades federais  por tipo de participação")
     data = UV
     counts = data.loc[data['data_deposito'] >= '2018-01-01'].copy()
     counts = counts.groupby(['mes_dep', 'ano_dep', 'mes_ano_dep', 'parceria'], observed=True)['ID'].nunique().reset_index()
     counts = counts.sort_values(['ano_dep', 'mes_dep']).copy()
     plot_line(counts)
 
-    st.markdown("#### Distribuição percentual do total de patentes com participação de universidades federais de ensino")
+    st.markdown("#### Distribuição percentual do total de patentes com participação de universidades federais por tipo de participação")
     counts = data.groupby('parceria', observed=True)['ID'].nunique().reset_index()
     plot_pie(counts)
 
 
 with aba4:
 
-    st.markdown("#### Série temporal das patentes sem participação de instituições federais de ensino")
+    st.markdown("#### Série temporal das patentes sem participação de instituições federais de ensino por tipo de participação")
     data = NIFE
     counts = data.loc[data['data_deposito'] >= '2018-01-01'].copy()
     counts = counts.groupby(['mes_dep', 'ano_dep', 'mes_ano_dep', 'parceria'], observed=True)['ID'].nunique().reset_index()
     counts = counts.sort_values(['ano_dep', 'mes_dep']).copy()
     plot_line(counts)
 
-    st.markdown("#### Distribuição percentual do total de patentes sem participação de instituições federais de ensino")
+    st.markdown("#### Distribuição percentual do total de patentes sem participação de instituições federais de ensino por tipo de participação")
     counts = data.groupby('parceria', observed=True)['ID'].nunique().reset_index()
     plot_pie(counts)

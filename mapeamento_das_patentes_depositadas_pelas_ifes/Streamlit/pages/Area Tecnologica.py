@@ -4,10 +4,7 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import plotly.express as px
 import seaborn as sns
-import plotly.graph_objs as go
-import plotly.offline as pyo
 from plotly.offline import iplot
-from datetime import timedelta
 import numpy as np
 
 st.set_page_config(page_title="Patentes Depositadas pelas Intituições Federais de Ensino", layout="wide")
