@@ -1,0 +1,10 @@
+pandas==2.0.3
+numpy==1.26.0
+matplotlib==3.7.2
+seaborn==0.12.2
+plotly==5.17.0
+streamlit==1.27.2
+streamlit-option-menu==0.3.6
+pillow==10.0.1
+geobr==0.2.0
+geopandas==0.7.0
