@@ -303,7 +303,7 @@ with tab2:
     # ----------------- FIM TERCEIRO GRÁFICO -------------------------------
 
 
-    # ----------------- INÍCIO QUARTO GRÁFICO -------------------------------
+    # ----------------- INÍCIO QUARTO GRÁFICO ------------------------------
 
     def format_value(value):
             return "{:.1f}".format(value)
@@ -335,7 +335,7 @@ with tab2:
 
     fc_evadidos_por_estado(df_ingressantes_apos_2012)
 
-
+    # ----------------- FIM QUARTO GRÁFICO --------------------------------
 
 with tab3:
     st.header("Regressão Logística")
