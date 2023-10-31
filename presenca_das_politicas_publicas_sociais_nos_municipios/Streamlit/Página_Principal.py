@@ -67,7 +67,7 @@ st.write(
     <div style="text-align: justify">
 <p> Para a avaliação da presença das Políticas Públicas Sociais (PPS) nos municípios brasileiros, foram selecionadas políticas de responsabilidade do Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS), que fossem universais e cujos dados estivessem disponibilizados no Portal de Dados Abertos. 
 
-</p> Desta forma, foram selecionados quatro políticas e um indicador: Programa Bolsa Família (PBF), Benefício de Prestação Continuada (BPC), Registro Mensal de Atendimentos dos  Centros de Referência da Assistência Social (CRAS) e o Índice de Gestão Descentralizada Municipal (IGD-M), o qual mede a qualidade da gestão do Cadastro Único e do PBF. 
+</p> Desta forma, foram selecionadas três políticas e um indicador: Programa Bolsa Família (PBF), Benefício de Prestação Continuada (BPC), Registro Mensal de Atendimentos dos  Centros de Referência da Assistência Social (CRAS) e o Índice de Gestão Descentralizada Municipal (IGD-M), o qual mede a qualidade da gestão do Cadastro Único e do PBF. 
 
 </p> Para avaliar a presença das PPS selecionadas em cada um dos municípios brasileiros, foi definido um índice composto pelo resultado da análise da presença de cada uma das políticas, cujo detalhamento consta nas páginas específicas das políticas. 
 
@@ -100,7 +100,8 @@ df_contagem_valores = pd.DataFrame(contagem_valores)
 df_contagem_valores.reset_index(inplace = True)
     
 # CRIA o gráfico
-fig = px.bar(df_contagem_valores, x='indice_pps', y='count')
+fig = px.bar(df_contagem_valores, x='indice_pps', y='count',
+            title="Índice da Presença de Políticas Públicas Sociais nos Municípios")
     
 # PERSONALIZAR o gráfico
 fig.update_yaxes(title_text='Nº de municípios',
@@ -116,7 +117,8 @@ fig.update_xaxes(
         tickfont=dict(size=18)# Tamanho da fonte
     )
 # EXIBIR o gráfico
-st.header("Índice de Presença de Políticas Públicas nos Municípios (1-10)")
+#st.header("Índice de Presença de Políticas Públicas nos Municípios (1-10)")
+fig.update_layout(title_x=0.3)
 st.plotly_chart(fig, use_container_width=True)
     
 #criando um espaço entre as visualizações
@@ -137,6 +139,7 @@ resultados_df = pd.merge(df_filtrado[['ibge_6', 'indice_pps']],
 #pio.renderers.default = 'iframe'
 fig2 = px.choropleth(resultados_df,
                     geojson=geojson,
+                    title="Índice da Presença de Políticas Públicas Sociais nos Municípios",
                     scope='south america',
                     color='indice_pps',
                     color_continuous_scale="Reds",
@@ -144,11 +147,12 @@ fig2 = px.choropleth(resultados_df,
                     featureidkey='properties.codarea',
                     hover_name='nome').update_layout(height=800, width=1000, autosize=False)
 
+fig2.update_layout(title_x=0.3, title_y=0.9)
 fig2.update_traces(marker_line_width=0)
 fig2.update_geos(fitbounds="locations", visible=False)
 
 # Exibir o gráfico no Streamlit
-st.header("Índice de Presença de Políticas Públicas nos Municípios (0-10)")
+#st.header("Índice de Presença de Políticas Públicas nos Municípios (0-10)")
 st.plotly_chart(fig2, use_container_width = True)
 
 #criando um espaço entre as visualizações
@@ -167,4 +171,3 @@ st.write(
     """,
     unsafe_allow_html=True
 )
-

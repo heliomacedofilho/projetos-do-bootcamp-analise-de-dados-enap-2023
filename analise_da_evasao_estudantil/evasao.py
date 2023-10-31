@@ -257,7 +257,7 @@ with tab1:
 with tab2:
     st.header("Análise Geral")
 
-    st.write('No gráfico abaixo, trazemos informações de cunho mais geral sobre as proporções de alunos evadidos da UFJF. Na caixa de seleção abaixo, você pode filtrar as informações que deseja visualizar, como o gráfico geral de evadidos por curso, e os gráficos com os demais parâmetros de análise: ingresso, renda, etnia, cota, sexo e outras. As informações trazidas aqui são o somatório de todos os cursos da UFJF que foram selecionados para a análise e respeitando a série temporal dos últimos 10 anos.')
+    st.write('Nos gráficos abaixo, trazemos informações de cunho mais geral sobre as proporções de alunos evadidos da UFJF. Na caixa de seleção abaixo, você pode filtrar as informações que deseja visualizar, como o gráfico geral de evadidos por curso, e os gráficos com os demais parâmetros de análise: ingresso, renda, etnia, cota, sexo e outras. As informações trazidas aqui são o somatório de todos os cursos da UFJF que foram selecionados para a análise e respeitando a série temporal dos últimos 10 anos.')
 
     info = st.selectbox('Selecione o tipo de informação:',
                                    (np.sort(tipo_tab2)))
@@ -299,7 +299,127 @@ with tab2:
         subinfo = st.selectbox('Selecione um turno: ', df_ingressantes_apos_2012['TURNO'].unique())
         evasao_por_grupo(df_ingressantes_apos_2012, ch[info], subinfo)
 
-    
+   
     # ----------------- FIM TERCEIRO GRÁFICO -------------------------------
 
 
+    # ----------------- INÍCIO QUARTO GRÁFICO ------------------------------
+
+
+    st.subheader('Análise por Local de Origem')
+    st.write('O gráfico a seguir mostra a taxa de evasão de acordo com o estado de origem dos estudantes.')
+
+    def format_value(value):
+            return "{:.1f}".format(value)
+
+    def fc_evadidos_por_estado(df):            
+        df_evadidos = df[df['SITUACAO'] == 'Evadido']
+        # Contar o número de alunos evadidos por estado
+        contagem_evadidos_por_estado = df_evadidos['ESTADO'].value_counts()
+        # Use groupby para agrupar os dados por 'estado' e aplique a função count() para contar as linhas por estado
+        evadidos_por_estado = df_evadidos.groupby('ESTADO').size().reset_index(name='Número de alunos evadidos')
+        # Contar o número total de alunos por estado
+        contagem_total_por_estado = df['ESTADO'].value_counts()
+        # Garantir que as séries tenham os mesmos índices para a divisão
+        evadidos_por_estado = contagem_total_por_estado.reindex(contagem_total_por_estado.index, fill_value=0)
+        # Calcular a proporção de alunos evadidos por estado em relação ao total de alunos por estado
+        proporcao_por_estado = ( contagem_evadidos_por_estado / contagem_total_por_estado ) * 100
+        # Ordenar o DataFrame por proporção
+        proporcao_por_estado = proporcao_por_estado.sort_values(ascending=False)
+
+        fig = go.Figure()
+        
+        fig.add_trace(go.Bar(x=proporcao_por_estado.index, y=proporcao_por_estado, name='taxa', text=proporcao_por_estado.apply(format_value), textposition='inside'))
+    
+        fig.update_layout(title=f'TAXA DE EVASÃO X ESTADO', xaxis_title=f'ESTADO', yaxis_title='TAXA DE EVASÃO', width=1000, height=800)
+        
+        # Exiba o gráfico no Streamlit
+        st.plotly_chart(fig)
+
+
+    fc_evadidos_por_estado(df_ingressantes_apos_2012)
+
+    # ----------------- FIM QUARTO GRÁFICO --------------------------------
+
+with tab3:
+    st.header("Regressão Logística")
+
+
+    # ----------------- INÍCIO REGRESSÃO LOGÍSTICA ------------------------
+
+    curso_rl = st.selectbox('Selecione o curso desejado:',
+                                   (np.sort(df_ingressantes_apos_2012['CURSO_NOME'].unique())))
+
+    st.write(f'**REGRESSÃO LOGÍSTICA - {curso_rl}**')
+    st.write('A regressão logística é um método de análise estatística usado para prever uma variável de resultado binária com base em uma ou mais variáveis independentes.')
+    st.write('Matriz de Confusão:')
+    st.write('Uma matriz de confusão é uma tabela usada para avaliar o desempenho do modelo de classificação. Ela resume o número de observações classificadas corretamente e incorretamente pelo modelo.')
+
+    def rl_por_curso(df, curso_rl):
+
+        df_filtro = df.loc[df['CURSO_NOME'] == curso_rl]
+
+        X = df_filtro[['BAIXA_RENDA_Encoded', 'ESCOLA_PUBLICA_Encoded', 'ETNIA_PPI_Encoded', 'PCD_Encoded', 'SEXO_Encoded',
+                  'ANO_INGRESSO_Encoded', 'TIPO_INGRESSO_Encoded', 'CAMPUS_Encoded', 'TURNO_Encoded']]
+        y = df_filtro['SITUACAO_Encoded']
+
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    
+    # Inicializando o modelo de regressão logística
+        model = LogisticRegression()
+    
+    # Treinando o modelo com os dados de treinamento
+        model.fit(X_train, y_train)
+    
+    # Fazendo previsões com o conjunto de teste
+        y_pred = model.predict(X_test)
+    
+    # Avaliando a precisão do modelo
+        accuracy = accuracy_score(y_test, y_pred)
+
+    # Calcule a matriz de confusão
+        conf_matrix = confusion_matrix(y_test, y_pred)
+    #st.write('Matriz de Confusão:')
+    #st.text(conf_matrix)
+    
+    # Exiba um relatório de classificação
+    #report = classification_report(y_test, y_pred)
+    #st.write('Relatório de Classificação:')
+    #st.text(report)
+
+    # Criar a representação gráfica da matriz de confusão
+    #fig, ax = plt.subplots(figsize=(0.8, 0.6), dpi=150)
+    #disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix)
+    #disp.plot(cmap="Blues", ax=ax)
+    
+    
+    # Classes
+        classes = ['Concluído', 'Evadido']
+    
+        fig, ax = plot_confusion_matrix(conf_mat = conf_matrix,
+                                       class_names = classes,
+                                       show_absolute = True,
+                                       show_normed = False,
+                                       colorbar = True)
+
+
+    # Exibir a matriz de confusão no Streamlit
+#    st.pyplot(fig)
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+        
+            st.pyplot(fig)
+            st.write("Acurácia do modelo: {:.2f}".format(accuracy))
+
+        with col2:
+            st.header("")
+
+
+    rl_por_curso(df, curso_rl)
+#    with col3:
+#        st.header("")
+
+
+    # ----------------- FIM REGRESSÃO LOGÍSTICA ---------------------------
