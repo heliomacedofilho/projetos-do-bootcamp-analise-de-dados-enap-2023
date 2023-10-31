@@ -18,7 +18,7 @@ with open('data/geojson', 'r') as geojson_file:
     geojson = json.load(geojson_file)
 
 st.set_page_config(
-    page_title='Presença das políticas públicas sociais nos municípios brasileiros :earth_americas:',
+    page_title='Presença das Políticas Públicas Sociais nos municípios brasileiros :earth_americas:',
     page_icon='📊',
     layout='wide',
     initial_sidebar_state='expanded',
@@ -65,56 +65,62 @@ st.text("")
 st.write(
     """
     <div style="text-align: justify">
-<p> TEXTO EXPLICATIVO XXXXXX . </p>
+<p> Para a avaliação da presença das Políticas Públicas Sociais (PPS) nos municípios brasileiros, foram selecionadas políticas de responsabilidade do Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS), que fossem universais e cujos dados estivessem disponibilizados no Portal de Dados Abertos. 
+
+</p> Desta forma, foram selecionados quatro políticas e um indicador: Programa Bolsa Família (PBF), Benefício de Prestação Continuada (BPC), Registro Mensal de Atendimentos dos  Centros de Referência da Assistência Social (CRAS) e o Índice de Gestão Descentralizada Municipal (IGD-M), o qual mede a qualidade da gestão do Cadastro Único e do PBF. 
+
+</p> Para avaliar a presença das PPS selecionadas em cada um dos municípios brasileiros, foi definido um índice composto pelo resultado da análise da presença de cada uma das políticas, cujo detalhamento consta nas páginas específicas das políticas. 
+
+</p> Cada município poderia pontuar de 0 a 10 pontos, de acordo com o resultado do Índice da presença das PPS nos municípios brasileiros, conforme apresentado nos gráficos abaixo. </p>
 </div>    
     """,
     unsafe_allow_html=True
 )
 
+
 #criando um espaço entre as visualizações
 st.text("")
 
 #criando os cartões com os valores totais do BPC, FPM e total de beneficiados
-col1, col2= st.columns(2)
+#col1, col2= st.columns(2)
 
-with col1 :
-    st.write(
-        """
-        <h2 style="font-size: 24px;">XXX</h2>
-        """,
-        unsafe_allow_html=True
-    )
-    #st.write("{:,}".format(df_filtrado['qtd_fam_beneficiadas'].sum()))
-with col2:
-    ## GRÁFICO do índice
+# #with col1 :
+#     st.write(
+#         """
+#         <h2 style="font-size: 24px;">XXX</h2>
+#         """,
+#         unsafe_allow_html=True
+#     )
+#     #st.write("{:,}".format(df_filtrado['qtd_fam_beneficiadas'].sum()))
+# with col2:
+## GRÁFICO do índice
+# AJUSTA o dataframe
+contagem_valores = df_filtrado['indice_pps'].value_counts()
+df_contagem_valores = pd.DataFrame(contagem_valores)
+df_contagem_valores.reset_index(inplace = True)
     
-    # AJUSTA o dataframe
-    contagem_valores = df_filtrado['indice_pps'].value_counts()
-    df_contagem_valores = pd.DataFrame(contagem_valores)
-    df_contagem_valores.reset_index(inplace = True)
+# CRIA o gráfico
+fig = px.bar(df_contagem_valores, x='indice_pps', y='count')
     
-    # CRIA o gráfico
-    fig = px.bar(df_contagem_valores, x='indice_pps', y='count')
-    
-    # PERSONALIZAR o gráfico
-    fig.update_yaxes(title_text='Nº de municípios',
+# PERSONALIZAR o gráfico
+fig.update_yaxes(title_text='Nº de municípios',
                     # title_textfont =dict(size=20),
                     tickfont=dict(size=18) # Tamanho da fonte 
     )
     
-    fig.update_xaxes(
+fig.update_xaxes(
         title_text='Índice Presença de Políticas Públicas',
         tickvals=[1,2,3,4,5,6,7,8,9,10],  # Valores reais
         ticktext=['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],  # Rótulos personalizados
         tickangle=0,  # Rotação dos rótulos
         tickfont=dict(size=18)# Tamanho da fonte
     )
-    # EXIBIR o gráfico
-    st.header("Índice de Presença de Políticas Públicas nos Municípios (1-10)")
-    st.plotly_chart(fig, use_container_width=True)
+# EXIBIR o gráfico
+st.header("Índice de Presença de Políticas Públicas nos Municípios (1-10)")
+st.plotly_chart(fig, use_container_width=True)
     
-    #criando um espaço entre as visualizações
-    st.text("")
+#criando um espaço entre as visualizações
+st.text("")
     
 
 # MAPA
@@ -142,5 +148,23 @@ fig2.update_traces(marker_line_width=0)
 fig2.update_geos(fitbounds="locations", visible=False)
 
 # Exibir o gráfico no Streamlit
-st.header("Índice PPS nos municípios (0-10)")
+st.header("Índice de Presença de Políticas Públicas nos Municípios (0-10)")
 st.plotly_chart(fig2, use_container_width = True)
+
+#criando um espaço entre as visualizações
+st.text("")
+
+st.subheader('**Autoras do projeto**') 
+
+st.write(
+    """
+    <div style="text-align: justify">
+<p> - Aline Oliveira Moura
+<p> - Camila Abuassi de Faro Passos 
+<p> - Cristiane Lopes de Assis 
+<p> - Juliana Pierrobon Lopez 
+<p> - Mariana Nogueira de Resende Sousa   
+    """,
+    unsafe_allow_html=True
+)
+
