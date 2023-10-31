@@ -20,7 +20,7 @@ Os detalhes do projeto serão apresentados a seguir.
 
 * A Política de Dados Abertos do Poder Executivo Federal, instituída pelo Decreto nº 8.777/2016, define regras para promover a abertura de dados governamentais no âmbito dos órgãos e entidades federais, como ministérios, autarquias, agências reguladoras e fundações públicas (Lei de Acesso à Informação (LAI) - Lei nº 12.527/2012).  
 
-* O Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS) publica no [Portal de Dados Abertos](https://dados.gov.br/home) 44 conjuntos de dados relacionados a diferentes Políticas Públicas Sociais (PPS) de sua responsabilidade, tais como Cadastro Único, Programa Bolsa Família, Benefício de Prestação Continuada, Registro Mensal de Atendimentos, Programa de Aquisição de Alimentos, Programa Cisternas, dentre outros.
+* O Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS) publica no <a href="https://dados.gov.br/home">Portal de Dados Abertos</a> 44 conjuntos de dados relacionados a diferentes Políticas Públicas Sociais (PPS) de sua responsabilidade, tais como Cadastro Único, Programa Bolsa Família, Benefício de Prestação Continuada, Registro Mensal de Atendimentos, Programa de Aquisição de Alimentos, Programa Cisternas, dentre outros.
 
 * Os conjuntos de dados publicados em ambiente aberto podem ser utilizados para a realização de diversas análises do campo do desenvolvimento e assistência social e, se utilizados em conjunto, podem apresentar um retrato da participação dessas PPS nos municípios brasileiros.
 
