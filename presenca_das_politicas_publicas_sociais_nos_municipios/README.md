@@ -139,17 +139,17 @@ Por fim, foram somadas as notas padronizadas atribuídas aos quatro programas pa
 
   - [Script da análise do Cadastro Único](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/CadastroUnico.ipynb)
   
-  - Script da análise do Programa Bolsa Família - Juliana
+  - [Script da análise do Programa Bolsa Família](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/PBF.ipynb)
   
-  - Script da análise do Benefício de Prestação Continuada - Cris
+  - [cript da análise do Benefício de Prestação Continuada](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/BPC-2022.ipynb)
   
-  - Script da análise do Índice de Gestão Descentralizada - Camila
+  - [Script da análise do Índice de Gestão Descentralizada](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/igd_m.ipynb)
   
-  - Script da análise do Registro Mensal Atendimento (RMA) do CRAS - Aline
+  - [Script da análise do Registro Mensal Atendimento (RMA) do CRAS](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/RMA.ipynb)
   
-  - Script da análise do Pib Municipal - Camila
+  - [Script da análise do Pib Municipal](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/pib_pc.ipynb)
   
-  - Script do Índice de avaliação da presença das PPS nos municípios brasileiros - Juliana
+  - [Script do Índice de avaliação da presença das PPS nos municípios brasileiros](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/blob/main/presenca_das_politicas_publicas_sociais_nos_municipios/Indice%20Geral%20PPS.ipynb)
 
 # :wrench: Conjuntos de dados com indicação de ajuste no Portal de Dados Abertos
 De uma maneira geral, os dados disponibilizados nos Portal de dados abertos pelo MDS acessados para o desenvolvimento do presente projeto estavam organizados de maneira adequada, atualizados e sem inconsistências, com exceção dos conjuntos abaixo destacados: 
