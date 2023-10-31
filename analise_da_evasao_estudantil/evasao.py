@@ -303,6 +303,40 @@ with tab2:
     # ----------------- FIM TERCEIRO GRÁFICO -------------------------------
 
 
+    # ----------------- INÍCIO QUARTO GRÁFICO -------------------------------
+
+    def format_value(value):
+            return "{:.1f}".format(value)
+
+    def fc_evadidos_por_estado(df):            
+        df_evadidos = df[df['SITUACAO'] == 'Evadido']
+        # Contar o número de alunos evadidos por estado
+        contagem_evadidos_por_estado = df_evadidos['ESTADO'].value_counts()
+        # Use groupby para agrupar os dados por 'estado' e aplique a função count() para contar as linhas por estado
+        evadidos_por_estado = df_evadidos.groupby('ESTADO').size().reset_index(name='Número de alunos evadidos')
+        # Contar o número total de alunos por estado
+        contagem_total_por_estado = df['ESTADO'].value_counts()
+        # Garantir que as séries tenham os mesmos índices para a divisão
+        evadidos_por_estado = contagem_total_por_estado.reindex(contagem_total_por_estado.index, fill_value=0)
+        # Calcular a proporção de alunos evadidos por estado em relação ao total de alunos por estado
+        proporcao_por_estado = ( contagem_evadidos_por_estado / contagem_total_por_estado ) * 100
+        # Ordenar o DataFrame por proporção
+        proporcao_por_estado = proporcao_por_estado.sort_values(ascending=False)
+
+        fig = go.Figure()
+        
+        fig.add_trace(go.Bar(x=proporcao_por_estado.index, y=proporcao_por_estado, name='taxa', text=proporcao_por_estado.apply(format_value), textposition='inside'))
+    
+        fig.update_layout(title=f'TAXA DE EVASÃO X ESTADO', xaxis_title=f'ESTADO', yaxis_title='TAXA DE EVASÃO', width=1000, height=800)
+        
+        # Exiba o gráfico no Streamlit
+        st.plotly_chart(fig)
+
+
+    fc_evadidos_por_estado(df_ingressantes_apos_2012)
+
+
+
 with tab3:
     st.header("Regressão Logística")
 
