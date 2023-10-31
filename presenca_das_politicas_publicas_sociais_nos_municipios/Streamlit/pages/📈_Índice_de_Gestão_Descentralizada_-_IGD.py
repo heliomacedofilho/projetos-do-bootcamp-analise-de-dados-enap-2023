@@ -9,11 +9,7 @@ import  json
 st.set_page_config(layout="wide")
 
 #carregando os dados
-<<<<<<< Updated upstream
-df = pd.read_csv('df_idg_completo_2.csv', encoding='utf-8', sep=';')
-=======
 df = pd.read_csv('df_idg_completo.csv', encoding='utf-8', sep=';')
->>>>>>> Stashed changes
 georreferenciamento_df = pd.read_csv('georreferenciamento_df.csv')
 
 #criando as caixas de seleção
@@ -179,11 +175,7 @@ with col2:
         resultados_df = df_filtrado.copy()
         
         # Puxar a malha geográfica do Brasil a nível de município
-<<<<<<< Updated upstream
-        with open('data/geojson', 'r') as geojson_file:
-=======
         with open('geojson', 'r') as geojson_file:
->>>>>>> Stashed changes
             geojson = json.load(geojson_file)
         
         # Remover o dígito verificador dos códigos IBGE

@@ -8,13 +8,6 @@ import plotly.io as pio
 import json 
 
 st.set_page_config(layout="wide")
-<<<<<<< Updated upstream:presenca_das_politicas_publicas_sociais_nos_municipios/Streamlit/pages/👩🏼‍🦽_👵Benefício_de_Prestação_Continuada_-_BPC.py
-
-#carregando os dados
-df = pd.read_csv('data\df_bpc_fpm_completa.csv')
-georreferenciamento_df = pd.read_csv('data\georreferenciamento_df.csv')
-=======
->>>>>>> Stashed changes:presenca_das_politicas_publicas_sociais_nos_municipios/Streamlit/pages/👩🏼_🦽_👵Benefício_de_Prestação_Continuada_-_BPC.py
 
 #carregando os dados
 df = pd.read_csv('df_bpc_fpm_completa.csv')
@@ -65,12 +58,7 @@ st.text("")
 st.write(
     """
     <div style="text-align: justify">
-<<<<<<< Updated upstream:presenca_das_politicas_publicas_sociais_nos_municipios/Streamlit/pages/👩🏼‍🦽_👵Benefício_de_Prestação_Continuada_-_BPC.py
         <p>O  <span style="color: blue;">BPC</span> é o pagamento de um salário mínimo mensal ao idoso acima de 65 anos ou à pessoa com deficiência de qualquer idade com impedimentos de natureza física, mental, intelectual ou sensorial de longo prazo que comprovem não possuir meios de prover à própria manutenção ou tê-la provida por sua família. E cuja renda por pessoa do grupo familiar menor que 1/4 do salário-mínimo per capita vigente. </p>
-=======
-        <p>O  <span style="color: blue;">BPC</span> é o pagamento de um salário mínimo mensal ao idoso acima de 65 anos ou à pessoa com deficiência de qualquer idade com impedimentos de natureza física, mental, intelectual ou sensorial de longo prazo (aquele que produza efeitos pelo prazo mínimo de dois anos, que o impossibilite de participar de forma plena e efetiva na sociedade, em igualdade de condições com as demais pessoas) que comprovem não possuir meios de prover à própria manutenção ou tê-la provida por sua família. </p>
-         </p>O público-alvo do BPC é a essoa idosa acima de 65 anos ou mais, ou pessoa com deficiência de qualquer idade com impedimentos de longo prazo, com renda por pessoa do grupo familiar menor que 1/4 do salário-mínimo per capita vigente. </p>
->>>>>>> Stashed changes:presenca_das_politicas_publicas_sociais_nos_municipios/Streamlit/pages/👩🏼_🦽_👵Benefício_de_Prestação_Continuada_-_BPC.py
   """,
     unsafe_allow_html=True
 )
