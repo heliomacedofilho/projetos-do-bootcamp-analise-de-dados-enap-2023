@@ -57,9 +57,9 @@ O Benefício de Prestação Continuada da Assistência Social[^2] é o pagamento
 O público-alvo do BPC é a essoa idosa acima de 65 anos ou mais, ou pessoa com deficiência de qualquer idade com impedimentos de longo prazo, com renda por pessoa do grupo familiar menor que 1/4 do salário-mínimo per capita vigente.
 
 ### :writing_hand: Registro Mensal de Atendimentos (RMA)
-O Registro Mensal de Atendimentos][^3] é um sistema onde são registradas mensalmente as informações relativas aos serviços ofertados e o volume de atendimentos nos Centros de Referência da Assistência Social (CRAS), Centros de Referência Especializados de Assistência Social (CREAS) e Centro de Referência Especializado para População em Situação de Rua (Centros POP).
+O Registro Mensal de Atendimentos][^3] é um sistema onde são registradas mensalmente as informações relativas aos serviços ofertados e o volume de atendimentos nos Centros de Referência da Assistência Social (CRAS), Centros de Referência Especializados de Assistência Social (CREAS) e Centro de Referência Especializado para População em Situação de Rua (Centros POP). Seu principal objetivo é uniformizar essas informações e, dessa forma, proporcionar dados qualificados que contribuam para o desenvolvimento do Sistema Único de Assistência Social (SUAS). 
 
-Seu principal objetivo é uniformizar essas informações e, dessa forma, proporcionar dados qualificados que contribuam para o desenvolvimento do Sistema Único de Assistência Social (SUAS). Considerando a premissa de seleção de políticas universais para comporem o índice, foram utilizados os registros apenas do CRAS, pois os demais serviços estão presentes apenas em municípios que preencham critérios específicos.
+Considerando a premissa de seleção de políticas universais para comporem o índice, foram utilizados os registros apenas do CRAS, pois os demais serviços estão presentes apenas em municípios que preencham critérios específicos.
 
 ### :card_index: Índice de Gestão Descentralizada (IGD)
 O Índice de Gestão Descentralizada[^4] é um indicador que mede os resultados da gestão do Programa Bolsa Família e do Cadastro Único obtidos em um mês. Representa uma estratégia inovadora para medir o desempenho de cada município, estimular resultados cada vez mais qualitativos e também compor a base de cálculo de recursos a serem transferidos aos municípios. 
