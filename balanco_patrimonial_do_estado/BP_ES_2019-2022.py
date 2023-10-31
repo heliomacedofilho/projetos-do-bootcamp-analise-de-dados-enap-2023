@@ -7,7 +7,6 @@ import warnings
 warnings.filterwarnings('ignore')
 import seaborn as sns
 import plotly.express as px
-import plotly.express as px
 import plotly.io as pio
 from sklearn import preprocessing
 
@@ -21,7 +20,7 @@ def build_path(subfolder = 'data'):
         os.makedirs(folderpath)
     return folderpath
 
-
+@st.cache_data
 def get_dados_pcasp(
         filename='CPU_PCASP_2022.xlsx'):
     filepath = os.path.join(build_path(), filename)
@@ -33,6 +32,10 @@ pcasp = get_dados_pcasp()
 pcasp = pcasp.drop(columns=['FUNÇÃO','STATUS','NATUREZA DO SALDO','CONTROLE','ÍTEM','SUBÍTEM'])
 
 pcasp = pcasp.loc[pcasp['CLASSE'].isin([1, 2])]
+
+pcasp.loc[pcasp['TÍTULO.1'] == 'OBRIGAÇÕES TRABALHISTAS, PREVIDENCIÁRIAS E ASSISTENCIAIS A PAGAR A LONGO PRAZO','TÍTULO.1'] = 'OBRIGAÇÕES TRAB. A LONGO PRAZO'
+
+pcasp.loc[pcasp['TÍTULO.1'] == 'OBRIGAÇÕES TRABALHISTAS, PREVIDENCIÁRIAS E ASSISTENCIAIS A PAGAR A CURTO PRAZO','TÍTULO.1'] = 'OBRIGAÇÕES TRAB. A CURTO PRAZO'
 
 pcasp['NÍVEL3'] = pcasp['CLASSE'].astype(str) + pcasp['GRUPO'].astype(str) + pcasp['SUBGRUPO'].astype(str)
 
@@ -48,8 +51,10 @@ pcasp_nivel_1 = pcasp.loc[(pcasp['GRUPO']== 0)]
 
 pcasp_nivel_1_2_3 = pd.concat([pcasp_nivel_1,pcasp_nivel_2,pcasp_nivel_3],axis=0)
 
+
 build_path()
 
+@st.cache_data
 def get_dados_instancia(filename='instancia_MSC_API.csv'):
     filepath = os.path.join(build_path(), filename)
     return pd.read_csv(filepath, sep=';')
@@ -123,121 +128,163 @@ balanco_123 = pd.concat([balanco_nivel_1,balanco_nivel_2,balanco_nivel_3],axis=0
 
 balanco_123 = balanco_123.sort_values(by=['EXERCÍCIO','CONTA'])
 
-lista_exercicios = list(set(balanco_123['EXERCÍCIO']))
-
 balanco_123 = balanco_123.drop(columns=['NÍVEL3','NÍVEL2','NÍVEL1'])
-
+lista_exercicios = list(set(balanco_123['EXERCÍCIO']))
 balanco = []
 for ano in lista_exercicios:
     balanco_ano = balanco_123.loc[balanco_123['EXERCÍCIO'] == ano]
     balanco_ano = balanco_ano.rename(columns={'VALOR': f'{ano}'})
     balanco_ano = balanco_ano.drop(columns=['EXERCÍCIO'])
     balanco.append(balanco_ano)
+balanco_final = pd.merge(balanco[0], balanco[1], how='outer', on=['CONTA','TÍTULO.1'])
+balanco_final = pd.merge(balanco_final, balanco[2], how='outer', on=['CONTA','TÍTULO.1'])
+balanco_final = pd.merge(balanco_final, balanco[3], how='outer', on=['CONTA','TÍTULO.1'])
+balanco_final = balanco_final.sort_values(by='CONTA')
 
-# balanco_final = pd.merge(balanco[0], balanco[1], how='left', on=['CONTA','TÍTULO.1'])
-# balanco_final = pd.merge(balanco_final, balanco[2], how='left', on=['CONTA','TÍTULO.1'])
-# balanco_final = pd.merge(balanco_final, balanco[3], how='left', on=['CONTA','TÍTULO.1'])
-
-#balanco_final = pd.merge(balanco[0], balanco[1], how='left', on=['CONTA','TÍTULO.1'])
-balanco_final = pd.merge(balanco[3], balanco[2], how='left', on=['CONTA','TÍTULO.1'])
-
-#balanco_final = pd.merge(balanco_final, balanco[2], how='left', on=['CONTA','TÍTULO.1'])
-balanco_final = pd.merge(balanco_final, balanco[1], how='left', on=['CONTA','TÍTULO.1'])
-
-#balanco_final = pd.merge(balanco_final, balanco[3], how='left', on=['CONTA','TÍTULO.1'])
-balanco_final = pd.merge(balanco_final, balanco[0], how='left', on=['CONTA','TÍTULO.1'])
-
-
-pd.options.display.float_format = 'R${:,.2f}'.format
+#pd.options.display.float_format = 'R${:,.2f}'.format
 
 balanco_final_exercicio = balanco_final.T
 lista = []
-for i in range(32):
-    lista.append((i,list(balanco_final_exercicio.loc['TÍTULO.1'])[i]))
+for i in range(len(balanco_final)):
+    lista.append( list(balanco_final_exercicio.loc['TÍTULO.1'])[i])
 
-d = dict(lista)
-
-balanco_final_exercicio.rename(columns = d, inplace=True)
+balanco_final_exercicio = balanco_final_exercicio.rename(columns=balanco_final_exercicio.iloc[1])
 balanco_final_exercicio = balanco_final_exercicio[2:]
 balanco_final_exercicio.index.names = ['EXERCÍCIO']
 balanco_final_exercicio = balanco_final_exercicio.reset_index(level=['EXERCÍCIO'])
-
-
 balanco_final['CONTA'] = balanco_final['CONTA'].astype(str)
 balanco_final['CLASSE'] = balanco_final['CONTA'].str.slice(0,1)
+balanco_final = balanco_final.rename(columns={2019: '2019', 2020: '2020', 2021: '2021', 2022: '2022'})
 
-balanco_normalizado = balanco_final.copy()
+
+
 
 st.markdown('# Balanço Patrimonial do Estado do Espírito Santo 🏢')
 st.markdown("#### Série Histórica 2019-2022 a partir da MSC ")
 st.markdown("---")
 
-escolha_ente = st.sidebar.selectbox('Escolha o Ente', ('ES', ''))
+with st.sidebar:
+    #escolha_ente = st.sidebar.selectbox('Escolha o Ente:', ('ES', ''))
+    st.sidebar.markdown('# Balanço Patrimonial do Estado do Espírito Santo 🏢')
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("##### Projeto desenvolvido no Curso Bootcamp Análise de Dados 2023, promovido pela ENAP.")
+    st.sidebar.markdown("Equipe: Ana Paula Giancoli, Eugênia Giancoli, Gislaine Messias e Mariana Hermínia")
+    st.sidebar.markdown("---")
+    st.markdown("#### Série Histórica 2019-2022 a partir da MSC:")
+    st.sidebar.markdown("##### Escolha um ou mais anos: ")
+    ano2019=st.sidebar.checkbox("2019", value=True)
+    ano2020=st.sidebar.checkbox("2020")
+    ano2021=st.sidebar.checkbox("2021")
+    ano2022=st.sidebar.checkbox("2022")
+    listaAnos=[]
+    if ano2019:
+        listaAnos.append("2019")
+    if ano2020:
+        listaAnos.append("2020")
+    if ano2021:
+        listaAnos.append("2021")
+    if ano2022:
+        listaAnos.append("2022")
 
-st.sidebar.write("Escolha um ou mais anos")
-ano2019=st.sidebar.checkbox("2019")
-ano2020=st.sidebar.checkbox("2020")
-ano2021=st.sidebar.checkbox("2021")
-ano2022=st.sidebar.checkbox("2022")
-listaAnos=[]
-if ano2019:
-    listaAnos.append("2019")
-if ano2020:
-    listaAnos.append("2020")
-if ano2021:
-    listaAnos.append("2021")
-if ano2022:
-    listaAnos.append("2022")
+    st.sidebar.markdown("---")
+    st.markdown(f'#### Série Histórica 2019-2022 selecionada pela Conta: ')
+    escolha_descr = st.sidebar.selectbox('Escolha uma das contas: ', balanco_final['TÍTULO.1'])
+
     
-
-escolha_descr = st.sidebar.selectbox('Escolha os dados', balanco_123['TÍTULO.1'].unique())
-
-
 # Gráfico Geral com Série histórica por contas
-chart_data = pd.DataFrame(balanco_final, columns=listaAnos)
-st.bar_chart(chart_data)
-st.markdown("---")
+# chart_data = pd.DataFrame(balanco_final, columns=listaAnos)
+# st.bar_chart(chart_data)
+# st.markdown("---")
 
-#st.write(f'Ente escolhido: {escolha_ente}')    
-#st.write(f'Check box marcados: {listaAnos}')
-#st.write(f'Conta escolhida: {escolha_descr}')
+st.bar_chart(balanco_final, y=listaAnos, x='CONTA', color=listaAnos[0])
+st.markdown("---")  
 
-# Gráfico Geral com Série histórica de todas as contas
+st.markdown("#### Série Histórica 2019-2022 selecionada pela Conta ")
+col3, col4 = st.columns([3, 5])
+with col3:
+    pass
+
+with col4:
+    st.markdown(f"##### {escolha_descr} ")
+    balanco = pd.DataFrame(balanco_final_exercicio, columns=['EXERCÍCIO', escolha_descr])
+
 st.bar_chart(balanco_final_exercicio, y=escolha_descr,x='EXERCÍCIO',color=escolha_descr)
-st.markdown("---")
+st.markdown("---")    
+
+# Criar colunas em balanco_final para organizar o treemap nas suas subcontas
+balanco_final_map = balanco_final.copy()
+# Cria coluna que indica se a conta é Ativo ou Passivo e PL
+balanco_final_map['N1']=' '
+#Ativo
+balanco_final_map.loc[balanco_final_map['CONTA'].str.slice(0,1)== '1', 'N1'] = 'ATIVO'
+#Passivo e PL
+balanco_final_map.loc[balanco_final_map['CONTA'].str.slice(0,1) == '2', 'N1'] ='PASSIVO E PATRIMÔNIO LIQUIDO'
+#Para conta que são as próprias N1, deixe o campo vazio
+#balanco_final.loc[balanco_final['CONTA'].str.slice(1,2) == '0', 'N1'] =' '
+#Para conta que são subcontas de N1 e N2, deixe o campo vazio
+#balanco_final.loc[balanco_final['CONTA'].str.slice(2,3) != '0', 'N1'] =' '
+
+# Cria coluna que indica de a conta é Ativo(Ativo Circulante ou Ativo Não Circulante)
+# ou Passivo e PL(Passivo Circulante ou Passivo Não Circulante ou PL)
+balanco_final_map['N2']=' '
+#Ativo Circulante
+balanco_final_map.loc[balanco_final_map['CONTA'].str.slice(0,2) == '11', 'N2'] = 'ATIVO CIRCULANTE'
+#Ativo Não Circulante
+balanco_final_map.loc[balanco_final_map['CONTA'].str.slice(0,2) == '12', 'N2'] = 'ATIVO NÃO CIRCULANTE'
+#Passivo Circulante
+balanco_final_map.loc[balanco_final_map['CONTA'].str.slice(0,2) == '21', 'N2'] ='PASSIVO CIRCULANTE'
+#Passivo Não Circulante
+balanco_final_map.loc[balanco_final_map['CONTA'].str.slice(0,2) == '22', 'N2'] ='PASSIVO NAO-CIRCULANTE'
+#PL
+balanco_final_map.loc[balanco_final_map['CONTA'].str.slice(0,2) == '23', 'N2'] ='PATRIMÔNIO LIQUIDO'
+#Para conta que são as próprias N1 e N2, deixe o campo vazio
+#balanco_final.loc[balanco_final['CONTA'].str.slice(2,3) == '0', 'N2'] =' '
+
+# Elimina as contas cumulativas
+balanco_final_map = balanco_final_map[ (balanco_final_map['TÍTULO.1'] != 'ATIVO') & (balanco_final_map['TÍTULO.1'] != 'PASSIVO E PATRIMÔNIO LIQUIDO') & (balanco_final_map['TÍTULO.1'] != 'ATIVO CIRCULANTE') & (balanco_final_map['TÍTULO.1'] != 'ATIVO NÃO CIRCULANTE') & (balanco_final_map['TÍTULO.1'] != 'PASSIVO CIRCULANTE') & (balanco_final_map['TÍTULO.1'] != 'PASSIVO NAO-CIRCULANTE') & (balanco_final_map['TÍTULO.1'] != 'PATRIMÔNIO LIQUIDO')]
+
+balanco_normalizado = balanco_final_map.copy()
+
 
 for ano in listaAnos:
     # Gráfico Treemap ATIVO                             
-    st.header('Mapa do Ativo de ' + listaAnos[listaAnos.index(ano)])
-    ativo = px.treemap(balanco_final.loc[balanco_final['CLASSE'] == '1'], 
-                     path = [px.Constant("Ativo"), 'TÍTULO.1'], 
+    ativo = px.treemap(balanco_final_map.loc[balanco_final_map['CLASSE'] == '1'], 
+                     path = ['N1','N2', 'TÍTULO.1'], 
                      values = listaAnos[listaAnos.index(ano)], 
                      color_continuous_scale='RdBu',
                      color = listaAnos[listaAnos.index(ano)],             
                      color_continuous_midpoint=0)
 
-    ativo.update_layout(margin = dict(t=50, l=25, r=25, b=25))
-    st.plotly_chart(ativo)
-    
+    ativo.update_layout(margin = dict(t=50, l=25, r=25, b=25))   
     coluna_ano = listaAnos[listaAnos.index(ano)]
     
-    if balanco_final[coluna_ano].min() < 0 :
-        
+    if balanco_final_map[coluna_ano].min() < 0 :        
         listanorm = preprocessing.normalize([balanco_normalizado[coluna_ano].values.tolist()]) 
         coluna_ano = coluna_ano+'ABS'
         listanormal = listanorm-(listanorm.min()*2)
         balanco_normalizado[coluna_ano] = pd.DataFrame(listanormal).T
     
     # Gráfico Treemap PASSIVO
-    st.header('Mapa do Passivo e Patrimônio Líquido de ' + listaAnos[listaAnos.index(ano)])
     passivo = px.treemap(balanco_normalizado.loc[balanco_normalizado['CLASSE'] == '2'], 
-                     path = [px.Constant("Passivo"), 'TÍTULO.1'], 
+                     path = ['N1','N2', 'TÍTULO.1'], 
                      values = coluna_ano, 
                      color_continuous_scale='RdBu',
                      color = listaAnos[listaAnos.index(ano)],             
                      color_continuous_midpoint=np.average(balanco_normalizado[coluna_ano]))
 
     passivo.update_layout(margin = dict(t=50, l=25, r=25, b=25))
-    st.plotly_chart(passivo)
-    st.markdown("---")
+    #st.markdown("---")
     
+    # Atualizar legenda dos TreeMaps
+    ativo.update_layout(title_text='Mapa do Ativo de ' + listaAnos[listaAnos.index(ano)], title_font=dict(size=24), title_x = 0.025)
+    passivo.update_layout(title_text='Mapa do Passivo e Patrimônio Líquido de ' + listaAnos[listaAnos.index(ano)], title_font=dict(size=24), title_x = 0.025)
+    
+    # Layout com duas colunas
+    col1, col2 = st.columns(2)
+
+    # Colocar TreeMaps nas colunas
+    with col1:
+        st.plotly_chart(ativo, use_container_width=True)
+
+    with col2:
+        st.plotly_chart(passivo, use_container_width=True)
