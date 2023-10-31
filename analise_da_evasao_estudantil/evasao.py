@@ -7,6 +7,14 @@ import matplotlib.pyplot as plt
 from scipy.stats import chi2_contingency
 import ssl
 import numpy as np
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay 
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from mlxtend.plotting import plot_confusion_matrix
+
+
+
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -292,7 +300,8 @@ with tab3:
     st.write('Matriz de Confusão:')
     st.write('Uma matriz de confusão é uma tabela usada para avaliar o desempenho do modelo de classificação. Ela resume o número de observações classificadas corretamente e incorretamente pelo modelo.')
 
-    from sklearn.preprocessing import LabelEncoder
+    #def rl_por_curso(df, curso_rl):
+
     encoder = LabelEncoder()
 
     df = df_ingressantes_apos_2012.loc[(df_ingressantes_apos_2012['ANO_INGRESSO'] < 2019)]
@@ -313,10 +322,6 @@ with tab3:
     X = df_filtro[['BAIXA_RENDA_Encoded', 'ESCOLA_PUBLICA_Encoded', 'ETNIA_PPI_Encoded', 'PCD_Encoded', 'SEXO_Encoded',
                   'ANO_INGRESSO_Encoded', 'TIPO_INGRESSO_Encoded', 'CAMPUS_Encoded', 'TURNO_Encoded']]
     y = df_filtro['SITUACAO_Encoded']
-
-    from sklearn.linear_model import LogisticRegression
-    from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay 
-    from sklearn.model_selection import train_test_split
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
@@ -346,8 +351,6 @@ with tab3:
     #fig, ax = plt.subplots(figsize=(0.8, 0.6), dpi=150)
     #disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix)
     #disp.plot(cmap="Blues", ax=ax)
-
-    from mlxtend.plotting import plot_confusion_matrix
     
     
     # Classes
