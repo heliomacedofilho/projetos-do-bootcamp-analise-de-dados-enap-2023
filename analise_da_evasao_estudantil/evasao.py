@@ -284,8 +284,13 @@ with tab3:
 
     # ----------------- INÍCIO REGRESSÃO LOGÍSTICA ------------------------
 
-    curso_ = st.selectbox('Selecione o curso_:',
+    curso_rl = st.selectbox('Selecione o curso desejado:',
                                    (np.sort(df_ingressantes_apos_2012['CURSO_NOME'].unique())))
+
+    st.write(f'**REGRESSÃO LOGÍSTICA - {curso_rl}**')
+    st.write('A regressão logística é um método de análise estatística usado para prever uma variável de resultado binária com base em uma ou mais variáveis independentes.')
+    st.write('Matriz de Confusão:')
+    st.write('Uma matriz de confusão é uma tabela usada para avaliar o desempenho do modelo de classificação. Ela resume o número de observações classificadas corretamente e incorretamente pelo modelo.')
 
     from sklearn.preprocessing import LabelEncoder
     encoder = LabelEncoder()
@@ -297,11 +302,16 @@ with tab3:
     df['ETNIA_PPI_Encoded'] = encoder.fit_transform(df['ETNIA_PPI'])
     df['PCD_Encoded'] = encoder.fit_transform(df['PCD'])
     df['SEXO_Encoded'] = encoder.fit_transform(df['SEXO'])
+    df['ANO_INGRESSO_Encoded'] = encoder.fit_transform(df['ANO_INGRESSO'])
+    df['TIPO_INGRESSO_Encoded'] = encoder.fit_transform(df['TIPO_INGRESSO'])
+    df['CAMPUS_Encoded'] = encoder.fit_transform(df['CAMPUS'])
+    df['TURNO_Encoded'] = encoder.fit_transform(df['TURNO'])
     df['SITUACAO_Encoded'] = encoder.fit_transform(df['SITUACAO'])
 
-    df_filtro = df.loc[df['CURSO_NOME'] == curso_]
+    df_filtro = df.loc[df['CURSO_NOME'] == curso_rl]
 
-    X = df_filtro[['BAIXA_RENDA_Encoded', 'ESCOLA_PUBLICA_Encoded', 'ETNIA_PPI_Encoded', 'PCD_Encoded', 'SEXO_Encoded']]
+    X = df_filtro[['BAIXA_RENDA_Encoded', 'ESCOLA_PUBLICA_Encoded', 'ETNIA_PPI_Encoded', 'PCD_Encoded', 'SEXO_Encoded',
+                  'ANO_INGRESSO_Encoded', 'TIPO_INGRESSO_Encoded', 'CAMPUS_Encoded', 'TURNO_Encoded']]
     y = df_filtro['SITUACAO_Encoded']
 
     from sklearn.linear_model import LogisticRegression
@@ -356,8 +366,7 @@ with tab3:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.write(f'**REGRESSÃO LOGÍSTICA - {curso_}**')
-        st.write('Matriz de Confusão:')
+        
         st.pyplot(fig)
         st.write("Acurácia do modelo: {:.2f}".format(accuracy))
 
