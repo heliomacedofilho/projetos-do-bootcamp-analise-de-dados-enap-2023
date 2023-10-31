@@ -45,6 +45,22 @@ df_ingressantes_apos_2012 = df_ingressantes_apos_2012[~df_ingressantes_apos_2012
 
 df_ingressantes_apos_2012 = df_ingressantes_apos_2012[~df_ingressantes_apos_2012['CURSO_NOME'].str.contains("BACHARELADO INTERDISCIPLINAR", regex=False)]
 
+encoder = LabelEncoder()
+
+df = df_ingressantes_apos_2012.loc[(df_ingressantes_apos_2012['ANO_INGRESSO'] < 2019)]
+df = df.loc[(df['SITUACAO'] != 'Ativo')]
+df['BAIXA_RENDA_Encoded'] = encoder.fit_transform(df['BAIXA_RENDA'])
+df['ESCOLA_PUBLICA_Encoded'] = encoder.fit_transform(df['ESCOLA_PUBLICA'])
+df['ETNIA_PPI_Encoded'] = encoder.fit_transform(df['ETNIA_PPI'])
+df['PCD_Encoded'] = encoder.fit_transform(df['PCD'])
+df['SEXO_Encoded'] = encoder.fit_transform(df['SEXO'])
+df['ANO_INGRESSO_Encoded'] = encoder.fit_transform(df['ANO_INGRESSO'])
+df['TIPO_INGRESSO_Encoded'] = encoder.fit_transform(df['TIPO_INGRESSO'])
+df['CAMPUS_Encoded'] = encoder.fit_transform(df['CAMPUS'])
+df['TURNO_Encoded'] = encoder.fit_transform(df['TURNO'])
+df['SITUACAO_Encoded'] = encoder.fit_transform(df['SITUACAO'])
+
+
 # ----------------- FIM FILTROS DATAFRAME-------------------------------
 
 
@@ -300,45 +316,30 @@ with tab3:
     st.write('Matriz de Confusão:')
     st.write('Uma matriz de confusão é uma tabela usada para avaliar o desempenho do modelo de classificação. Ela resume o número de observações classificadas corretamente e incorretamente pelo modelo.')
 
-    #def rl_por_curso(df, curso_rl):
+    def rl_por_curso(df, curso_rl):
 
-    encoder = LabelEncoder()
+        df_filtro = df.loc[df['CURSO_NOME'] == curso_rl]
 
-    df = df_ingressantes_apos_2012.loc[(df_ingressantes_apos_2012['ANO_INGRESSO'] < 2019)]
-    df = df.loc[(df['SITUACAO'] != 'Ativo')]
-    df['BAIXA_RENDA_Encoded'] = encoder.fit_transform(df['BAIXA_RENDA'])
-    df['ESCOLA_PUBLICA_Encoded'] = encoder.fit_transform(df['ESCOLA_PUBLICA'])
-    df['ETNIA_PPI_Encoded'] = encoder.fit_transform(df['ETNIA_PPI'])
-    df['PCD_Encoded'] = encoder.fit_transform(df['PCD'])
-    df['SEXO_Encoded'] = encoder.fit_transform(df['SEXO'])
-    df['ANO_INGRESSO_Encoded'] = encoder.fit_transform(df['ANO_INGRESSO'])
-    df['TIPO_INGRESSO_Encoded'] = encoder.fit_transform(df['TIPO_INGRESSO'])
-    df['CAMPUS_Encoded'] = encoder.fit_transform(df['CAMPUS'])
-    df['TURNO_Encoded'] = encoder.fit_transform(df['TURNO'])
-    df['SITUACAO_Encoded'] = encoder.fit_transform(df['SITUACAO'])
-
-    df_filtro = df.loc[df['CURSO_NOME'] == curso_rl]
-
-    X = df_filtro[['BAIXA_RENDA_Encoded', 'ESCOLA_PUBLICA_Encoded', 'ETNIA_PPI_Encoded', 'PCD_Encoded', 'SEXO_Encoded',
+        X = df_filtro[['BAIXA_RENDA_Encoded', 'ESCOLA_PUBLICA_Encoded', 'ETNIA_PPI_Encoded', 'PCD_Encoded', 'SEXO_Encoded',
                   'ANO_INGRESSO_Encoded', 'TIPO_INGRESSO_Encoded', 'CAMPUS_Encoded', 'TURNO_Encoded']]
-    y = df_filtro['SITUACAO_Encoded']
+        y = df_filtro['SITUACAO_Encoded']
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
     # Inicializando o modelo de regressão logística
-    model = LogisticRegression()
+        model = LogisticRegression()
     
     # Treinando o modelo com os dados de treinamento
-    model.fit(X_train, y_train)
+        model.fit(X_train, y_train)
     
     # Fazendo previsões com o conjunto de teste
-    y_pred = model.predict(X_test)
+        y_pred = model.predict(X_test)
     
     # Avaliando a precisão do modelo
-    accuracy = accuracy_score(y_test, y_pred)
+        accuracy = accuracy_score(y_test, y_pred)
 
     # Calcule a matriz de confusão
-    conf_matrix = confusion_matrix(y_test, y_pred)
+        conf_matrix = confusion_matrix(y_test, y_pred)
     #st.write('Matriz de Confusão:')
     #st.text(conf_matrix)
     
@@ -354,9 +355,9 @@ with tab3:
     
     
     # Classes
-    classes = ['Concluído', 'Evadido']
+        classes = ['Concluído', 'Evadido']
     
-    fig, ax = plot_confusion_matrix(conf_mat = conf_matrix,
+        fig, ax = plot_confusion_matrix(conf_mat = conf_matrix,
                                        class_names = classes,
                                        show_absolute = True,
                                        show_normed = False,
@@ -366,17 +367,18 @@ with tab3:
     # Exibir a matriz de confusão no Streamlit
 #    st.pyplot(fig)
 
-    col1, col2 = st.columns(2)
+        col1, col2 = st.columns(2)
 
-    with col1:
+        with col1:
         
-        st.pyplot(fig)
-        st.write("Acurácia do modelo: {:.2f}".format(accuracy))
+            st.pyplot(fig)
+            st.write("Acurácia do modelo: {:.2f}".format(accuracy))
 
-    with col2:
-        st.header("")
+        with col2:
+            st.header("")
 
 
+    rl_por_curso(df, curso_rl)
 #    with col3:
 #        st.header("")
 
