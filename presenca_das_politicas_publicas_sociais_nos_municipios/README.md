@@ -162,7 +162,7 @@ O processo do desenvolvimento do Projeto permitiu construirmos aprendizados que 
 
 Para além de treinar as ferramentas aprendidas durante o BootCamp, enfrentamos dificuldades que nos trouxeram grandes oportunidades de crescimento, que gostaríamos de dividir com todas:
 
-* Abra o arquivo a ser utilizado antes de carregá-lo na interface onde serão desenvolvidas as análises - Muitas vezes uma simples leitura do arquivo permite a identificação imediata de algum padrão de inconsistência que pode indicar a necessidade de substituição do arquivo e que, ao analisar na interface de desenvolvimento, pode ser observado apenas após um longo tempo de escrita de códigos
+* Abra o arquivo a ser utilizado antes de carregá-lo na interface onde serão desenvolvidas as análises. Muitas vezes uma simples leitura do arquivo permite a identificação imediata de algum padrão de inconsistência que pode indicar a necessidade de substituição do arquivo e que, ao analisar na interface de desenvolvimento, pode ser observado apenas após um longo tempo de escrita de códigos
   
 * Ao partir de uma premissa para analisar os dados selecionados, que envolvam um conjunto de dados muito extenso, faça um exercício com uma amostra inicial. Até mesmo pensando em dados hipotéticos, teste a sua ideia antes de dar início à analise de todo o conjunto de dados. Isso poderá poupar muitas horas de escrita de códigos que no final não serão usados
 
