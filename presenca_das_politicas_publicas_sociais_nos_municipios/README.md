@@ -28,39 +28,37 @@ Os detalhes do projeto serão apresentados a seguir.
 
 ## :checkered_flag: Objetivos do projeto
   
-  - :heavy_check_mark: Avaliar a qualidade dos dados abertos disponibilizados pelo MDS
+  - :heavy_check_mark: Avaliar a qualidade dos dados abertos disponibilizados pelo MDS.
   
-  - :bar_chart: Promover análise dos dados disponibilizados selecionados
+  - :bar_chart: Promover análise dos dados disponibilizados selecionados.
   
-  - :thumbsup: Identificar a presença das Política Públicas Sociais (PPS) nos municípios
+  - :thumbsup: Identificar a presença das Política Públicas Sociais (PPS) nos municípios.
 
 ## :diamond_shape_with_a_dot_inside: Metodologia
 
-* Para a avaliação das Políticas Públicas Sociais (PPS) nos municípios brasileiros foram utilizados apenas os dados das PPS que estão disponibilizados pelo MDS no Portal de Dados Abertos. Caso o dado disponibilizado no portal estivesse defasado em relação ao dado disponibilizado em outro acesso aberto, foi utilizado o dado mais atual possível e reportado no projeto a necessidade de promover o ajuste no Portal de Dados abertos
+* `Acesso aos dados`:  Para o desenvolvimento do projeto foram utilizados os dados disponibilizados pelo MDS no Portal de Dados Abertos. Caso o dado disponibilizado no portal estivesse defasado em relação a outra fonte de acesso aberto, foi utilizado o dado mais atual possível e reportada no projeto a necessidade de promover o ajuste no portal.
 
-* Para classificação dos municípios de acordo com a presença das PPS foi calculado o Índice da presença das PPS, a partir da avaliação de cada um dos programas que serão detalhados em seção própria. Destaca-se que os programas foram selecionados a partir das seguintes premissas:
+* `Cálculo do Índice`: Para a avaliação da presença das Políticas Públicas Sociais (PPS) nos municípios brasileiros, foi calculado um índice composto, a partir da avaliação de programas selecionados, considerando as seguintes premissas:
   
-  * Possuir os dados disponibilizados no Portal de Dados Abertos
+  * Possuir os dados disponibilizados no Portal de Dados Abertos.
   
-  * Ser universal
+  * Ser universal.
 
-* Para os cálculos da renda das pessoas e famílias foram utilizados os dados do Cadastro Único, instrumento que identifica e caracteriza as famílias de baixa renda, proporcionando um mapa da parcela mais pobre e vulnerável da população brasileira e os dados dos Censos de 2010 e de 2022. O CadÚnico é a porta de entrada para várias PPS e os dados de renda estão atualizados e permitem fazer o recorte da população alvo das PPS para as análises
-
-* A análise de renda englobou o cálculo da variação das taxas de pobreza, a partir dos dados do CadÚnico e do Censo populacional, e a variação do número das famílias em situação de pobreza e extrema-pobreza ao longo do tempo. Importante registrar que essa análise foi apenas um exercício para a prática das ferramentas aprendidas no curso. Novas análises futuras poderão englobar a avaliação do comportamento da presença das PPS por meio do índice ao longo do tempo e a sua comparação com as variações da renda poderá ser feita com propriedade
+* `Análise da renda`: Para os cálculos da renda das pessoas e famílias foram utilizados os dados do Cadastro Único, instrumento que identifica e caracteriza as famílias de baixa renda, e os dados dos Censos de 2010 e de 2022. O CadÚnico é a porta de entrada para várias políticas sociais e os dados de renda estão atualizados e permitem fazer o recorte da população alvo das PPS para as análises.
+  
+  A análise de renda englobou o cálculo da variação das taxas de pobreza, a partir dos dados do CadÚnico e do Censo populacional, e a variação do número das famílias em situação de pobreza e     extrema-pobreza ao longo do tempo. Importante registrar que essa análise foi apenas um exercício para a prática das ferramentas aprendidas no curso. Análises futuras poderão englobar a avaliação do comportamento da presença das PPS por meio do índice ao longo do tempo e a sua comparação com as variações da renda poderá ser feita com propriedade.
 
 ## :memo: Políticas Públicas Sociais selecionadas
 
 ### :dollar::family_man_woman_boy: Programa Bolsa Família (PBF)
-O Programa Bolsa Família[^1] contribui no combate à pobreza, garantindo renda básica ao público alvo do programa e buscando integrar políticas públicas de modo a estimular a emancipação das famílias para que alcancem autonomia e superem situações de vulnerabilidade social.
+O Programa Bolsa Família[^1] contribui no combate à pobreza, garantindo renda básica ao público alvo do programa e buscando integrar políticas públicas, de modo a estimular a emancipação das famílias, para que alcancem autonomia e superem situações de vulnerabilidade social.
 
 O público-alvo do PBF são as famílias com renda mensal por pessoa de até R$ 218 (duzentos e dezoito reais). Isso significa que toda a renda gerada pelas pessoas da família, por mês, dividida pelo número de pessoas da família deve ser, no máximo, R$ 218. 
 
-Registra-se que a família deverá estar inscrita no Cadastro Único para Programas Sociais.
+Para acessar o programa, a família deverá estar inscrita no Cadastro Único para Programas Sociais.
 
 ### :dollar::older_woman::wheelchair: Benefício de Prestação Continuada (BPC)
-O Benefício de Prestação Continuada da Assistência Social[^2] é o pagamento de um salário mínimo mensal ao idoso acima de 65 anos ou à pessoa com deficiência de qualquer idade com impedimentos de natureza física, mental, intelectual ou sensorial de longo prazo (aquele que produza efeitos pelo prazo mínimo de dois anos, que o impossibilite de participar de forma plena e efetiva na sociedade, em igualdade de condições com as demais pessoas) que comprovem não possuir meios de prover à própria manutenção ou tê-la provida por sua família.
-
-O público-alvo do BPC é a essoa idosa acima de 65 anos ou mais, ou pessoa com deficiência de qualquer idade com impedimentos de longo prazo, com renda por pessoa do grupo familiar menor que 1/4 do salário-mínimo per capita vigente.
+O Benefício de Prestação Continuada da Assistência Social[^2] é o pagamento de um salário mínimo mensal ao idoso acima de 65 anos ou à pessoa com deficiência de qualquer idade com impedimentos de natureza física, mental, intelectual ou sensorial de longo prazo, que comprovem não possuir meios de prover à própria manutenção ou tê-la provida por sua família, e cuja renda por pessoa do grupo familiar seja menor que 1/4 do salário-mínimo vigente.
 
 ### :writing_hand: Registro Mensal de Atendimentos (RMA)
 O Registro Mensal de Atendimentos][^3] é um sistema onde são registradas mensalmente as informações relativas aos serviços ofertados e o volume de atendimentos nos Centros de Referência da Assistência Social (CRAS), Centros de Referência Especializados de Assistência Social (CREAS) e Centro de Referência Especializado para População em Situação de Rua (Centros POP). Seu principal objetivo é uniformizar essas informações e, dessa forma, proporcionar dados qualificados que contribuam para o desenvolvimento do Sistema Único de Assistência Social (SUAS). 
@@ -68,13 +66,11 @@ O Registro Mensal de Atendimentos][^3] é um sistema onde são registradas mensa
 Considerando a premissa de seleção de políticas universais para comporem o índice, foram utilizados os registros apenas do CRAS, pois os demais serviços estão presentes apenas em municípios que preencham critérios específicos.
 
 ### :card_index: Índice de Gestão Descentralizada (IGD)
-O Índice de Gestão Descentralizada[^4] é um indicador que mede os resultados da gestão do Programa Bolsa Família e do Cadastro Único obtidos em um mês. Representa uma estratégia inovadora para medir o desempenho de cada município, estimular resultados cada vez mais qualitativos e também compor a base de cálculo de recursos a serem transferidos aos municípios. 
-
-Assim, ele associa a gestão por resultados aos recursos financeiros a serem transferidos para estados e municípios, que devem ser utilizados para melhoria da gestão do Programa Bolsa Família e do Cadastro Único. A finalidade dessa regra é melhorar a qualidade dos serviços prestados às famílias beneficiárias. Cada vez que se desenvolvem ações integradas do Programa e do Cadastro, os estados e municípios alcançam IGD mais elevado.
+O Índice de Gestão Descentralizada[^4] é um indicador que mede os resultados da gestão do Programa Bolsa Família e do Cadastro Único obtidos em um mês. Representa uma estratégia para medir o desempenho de cada município, estimular resultados cada vez mais qualitativos e também compor a base de cálculo de recursos a serem transferidos aos municípios. 
 
 O cálculo do IGD é composto por 4 fatores: 1) taxa de atualização cadastral e taxas de acompanhamento das condicionalidades de saúde e educação; 2) adesão ao Sistema Único de Assistência Social (Suas); 3) prestação de contas; e 4) parecer das contas do uso dos recursos.
 
-Para o cálculo do Índice da presença das PPS nos municípios brasileiros foram utilizados os dados do Fator 1 do IGD, por estarem disponibilizados no Portal de Dados Abertos e por ser o fator mais diretamente relacionado às entregas diretas à sociedade. 
+Para o cálculo do Índice da presença das PPS nos municípios brasileiros foram utilizados os dados do Fator 1 do IGD, por estarem disponibilizados no Portal de Dados Abertos e por ser o fator mais diretamente relacionado a entregas à sociedade. 
 
 
 ## :memo: Demais Políticias Públicas utilizadas
@@ -84,7 +80,7 @@ O Cadastro Único para Programas Sociais[^5] é um instrumento que identifica e 
 
 Deste modo, o Cadastro Único proporciona um mapa da parcela mais pobre e vulnerável da população brasileira, permitindo aos governos federal, estadual, municipal e distrital saber quem são, onde moram, como vivem e do que necessitam essas famílias. Isso facilita o diagnóstico para a criação de novos programas e a organização da oferta de serviços para essa população, além da seleção de público para esses programas e serviços.
 
-O público-alvo são as famílias que vivem com renda mensal de até meio salário-mínimo por pessoa. As famílias com renda acima desse valor podem ser cadastradas para participar de programas ou serviços específicos. Destaca-se que o cadastramento leva em conta se as famílias fazem parte de povos e comunidades tradicionais ou de grupos específicos, entre eles, indígenas, quilombolas, ribeirinhos e população em situação de rua. 
+O público-alvo são as famílias que vivem com renda mensal de até meio salário-mínimo por pessoa. As famílias com renda acima desse valor podem ser cadastradas para participarem de programas ou serviços específicos. Destaca-se que o cadastramento leva em conta se as famílias fazem parte de povos e comunidades tradicionais ou de grupos específicos, entre eles, indígenas, quilombolas, ribeirinhos e população em situação de rua. 
 
 [^1]: Medida Provisória nº 1.164, de 2 de março de 2023; Lei nº 14.601, de 19 de junho de 2023.
 [^2]: Constituição Federal de 1988 (art. 203, inciso V); Lei nº 8.742, de 7 de dezembro de 1993 (arts. 20, 20-B, 21 e 21-A); Decreto nº 6.214, de 26 de setembro de 2007; Decreto nº 8.805, de 07 de julho de 2016.
@@ -93,25 +89,25 @@ O público-alvo são as famílias que vivem com renda mensal de até meio salár
 [^5]: Lei nº 8.742, de 7 de dezembro de 1993; Decreto nº 11.016, de 29 de março de 2022.
 
 # :date: Conjuntos de dados utilizados
-- `Cadastro Único`: [Cadastro Único - Famílias/Pessoas por faixas de renda per capita - MI Social](https://dados.gov.br/dados/conjuntos-dados/cadastro-unico---familiaspessoas-por-faixas-de-renda-per-capita---mi-social)) - Os dados do CadÚnico foram utilizados para o cálculo da presença dos seguintes programas:
+- `Cadastro Único`: [Cadastro Único - Famílias/Pessoas por faixas de renda per capita - MI Social](https://dados.gov.br/dados/conjuntos-dados/cadastro-unico---familiaspessoas-por-faixas-de-renda-per-capita---mi-social)) - Os dados do CadÚnico utilizados foram os disponibilizados no Portal de Dados Abertos, sendo a última referência vigente a de setembro/2023. Para os cálculos de cada programa, foram usadas as seguintes referências:
 
-  * **Programa Bolsa Família**: para o cálculo da presença do PBF nos municípios brasileiros foram comparados os dados das famílias beneficiárias do programa de setembro/2023 com os dados de famílias das faixas de pobreza e extrema-pobreza do CadÚnico de agosto/2023, pois para o pagamento do PBF de um determinado mês são utilizados os dados do CadÚnico do mês anterior para preparação da folha de pagamento 
+  * **Programa Bolsa Família**: para o cálculo da presença do PBF nos municípios brasileiros foram comparados os dados das famílias beneficiárias do programa de setembro/2023, com os dados de famílias das faixas de pobreza e extrema-pobreza do CadÚnico de agosto/2023, pois para o pagamento do PBF de um determinado mês, são utilizados os dados do CadÚnico do mês anterior para preparação da folha de pagamento. 
 
-  * **Registro Mensal de Atendimento**: para o cálculo da presença dos atendimentos dos CRAS nos municípios foram utilizados os dados dos RMA do ano de 2022, dividido por doze, de modo a comparar o número médio de atendimento de 2022 com o número de pessoas cadastradas no CadÚnico em dez/2022
+  * **Registro Mensal de Atendimento**: para o cálculo da presença dos atendimentos dos CRAS nos municípios foram utilizados os dados do RMA do ano de 2022, dividido por doze, de modo a comparar o número médio de atendimentos de 2022 com o número de pessoas em situação de pobreza e extrema-pobreza cadastradas no CadÚnico em dez/2022.
 
    * **Análise de renda**: a partir dos dados do CadÚnico de 2012 a 2023, foram feitas análises do número de famílias que estavam na faixa da pobreza, ou seja, em situação de pobreza e extrema-pobreza, em agosto de cada ano, permitindo analisar a variação do número de famílias nesta faixa ao longo do tempo. 
      
-   * **Taxa pobreza CadÚnico**:  a partir dos dados do CadÚnico, de abril/2012 e agosto/2023, foram feitas análises das taxas de pobreza do Cadastro Único, utilizando para tanto o número de pessoas em situação de pobreza e extrema-pobreza, pela população do Censo de 2010 e do Censo de 2023. O recorte de 2012 se deveu por apenas a partir de abril constarem dados por faixa de renda.
+   * **Taxa pobreza CadÚnico**:  a partir dos dados do CadÚnico, de abril/2012 e agosto/2023, foram feitas análises das taxas de pobreza do Cadastro Único, utilizando para tanto o número de pessoas em situação de pobreza e extrema-pobreza, pela população do Censo de 2010 e do Censo de 2023, respectivamente. O recorte de 2012 se deveu por apenas a partir de abril constarem dados por faixa de renda.
 
-- `Programa Bolsa Família`: [Bolsa Família – MI Social](https://dados.gov.br/dados/conjuntos-dados/bolsa-familia---mi-social) - Os dados do PBF utilizados foram os disponibilizados no Portal de Dados Abertos. Destaca-se que ao acessar os dados do PBF estavam disponíveis tanto os dados do mês de setembro quanto o de outubro de 2023. Entretanto, considerando que para a preparação da folha de pagamento do programa são utilizados os dados do CadÚnico do mês anterior, optou-se por utilizar os dados do PBF de setembro de 2023.
+- `Programa Bolsa Família`: [Bolsa Família – MI Social](https://dados.gov.br/dados/conjuntos-dados/bolsa-familia---mi-social) - Os dados do PBF utilizados foram os disponibilizados no Portal de Dados Abertos. Destaca-se que ao acessar os dados do PBF estavam disponíveis tanto os dados do mês de setembro quanto os de outubro de 2023. Entretanto, considerando que para a preparação da folha de pagamento do programa são utilizados os dados do CadÚnico do mês anterior, optou-se por utilizar os dados do PBF de setembro de 2023.
 
-- `Benefício de Prestação Continuada`: [BPC por município pagador](https://dados.gov.br/dados/conjuntos-dados/bpc-por-municipio-pagador)) - Para o cálculo da presença do BPC nos municípios brasileiros foram comparados os dados de pagamento do BPC do ano de 2022 com os dados do Fundo de Participação Municipal do mesmo ano. Destaca-se que os dados de 2023 também estão disponibilizados em dados abertos, até a referência maio/2023. Entretanto, a metodologia utilizada comparou o valor total do ano para os dois conjuntos de dados de modo a  minimizar o efeito das variações mensais de pagamento. 
+- `Benefício de Prestação Continuada`: [BPC por município pagador](https://dados.gov.br/dados/conjuntos-dados/bpc-por-municipio-pagador)) - Para o cálculo da presença do BPC nos municípios brasileiros foram comparados os dados de pagamento do BPC do ano de 2022 com os dados do Fundo de Participação Municipal do mesmo ano. Destaca-se que os dados de 2023 também estão disponibilizados em dados abertos, até a referência de maio/2023. Entretanto, a metodologia utilizada comparou o valor total do ano para os dois conjuntos de dados, de modo a  minimizar o efeito das variações mensais de pagamento. 
 
-- `Registro Mensal Atendimento do CRAS`: [RMA 2022 CRAS](https://aplicacoes.mds.gov.br/snas/vigilancia/index2.php) - Para o cálculo da presença do atendimento dos CRAS nos municípios brasileiros foram utilizados os dados do ano de 2022, de modo a  minimizar o efeito das variações mensais, tanto do atendimento quanto do seu registro, que não é realizado necessariamente no mesmo mês do atendimento. Destaca-se que no Portal de Dados Abertos estão disponibilizados os dados até 2021, embora no próprio portal tenha o direcionamento para a página com todas as bases do RMA. Assim, foram utilizados os dados acessados no Portal da Vigilância Socioassistencial da Secretaria Nacional de Assistência Social.
+- `Registro Mensal Atendimento do CRAS`: [RMA 2022 CRAS](https://aplicacoes.mds.gov.br/snas/vigilancia/index2.php) - Para o cálculo da presença do atendimento dos CRAS nos municípios brasileiros foram utilizados os dados do ano de 2022, de modo a  minimizar o efeito das variações mensais, tanto do atendimento quanto do seu registro, o qual não é realizado necessariamente no mesmo mês do atendimento. No Portal de Dados Abertos estão disponibilizados apenas os dados do RMA até 2021, mas a própria página direciona para o Portal da Vigilância Socioassistencial da Secretaria Nacional de Assistência Social, de onde foram acessados os dados mais recentes. 
   
-- `Índice de Gestão Descentralizada`:  [IGD-M PBF - Taxas](https://aplicacoes.cidadania.gov.br/vis/data3/data-explorer.php) - Para o cálculo da classificação dos municípios a partir do resultado do IGD foram utilizados os dados de agosto/2023, última referência disponibilizada pelo MDS na ferramenta Vis Data. Embora os dados do IGD-M estejam disponibilizados no Portal Dados Abertos para a mesma referência, ao analisar a base foram identificadas inconsistências. 
+- `Índice de Gestão Descentralizada`:  [IGD-M PBF - Taxas](https://aplicacoes.cidadania.gov.br/vis/data3/data-explorer.php) - Para o cálculo da classificação dos municípios a partir do resultado do IGD foram utilizados os dados de julho/2023, última referência disponibilizada pelo MDS na ferramenta Vis Data, no momento da coleta. Embora os dados do IGD-M estejam disponibilizados no Portal Dados Abertos para a mesma referência, ao analisar a base foram identificadas inconsistências. 
   
-- `Fundo de Participação do Município (FPM)`:  [FPM por Município](https://www.tesourotransparente.gov.br/ckan/dataset/transferencias-obrigatorias-da-uniao-por-municipio/resource/d69ff32a-6681-4114-81f0-233bb6b17f58) - Como o público alvo do BPC é uma parcela da população brasileira (Pessoas com deficiência e Idosos a partir de 65 anos que preencham as regras do programa) e não há a obrigatoriedade de estar cadastrada no CadÚnico para acesso ao programa, para avaliar a presença do BPC nos municípios brasileiros foram comparados os valores do BPC com o valor repassado por meio do FPM. Esta é uma comparação tradicional realizada para reforçar o papel da Previdência social, conforme explicado no informe [Previdência Social e Redistribuição de Renda Intermunicipal](http://sa.previdencia.gov.br/site/arquivos/office/3_090608-155706-828.pdf). Com o objetivo de comparar com o mesmo período do BPC, foi utilizado o valor total do FPM repassado aos municípios em 2022, disponível no Portal do Tesouro Nacional Transparente.
+- `Fundo de Participação do Município (FPM)`:  [FPM por Município](https://www.tesourotransparente.gov.br/ckan/dataset/transferencias-obrigatorias-da-uniao-por-municipio/resource/d69ff32a-6681-4114-81f0-233bb6b17f58) - Como o público alvo do BPC é um recorte da população brasileira (Pessoas com deficiência e Idosos a partir de 65 anos que preencham as regras do programa) e não há a obrigatoriedade de estar cadastrada no CadÚnico para acesso ao programa, para avaliar a sua presença nos municípios brasileiros, foram comparados os dados de pagamento do BPC com os valores repassados por meio do FPM. Esta é uma comparação tradicional realizada para reforçar o papel da Previdência social, conforme explicado no informe [Previdência Social e Redistribuição de Renda Intermunicipal](http://sa.previdencia.gov.br/site/arquivos/office/3_090608-155706-828.pdf). Com o objetivo de comparar com o mesmo período do BPC, foi utilizado o valor total do FPM repassado aos municípios em 2022, disponível no Portal do Tesouro Nacional Transparente.
 
 - `Taxa de pobreza`: Para promover a análise da variação da taxa da pobreza, foram utilizados os dados do CadÚnico da referência próxima aos dos dados de população dos dois últimos Censos disponíveis, conforme segue abaixo:
   - `População dos municípios Censo 2010`: [Tabela 1378 - População residente, por situação do domicílio, sexo e idade, segundo a condição no domicílio e compartilhamento da responsabilidade pelo domicílio](https://sidra.ibge.gov.br/tabela/1378)
