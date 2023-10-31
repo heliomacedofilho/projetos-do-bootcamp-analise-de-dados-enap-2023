@@ -166,7 +166,7 @@ Para além de treinar as ferramentas aprendidas durante o BootCamp, enfrentamos 
   
 * Ao partir de uma premissa para analisar os dados selecionados, que envolvam um conjunto de dados muito extenso, faça um exercício com uma amostra inicial. Até mesmo pensando em dados hipotéticos, teste a sua ideia antes de dar início à analise de todo o conjunto de dados. Isso poderá poupar muitas horas de escrita de códigos que no final não serão usados
 
-* Ao trabalhar em um projeto no GitHub, com mais de uma pessoa trabalhando no mesmo arquivo, lembre-se sempre de ao finalizar de escrever o código no jupyter lab, salvar o arquivo, fazer o commit (para pegar as alterações da pasta local e preparar o arquivo para ir para o GitHub) e depois clicar no push para o seu repositório do projeto do GitHub ser atualizado. Apenas salvar o arquivo no jupyter lab poderá fazer com que a atualização do GitHub por outra pessoa gere arquivos com conflitos que demandrão muitas horas de trabalho para você recuperar a sua versão.
+* Ao trabalhar em um projeto no GitHub, com mais de uma pessoa trabalhando no mesmo arquivo, lembre-se sempre de ao terminar de escrever o código no jupyter lab, salvar o arquivo, fazer o commit (para pegar as alterações da pasta local e preparar o arquivo para ir para o GitHub) e depois clicar no push para o seu repositório do projeto do GitHub ser atualizado. Apenas salvar o arquivo no jupyter lab poderá fazer com que a atualização do GitHub por outra pessoa gere arquivos com conflitos que demandrão muitas horas de trabalho para você recuperar a sua versão.
   
 # :angel: Pessoas Contribuidoras
 
@@ -184,13 +184,9 @@ Para além de treinar as ferramentas aprendidas durante o BootCamp, enfrentamos 
   
 # :two_women_holding_hands:Pessoas Desenvolvedoras do Projeto
 
-  Aline Oliveira Moura
-  
-  Camila Abuassi de Faro Passos
-  
-  Cristiane Lopes de Assis
-  
-  Juliana Pierrobon Lopez
+![Equipe_zoom](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/f46dd7fe-3c44-4183-b7e0-c7c9c81ab82e)
+
+# 😌 Perdendo o arquivo pela milésima vez
 
 ![Mariana_zoom](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/180e9397-6b4e-4483-8e5a-daa715ba22d9)
 
