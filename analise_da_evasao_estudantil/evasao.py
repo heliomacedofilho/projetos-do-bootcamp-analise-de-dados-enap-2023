@@ -46,7 +46,7 @@ st.set_page_config(page_title="Evasão de alunos na UFJF", page_icon= '📚', la
 st.markdown('# Evasão de alunos na UFJF 📚')
 #st.markdown("---")
 
-tab1, tab2 = st.tabs(["Análise Por Curso", "Análise Geral"])
+tab1, tab2, tab3 = st.tabs(["Análise Por Curso", "Análise Geral", 'Regressão Logística'])
 
 chaves = ['ANO DE INGRESSO', 'SEMESTRE DE INGRESSO', 'TIPO DE INGRESSO', 'COTA',
        'NOME DO CURSO', 'AREA', 'SITUAÇÃO', 'MOTIVO DA SAÍDA', 'CAMPUS', 'TURNO',
@@ -175,7 +175,8 @@ with tab1:
         st.write(f'A estatística de Qui-quadrado indica que o fator {info} não influencia na taxa de evasão do curso {curso}.')
     
     # ----------------- FIM TABELA QUI-QUADRADO ---------------------------
-    
+
+
     
     # ----------------- INÍCIO SEGUNDO GRÁFICO ----------------------------
     
@@ -228,6 +229,7 @@ with tab1:
     
     # ----------------- FIM SEGUNDO GRÁFICO -------------------------------
 
+
 with tab2:
     st.header("Análise Geral")
 
@@ -260,7 +262,8 @@ with tab2:
         subinfo = st.selectbox('Selecione o ano: ', df_ingressantes_apos_2012['ANO_INGRESSO'].unique())
         evasao_por_grupo(df_ingressantes_apos_2012, ch[info], int(subinfo))
     elif info == 'COTA':
-        subinfo = st.selectbox('Selecione um grupo: ', df_ingressantes_apos_2012['COTA'].unique())
+        arr = df_ingressantes_apos_2012['COTA'].dropna().unique()
+        subinfo = st.selectbox('Selecione um grupo: ', np.sort(arr))
         evasao_por_grupo(df_ingressantes_apos_2012, ch[info], subinfo)
     elif info == 'TIPO DE INGRESSO':
         subinfo = st.selectbox('Selecione um tipo de ingresso: ', df_ingressantes_apos_2012['TIPO_INGRESSO'].unique())
@@ -271,5 +274,99 @@ with tab2:
     elif info == 'TURNO':
         subinfo = st.selectbox('Selecione um turno: ', df_ingressantes_apos_2012['TURNO'].unique())
         evasao_por_grupo(df_ingressantes_apos_2012, ch[info], subinfo)
+
     
     # ----------------- FIM TERCEIRO GRÁFICO -------------------------------
+
+with tab3:
+    st.header("Regressão Logística")
+
+
+    # ----------------- INÍCIO REGRESSÃO LOGÍSTICA ------------------------
+
+    curso_ = st.selectbox('Selecione o curso_:',
+                                   (np.sort(df_ingressantes_apos_2012['CURSO_NOME'].unique())))
+
+    from sklearn.preprocessing import LabelEncoder
+    encoder = LabelEncoder()
+
+    df = df_ingressantes_apos_2012.loc[(df_ingressantes_apos_2012['ANO_INGRESSO'] < 2019)]
+    df = df.loc[(df['SITUACAO'] != 'Ativo')]
+    df['BAIXA_RENDA_Encoded'] = encoder.fit_transform(df['BAIXA_RENDA'])
+    df['ESCOLA_PUBLICA_Encoded'] = encoder.fit_transform(df['ESCOLA_PUBLICA'])
+    df['ETNIA_PPI_Encoded'] = encoder.fit_transform(df['ETNIA_PPI'])
+    df['PCD_Encoded'] = encoder.fit_transform(df['PCD'])
+    df['SEXO_Encoded'] = encoder.fit_transform(df['SEXO'])
+    df['SITUACAO_Encoded'] = encoder.fit_transform(df['SITUACAO'])
+
+    df_filtro = df.loc[df['CURSO_NOME'] == curso_]
+
+    X = df_filtro[['BAIXA_RENDA_Encoded', 'ESCOLA_PUBLICA_Encoded', 'ETNIA_PPI_Encoded', 'PCD_Encoded', 'SEXO_Encoded']]
+    y = df_filtro['SITUACAO_Encoded']
+
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay 
+    from sklearn.model_selection import train_test_split
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    
+    # Inicializando o modelo de regressão logística
+    model = LogisticRegression()
+    
+    # Treinando o modelo com os dados de treinamento
+    model.fit(X_train, y_train)
+    
+    # Fazendo previsões com o conjunto de teste
+    y_pred = model.predict(X_test)
+    
+    # Avaliando a precisão do modelo
+    accuracy = accuracy_score(y_test, y_pred)
+
+    # Calcule a matriz de confusão
+    conf_matrix = confusion_matrix(y_test, y_pred)
+    #st.write('Matriz de Confusão:')
+    #st.text(conf_matrix)
+    
+    # Exiba um relatório de classificação
+    #report = classification_report(y_test, y_pred)
+    #st.write('Relatório de Classificação:')
+    #st.text(report)
+
+    # Criar a representação gráfica da matriz de confusão
+    #fig, ax = plt.subplots(figsize=(0.8, 0.6), dpi=150)
+    #disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix)
+    #disp.plot(cmap="Blues", ax=ax)
+
+    from mlxtend.plotting import plot_confusion_matrix
+    
+    
+    # Classes
+    classes = ['Concluído', 'Evadido']
+    
+    fig, ax = plot_confusion_matrix(conf_mat = conf_matrix,
+                                       class_names = classes,
+                                       show_absolute = True,
+                                       show_normed = False,
+                                       colorbar = True)
+
+
+    # Exibir a matriz de confusão no Streamlit
+#    st.pyplot(fig)
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.write(f'**REGRESSÃO LOGÍSTICA - {curso_}**')
+        st.write('Matriz de Confusão:')
+        st.pyplot(fig)
+        st.write("Acurácia do modelo: {:.2f}".format(accuracy))
+
+    with col2:
+        st.header("")
+
+
+#    with col3:
+#        st.header("")
+
+
+    # ----------------- FIM REGRESSÃO LOGÍSTICA ---------------------------
