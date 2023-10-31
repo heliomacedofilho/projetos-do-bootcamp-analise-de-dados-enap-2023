@@ -257,7 +257,7 @@ with tab1:
 with tab2:
     st.header("Análise Geral")
 
-    st.write('No gráfico abaixo, trazemos informações de cunho mais geral sobre as proporções de alunos evadidos da UFJF. Na caixa de seleção abaixo, você pode filtrar as informações que deseja visualizar, como o gráfico geral de evadidos por curso, e os gráficos com os demais parâmetros de análise: ingresso, renda, etnia, cota, sexo e outras. As informações trazidas aqui são o somatório de todos os cursos da UFJF que foram selecionados para a análise e respeitando a série temporal dos últimos 10 anos.')
+    st.write('Nos gráficos abaixo, trazemos informações de cunho mais geral sobre as proporções de alunos evadidos da UFJF. Na caixa de seleção abaixo, você pode filtrar as informações que deseja visualizar, como o gráfico geral de evadidos por curso, e os gráficos com os demais parâmetros de análise: ingresso, renda, etnia, cota, sexo e outras. As informações trazidas aqui são o somatório de todos os cursos da UFJF que foram selecionados para a análise e respeitando a série temporal dos últimos 10 anos.')
 
     info = st.selectbox('Selecione o tipo de informação:',
                                    (np.sort(tipo_tab2)))
@@ -304,6 +304,10 @@ with tab2:
 
 
     # ----------------- INÍCIO QUARTO GRÁFICO ------------------------------
+
+
+    st.subheader('Análise por Local de Origem')
+    st.write('O gráfico a seguir mostra a taxa de evasão de acordo com o estado de origem dos estudantes.')
 
     def format_value(value):
             return "{:.1f}".format(value)
