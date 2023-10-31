@@ -10,10 +10,10 @@ import json
 st.set_page_config(layout="wide")
 
 #carregando os dados
-df = pd.read_csv('data/df_RMA_completa.csv')
-georreferenciamento_df = pd.read_csv('data/georreferenciamento_df.csv')
+df = pd.read_csv('df_RMA_completa.csv')
+georreferenciamento_df = pd.read_csv('georreferenciamento_df.csv')
 
-with open('data/geojson.txt', 'r') as geojson_file:
+with open('geojson', 'r') as geojson_file:
     geojson = json.load(geojson_file)
 
 

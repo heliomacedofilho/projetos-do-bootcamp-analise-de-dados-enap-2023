@@ -21,11 +21,11 @@ st.write(
 )
 
 #carregando os dados
-df = pd.read_csv('pages/resultado_tax_pob.csv')
-df2 = pd.read_csv('pages/mob_evolucao_pob_e_ext_pob_sum_01_mp2.csv')
-georreferenciamento_df = pd.read_csv('data/georreferenciamento_df.csv')
+df = pd.read_csv('resultado_tax_pob.csv')
+df2 = pd.read_csv('mob_evolucao_pob_e_ext_pob_sum_01_mp2.csv')
+georreferenciamento_df = pd.read_csv('georreferenciamento_df.csv')
 
-with open('data/geojson', 'r') as geojson_file:
+with open('geojson', 'r') as geojson_file:
     geojson = json.load(geojson_file)
 
 #criando as caixas de seleção
