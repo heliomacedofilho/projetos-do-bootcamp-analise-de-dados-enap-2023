@@ -18,7 +18,9 @@ st.sidebar.success("Select a page")
 st.markdown(
     """
     <p style='text-align: justify;'>
-    Este painel foi desenvolvido como projeto final do curso de análise de dados, turma exclusiva para mulheres. Seu objetivo foi fazer uma análise dos dados das internações hospitalares e verificar a sua correlação com os valores repassados aos entes por emendas parlamentares. O período selecionado foi de 2014 (início dos dados das emendas) a 2022 (ano mais recente).
+    Este painel foi desenvolvido como projeto final do curso de análise de dados, turma exclusiva para mulheres. 
+    Seu objetivo foi fazer uma análise dos dados das internações hospitalares e verificar a sua correlação com os valores 
+    repassados aos entes por emendas parlamentares. O período selecionado foi de 2014 (início dos dados das emendas) a 2022 (ano mais recente).
     </p>
 
     <h3 style='text-align: justify;'>
@@ -40,7 +42,9 @@ st.markdown(
     de 2014 a 2022. Foram usados os dados de Autorização de Internação Hospitalar 
     (AIH) no formato reduzido (RD) com abrangência geográfica no nível municipal. 
     Foi selecionado para o campo linha os municípios brasileiros. Para as colunas, 
-    foi selecionado o ano/mês de processamento. O conteúdo utilizado foi o valor total.
+    foi selecionado o ano/mês de processamento. O conteúdo utilizado foi o valor total dos 
+    procedimentos presentes na AIH realizados naquela internação. Esse valores são regulamentados pela 
+    Tabela Unificada de Procedimentos, Medicamentos e Órteses, Próteses e Materiais Especiais do SUS (SIGTAP).
     </p>
     <p style='text-align: justify;'>
     [Datasus Saúde Governo Federal](https://datasus.saude.gov.br/informacoes-de-saude-tabnet/)
