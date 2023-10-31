@@ -30,7 +30,7 @@ Os detalhes do projeto serão apresentados a seguir.
 
 ## :diamond_shape_with_a_dot_inside: Metodologia
 
-* Para a avaliação das Políticas Públicas Sociais (PPS) nos municípios bresileiros serão utilizados apenas os dados das PPS que estão disponibilizados pelo MDS no Portal de Dados Abertos. Caso o dado disponibilizado no portal esteja defasado em relação ao dado disponibilizado em outro acesso aberto, será utilizado o dado mais atual possível e reportado no projeto a necessidade de promover o ajuste no Portal de Dados abertos
+* Para a avaliação das Políticas Públicas Sociais (PPS) nos municípios brasileiros foram utilizados apenas os dados das PPS que estão disponibilizados pelo MDS no Portal de Dados Abertos. Caso o dado disponibilizado no portal estivesse defasado em relação ao dado disponibilizado em outro acesso aberto, foi utilizado o dado mais atual possível e reportado no projeto a necessidade de promover o ajuste no Portal de Dados abertos
 
 * Para classificação dos municípios de acordo com a presença das PPS será calculado o Índice da presença das PPS, a partir da avaliação de cada um dos programas que serão detalhados em seção própria. Destaca-se que os programas foram selecionados a partir das seguintes premissas:
   
