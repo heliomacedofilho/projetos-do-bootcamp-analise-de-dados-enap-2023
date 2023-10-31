@@ -124,12 +124,14 @@ Como, a depender do caso concreto foi identificada a necessidade de distribuir o
 
 Por fim, foram somados as notas padronizadas atribuídas aos quatro programas para cada um dos municípios brasileiros, podendo pontuar no total de 0 a 10 em relação à presença das PPS.
 
-# :mag_right: Metodologia para cálculo da diferença das taxas de pobreza do CadÚnico de 2012 e 2023
-A partir dos dados do CadÚnico, de abril/2012 a agosto/2023, foram feitas análises das taxas de pobreza do Cadastro Único considerando os dados de população do Censo. Para tanto, o total do número de pessoas das faixas de pobreza e extrema-pobreza do Cadastro Único, de abril/2012 e de agosto/2023, foi dividido pela população do Censo de 2010 e do Censo de 2022, respectivamente. 
+# :mag_right: Metodologia para as análises de renda
+A partir dos dados do CadÚnico, de abril/2012 a agosto/2023, foram feitas análises das taxas de pobreza do Cadastro Único considerando os dados de população do Censo. Para tanto, o total do número de pessoas em situação de pobreza e extrema-pobreza do Cadastro Único, de abril/2012 e de agosto/2023, foi dividido pela população do Censo de 2010 e do Censo de 2022, respectivamente. 
 
 Após o cálculo da taxa de pobreza para cada um dos dois períodos analisados, foi feito o cálculo da diferença das taxas da pobreza de 2012 e de 2023 e os municípios classificados de acordo com as variações de aumento ou redução da taxa da pobreza, conforme imagem abaixo.
 
 ![metodologia_dif_tx_pob](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/6b2f20db-0050-4acc-a6ee-db44498757fa)
+
+Em adição, foi analisada a variação do número de famílias na faixa da pobreza, ou seja, em situação de pobreza e extrema-pobreza, no CadÚnico ao longo do tempo. Para tanto, foram utilizados os dados do CadÚnico dos meses de agosto de cada ano.  
 
 # :hammer: Scripts desenvolvidos
 
