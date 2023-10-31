@@ -22,7 +22,6 @@ st.markdown(
     Possui graduação em Licenciatura pela Universidade do Estado do Rio de Janeiro (2011) e Mestrado em Geofísica pelo Observatório Nacional (2014). Atualmente é técnica de geociências do Serviço Geológico do Brasil SGB/CPRM. Tem experiência na área de Geociências, com ênfase em Geofísica Aplicada, atuando principalmente nos seguintes temas: geofísica, inversão e desenvolvimento de software. Atualmente é coordenadora da Rede de Litotecas da SGB/CPRM e Membro da Diretoria da ABMGeo-RJ.
     </p>
     <p style='text-align: justify;'>
-    [LINK DO GITHUB OU LINKEDIN](url)
     </p>
     
     <h5 style='text-align: justify;'>
