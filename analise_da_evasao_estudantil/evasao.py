@@ -378,7 +378,7 @@ with tab3:
             st.header("")
 
 
-    rl_por_curso(df, curso_rl)
+    #rl_por_curso(df, curso_rl)
 #    with col3:
 #        st.header("")
 
