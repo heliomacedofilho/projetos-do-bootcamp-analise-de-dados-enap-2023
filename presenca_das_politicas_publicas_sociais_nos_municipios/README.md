@@ -1,10 +1,16 @@
-![Imagem enap](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/bfd78954-f0aa-4f39-9c16-ef0bc86dca47)
-![Imagem SUAS](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/c3f02ab7-9bf4-41cc-94b2-4a295972cc45)
+
+<p align="center">
+  <img src="https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/bfd78954-f0aa-4f39-9c16-ef0bc86dca47)](https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/bfd78954-f0aa-4f39-9c16-ef0bc86dca47">
+ 
+  <img src="https://github.com/heliomacedofilho/projetos-do-bootcamp-analise-de-dados-enap-2023/assets/148554023/c3f02ab7-9bf4-41cc-94b2-4a295972cc45">
+</p>
+
+  
 
 # <h1 align="center"> Presença das políticas públicas sociais nos municípios brasileiros
 </h1>
 
-# ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge) ![Badge Outubro/2023](http://img.shields.io/static/v1?label=DATA&message=Outubro/2023&color=blue&style=for-the-badge)
+# ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge) ![Badge Outubro/2023](http://img.shields.io/static/v1?label=DATA&message=Outubro/2023&color=blue&style=for-the-badge)
 
 # :scroll: Descrição do Projeto
 O projeto **Presença das Políticas Públicas Sociais (PPS) nos municípios brasileiros** é a etapa final para conclusão do curso Bootcamp em Análise de Dados (turma exclusiva para mulheres) – 2023, ofertado pela Escola Nacional de Administração Pública - Enap.
@@ -12,13 +18,13 @@ Os detalhes do projeto serão apresentados a seguir.
 
 ## :arrow_right_hook: Justificativa
 
-* A Política de Dados Abertos do Poder Executivo federal, instituída pelo Decreto nº 8.777/2016, define regras para promover a abertura de dados governamentais no âmbito dos órgãos e entidades federais, como ministérios, autarquias, agências reguladoras e fundações públicas (Lei de Acesso à Informação (LAI) - Lei nº 12.527/2012)  
+* A Política de Dados Abertos do Poder Executivo Federal, instituída pelo Decreto nº 8.777/2016, define regras para promover a abertura de dados governamentais no âmbito dos órgãos e entidades federais, como ministérios, autarquias, agências reguladoras e fundações públicas (Lei de Acesso à Informação (LAI) - Lei nº 12.527/2012).  
 
-* O Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS) publica 44 conjuntos de dados relacionados a diferentes Políticas Públicas Sociais (PPS) de sua responsabilidade, tais como Cadastro Único, Programa Bolsa Família, Benefício de Prestação Continuada, Registro Mensal de Atendimentos, Programa de Aquisição de Alimentos, Programa Cisternas, dentre outros
+* O Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS) publica no [Portal de Dados Abertos](https://dados.gov.br/home) 44 conjuntos de dados relacionados a diferentes Políticas Públicas Sociais (PPS) de sua responsabilidade, tais como Cadastro Único, Programa Bolsa Família, Benefício de Prestação Continuada, Registro Mensal de Atendimentos, Programa de Aquisição de Alimentos, Programa Cisternas, dentre outros.
 
-* Os conjuntos de dados publicados em ambiente aberto podem ser utilizados para a realização de diversas análises do campo do desenvolvimento e assistência social e, se utilizados em conjunto, podem apresentar um retrato da participação dessas PPS nos municípios brasileiros
+* Os conjuntos de dados publicados em ambiente aberto podem ser utilizados para a realização de diversas análises do campo do desenvolvimento e assistência social e, se utilizados em conjunto, podem apresentar um retrato da participação dessas PPS nos municípios brasileiros.
 
-* É importante avaliar a qualidade dos dados disponibilizados em ambiente aberto de modo a identificar a necessidade de promover melhorias nos conjuntos de dados e fortalecer a transparência ativa e a Política de Dados Abertos
+* É importante avaliar a qualidade dos dados disponibilizados em ambiente aberto de modo a identificar a necessidade de promover melhorias nos conjuntos de dados e fortalecer a transparência ativa e a Política de Dados Abertos.
 
 ## :checkered_flag: Objetivos do projeto
   
