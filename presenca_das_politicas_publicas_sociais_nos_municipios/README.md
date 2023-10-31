@@ -32,15 +32,15 @@ Os detalhes do projeto serão apresentados a seguir.
 
 * Para a avaliação das Políticas Públicas Sociais (PPS) nos municípios brasileiros foram utilizados apenas os dados das PPS que estão disponibilizados pelo MDS no Portal de Dados Abertos. Caso o dado disponibilizado no portal estivesse defasado em relação ao dado disponibilizado em outro acesso aberto, foi utilizado o dado mais atual possível e reportado no projeto a necessidade de promover o ajuste no Portal de Dados abertos
 
-* Para classificação dos municípios de acordo com a presença das PPS será calculado o Índice da presença das PPS, a partir da avaliação de cada um dos programas que serão detalhados em seção própria. Destaca-se que os programas foram selecionados a partir das seguintes premissas:
+* Para classificação dos municípios de acordo com a presença das PPS foi calculado o Índice da presença das PPS, a partir da avaliação de cada um dos programas que serão detalhados em seção própria. Destaca-se que os programas foram selecionados a partir das seguintes premissas:
   
   * Possuir os dados disponibilizados no Portal de Dados Abertos
   
   * Ser universal
 
-* Para os cálculos da renda das pessoas e famílias serão utilizados os dados do Cadastro Único, instrumento que identifica e caracteriza as famílias de baixa renda, proporcionando um mapa da parcela mais pobre e vulnerável da população brasileira e os dados dos Censos de 2010 e de 2022. O CadÚnico é a porta de entrada para várias PPS e os dados de renda estão atualizados e permitem fazer o recorte da população alvo das PPS para as análises.
+* Para os cálculos da renda das pessoas e famílias foram utilizados os dados do Cadastro Único, instrumento que identifica e caracteriza as famílias de baixa renda, proporcionando um mapa da parcela mais pobre e vulnerável da população brasileira e os dados dos Censos de 2010 e de 2022. O CadÚnico é a porta de entrada para várias PPS e os dados de renda estão atualizados e permitem fazer o recorte da população alvo das PPS para as análises
 
-* A análise de renda irá englobar o cálculo da variação das taxas de pobreza, a partir dos dados do CadÚnico e do Censo populacional, e a variação do número das famílias em situação de pobreza e extrema-pobreza ao longo do tempo, conforme será detalhado posteriormente. Importante registrar que essa análise será apenas um exercício para a prática das ferramentas aprendidas no curso. Novas análises futuras poderão englobar a avaliação do comportamento da presença das PPS por meio do índice ao longo do tempo e a sua comparação com as variações da renda poderá ser feita com propriedade. 
+* A análise de renda englobou o cálculo da variação das taxas de pobreza, a partir dos dados do CadÚnico e do Censo populacional, e a variação do número das famílias em situação de pobreza e extrema-pobreza ao longo do tempo. Importante registrar que essa análise foi apenas um exercício para a prática das ferramentas aprendidas no curso. Novas análises futuras poderão englobar a avaliação do comportamento da presença das PPS por meio do índice ao longo do tempo e a sua comparação com as variações da renda poderá ser feita com propriedade
 
 ## :memo: Políticas Públicas Sociais selecionadas
 
