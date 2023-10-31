@@ -18,7 +18,7 @@ st.sidebar.success("Select a page")
 st.markdown(
     """
     <p style='text-align: justify;'>
-    Escrever em resumo o objetivo do trabalho
+    Este painel foi desenvolvido como projeto final do curso de análise de dados, turma exclusiva para mulheres. Seu objetivo foi fazer uma análise dos dados das internações hospitalares e verificar a sua correlação com os valores repassados aos entes por emendas parlamentares. O período selecionado foi de 2014 (início dos dados das emendas) a 2022 (ano mais recente).
     </p>
 
     <h3 style='text-align: justify;'>
