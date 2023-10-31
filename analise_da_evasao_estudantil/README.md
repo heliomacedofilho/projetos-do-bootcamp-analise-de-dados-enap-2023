@@ -6,7 +6,7 @@ Projeto:
 Análise da evasão estudantil nas universidades públicas a partir de indicadores sociais.
 
 Descrição
-Estudo de caso com os dados de evasão estudantil da UFJF para identificar o perfil dos estudantes que evadem da universidade a partir do cruzamento de dados de indicadores sociais, tipos de ingresso, cursos e localização de origem dos estudantes.
+Estudo de caso com os dados de evasão estudantil da Universidade Federal de Juiz de Fora - UFJF para identificar o perfil dos estudantes que evadem da universidade a partir do cruzamento de dados de indicadores sociais, tipos de ingresso, cursos e localização de origem dos estudantes.
 
 
 Objetivos do projeto
@@ -27,7 +27,7 @@ Etapas do projeto:
 5. Avaliação da evasão dos alunos em função das informações da localização de origem por meio do mapa de calor;
 6. Informação da evasão dos alunos por sexo;
 7. Análise por meio de regressão linear do número de evadidos por ano;
-8. Análise 
+8. Análise por meio de regressão logística do número de evadidos em relação ao sexo, oriundos de escola pública, renda e curso.
 
 
 
@@ -36,10 +36,16 @@ Scripts desenvolvidos:
 1.analise_dados_evasao.jpynb
 2.Regressão linear.jpynb
 3.grafico_de_barras.jpynb
-4.limpeza_tratamento_dados
+4.limpeza_tratamento_dados.jpynb
+5. mapa_calor.jpynb
+5. evasao.py
+6. gráfico.py
+7. Regressão linear.jpynb
+8. projeto_final.jpynb
+
 
 Resultados obtidos:
-
+Painel interativo e responsivo com os dados analisados sobre a evasão dos alunos da UFJF com cruzamento das informações sobre campus, curso, sexo, tipo de ingresso, turno, renda, etnia e oriundos de escola pública,assim como, algumas avaliações estatísticas 
 
 Equipe:
 Aline
