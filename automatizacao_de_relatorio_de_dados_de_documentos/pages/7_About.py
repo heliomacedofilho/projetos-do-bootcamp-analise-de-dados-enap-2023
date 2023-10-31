@@ -1,11 +1,11 @@
 import streamlit as st
 
 
-# st.set_page_config(page_title="Equipe",
-#                    page_icon=":large_blue_square:",
-#                    layout='wide',
-#                    initial_sidebar_state='expanded'
-#                    )
+st.set_page_config(page_title="Equipe",
+                   page_icon=":large_blue_square:",
+                   layout='wide',
+                   initial_sidebar_state='expanded'
+                   )
 st.title('_Equipe_ :large_blue_square:', divider='rainbow' )
 #st.markdown("---")
 

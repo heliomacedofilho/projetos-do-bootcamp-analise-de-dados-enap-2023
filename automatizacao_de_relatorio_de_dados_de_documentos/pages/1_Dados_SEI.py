@@ -7,7 +7,7 @@ import streamlit as st
 #     layout='wide',
 #     initial_sidebar_state='expanded')
 
-st.title('Automatização de criação de Relatório oriundos de documentos SEI :large_blue_square:')
+st.title(':blue[Automação de Relatório de dados de Documentos SEI] :large_blue_square:')
     #st.markdown("---")
 st.caption("Projeto Final do Bootcamp de Análise de Dados - ENAP")
 st.subheader("Turma Exclusiva para Mulheres - Outubro/2023 :cherry_blossom:", divider='rainbow')
@@ -22,11 +22,11 @@ st.markdown(
     - Manual da Rede de Litoteca
     ### Ferramentas Utilizadas
     Programa desenvolvido em linguagem Python e com o uso das bibliotecas
-    #### Request
-    #### Selenium
-    #### BeautifulSoup
-    #### Streamlit
-    #### Pandas
-    #### Plotly express
+    ##### Request
+    ##### Selenium
+    ##### BeautifulSoup
+    ##### Streamlit
+    ##### Pandas
+    ##### Plotly express
     """
     )

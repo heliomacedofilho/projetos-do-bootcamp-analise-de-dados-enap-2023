@@ -10,9 +10,10 @@ from st_pages import Page, Section, add_page_title, show_pages
 "Projeto Final do Bootcamp de Análise de Dados - ENAP "
 
 add_page_title()
-st.header('Automação de Relatório de dados de Documentos','rainbow')
+st.header('Automação de Relatório de dados de Documentos')
+st.caption("Turma Exclusiva para Mulheres - Outubro/2023 :cherry_blossom:")
 st.subheader(':blue[Automação de Relatório de dados de Documentos] :large_blue_square: :ok:')
-st.subheader(':red[Gastos Hospitalares no Brasil] :hospital: :fire:')
+st.subheader(':red[Gastos Hospitalares no Brasil] :hospital: :fire:', divider='rainbow')
 
 show_pages(
     [
@@ -24,9 +25,10 @@ show_pages(
         #Section(name="Automação SEI", icon="📖"),
         #Page("pages/1_2_SEI_Exemplo.py", icon="📖"),
         # The pages appear in the order you pass them
-        Page("pages/1_1_Dados_SEI.py", "Dados SEI", "📖"),
-        Page("pages/1_2_SEI_Exemplo.py", "Exemplo SEI", "📖"),
-        Page("pages/1_3_SEI_Estados.py", "Mapa de Requisições", "📖"),
+        Page("pages/1_Dados_SEI.py", "Dados SEI", "📖"),
+        Page("pages/2_SEI_Exemplo.py", "Exemplo SEI", "📖"),
+        Page("pages/3_SEI_Estados.py", "Mapa de Requisições", "📖"),
+        Page("pages/4_SEI_Analise.py", "Análises da Requisições", "📖"),
         #Section(name="Gastos Saúde", icon=":hospital:"),
         # Will use the default icon and name based on the filename if you don't
         # pass them
@@ -98,15 +100,15 @@ show_pages(
 
 #     run()
 
-# st.markdown(
-#     f"""
-#     <link
-#         rel="stylesheet"
-#         href="assets/styles.css"
-#     >
-#     """,
-#     unsafe_allow_html=True
-# )
+st.markdown(
+    f"""
+    <link
+        rel="stylesheet"
+        href="assets/styles.css"
+    >
+    """,
+    unsafe_allow_html=True
+)
 # st.title("Projeto Final do Bootcamp de Análise de Dados - ENAP ")
 # st.header('Automação de Relatório de dados de Documentos', divider='rainbow')
 # st.subheader(':blue[Automação de Relatório de dados de Documentos] :large_blue_square: :ok:')

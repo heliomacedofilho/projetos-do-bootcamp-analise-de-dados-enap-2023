@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-# st.set_page_config(page_title="Municípios", page_icon="🏥", layout="wide")
+st.set_page_config(page_title="Municípios", page_icon="🏥", layout="wide")
 
 st.title('_Análise Descritiva:_ Mapas')
 st.markdown("---")
