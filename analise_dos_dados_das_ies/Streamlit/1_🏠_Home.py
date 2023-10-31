@@ -29,11 +29,19 @@ st.markdown('---')
 #######################################LOAD HTML ##############################################
 ###########PLOTE MAPA HTML
 with st.container():
-    st.write("Apresentamos o dashboard da Análise das Instituições de Ensino Superior do Brasil que está dividido em cinco. Cada uma seção apresenta os nossos resultados encontrados nas análises realizadas sobre: Instituições, Cursos, Docentes, Discentes e Técnicos Administrativos.")
     
-    st.write("Na seção 'Projeto', detalhamos o processo de desenvolvimento deste projeto.")
+    w01 = '<p style="font-family:Arial; color:black; font-size: 18px;">Este trabalho é resultado do Bootcamp <b>\"Análise de Dados para Mulheres\"</b>, promovido pela ENAP. Como resultado foi gerado este Dashboard, que trata da <b>Análise das Instituições de Ensino Superior do Brasil</b>.</p>'
+    st.markdown(w01, unsafe_allow_html=True)
     
-    st.write("Em 'Quem Somos', vocês encontrarão informações de contato sobre o nosso grupo.")
+    w02 = '<p style="font-family:Arial; color:black; font-size: 18px;">Este Dashboard está dividido em cinco seções principais - cada seção apresenta mapas, tabelas, gráficos e um resumo de constatações encontradas nas análises realizadas sobre: Instituições, Cursos, Docentes, Discentes e Técnicos Administrativos.</p>'
+    st.markdown(w02, unsafe_allow_html=True)
+    
+    w03 = '<p style="font-family:Arial; color:black; font-size: 18px;">Na seção <b>\"Projeto\"</b>, detalhamos o processo de desenvolvimento deste projeto.</p>'
+    st.markdown(w03, unsafe_allow_html=True)
+    
+    w04 = '<p style="font-family:Arial; color:black; font-size: 18px;">Em <b>\"Quem Somos\"</b>, vocês encontrarão informações de contato sobre o nosso grupo.</p>'
+    st.markdown(w04, unsafe_allow_html=True)
+    
     
     st.markdown('---')
 
