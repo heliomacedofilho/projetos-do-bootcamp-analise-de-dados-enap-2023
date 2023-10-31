@@ -1,6 +1,8 @@
 # pages/page1.py
 import streamlit as st
 
+video_url = "https://www.youtube.com/watch?v=adiF0AfB4Iw"
+st.video(video_url)
 
 st.set_page_config(
     page_title="Home",
