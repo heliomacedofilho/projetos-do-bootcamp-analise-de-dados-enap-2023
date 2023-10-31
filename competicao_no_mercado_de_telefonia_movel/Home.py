@@ -36,7 +36,7 @@ st.set_page_config(
 ### ************************************************************************************###
  
 # Criando o MENU PRINCIPAL - BARRA
-selected = option_menu(None, ["Projeto",  "Acesso a Informação", "Legislação", 'Acessibilidade'], 
+selected = option_menu(None, ["Projeto",  "Acesso à Informação", "Legislação", 'Acessibilidade'], 
         #icons=['house', "map", "bar-chart", 'book'], 
         icons=['house', "map", "bar-chart", 'book'], 
         menu_icon="cast", default_index=0, orientation="horizontal",
@@ -57,11 +57,11 @@ if selected == "Projeto":
         #webbrowser.open("https://www.gov.br/pt-br/orgaos-do-governo") 
         st.write(' ')
 elif selected == "Acesso a Informação":
-        webbrowser.open("https://www.gov.br/acessoainformacao/pt-br") 
+        webbrowser.open("https://www.gov.br/acessoainformacao/pt-br/") 
 elif selected == "Legislação":
-        webbrowser.open("http://www4.planalto.gov.br/legislacao")
+        webbrowser.open("http://www4.planalto.gov.br/legislacao/")
 elif selected == "Acessibilidade":
-        webbrowser.open("https://www.gov.br/governodigital/pt-br/acessibilidade-digital") 
+        webbrowser.open("https://www.gov.br/governodigital/pt-br/acessibilidade-digital/") 
 
 
 ### ************************************************************************************###
@@ -129,13 +129,24 @@ st.markdown("<h5 style='text-align: left; color: black;'> - 2009 a 2023 </h5>", 
 
 # Crie um ícone
 st.markdown("<h4 style='text-align: left; color: blue;'>Indicadores: </h4>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: left; color: black;'>- Market Share </h5>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: left; color: black;'>- HHI </h5>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: left; color: black;'>- Tecnologia de Geração </h5>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: left; color: black;'>- Tecnologia 5G </h5>", unsafe_allow_html=True)
+
+
+st.markdown("<h5 style='text-align: left; color: black;'>Market Share </h5>", unsafe_allow_html=True)
+st.markdown("<h7 style='text-align: left; color: grey;'>Market share é a participação de mercado (medida em percentagem) de cada grupo econômico em relação a determinada delimitação geográfica (Unidade da Federação ou por área de código DDD). </h7>", unsafe_allow_html=True)
+
+
+st.markdown("<h5 style='text-align: left; color: black;'>HHI </h5>", unsafe_allow_html=True)
+st.markdown("<h7 style='text-align: left; color: grey;'>HHI é o Índice Herfindahl-Hirschman, uma metodologia de medição do grau de concentração dos mercados. Calculado com base no somatório do quadrado das participações de mercado de todas as empresas de um dado mercado, o HHI pode chegar até 10.000 pontos, valor no qual há um monopólio, ou seja, em que uma única empresa possua 100% do mercado. Para analisar o grau de concentração de mercado a partir do HHI utilizamos os critérios da Federal Trade Commission (FTC) e do Guia para análise de atos de concentração horizontal do Conselho Administrativo de Defesa Econômica (Cade): abaixo de 1500 temos um mercado pouco concentrado; entre 1500 e 2500 temos uma concentração moderada de mercado; e acima de 2500 é um mercado altamente concentrado.. </h7>", unsafe_allow_html=True)
+
+
+st.markdown("<h5 style='text-align: left; color: black;'>Tecnologia de Geração </h5>", unsafe_allow_html=True)
+st.markdown("<h7 style='text-align: left; color: grey;'>Tecnologia de Geração são os diferentes padrões tecnológicos para serviços móveis de transmissão de dados (exemplo: 3G, 4G, 5G etc.). </h7>", unsafe_allow_html=True)
+
+st.markdown("<h5 style='text-align: left; color: black;'>Tecnologia 5G </h5>", unsafe_allow_html=True)
+st.markdown("<h7 style='text-align: left; color: grey;'>Tecnologia 5G é o mais recente padrão tecnológico para serviços móveis, e suas características, segundo a Anatel, incluem altas taxas de transmissão de dados e baixa latência (tempo de resposta), além de oferecer uma variedade de novas possibilidades, ainda a serem exploradas. </h7>", unsafe_allow_html=True)
 
 st.markdown("-------------------")
-st.markdown("<h4 style='text-align: left; color: black;'>Fonte de Dados </h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: left; color: blue;'>Fonte de Dados </h4>", unsafe_allow_html=True)
 st.markdown("Os dados utilizados nesse projeto são disponibilizados pela Agência Nacional de Telecomunicações - Anatel no Portal Brasileiro de Dados Abertos e no Portal da Agência Telefonia Móvel da Anatel, conforme acessos de Telefonia Móvel (Serviço Móvel Pessoal – SMP) enviados pelas prestadoras do serviço")
 
 ## LINKS ###
@@ -154,17 +165,17 @@ st.markdown(f"[Link para a EBC]({link3})")
 
 
 st.markdown("-------------------")
-st.markdown("<h4 style='text-align: justify; color: black;'>Ferramentas de TI e Biblicotecas</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: justify; color: blue;'>Ferramentas de TI e Biblicotecas</h4>", unsafe_allow_html=True)
 st.markdown("As ferramentas de tecnologia utilizadas no projeto são:")
-st.markdown("<h5 style='text-align: left; color: black;'>-  Python </h5>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: left; color: black;'>- Numpy </h5>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: left; color: black;'>- Pandas </h5>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: left; color: black;'>- MatPlotLib </h5>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: left; color: black;'>- Plotly </h5>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: left; color: black;'>- Seaborn </h5>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: left; color: black;'>- StreamLit </h5>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: left; color: black;'>- Power BI </h5>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: left; color: black;'>- Folium </h5>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: left; color: black;'>-  Python </h6>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: left; color: black;'>- Numpy </h6>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: left; color: black;'>- Pandas </h6>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: left; color: black;'>- MatPlotLib </h6>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: left; color: black;'>- Plotly </h6>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: left; color: black;'>- Seaborn </h6>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: left; color: black;'>- StreamLit </h6>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: left; color: black;'>- Power BI </h6>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: left; color: black;'>- Folium </h6>", unsafe_allow_html=True)
 
 ### ************************************************************************************###
 ### Código EXTRA ###
