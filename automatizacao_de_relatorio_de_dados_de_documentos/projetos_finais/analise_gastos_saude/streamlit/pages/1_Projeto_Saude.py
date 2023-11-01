@@ -1,26 +1,21 @@
 # pages/page1.py
 import streamlit as st
 
-
 st.set_page_config(
-    page_title="Home",
+    page_title="Projeto Saúde",
     page_icon="🏥",
-    layout='wide',
-    initial_sidebar_state='expanded')
+    layout='wide')
 
 st.markdown('# Custos de Internações Hospitalares e Emendas Parlamentares Destinadas à Saúde')
 st.markdown("---")
 st.write("## Projeto Final do Bootcamp de Análise de Dados - ENAP")
 st.write("### Turma Exclusiva para Mulheres - Outubro/2023")
-st.sidebar.success("Select a page")
-
 
 st.markdown(
     """
     <p style='text-align: justify;'>
     Este painel foi desenvolvido como projeto final do curso de análise de dados, turma exclusiva para mulheres. 
-    Seu objetivo foi fazer uma análise dos dados das internações hospitalares e verificar a sua correlação com os valores 
-    repassados aos entes por emendas parlamentares. O período selecionado foi de 2014 (início dos dados das emendas) a 2022 (ano mais recente).
+    Seu objetivo foi fazer uma análise dos dados das internações hospitalares e verificar a sua correlação com os valores repassados aos entes por emendas parlamentares. O período selecionado foi de 2014 (início dos dados das emendas) a 2022 (ano mais recente).
     </p>
 
     <h3 style='text-align: justify;'>

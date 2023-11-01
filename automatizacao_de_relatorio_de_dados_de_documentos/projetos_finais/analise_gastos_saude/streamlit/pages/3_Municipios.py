@@ -2,10 +2,9 @@ import streamlit as st
 import pandas as pd
 import pickle
 
+st.set_page_config(page_title="Mapas de Gastos Hospitalares por Estados", page_icon="🏥", layout="wide")
 
-st.set_page_config(page_title="Municípios", page_icon="🏥", layout="wide")
-
-st.title('_Municípios_')
+st.title('_Gastos Hospitalares UF_')
 st.markdown("---")
 
 figura1 = ''
