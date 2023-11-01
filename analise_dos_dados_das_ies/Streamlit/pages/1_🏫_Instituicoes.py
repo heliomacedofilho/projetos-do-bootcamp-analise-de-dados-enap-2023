@@ -448,6 +448,131 @@ st.markdown(write_plot09b, unsafe_allow_html=True)
 st.markdown("---")
 
 
+# -----------------------------------------------------------------------------------
+# Plot 10: Cobertura de Municipios 
+# -----------------------------------------------------------------------------------  
+titulo_plot10 = '<p style="font-family:Courier; color:Blue; font-size: 25px;"><b>Cobertura de Municipios com existência de IES</b></p>'
+st.markdown(titulo_plot10, unsafe_allow_html=True)
 
+fig = plt.figure(figsize=(20, 15))
+axes = fig.add_subplot(111)
+
+cores = sns.color_palette("mako", 27) # magma
+interval_x = np.arange(0,625,25) # intervalo eixos população
+interval_y = np.arange(0,60000000,5000000) # intervalo eixos população
+
+g = sns.barplot(x='SG_UF_IES', 
+                y='Total_IES', 
+                data=ies_agg_UF.sort_values(by='Total_IES', ascending=False),
+                palette = cores, 
+                label='Total_IES')
+
+axes.set_ylabel('Total IES', fontsize=18)
+axes.yaxis.set_ticks(interval_x)
+axes.set(xlabel='') 
+
+ax2 = axes.twinx()
+ax2.plot(ies_agg_UF.sort_values(by='Total_IES', ascending=False)['SG_UF_IES'], 
+         ies_agg_UF.sort_values(by='Total_IES', ascending=False)['Total_Pop_UF_IES'],
+        color='#ffff00', label='Total_Pop_IES')
+ax2.set_ylabel("População dos municipios com IES", fontsize=20)
+
+ax3 = axes.twinx()
+ax3.plot(ies_agg_UF.sort_values(by='Total_IES', ascending=False)['SG_UF_IES'], 
+         ies_agg_UF.sort_values(by='Total_IES', ascending=False)['Total_Pop_UF'],
+        color='#ff8000', label='Total_Pop_IBGE')
+#ax3.set_ylabel("População total da UF")
+
+axes.grid(visible=False)
+
+ax2.grid(visible=True, linestyle = "dashed", color='white')
+ax2.yaxis.set_ticks(interval_y)
+#ax2.yaxis.set_visible(False) # remove yticks
+
+ax3.grid(visible=False)
+ax3.yaxis.set_ticks(interval_y)
+ax3.yaxis.set_visible(True) # remove yticks
+
+lines1, labels1 = axes.get_legend_handles_labels()
+lines2, labels2 = ax2.get_legend_handles_labels()
+lines3, labels3 = ax3.get_legend_handles_labels()
+ax3.legend(lines1 + lines2 + lines3, labels1 + labels2 + labels3, loc="upper center", fontsize=18)
+
+valores_prop_mun =  ies_agg_UF.sort_values(by='Total_IES', ascending=False)['Cob_Mun_com_IES'].values
+for i, p in enumerate(axes.patches):
+        axes.annotate('{:,.0f}%'.format(valores_prop_mun[i]), 
+                      (p.get_x()+0.1, p.get_height()+10) , 
+                     fontsize=16, weight='bold', color='#730099')
+
+st.pyplot(fig)
+
+# -------------------
+# Analise
+# -------------------
+st.subheader('Análise:')
+write_plot10 = '<p style="font-family:Arial; color:black; font-size: 18px;">O gráfico acima mostra o percentual de municipios com a existência de pelo menos uma instituição de ensino. Desta forma, embora SP tenha o maior número de instituições, é o estado do Rio de Janeiro que possui a maior cobertura de IES (32% dos seus municípios com alguma instituição), seguido pelos estados do Espírito Santo e São Paulo, ambos com cobertura de 24%. Na PB e RN, apenas 4 a 5% dos municípios possuem algum tipo de IES</p>'
+st.markdown(write_plot10, unsafe_allow_html=True)
+st.markdown("---")
+
+
+# -----------------------------------------------------------------------------------
+# Plot 11: Cobertura de Microregioes 
+# -----------------------------------------------------------------------------------  
+titulo_plot11 = '<p style="font-family:Courier; color:Blue; font-size: 25px;"><b>Cobertura de Microrregiões com existência de IES</b></p>'
+st.markdown(titulo_plot11, unsafe_allow_html=True)
+
+
+# prepara dados
+colunas_int = ['SG_UF_IES','Total_IES', 'Cob_Mun_com_IES','Cob_Meso_com_IES','Cob_Micro_com_IES']
+df_coberturas = ies_agg_UF[colunas_int]
+df_coberturas_m = df_coberturas.melt(id_vars=['SG_UF_IES'])
+
+f, axes = plt.subplots(1, 1,  figsize=(20, 10))
+cores = sns.color_palette("Paired")
+
+dados = df_coberturas_m[df_coberturas_m['variable'].isin(['Cob_Mun_com_IES','Cob_Micro_com_IES'])]
+
+# ordem das UFs no eixo x
+my_order = list(df_coberturas.sort_values(by='Total_IES', ascending=False)['SG_UF_IES'])
+
+sns.barplot(x='SG_UF_IES', y='value', hue='variable', 
+            data=dados,
+            ax=axes, 
+            palette=cores, 
+            order=my_order,
+            hue_order=['Cob_Micro_com_IES','Cob_Mun_com_IES'])
+
+#axes.set_title('Distribuição IES no Brasil - Cobertura Microrregiões (2022)', fontsize=20)
+axes.set_xlabel('')
+axes.set_ylabel("Percentual (%)", fontsize = 20)
+xlocs, xlabels = plt.xticks()
+ylocs, ylabels = plt.yticks()
+plt.setp(xlabels, rotation=0, fontsize=15)
+plt.setp(ylabels, fontsize=15)
+
+dados2 = df_coberturas[['SG_UF_IES','Total_IES']].sort_values(by='Total_IES', ascending=False)
+x=dados2['SG_UF_IES']
+y=dados2['Total_IES']
+axes2 = axes.twinx()
+axes2.plot(x, y, color='#cc0000', label='Total IES')
+axes2.set_ylabel("Total de IES na UF", fontsize = 20)
+axes2.grid(visible=False)
+
+for i, j in zip(x, y):
+    axes2.text(i,j, str(j), ha='center', va='bottom', color='#cc0000', fontsize=14)
+
+    axes.legend(loc='best', fontsize=18)
+st.pyplot(f)
+
+# -------------------
+# Analise
+# -------------------
+st.subheader('Análise:')
+write_plot11 = '<p style="font-family:Arial; color:black; font-size: 18px;">O gráfico acima mostra a cobertura de municípios em microrregiões com a existência de pelo menos uma instituição de ensino. Desta forma, se tem uma razoável cobertura de IES em boa parte dos estados, ao se considerar esta perspectiva de microrregiões.</p>'
+write_plot11b = '<p style="font-family:Arial; color:red; font-size: 18px;">Obs. a linha vermelha representa o total de instituições de ensino em cada UF.</p>'
+
+st.markdown(write_plot11, unsafe_allow_html=True)
+st.markdown(write_plot11b, unsafe_allow_html=True)
+st.markdown("---")
 
 
