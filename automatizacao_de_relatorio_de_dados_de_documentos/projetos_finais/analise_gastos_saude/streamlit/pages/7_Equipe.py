@@ -1,8 +1,8 @@
 import streamlit as st
 
 
-st.set_page_config(page_title="Equipe", page_icon="🏥", layout="wide")
-st.title('_Equipe_ :hospital:')
+st.set_page_config(page_title="Equipe", page_icon="👩‍💻", layout="wide")
+st.title('_Equipe_ :female-technologist:')
 st.markdown("---")
 
 st.write("## Projeto Final do Bootcamp de Análise de Dados - ENAP")
@@ -13,7 +13,7 @@ st.markdown(
     <p style='text-align: justify;'>
     Esse projeto foi desenvolvido a partir de uma colaboração harmoniosa de uma 
     equipe de servidoras públicas talentosas e dedicadas. Cada participante 
-    trouxe sua experiência única e conhecimentos para o projeto, contribuindo com 
+    trouxe sua experiência única e seus conhecimentos para o projeto, contribuindo com 
     diferentes perspectivas e habilidades. Essa abordagem coletiva permitiu-nos 
     enfrentar desafios complexos em tempo hábil, possibilitando o desenvolvimento e 
     entrega de dois projetos independentes.
@@ -23,11 +23,9 @@ st.markdown(
     </h5>
     <p style='text-align: justify;'>
     Possui graduação em Licenciatura pela Universidade do Estado do Rio de Janeiro (2011) e Mestrado em Geofísica pelo Observatório Nacional (2014). Atualmente é técnica de geociências do Serviço Geológico do Brasil SGB/CPRM. Tem experiência na área de Geociências, com ênfase em Geofísica Aplicada, atuando principalmente nos seguintes temas: geofísica, inversão e desenvolvimento de software. Atualmente é coordenadora da Rede de Litotecas da SGB/CPRM e Membro da Diretoria da ABMGeo-RJ.
-
+     </p>
     <p style='text-align: justify;'>
     <a href='https://www.https://github.com/dpsales'> Github</a>
-    </p>
-    
     </p>
     <p style='text-align: justify;'>
     <a href='https://www.linkedin.com/in/daiana-sales-5908a621/'> Linkedin</a>
@@ -90,10 +88,6 @@ st.markdown(
     <p style='text-align: justify;'>
     Possui graduação em Farmácia e Bioquímica pela Universidade Federal do Paraná (UFPR), Mestrado e    Doutorado em Biologia Celular e Molecular pela UFPR, com período sanduíche em Max-Delbrück-Centrum em Berlim. Experiência em monitoramento e avaliação de políticas públicas, com ênfase em análise de bancos de dados com foco em gestão e construção de indicadores monitoráveis. Atualmente trabalha na área de Assessoria de Informação do Departamento de HIV/aids do Ministério da Saúde, onde é responsável pelas informações de monitoramento clínico de pessoas vivendo com HIV e da resistência aos antirretrovirais, com publicações periódicas por relatórios e painéis interativos.
     </p>
-    <p style='text-align: justify;'>
-    
-    </p>
-
 
     """,
     unsafe_allow_html=True

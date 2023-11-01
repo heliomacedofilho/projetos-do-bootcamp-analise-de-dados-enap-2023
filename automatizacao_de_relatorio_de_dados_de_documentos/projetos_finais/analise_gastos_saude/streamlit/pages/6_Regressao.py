@@ -12,7 +12,6 @@ st.set_page_config(page_title="Regressão", page_icon="🏥", layout="wide")
 st.title('_Regressão Linear Simples - OLS_ :hospital:')
 st.markdown("---")
 
-
 @st.cache_data
 def gerar_df():
     df = pd.read_excel('./data/variaveis_uf_ano.xlsx',

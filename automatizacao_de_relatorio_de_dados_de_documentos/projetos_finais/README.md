@@ -53,8 +53,17 @@ Programa desenvolvido em linguagem Python e com o uso das bibliotecas streamlit,
 
 ## INTEGRANTES
 
+* Daiana de Paula Sales
+  <a href='https://www.https://github.com/dpsales'> Github</a>
+  <a href='https://www.linkedin.com/in/daiana-sales-5908a621/'> Linkedin</a>
 * Harlane Araújo de Magalhães
-* Michela Barreto Camboim Gonçalves Feitosa 
+  <a href='https://www.linkedin.com/in/harlane-magalh%C3%A3es-39443a196/'> Linkedin</a>
+* Michela Barreto Camboim Gonçalves Feitosa
+  <a href='https://www.https://github.com/MichelaCamboim/'> Github</a>
+  <a href='https://www.linkedin.com/in/michela-camboim/'> Linkedin</a>
 * Paula Bittencourt Gomes
+  <a href='https://github.com/pbitgomes'> Github</a>
 * Priscilla Uchoa Martins
+  <a href='https://github.com/PriscillaUchoa'> Github</a>
 * Rosana Elisa Gonçalves Pinho
+  <a href='https://github.com/rosanagg'> Github</a>

@@ -1,0 +1,15 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin: 20px;
+}
+
+#MainMenu {
+  visibility: hidden;
+}
