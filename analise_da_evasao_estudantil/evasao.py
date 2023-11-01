@@ -343,7 +343,7 @@ with tab2:
 
         st.write('Valores absolutos de alunos por estado:')
 
-        st.table(df_dados['ABS'].to_frame().T)
+        st.table(df_dados['ABS'].to_frame().T) 
 
     fc_evadidos_por_estado(df_ingressantes_apos_2012)
 
