@@ -22,7 +22,7 @@ with st.echo("below"):
         Page("pages/2_SEI_Exemplo.py", "HTML para DataFrame", "📖"),
         Page("pages/3_SEI_Estados.py", "Mapa de Requisições", "📖"),
         Page("pages/4_SEI_Analise.py", "Análises da Requisições", "📖"),
-        Section(name="Gastos Saúde", icon=":hospital:"),
+        #Section(name="Gastos Saúde", icon=":hospital:"),
         # Will use the default icon and name based on the filename if you don't
         # pass them
         Page("pages/Gastos_Saude.py", icon=":hospital:"),
@@ -35,11 +35,11 @@ with st.echo("below"):
         ]
     )
     
-#add_page_title()
-# st.header('Automatização de Relatório de dados de Documentos')
-# st.caption("Turma Exclusiva para Mulheres - Outubro/2023 :cherry_blossom:")
-# st.subheader(':blue[Automação de Relatório de dados de Documentos] :large_blue_square: :ok:')
-# st.subheader(':red[Gastos Hospitalares no Brasil] :hospital: :fire:', divider='rainbow')
+add_page_title()
+st.header('Automatização de Relatório de dados de Documentos')
+st.caption("Turma Exclusiva para Mulheres - Outubro/2023 :cherry_blossom:")
+st.subheader(':blue[Automação de Relatório de dados de Documentos] :large_blue_square: :ok:')
+st.subheader(':red[Gastos Hospitalares no Brasil] :hospital: :fire:', divider='rainbow')
 
 
 

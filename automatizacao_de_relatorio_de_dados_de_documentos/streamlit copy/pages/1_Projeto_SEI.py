@@ -34,18 +34,18 @@ st.markdown(
         - Manual da Rede de Litoteca
         """
         )
-        
+st.subheader('Método e Metodologia', divider= 'rainbow')        
 st.markdown(        
         """
         O Projeto tem como premissas: a inovação por meio da automação de tarefas, economia do dinheiro público devido a otimização da utilização das ferramentas com foco em resultados, a transparência administrativa eo compartilhamento do conhecimento produzido por meio da geração de uma “Documentação específica no GITHUB”.
         Para o projeto foram utilizadas as seguintes bibliotecas:
-        *Request
-        *Selenium
-        *BeautifulSoup
-        *Streamlit
-        *Pandas
-        *Plotly express
-        *Folium
+        - Request
+        - Selenium
+        - BeautifulSoup
+        - Streamlit
+        - Pandas
+        - Plotly express
+        - Folium
         """
     )
 st.subheader('Críticas dos dados', divider= 'rainbow')
@@ -56,5 +56,7 @@ st.markdown(
         -	a transformação do valor de resposta da TAG de Sim para valores Booleanos;
         -	a vinculação das Unidades Executoras às Litotecas responsáveis pelas amostras; e
         -	concatenar o custo internacional de empréstimo  por material requisitado.
+        
+        Foram identificadas falhas no preenchimento do formulário o que inviabilizou análises inicialmente planejadas, o retorno de resultados, permitindo detectar a necessidade de aperfeiçoamento do fluxo do processo.
         """
     )
