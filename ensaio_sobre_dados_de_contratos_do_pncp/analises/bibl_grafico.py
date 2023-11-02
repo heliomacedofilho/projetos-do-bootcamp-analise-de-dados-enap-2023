@@ -16,8 +16,16 @@ def build_path(subfolder = 'merge'):
         os.makedirs(folderpath)
     return folderpath
     
+#para gráficos no plotly
 def save_data(figure, nome_grafico, subfolder = 'app'):
     filepath = os.path.join(build_path(subfolder), f'{nome_grafico}.pkl')
     
     with open(filepath, 'wb') as pickle_file:
         pickle.dump(figure, pickle_file)   
+
+#para gráficos no matplotlib
+def save_data_matplotlib(plt, nome_grafico, subfolder='app'):
+    filepath = os.path.join(build_path(subfolder), f'{nome_grafico}.pkl')
+
+    with open(filepath, 'wb') as pickle_file:
+        pickle.dump(plt, pickle_file)

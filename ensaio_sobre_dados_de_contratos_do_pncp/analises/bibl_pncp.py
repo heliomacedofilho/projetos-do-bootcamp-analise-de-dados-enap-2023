@@ -2,6 +2,15 @@ import pandas as pd
 import requests
 import math as m
 import os
+import matplotlib.pyplot as plt
+#para conseguir visualizar os gráficos no notebook
+%matplotlib inline 
+import warnings
+warnings.filterwarnings('ignore')
+import seaborn as sns
+import plotly.express as px
+import plotly.graph_objects as go
+import plotly.express as px
 
 #função para ler a API e jogar em um json
 def read_api(url, params=None):
@@ -138,4 +147,14 @@ def trata_csv_completo():
     df = df.drop_duplicates()
     
     df.to_csv(f"dadosPNCP_completo_tratado.csv", index=False)  # salvando o DataFrame como um arquivo CSV O argumento 'index=False' evita que o índice seja salvo no arquivo CSV
-    
+
+#:OBS: não sei se a função abaixo sera usada para visualizaçãod e dados... a verificar...
+#objetivo: criar um caminho (path) para uma pasta (diretório) para armazenar arquivos, com a opção de especificar um subdiretório (subfolder). 
+#O subdiretório padrão é definido como "merge", mas pode especificar um subdiretório diferente como argumento quando chama a função.
+# def build_path(subfolder = 'merge'):
+#     folderpath = os.path.join(os.getcwd(), os.pardir, #pathjoin: para unir os elementos e formar o caminho completo / .getcwd: obtém o diretório de trabalho atual / .pardir = é o diretório pai (acima do dir atual)
+#                               'project', 'data', subfolder)
+#     folderpath = os.path.abspath(folderpath) #usa caminho absoluto e não relativo
+#     if not os.path.exists(folderpath): #verifica se o diretório especificado já existe. Se não existir, a função .makedirs() cria o diretório e suas subpastas se necessário.
+#         os.makedirs(folderpath)
+#     return folderpath
