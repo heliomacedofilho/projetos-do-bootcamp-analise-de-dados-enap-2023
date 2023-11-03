@@ -58,7 +58,7 @@ st.text("")
 st.write(
     """
     <div style="text-align: justify">
-        <p>O  <span style="color: blue;">BPC</span> é o pagamento de um salário mínimo mensal ao idoso com 65 anos ou mais ou à pessoa com deficiência de qualquer idade com impedimentos de natureza física, mental, intelectual ou sensorial de longo prazo que comprovem não possuir meios de prover à própria manutenção ou tê-la provida por sua família. E cuja renda por pessoa do grupo familiar menor que 1/4 do salário-mínimo per capita vigente. </p>
+        <p>O  <span style="color: blue;">BPC</span> é o pagamento de um salário mínimo mensal ao idoso com 65 anos ou mais ou à pessoa com deficiência de qualquer idade com impedimentos de natureza física, mental, intelectual ou sensorial de longo prazo que comprovem não possuir meios de prover à própria manutenção ou tê-la provida por sua família. E cuja renda por pessoa do grupo familiar menor ou igual a 1/4 do salário-mínimo per capita vigente. </p>
   """,
     unsafe_allow_html=True
 )
