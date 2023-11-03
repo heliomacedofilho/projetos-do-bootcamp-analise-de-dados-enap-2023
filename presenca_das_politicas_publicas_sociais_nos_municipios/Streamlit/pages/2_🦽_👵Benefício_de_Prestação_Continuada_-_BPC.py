@@ -73,7 +73,7 @@ col1, col2 = st.columns(2)
 with col1 :
     st.write(
         """
-        <h2 style="font-size: 18px;">Valor total pago do BPC</h2>
+        <h2 style="font-size: 18px;">Valor total pago do BPC em 2022</h2>
         """,
         unsafe_allow_html=True
     )
@@ -83,7 +83,7 @@ with col1 :
 with col2 :
     st.write(
         """
-        <h2 style="font-size: 18px;">Total de beneficiados</h2>
+        <h2 style="font-size: 18px;">Total de beneficiados em dez/2022</h2>
         """,
         unsafe_allow_html=True
     )
