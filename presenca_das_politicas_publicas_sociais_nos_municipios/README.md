@@ -58,7 +58,7 @@ O público-alvo do PBF são as famílias com renda mensal por pessoa de até R$ 
 Para acessar o programa, a família deverá estar inscrita no Cadastro Único para Programas Sociais.
 
 ### :dollar::older_woman::wheelchair: Benefício de Prestação Continuada (BPC)
-O Benefício de Prestação Continuada da Assistência Social[^2] é o pagamento de um salário mínimo mensal ao idoso acima de 65 anos ou à pessoa com deficiência de qualquer idade com impedimentos de natureza física, mental, intelectual ou sensorial de longo prazo, que comprovem não possuir meios de prover à própria manutenção ou tê-la provida por sua família, e cuja renda por pessoa do grupo familiar seja menor que 1/4 do salário-mínimo vigente.
+O Benefício de Prestação Continuada da Assistência Social[^2] é o pagamento de um salário mínimo mensal ao idoso com 65 anos ou mais ou à pessoa com deficiência de qualquer idade com impedimentos de natureza física, mental, intelectual ou sensorial de longo prazo, que comprovem não possuir meios de prover à própria manutenção ou tê-la provida por sua família, e cuja renda por pessoa do grupo familiar seja menor que 1/4 do salário-mínimo vigente.
 
 ### :writing_hand: Registro Mensal de Atendimentos (RMA)
 O Registro Mensal de Atendimentos][^3] é um sistema onde são registradas mensalmente as informações relativas aos serviços ofertados e o volume de atendimentos nos Centros de Referência da Assistência Social (CRAS), Centros de Referência Especializados de Assistência Social (CREAS) e Centro de Referência Especializado para População em Situação de Rua (Centros POP). Seu principal objetivo é uniformizar essas informações e, dessa forma, proporcionar dados qualificados que contribuam para o desenvolvimento do Sistema Único de Assistência Social (SUAS). 
